@@ -1,0 +1,76 @@
+{
+  "title": "Quiz de Cierre: Resolución de Conflictos en el Contexto Laboral — Edición Pro 2026",
+  "intro": "Esta evaluación rápida integra los 6 módulos del curso. Lee cada situación con atención y aplica lo aprendido: diagnostica el conflicto, decide entre mediar, derivar o intervenir, y define una primera acción concreta. Tienes 5 preguntas de selección múltiple. ¡Demuestra tu criterio profesional!",
+  "questions": [
+    {
+      "q": "Carla (jefa de Cobranzas) reporta que Andrés (jefe de Riesgo) no responde sus correos hace un mes y tiene 12 aprobaciones pendientes. Andrés dice que ella lo presiona con plazos imposibles. ¿Cómo diagnosticas y respondes a esta situación como Subgerente?",
+      "options": [
+        "Es un conflicto de relación grave; debo derivarlo de inmediato según protocolo de denuncias.",
+        "Es un conflicto de tarea entre pares, en fase temprana de escalamiento; corresponde mediar internamente para reabrir el canal de trabajo.",
+        "Es un conflicto trivial; lo mejor es evitar e intervenir solo si vuelve a ocurrir.",
+        "Es un conflicto de valores; debo imponer una decisión para destrabar las 12 aprobaciones."
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Es un conflicto de tarea entre dos jefaturas (pares), sin desbalance estructural ni denuncia formal, por lo que la mediación interna es la vía adecuada para restablecer la coordinación y abordar los plazos.",
+      "feedbackKo": "Revisa el Módulo 5. Al ser un conflicto de tarea entre pares, sin riesgo ni denuncia formal, corresponde mediar internamente, no derivar ni imponer.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Sofía (analista junior) solicita reunión confidencial y relata que Rodrigo (líder técnico) le hizo comentarios sobre su apariencia frente a colegas. ¿Cuál es tu PRIMERA acción correcta?",
+      "options": [
+        "Convocar a una mediación entre Sofía y Rodrigo para aclarar el malentendido.",
+        "Hablar primero con Rodrigo para conocer su versión antes de decidir.",
+        "Resguardar a Sofía, documentar lo relatado por escrito y derivar según el protocolo de la Ley Karin; no mediar internamente.",
+        "Esperar una denuncia formal escrita de Sofía antes de actuar."
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Ante un posible caso con desbalance de poder y conductas que podrían constituir acoso, no se media: se resguarda a la afectada, se documenta y se deriva de inmediato según el protocolo Ley Karin.",
+      "feedbackKo": "Atención al Módulo 5. En casos con desbalance de poder y posible acoso, mediar o esperar puede revictimizar y vulnerar el protocolo Ley Karin. Lo correcto es resguardar, documentar y derivar.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "El equipo de Operaciones lleva 3 reuniones de planificación trimestral sin acuerdo sobre prioridades, en un tono cordial pero sin avanzar. ¿Qué estilo Thomas-Kilmann es más adecuado y por qué?",
+      "options": [
+        "Evitar, porque el tono cordial indica que el tema se resolverá solo con el tiempo.",
+        "Competir, porque como Subgerente debes imponer las prioridades sin discusión.",
+        "Colaborar, porque hay tiempo razonable, relación sana y un tema importante que requiere integrar intereses del equipo.",
+        "Ceder, dejando que el grupo más numeroso defina las prioridades."
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Al existir relación cordial, importancia del tema y tiempo para procesar (no es una urgencia de 3 días), colaborar permite construir un acuerdo que integre los intereses del equipo.",
+      "feedbackKo": "Repasa el Módulo 3. Cuando hay tiempo, buena relación y un tema relevante, colaborar es el estilo que integra intereses; evitar o imponer no resuelve el estancamiento.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En el caso de Carla y Andrés, antes de mediar reconoces que Carla lleva 8 años en la empresa y Andrés solo 2. Notas que tiendes a creer que 'el nuevo debe estar equivocado'. ¿Qué sesgo cognitivo debes vigilar?",
+      "options": [
+        "Sesgo de anclaje, por fijarte en la primera cifra mencionada.",
+        "Error fundamental de atribución, al atribuir el problema a la persona (Andrés) más que a las condiciones del trabajo.",
+        "Sesgo de disponibilidad, por recordar casos recientes similares.",
+        "Sesgo de escasez, por la presión de los 12 casos pendientes."
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Asumir que el problema es la persona (Andrés por ser nuevo) y no las condiciones o la dinámica de plazos es un error fundamental de atribución, sesgo clave a vigilar para mediar con neutralidad.",
+      "feedbackKo": "Revisa el Módulo 2. Atribuir el conflicto a la persona en lugar de a las circunstancias es el error fundamental de atribución, que amenaza tu neutralidad como mediador.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según el modelo de Glasl, ¿por qué es riesgoso no actuar a tiempo en el conflicto entre Carla y Andrés, dejando que 'se resuelva solo'?",
+      "options": [
+        "Porque el equipo perderá la oportunidad de aprender a gestionar conflictos por su cuenta.",
+        "Porque la jefatura puede perder autoridad si interviene después.",
+        "Porque el conflicto puede escalar de fases tempranas a fases avanzadas, donde ya no se trata del tema original sino de quién gana, y resolverlo requiere mediación externa más costosa.",
+        "Porque las 12 aprobaciones pendientes se cerrarán automáticamente por inactividad."
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Glasl muestra que al escalar a fases avanzadas el conflicto cambia de naturaleza: deja de ser el tema original y se vuelve una lucha de poder, encareciendo y dificultando su resolución.",
+      "feedbackKo": "Repasa el Módulo 1. Según Glasl, postergar la intervención permite que el conflicto escale a fases donde lo central deja de ser el tema y pasa a ser 'quién gana', haciendo la resolución mucho más difícil.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

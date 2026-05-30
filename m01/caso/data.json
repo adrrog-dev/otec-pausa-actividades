@@ -1,0 +1,88 @@
+{
+  "title": "El nuevo turno en la planta",
+  "intro": "Eres supervisor de una planta de producción en Quilicura con 80 operarios. La jefatura introdujo un nuevo turno nocturno sin consultar al equipo. Tres operarios senior amenazan con renunciar; el resto se divide entre apoyar a los senior y temer perder sus horas extra. Llevas dos semanas postergando reunirte con ellos. Hoy debes empezar a actuar. Tus decisiones determinarán si el conflicto se resuelve o escala según el modelo de Glasl.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Lunes en la mañana. El ambiente está tenso. Uno de los operarios senior te dice de pasada: 'Así que ahora deciden todo sin preguntarnos'. Tienes que decidir cómo abordar la situación esta semana.",
+      "options": [
+        {
+          "text": "Convocar a una reunión con los tres operarios senior para escuchar sus preocupaciones antes de tomar más decisiones.",
+          "outcome": "Los operarios senior, aunque molestos, valoran ser escuchados. Bajan el tono de las amenazas y comparten que su molestia real es no haber sido consultados, más que el turno en sí.",
+          "feedback": "Buena lectura. Estás en una fase intermedia de Glasl (cercana a 'acciones, no palabras'). Escuchar a tiempo evita el escalamiento e identifica el verdadero tipo de conflicto: de proceso y de relación, no solo de tarea.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Enviar un comunicado escrito recordando que el turno es una decisión de la empresa y que se debe acatar.",
+          "outcome": "El comunicado se percibe como una imposición. Los operarios senior endurecen su postura y el resto del equipo empieza a tomar bandos abiertamente.",
+          "feedback": "Imponer sin escuchar empuja el conflicto hacia el escalamiento (fase de coaliciones y amenazas en Glasl). El conflicto de proceso se transforma en uno de relación, mucho más difícil de resolver.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Seguir postergando la reunión a la espera de que la situación se calme sola.",
+          "outcome": "Pasa otra semana. La división del equipo se profundiza, bajan la productividad y aparecen errores en la línea. Las amenazas de renuncia se hacen más firmes.",
+          "feedback": "El conflicto no atendido no desaparece: avanza. Cada semana sin intervención tiene costo en clima, errores y rotación. Postergar es la decisión que más daño genera.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya tienes más claro el panorama. El resto del equipo está dividido: unos apoyan a los senior, otros temen perder horas extra. La conversación informal en los pasillos sube de tono. Debes decidir cómo manejar al equipo completo.",
+      "options": [
+        {
+          "text": "Realizar una reunión con todo el equipo para transparentar el porqué del turno y abrir un espacio de propuestas sobre su implementación.",
+          "outcome": "El equipo aprecia la transparencia. Surgen propuestas concretas sobre rotación y compensación de horas. La sensación de 'decisión impuesta' disminuye.",
+          "feedback": "Excelente. Diagnosticaste correctamente que el conflicto es principalmente de proceso (cómo se decidió) y abordaste su raíz antes de la fase de no retorno de Glasl.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Reunirte solo con quienes apoyan el turno para reforzar su postura frente a los senior.",
+          "outcome": "Se consolidan dos bandos enfrentados. El conflicto pasa de las personas a los grupos y se vuelve estructural.",
+          "feedback": "Formar alianzas es una señal típica de escalamiento (fase de coaliciones en Glasl). Esto profundiza la división y acerca el conflicto al punto donde ya requiere intervención externa.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Pedir a RRHH que aplique medidas disciplinarias a quien siga 'generando ruido'.",
+          "outcome": "El equipo percibe represalia. El miedo reemplaza al diálogo, pero la molestia sigue latente y la rotación aumenta.",
+          "feedback": "Sancionar la expresión del conflicto no resuelve su causa: lo hace latente y más peligroso. Confundes la queja legítima con indisciplina.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Han pasado dos semanas desde tu primera intervención. Debes definir cómo dejar instalada una forma de prevenir que esto se repita y cómo cerrar el ciclo del conflicto actual.",
+      "options": [
+        {
+          "text": "Acordar con el equipo un mecanismo formal de consulta para futuros cambios de turno y registrar los compromisos por escrito.",
+          "outcome": "El equipo recupera la confianza. Los operarios senior retiran las amenazas de renuncia y la productividad se estabiliza. El conflicto deja un aprendizaje organizacional.",
+          "feedback": "Cierre ejemplar. Convertiste el conflicto en información útil y en una mejora de proceso. Esto es prevención: actuar antes de la fase de no retorno de Glasl.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Dar por cerrado el tema verbalmente, sin acuerdos formales.",
+          "outcome": "Por unas semanas hay calma, pero al siguiente cambio operativo el malestar reaparece, porque no quedó instalado ningún mecanismo.",
+          "feedback": "Resolver sin registrar ni institucionalizar el aprendizaje deja la puerta abierta a la reincidencia. El conflicto vuelve a la fase latente.",
+          "score": 0,
+          "next": null
+        },
+        {
+          "text": "Delegar el seguimiento a RRHH sin involucrarte tú como jefatura directa.",
+          "outcome": "El equipo siente que su supervisor directo no se hace cargo. La distancia debilita la confianza recién recuperada.",
+          "feedback": "La jefatura directa es clave en la gestión de conflictos de su equipo. Delegar por completo el cierre transmite desinterés y resta legitimidad a la solución.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso muestra que un conflicto laboral es información, no un fallo. 'El nuevo turno en la planta' nació como un conflicto de proceso (la forma en que se tomó la decisión) que, mal gestionado, podía transformarse en uno de relación entre bandos. Según el modelo de Glasl, postergar, imponer o sancionar empuja el conflicto hacia las fases de coaliciones y amenazas, donde ya se requiere intervención externa. En cambio, escuchar a tiempo, transparentar las razones, abrir espacios de propuesta e institucionalizar acuerdos permite intervenir en el momento óptimo y reducir los costos en clima, errores y rotación. El superpoder del supervisor es nombrar lo que pasa —tipo y fase del conflicto— antes de actuar."
+}

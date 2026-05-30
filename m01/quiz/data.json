@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Diagnóstico de Conflictos — Tipología y Fases de Glasl",
+  "intro": "Pon a prueba lo aprendido en el Módulo 1. Cinco preguntas de selección única para reconocer tipos de conflicto laboral y ubicar la fase de escalamiento según el modelo de Glasl. Recuerda: aprobar significa lograr al menos 4 de 5 respuestas correctas. ¡Adelante!",
+  "questions": [
+    {
+      "q": "Según la tipología clásica, ¿cuál de las siguientes NO corresponde a un tipo de conflicto laboral?",
+      "options": [
+        "Conflicto de tarea",
+        "Conflicto de estación del año",
+        "Conflicto de relación",
+        "Conflicto de proceso"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Los cuatro tipos reconocidos son: de tarea, de relación, de proceso y de valores. 'De estación del año' no existe en este marco.",
+      "feedbackKo": "Revisa la clase 1.3. Los tipos válidos son: de tarea, de relación, de proceso y de valores. 'De estación del año' es un distractor.",
+      "points": 10,
+      "difficulty": "fácil"
+    },
+    {
+      "q": "En el modelo de las 9 fases de Glasl, ¿a partir de qué fase el conflicto requiere obligatoriamente intervención externa (mediación)?",
+      "options": [
+        "Fase 1 (endurecimiento)",
+        "Fase 3 (acciones, no palabras)",
+        "Fase 6 (amenazas estratégicas)",
+        "Fase 9 (juntos al abismo)"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. A partir de la fase 6 (amenazas estratégicas), el conflicto ya no se resuelve sin intervención externa.",
+      "feedbackKo": "Recuerda lo visto en la clase 1.4: es en la fase 6 (amenazas estratégicas) donde se vuelve obligatoria la intervención externa.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "De acuerdo con el enfoque del módulo, ¿cómo se debe entender el conflicto laboral?",
+      "options": [
+        "Como un fallo de la organización que conviene ocultar",
+        "Como información de que algo no está alineado en la organización",
+        "Como un problema exclusivo de las personas involucradas",
+        "Como un asunto que se resuelve solo con el tiempo"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El conflicto es información, no un fallo: indica que algo importante no está alineado. Negarlo lo agranda.",
+      "feedbackKo": "Revisa la introducción del módulo. El conflicto es una señal o información, no un fallo que se deba ocultar.",
+      "points": 10,
+      "difficulty": "fácil"
+    },
+    {
+      "q": "Según la tipología de los 4 cuadrantes, ¿cuál de estos conflictos suele ser el más difícil de resolver?",
+      "options": [
+        "Conflicto de tarea",
+        "Conflicto de proceso",
+        "Conflicto de relación",
+        "Conflicto de valores"
+      ],
+      "correctIndex": 3,
+      "feedbackOk": "Correcto. El conflicto de valores es el más difícil de resolver, mientras que el de tarea suele ser el más sencillo.",
+      "feedbackKo": "Revisa el resumen del módulo: el más fácil de resolver es el de tarea y el más difícil es el de valores.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "En el caso 'El nuevo turno en la planta', tres operarios senior amenazan con renunciar y el equipo se divide tras un cambio impuesto sin consulta. ¿Qué señal indica este escenario respecto al escalamiento del conflicto?",
+      "options": [
+        "Está en fase latente y aún no requiere atención",
+        "Muestra señales de escalamiento (amenazas y división) que exigen intervenir pronto",
+        "Es solo una diferencia legítima sin riesgo",
+        "Se resolverá automáticamente al implementar el turno"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Las amenazas de renuncia y la división del equipo indican escalamiento: el momento de intervenir es ahora, antes de que el daño aumente.",
+      "feedbackKo": "Observa las señales del caso: amenazas de renuncia y división del equipo indican que el conflicto está escalando y requiere acción pronta, no espera.",
+      "points": 10,
+      "difficulty": "intermedio"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "title": "Quiz — Conversaciones difíciles con DESC y escucha activa nivel 3",
+  "intro": "A continuación encontrará 5 preguntas para verificar su comprensión del modelo DESC, la escucha activa nivel 3, el lenguaje yo y los sesgos cognitivos. Lea cada situación con atención y seleccione la mejor alternativa. Recuerde: el objetivo es abordar la conversación sin escalarla.",
+  "questions": [
+    {
+      "q": "¿Qué representan correctamente las siglas del modelo DESC para iniciar una conversación difícil?",
+      "options": [
+        "Decidir, Escuchar, Sancionar, Cerrar",
+        "Describir, Expresar, Solicitar, Consecuencias",
+        "Detener, Evaluar, Solucionar, Confirmar",
+        "Describir, Exigir, Sancionar, Concluir"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. DESC es Describir los hechos, Expresar cómo le afecta, Solicitar un cambio concreto y señalar las Consecuencias. Es un guion que se adapta, no se recita.",
+      "feedbackKo": "Revise el contenido. DESC corresponde a Describir, Expresar, Solicitar y Consecuencias. No es un modelo de sanción, sino una estructura para conversar sin escalar el conflicto.",
+      "points": 10,
+      "difficulty": "fácil"
+    },
+    {
+      "q": "La escucha activa de nivel 3 se caracteriza por integrar tres acciones. ¿Cuáles son?",
+      "options": [
+        "Oír, esperar el turno y responder rápido",
+        "Validar la emoción, reformular el contenido y chequear la comprensión",
+        "Anotar, interrumpir y corregir los errores del otro",
+        "Asentir, opinar y dar una solución inmediata"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La escucha nivel 3 es validar + reformular + chequear comprensión. Escuchar no es esperar el turno para hablar.",
+      "feedbackKo": "No es así. La escucha nivel 3 combina validar la emoción, reformular el contenido y chequear la comprensión. Asentir o dar soluciones rápidas corresponde a niveles más superficiales.",
+      "points": 10,
+      "difficulty": "media"
+    },
+    {
+      "q": "¿Cuál de las siguientes frases es un ejemplo correcto de 'lenguaje yo' para abrir un diálogo sin que la otra persona se sienta acusada?",
+      "options": [
+        "Tú siempre llegas tarde y no te importa el equipo",
+        "Me preocupa el atraso porque afecta la coordinación del turno",
+        "Eres irresponsable con los horarios",
+        "Todos dicen que no cumples con tus tiempos"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El 'lenguaje yo' describe el impacto desde la propia experiencia ('me preocupa') y transforma la acusación en información, facilitando una mejor respuesta.",
+      "feedbackKo": "Esa alternativa usa 'lenguaje tú', que suena a acusación y activa la defensa del otro. El 'lenguaje yo' parte desde cómo le afecta a usted: 'Me preocupa el atraso porque...'.",
+      "points": 10,
+      "difficulty": "media"
+    },
+    {
+      "q": "En el caso de Marcela y la vendedora Camila, ¿qué sesgo cognitivo debería chequear Marcela antes de la reunión, considerando que Camila es su mejor vendedora del semestre?",
+      "options": [
+        "Sesgo de anclaje, por fijarse solo en el primer dato escuchado",
+        "Sesgo de confirmación, por buscar pruebas que respalden lo que ya cree de Camila",
+        "Sesgo de disponibilidad, por recordar solo casos recientes",
+        "Sesgo de atribución, atribuyendo todo al azar"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El sesgo de confirmación la llevaría a buscar evidencia que valide su buena imagen previa de Camila, ignorando datos que la contradigan. Conviene escuchar ambas versiones con apertura.",
+      "feedbackKo": "Reflexione: como Marcela ya tiene una imagen positiva de Camila, el riesgo principal es el sesgo de confirmación, es decir, buscar solo pruebas que respalden lo que ya cree antes de escuchar todos los hechos.",
+      "points": 10,
+      "difficulty": "difícil"
+    },
+    {
+      "q": "Según el módulo, ¿por qué la mayoría de los conflictos laborales no se resuelven a tiempo?",
+      "options": [
+        "Porque las empresas no cuentan con políticas escritas",
+        "Porque la conversación no sucede, o sucede mal",
+        "Porque falta presupuesto para mediadores externos",
+        "Porque los trabajadores desconocen sus derechos legales"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La causa central es que la conversación no ocurre o se da de mala forma: a la defensiva, asumiendo intenciones o reaccionando al tono en vez del contenido.",
+      "feedbackKo": "Revise la introducción del módulo. El problema de fondo no es legal ni presupuestario: es que la conversación difícil no sucede, o sucede mal, lo que escala situaciones que tenían solución simple.",
+      "points": 10,
+      "difficulty": "fácil"
+    }
+  ]
+}

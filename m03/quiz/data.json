@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Los 5 estilos Thomas-Kilmann en el contexto laboral",
+  "intro": "Pon a prueba tu comprensión del modelo Thomas-Kilmann. Recuerda: ningún estilo es bueno o malo en sí mismo; lo importante es saber cuál usar según el contexto. Necesitas reconocer estilos en casos reales y elegir la estrategia más adecuada. ¡Mucho éxito!",
+  "questions": [
+    {
+      "q": "Según el modelo Thomas-Kilmann, ¿qué dos dimensiones definen los 5 estilos de afrontamiento del conflicto?",
+      "options": [
+        "Asertividad y cooperación",
+        "Urgencia y poder",
+        "Empatía y autoridad",
+        "Comunicación y liderazgo"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. El modelo se construye sobre dos ejes: la asertividad (cuánto buscas tus propios intereses) y la cooperación (cuánto consideras los intereses del otro). De su combinación surgen los 5 estilos.",
+      "feedbackKo": "Incorrecto. Las dos dimensiones del modelo Thomas-Kilmann son la asertividad y la cooperación. La combinación de ambas da origen a los 5 estilos de afrontamiento.",
+      "points": 10,
+      "difficulty": "fácil"
+    },
+    {
+      "q": "Una jefatura impone su decisión sobre el equipo sin considerar las opiniones del resto, priorizando solo su objetivo. ¿Qué estilo está usando?",
+      "options": [
+        "Ceder",
+        "Competir",
+        "Transigir",
+        "Evitar"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Competir es alta asertividad y baja cooperación: 'Yo gano, tú pierdes'. Es funcional en emergencias o decisiones impopulares necesarias, pero disfuncional si se usa siempre.",
+      "feedbackKo": "Incorrecto. Imponer la propia decisión sin considerar al otro corresponde a Competir (alta asertividad, baja cooperación). Recuerda que no es un estilo malo, pero su uso constante daña las relaciones.",
+      "points": 10,
+      "difficulty": "media"
+    },
+    {
+      "q": "En el caso 'La fusión de áreas', la jefa de Logística se queda callada en las reuniones y luego se queja con RRHH. ¿Qué riesgo del estilo 'colaborar' está mostrando?",
+      "options": [
+        "Que su colaboración se transforma en cesión, porque no sostiene su posición",
+        "Que está compitiendo de forma encubierta",
+        "Que está aplicando correctamente el test de los 5 ejes",
+        "Que evita el conflicto de manera estratégica y planificada"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. Querer colaborar sin asertividad termina en cesión: 'Tú ganas, yo pierdo'. Para colaborar de verdad hay que sostener la propia posición mientras se buscan intereses comunes.",
+      "feedbackKo": "Incorrecto. El problema es que su intención de colaborar, sin asertividad para sostener su postura, deriva en cesión. Colaborar exige tanto cooperación como firmeza.",
+      "points": 10,
+      "difficulty": "media"
+    },
+    {
+      "q": "El tema en disputa es de baja importancia, hay poco tiempo y la relación tampoco se ve afectada. Según el 'test de los 5 ejes', ¿qué estilo suele ser el más razonable?",
+      "options": [
+        "Colaborar, porque siempre es la mejor opción",
+        "Competir, para cerrar rápido el tema",
+        "Evitar, postergando o no entrando en el conflicto",
+        "Ceder, para mantener la armonía"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Evitar es el estilo más subestimado: cuando el tema importa poco y no vale la energía ni el tiempo, postergar o no involucrarse es una decisión sensata, no una debilidad.",
+      "feedbackKo": "Incorrecto. Cuando el tema es de baja importancia y hay poco tiempo, Evitar es funcional. Colaborar es el estilo más costoso en tiempo y energía, por lo que no conviene para asuntos menores.",
+      "points": 10,
+      "difficulty": "media"
+    },
+    {
+      "q": "¿Cuál de las siguientes afirmaciones refleja mejor la conclusión central del módulo sobre los 5 estilos?",
+      "options": [
+        "Colaborar es siempre la mejor estrategia en cualquier conflicto",
+        "Ningún estilo es bueno o malo en sí mismo; lo clave es ampliar el repertorio y ajustar al contexto",
+        "Lo ideal es usar un solo estilo dominante para ser coherente",
+        "Competir debe evitarse en todos los casos por dañar las relaciones"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La idea central es que los 5 estilos son herramientas: ninguno es bueno o malo por sí mismo. Conocer tu estilo dominante revela tu ceguera, y un repertorio amplio te permite ajustarte a cada situación.",
+      "feedbackKo": "Incorrecto. El mensaje clave del módulo es que ningún estilo es bueno o malo en sí mismo. Lo valioso es ampliar tu repertorio y elegir según el contexto, no aferrarte a uno solo.",
+      "points": 10,
+      "difficulty": "fácil"
+    }
+  ]
+}

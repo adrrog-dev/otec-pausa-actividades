@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>El cliente difícil del retail: una conversación que no puede esperar — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "El cliente difícil del retail: una conversación que no puede esperar",
+  "intro": "Eres Marcela, supervisora de tienda en un mall de Las Condes. Recibes una queja escrita de un cliente VIP que asegura que tu vendedora Camila 'fue irrespetuosa'. Camila, tu mejor vendedora del semestre, llega llorando a la oficina diciendo que el cliente la maltrató primero. Tienes 30 minutos antes de tu próxima reunión. Cada decisión que tomes afectará el resultado de la conversación. Aplica DESC, escucha activa y lenguaje yo.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Camila entra a tu oficina visiblemente afectada y con lágrimas. Apenas se sienta. Es el primer minuto de la conversación. ¿Cómo abres?",
+      "options": [
+        {
+          "text": "\"Camila, necesito que me expliques qué hiciste para que un cliente VIP se quejara por escrito.\"",
+          "outcome": "Camila se cierra de inmediato y responde a la defensiva: 'Yo no hice nada, él me trató pésimo'. La conversación parte desde la acusación.",
+          "feedback": "Usaste 'lenguaje tú' y un sesgo de atribución (asumes que ella causó el problema). Esto activa la defensa y bloquea la escucha. En conversaciones difíciles, abrir con culpa escala el conflicto.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "\"Veo que estás muy afectada. Antes de revisar nada, quiero escuchar de ti qué pasó. Tómate tu tiempo.\"",
+          "outcome": "Camila respira, baja los hombros y comienza a relatar la situación con más calma. Se siente escuchada, no juzgada.",
+          "feedback": "Excelente. Aplicaste escucha activa nivel 3: validaste la emoción antes de pedir contenido. Esto baja la activación emocional y abre el diálogo. Además, neutralizaste el sesgo de atribución al no asumir culpa.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "\"No te preocupes, seguro fue culpa del cliente, los VIP son insoportables. Sigamos atendiendo.\"",
+          "outcome": "Camila se calma momentáneamente, pero la queja escrita queda sin abordar. El tema reaparecerá y la confianza con el cliente VIP se deteriora.",
+          "feedback": "Validar es bueno, pero tomar partido sin información es un sesgo de confirmación (das por cierto lo que quieres creer). Evitar la conversación no la resuelve: solo la posterga.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Camila te cuenta su versión: el cliente le levantó la voz y ella respondió 'con firmeza'. Tú tienes la queja escrita frente a ti, que dice algo distinto. Necesitas abordar la conducta sin que se sienta atacada. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Aplicas DESC: \"Cuando un cliente se va molesto y lo deja por escrito (Describir), me preocupa el impacto en la tienda (Expresar). Me gustaría que revisemos juntas cómo manejar estos casos (Solicitar), para que esto no afecte tu evaluación (Consecuencias).\"",
+          "outcome": "Camila asiente. Reconoce que pudo responder distinto y se muestra dispuesta a revisar el protocolo. La conversación avanza hacia soluciones.",
+          "feedback": "Muy bien. Usaste el modelo DESC completo describiendo hechos, no juicios. El 'lenguaje yo' ('me preocupa', 'me gustaría') transformó la acusación en información. Esto invita a colaborar, no a defenderse.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Le lees la queja en voz alta, palabra por palabra, para que entienda la gravedad.",
+          "outcome": "Camila se siente expuesta y vuelve a la defensiva. Interpreta que ya tomaste partido por el cliente y deja de aportar información útil.",
+          "feedback": "Confrontar con el documento sin contexto activa el sesgo de anclaje (la queja se vuelve la única verdad). Falta el componente 'Expresar' y 'Solicitar' del DESC. Los hechos importan, pero la forma de presentarlos define si hay acuerdo.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Reformulas lo que ella dijo: \"Entonces, si entiendo bien, sentiste que el cliente te faltó el respeto primero y respondiste para defenderte. ¿Es así?\"",
+          "outcome": "Camila confirma y agrega detalles que no había mencionado. Se siente comprendida y empieza a reconocer por sí misma que su respuesta fue elevada.",
+          "feedback": "Buena escucha nivel 3: reformulaste contenido y chequeaste comprensión. La reformulación ayuda a que la persona escuche su propia versión y baje defensas. Te falta aún cerrar con una solicitud concreta (DESC), pero vas bien encaminada.",
+          "score": 0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Quedan 10 minutos antes de tu reunión. Camila está más tranquila y dispuesta a conversar. Debes cerrar con un acuerdo y, además, decidir qué harás con el cliente VIP. ¿Cómo cierras?",
+      "options": [
+        {
+          "text": "Acuerdan juntas pasos concretos: revisar el protocolo de clientes difíciles, y tú respondes al cliente VIP investigando ambas versiones antes de concluir.",
+          "outcome": "Camila se va aliviada y comprometida. Tú abordas la queja con criterio, sin condenar ni encubrir. La situación se resuelve sin escalamiento y la confianza del equipo se fortalece.",
+          "feedback": "Cierre profesional. Acordaste consecuencias (la 'C' del DESC) de forma colaborativa y neutralizaste el error fundamental de atribución al investigar ambas versiones. Resolviste sin escalar y cuidaste tanto a la trabajadora como al cliente.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Le dices que confías en ella y que cierres tú misma el tema respondiendo al cliente que se equivocó.",
+          "outcome": "Camila queda agradecida, pero el cliente VIP recibe una respuesta defensiva y presenta un reclamo formal a la gerencia. El conflicto escala hacia arriba.",
+          "feedback": "Defender al equipo sin verificar es sesgo de confirmación y lealtad mal entendida. Resolver una conversación difícil incluye gestionar a todas las partes con criterio, no solo a quien tienes enfrente.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Le pides que escriba su versión por correo y le dices que lo verán 'cuando haya tiempo'.",
+          "outcome": "Camila se va sin claridad. El tema queda abierto, la queja del cliente sin respuesta y la incertidumbre genera ansiedad en el equipo.",
+          "feedback": "Evitaste el cierre. Las conversaciones difíciles necesitan un acuerdo concreto, aunque sea preliminar. Postergar sin compromiso deja el conflicto latente y suele empeorarlo.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso muestra que una conversación difícil bien conducida sigue una secuencia clara: primero validar la emoción y escuchar (escucha activa nivel 3), luego abordar la conducta con hechos y lenguaje yo mediante el modelo DESC, y finalmente cerrar con acuerdos concretos. Los mejores resultados se obtienen cuando se evita asumir culpa anticipadamente (sesgo de atribución), cuando no se toma partido sin información (sesgo de confirmación) y cuando se gestiona a todas las partes involucradas, no solo a quien se tiene al frente. Recuerda: escuchar no es esperar tu turno para hablar, y DESC es un guion que adaptas, no un libreto que recitas. La causa más frecuente de que 'el otro no entienda' suele estar en nuestros propios sesgos. Te invitamos a aplicar esta misma estructura en una conversación pendiente de tu equipo, practicándola en voz alta antes de tenerla."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+  "title": "Mediar o derivar: el caso de Mariela y Hugo (Ley Karin)",
+  "intro": "Eres la encargada de Personas de una empresa industrial en Talcahuano. Llevas 2 meses en el cargo y reportas directamente al Gerente General. Mariela, operaria con 3 meses en la empresa, te pide una reunión confidencial. Te cuenta que su supervisor directo, Hugo —15 años en la empresa y muy valorado por la gerencia—, le ha hecho comentarios sobre su cuerpo y la invita 'casualmente' a salir después del turno. Tiene miedo de represalias y duda si está exagerando. Tus decisiones definirán si proteges a la trabajadora y cumples la Ley 21.643. Nota: este caso puede activar experiencias personales; tómate el tiempo que necesites.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Mariela termina su relato. Está nerviosa y te pide que 'no hagas un escándalo'. ¿Cómo defines el primer paso?",
+      "options": [
+        {
+          "text": "Proponer una reunión de mediación entre Mariela y Hugo para que 'aclaren el malentendido'.",
+          "outcome": "Citas a ambos a una reunión conjunta. Mariela se siente expuesta y desprotegida frente a quien tiene poder sobre ella.",
+          "feedback": "Incorrecto. Los hechos relatados configuran posible acoso sexual y existe un evidente desbalance de poder (supervisor sobre subordinada). La Ley 21.643 (Ley Karin) prohíbe mediar este tipo de casos: requieren derivación al procedimiento formal de denuncia. Mediar aquí revictimiza y genera responsabilidad para la empresa.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Reconocer que los hechos podrían constituir acoso sexual y activar el protocolo de denuncia formal (Ley Karin).",
+          "outcome": "Validas el relato de Mariela, le explicas con calma que existe un canal formal y que ella no está exagerando. Le aseguras confidencialidad y resguardo.",
+          "feedback": "Correcto. Cuando hay posible acoso sexual, acoso laboral o violencia, y existe desbalance jerárquico, NO corresponde mediación interna: corresponde derivación obligatoria al procedimiento formal de la Ley 21.643. Reconocer esto es propio de un profesional senior.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Pedirle que lo piense unos días y que vuelva si 'la situación se repite'.",
+          "outcome": "Mariela se va sin respuesta. El plazo de actuación corre y la empresa queda en riesgo de incumplimiento.",
+          "feedback": "Incorrecto. Una vez recibido el reporte, existe deber de actuar dentro de plazos acotados. Dejar pasar el tiempo expone a la trabajadora y a la empresa a responsabilidad. El silencio no es neutralidad.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Has decidido cómo encuadrar el caso. Ahora debes definir las medidas inmediatas en las próximas 24 horas para proteger a Mariela.",
+      "options": [
+        {
+          "text": "Hablar informalmente con Hugo para 'escuchar su versión' antes de formalizar nada.",
+          "outcome": "Hugo se entera del reporte de forma anticipada. El ambiente se tensa y Mariela teme represalias inmediatas.",
+          "feedback": "Incorrecto. Adelantar el aviso al denunciado fuera del procedimiento formal compromete la investigación, vulnera la confidencialidad y expone a la denunciante. En las primeras 24 horas no debes confrontar a Hugo por tu cuenta.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Documentar el relato por escrito, resguardar confidencialidad y evaluar medidas de resguardo (separar funciones o turnos) sin exponer a Mariela.",
+          "outcome": "Registras los hechos con respeto, proteges la identidad de Mariela y propones medidas de resguardo provisionales conforme al protocolo.",
+          "feedback": "Correcto. La Ley Karin obliga a adoptar medidas de resguardo dentro de plazos breves para evitar exposición y represalias, manteniendo la confidencialidad. Documentar es clave: si no queda registro, no existió.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Comentar el caso con la jefatura de Hugo para que 'lo tenga en cuenta'.",
+          "outcome": "La información circula por canales no formales y llega a personas que no deben conocerla. Se rompe la confidencialidad.",
+          "feedback": "Incorrecto. Difundir el caso fuera del canal formal vulnera la confidencialidad y la protección de la trabajadora. La información solo debe fluir por el procedimiento establecido en la Ley 21.643.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Debes reportar el caso al Gerente General, a quien reportas directamente. ¿Cómo lo haces?",
+      "options": [
+        {
+          "text": "Enviar un correo formal indicando que se recibió un reporte que activa protocolo Ley Karin, sin exponer la identidad ni detalles sensibles de la trabajadora.",
+          "outcome": "El Gerente General queda informado del riesgo y de la activación del procedimiento, sin acceder a datos que vulneren a Mariela.",
+          "feedback": "Correcto. El reporte debe ser formal, breve y reservado: comunica la activación del protocolo y la necesidad de resguardos, protegiendo la identidad de la denunciante. Recuerda que el procedimiento debe ser validado por asesoría laboral.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Detallar nombres, hora del relato y todo lo conversado, con copia a otras jefaturas para 'transparencia'.",
+          "outcome": "La identidad de Mariela queda expuesta a múltiples destinatarios. Se vulnera la confidencialidad y aumenta el riesgo de represalias.",
+          "feedback": "Incorrecto. La transparencia no significa difundir datos sensibles. El principio rector es confidencialidad y acceso restringido. Compartir el caso con jefaturas no involucradas vulnera a la trabajadora.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "No informar al Gerente General para 'no involucrarlo' y manejarlo sola.",
+          "outcome": "El caso queda sin respaldo institucional ni trazabilidad. Si escala, la empresa no podrá demostrar que actuó conforme a la ley.",
+          "feedback": "Incorrecto. El procedimiento Ley Karin requiere trazabilidad y respaldo institucional. Informar por el canal correcto, con la debida reserva, es parte del cumplimiento. Manejarlo en solitario expone a todos.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso ilustra una regla central del Módulo 5: no siempre mediar es la respuesta correcta. Cuando los hechos pueden constituir acoso sexual, acoso laboral o violencia, y existe desbalance de poder, la Ley 21.643 (Ley Karin) exige derivación obligatoria al procedimiento formal, no mediación interna. Las decisiones acertadas comparten tres pilares: reconocer la naturaleza crítica del caso, proteger a la trabajadora con medidas de resguardo y confidencialidad dentro de los plazos, y dejar registro documentado con reporte formal y reservado a la instancia que corresponde. Recuerda: la neutralidad no es indiferencia ni silencio; es estructura. Y toda actuación debe quedar por escrito, porque si no queda registro, no existió. Importante: este material es formativo y el protocolo concreto de cada empresa debe ser validado por asesoría laboral antes de su aplicación."
+}

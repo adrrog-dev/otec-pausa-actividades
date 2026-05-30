@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Negociación de Salario Interno: El Caso de Pedro — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Negociación de Salario Interno: El Caso de Pedro",
+  "intro": "Pedro es ingeniero senior en una empresa minera del norte de Chile. Lleva 4 años sin aumento real (solo reajuste por IPC) y acaba de recibir una oferta de la competencia por un 25% más de sueldo. Pedro quiere quedarse, pero necesita sentir reconocimiento. Hoy tiene una reunión con su jefa, Carolina, quien tiene presupuesto limitado porque la empresa congeló aumentos por 6 meses. Usted tomará el rol de Pedro y deberá aplicar el método Harvard: enfocarse en intereses, no en posiciones, y usar bien su BATNA. Cada decisión tendrá consecuencias.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Antes de la reunión, Pedro debe preparar su estrategia. Sabe que tiene una oferta externa por 25% más (su BATNA). ¿Cómo enfoca su preparación?",
+      "options": [
+        {
+          "text": "Definir su interés real (reconocimiento y desarrollo) y su BATNA concreto, sin fijar de inmediato una sola cifra.",
+          "outcome": "Pedro llega a la reunión con claridad: sabe qué necesidad quiere cubrir y cuál es su mejor alternativa si no hay acuerdo.",
+          "feedback": "Correcto. Preparar el interés real y conocer el BATNA es el corazón del método Harvard. Un BATNA fuerte da poder real sin necesidad de amenazar.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Decidir que pedirá exactamente un 25% de aumento y no aceptará menos.",
+          "outcome": "Pedro entra rígido, anclado a una sola posición, sin haber explorado qué necesita realmente ni qué puede ofrecer la empresa.",
+          "feedback": "Riesgo alto. Confundir una cifra con el interés real cierra opciones de valor mutuo. Las posiciones discuten; los intereses negocian.",
+          "score": -0.5,
+          "next": 2
+        },
+        {
+          "text": "No preparar nada y confiar en que la oferta externa hablará por sí sola.",
+          "outcome": "Pedro improvisa y se queda sin argumentos cuando Carolina le pide fundamentar su solicitud.",
+          "feedback": "Error. Sin preparación no hay BATNA claro ni criterios objetivos. La fase de preparación es la más importante de las 4 fases.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "En la reunión, Carolina dice: 'Pedro, te valoro mucho, pero la empresa congeló los aumentos por 6 meses. No puedo darte el 25%.' ¿Cómo responde Pedro?",
+      "options": [
+        {
+          "text": "Separar a la persona del problema y preguntar por los intereses de ella: '¿Qué te preocupa del presupuesto y qué sí estaría dentro de tus posibilidades?'",
+          "outcome": "Carolina baja la guardia y explica el contexto real: hay margen en bonos, capacitación y revisión a los 6 meses, aunque no en sueldo base ahora.",
+          "feedback": "Excelente. Usar las 5 preguntas y separar la persona del problema abre la Zona de Posible Acuerdo (ZOPA). Ahora aparecen opciones que no estaban sobre la mesa.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Poner sobre la mesa la oferta externa como amenaza: 'Si no me suben, me voy a la competencia.'",
+          "outcome": "Carolina se pone a la defensiva. La conversación se tensa y se vuelve un pulso de poder en lugar de una búsqueda de acuerdo.",
+          "feedback": "Riesgo. Usar el BATNA como amenaza directa daña la relación. El BATNA da poder, pero conviene mencionarlo como información, no como ultimátum.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Aceptar de inmediato que no hay nada que hacer y cerrar la conversación.",
+          "outcome": "Pedro se rinde antes de explorar opciones. Sale frustrado y la oferta externa empieza a verse más atractiva por descarte.",
+          "feedback": "Error. Aceptar la primera negativa sin explorar intereses ni opciones desperdicia toda la ZOPA posible. Siempre conviene indagar antes de ceder.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Carolina ofrece un bono de retención y revisión salarial en 6 meses, pero sin aumento de sueldo base ahora. La oferta externa de Pedro vence en 2 semanas. ¿Qué hace?",
+      "options": [
+        {
+          "text": "Proponer opciones de valor mutuo basadas en criterios objetivos: bono ahora + compromiso escrito de revisión en 6 meses con metas claras + capacitación.",
+          "outcome": "Ambos llegan a un acuerdo concreto y verificable. Carolina retiene talento y Pedro obtiene reconocimiento real y una ruta de desarrollo.",
+          "feedback": "Muy bien. Generar opciones y apoyarse en criterios objetivos produce un acuerdo que ambos pueden cumplir en 6 meses. Eso es una buena negociación.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Aceptar verbalmente el compromiso de revisión, sin nada por escrito ni metas definidas.",
+          "outcome": "Pedro se queda, pero a los 6 meses el compromiso es difuso y no se cumple como esperaba. Vuelve la frustración.",
+          "feedback": "Parcial. Faltó concretar criterios objetivos y dejar el acuerdo por escrito. Un buen acuerdo debe poder cumplirse y verificarse en el plazo definido.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Rechazar todo y tomar la oferta externa sin más conversación.",
+          "outcome": "Pedro ejecuta su BATNA, pero sin haber comparado realmente las opciones internas que ya estaban disponibles.",
+          "feedback": "Riesgo. Ejecutar el BATNA es válido, pero conviene hacerlo tras comparar con la ZOPA real, no por impulso. La decisión debe ser informada.",
+          "score": -0.3,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso muestra que negociar bien no es ganar imponiendo una cifra, sino construir un acuerdo que ambas partes puedan cumplir. Los aprendizajes clave: (1) Preparar antes de negociar, conociendo su interés real y su BATNA. (2) Separar a la persona del problema y usar las 5 preguntas para descubrir los intereses del otro. (3) Generar opciones de valor mutuo apoyadas en criterios objetivos. (4) Dejar el acuerdo por escrito y verificable. Recuerde: las posiciones discuten, los intereses negocian. Un BATNA fuerte da poder real, pero usarlo como amenaza daña la relación. La meta no es 'yo gano', sino que ambos puedan cumplir el acuerdo en 6 meses. Le recomendamos completar la Matriz de Preparación de Negociación con un caso propio para fijar lo aprendido."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

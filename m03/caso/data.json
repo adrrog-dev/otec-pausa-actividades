@@ -1,0 +1,88 @@
+{
+  "title": "La fusión de áreas: tu turno de decidir",
+  "intro": "Eres Carolina, jefa de Logística (3 años en la empresa) en una compañía de servicios de Antofagasta. La gerencia acaba de anunciar la fusión de Operaciones y Logística por reducción de costos. Tú y Rodrigo, jefe de Operaciones (12 años, estilo dominante 'competir'), deben acordar en 2 semanas quién dirigirá la nueva área. En la primera reunión, Rodrigo te interrumpió varias veces y tú terminaste guardando silencio. Tu estilo dominante es 'colaborar', pero hoy se está pareciendo más a 'ceder'. Cada decisión que tomes tendrá consecuencias. Aplica el modelo Thomas-Kilmann y el 'test de los 5 ejes'.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Segunda reunión con Rodrigo. Apenas planteas tu propuesta de estructura para la nueva área, él te interrumpe: 'Carolina, con todo respeto, yo llevo 12 años acá y conozco esto mejor que nadie. Esto lo dirijo yo'. El resto del equipo observa. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Asientes y dices 'tienes más experiencia, me parece bien que lideres tú'.",
+          "outcome": "Rodrigo asume el control de la reunión. Sales sin haber expuesto tus ideas y con la sensación de haber regalado tu posición.",
+          "feedback": "Estás usando 'ceder' (baja asertividad, alta cooperación). El problema no es ceder en sí, sino hacerlo por defecto cuando el tema es importante para ti y para la organización. Ceder es funcional cuando el asunto te importa poco o quieres preservar la relación en algo menor. Aquí el costo es alto: pierdes voz en una decisión estructural.",
+          "score": -0.7,
+          "next": 2
+        },
+        {
+          "text": "Le respondes con calma: 'Rodrigo, valoro tu experiencia. Te pido que terminemos de escuchar ambas propuestas antes de decidir; la gerencia nos pidió un acuerdo, no una imposición'.",
+          "outcome": "Rodrigo baja un poco el tono. La conversación se reordena y logras exponer tu propuesta completa frente al equipo.",
+          "feedback": "Estás flexibilizando hacia 'colaborar' con un piso de asertividad sano. Reconoces la relación y la experiencia del otro, pero defiendes tu derecho a participar. Esto es exactamente sostener 'colaborar' sin caer en 'ceder': cooperación alta, pero asertividad presente.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Le respondes tajante: 'Los años no te hacen mejor líder. Yo debería dirigir esto y punto'.",
+          "outcome": "La reunión se tensa, Rodrigo se cierra por completo y el equipo se incomoda. El conflicto escala y ambos quedan en posiciones rígidas.",
+          "feedback": "Pasaste a 'competir' (alta asertividad, baja cooperación). Competir es útil cuando hay urgencia real, decisiones impopulares necesarias o riesgo de seguridad. Pero aquí necesitas construir una relación de trabajo a largo plazo: competir destruye el puente que vas a necesitar mañana.",
+          "score": -0.4,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Quedan 8 días. RRHH te llama: 'Supimos que las reuniones con Rodrigo no están funcionando. ¿Cómo lo ves?'. Es tu oportunidad de actuar sobre el proceso, no solo sobre la pelea. ¿Qué decides?",
+      "options": [
+        {
+          "text": "Te quejas de Rodrigo: 'Es imposible, me interrumpe y no escucha. Que decidan ustedes'.",
+          "outcome": "RRHH toma nota, pero quedas posicionada como alguien que delega el problema hacia arriba en vez de gestionarlo.",
+          "feedback": "Esto combina 'evitar' (sacarte el problema de encima) con desahogo. Evitar es legítimo cuando el tema es menor o necesitas enfriar emociones, pero usarlo en una decisión clave y delegarla a un tercero debilita tu rol de jefatura.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Propones a RRHH una reunión facilitada con reglas claras: turnos de palabra y una agenda con criterios objetivos para decidir la dirección del área.",
+          "outcome": "RRHH acepta y coordina la sesión. Por primera vez la conversación con Rodrigo se da en un marco ordenado y profesional.",
+          "feedback": "Excelente uso del 'test de los 5 ejes': el tema es muy importante, la relación también, hay poder asimétrico y poco tiempo. Crear estructura para colaborar es la jugada madura: no eliminas el conflicto, le das un cauce que permite avanzar.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Dices que prefieres resolverlo directamente con Rodrigo sin intervención de RRHH.",
+          "outcome": "RRHH respeta tu decisión. Es una apuesta: depende de que la dinámica con Rodrigo realmente cambie en los próximos días.",
+          "feedback": "Defender la autonomía es válido y muestra asertividad. Sin embargo, dada la asimetría de poder y el patrón de interrupciones ya visto, rechazar un apoyo neutral puede dejarte nuevamente en desventaja. No es un error grave, pero subestima los ejes 'poder' y 'tiempo'.",
+          "score": 0.2,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Última semana. En la sesión, Rodrigo propone una salida: 'Dividamos. Yo dirijo la parte operativa y tú la logística, cada uno con su equipo'. Es cómodo, pero la gerencia pidió un área integrada con un solo liderazgo para reducir costos. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Aceptas de inmediato: 'Perfecto, así cada uno mantiene lo suyo'.",
+          "outcome": "Presentan la propuesta a gerencia, que la rechaza porque no cumple el objetivo de integración ni el ahorro buscado. Vuelven al punto de partida con menos tiempo.",
+          "feedback": "Esto es 'transigir' mal aplicado: un acuerdo intermedio que deja a todos a medias y, peor aún, incumple el objetivo real de la organización. Transigir sirve cuando el tiempo apremia y ambas partes ceden algo razonable, pero no puede ignorar el mandato del cliente interno.",
+          "score": -0.6,
+          "next": null
+        },
+        {
+          "text": "Reconoces el espíritu de su propuesta y reencuadras: 'Me gusta que pienses en estructura. ¿Y si diseñamos un único modelo donde uno lidere el área y el otro co-lidere un eje crítico con peso real en decisiones?'.",
+          "outcome": "Rodrigo se interesa. Construyen juntos una propuesta integrada que cumple el objetivo de gerencia y reparte responsabilidad de forma equilibrada. La gerencia la aprueba.",
+          "feedback": "Esto es 'colaborar' en su mejor versión: tomas lo valioso de la idea del otro, no cedes en el objetivo de fondo y creas una solución que suma. Requiere tiempo y energía, por eso no siempre es la mejor opción, pero aquí —decisión estructural, relación de largo plazo, mandato claro— sí lo era.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Le dices que su propuesta no sirve porque la gerencia ya pidió integración, y planteas que tú deberías liderar todo.",
+          "outcome": "Rodrigo se molesta y la sesión termina sin acuerdo. Llegan al plazo sin una propuesta conjunta y la gerencia decide por ambos.",
+          "feedback": "Tienes razón en el dato (la división incumple el objetivo), pero vuelves a 'competir' y pierdes la oportunidad de construir. Tener la razón no basta: si no traes al otro contigo, el conflicto escala y la decisión se te escapa de las manos.",
+          "score": -0.3,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso ilustra el aprendizaje central del Módulo 3: ningún estilo es bueno o malo en sí mismo; lo decisivo es elegir el estilo según el contexto. Tu estilo dominante ('colaborar') es valioso, pero bajo presión puede degradarse hacia 'ceder' —perdiendo voz— o sobrecorregir hacia 'competir' —rompiendo la relación. Las decisiones de mayor puntaje compartían tres cosas: asertividad presente (defendías tu lugar), cooperación genuina (reconocías al otro) y uso del 'test de los 5 ejes' para leer la situación (tema muy importante, relación de largo plazo, poder asimétrico y plazo acotado). La lección práctica: amplía tu repertorio. Aprende a sostener 'colaborar' poniendo estructura al conflicto (reglas, agenda, facilitación) en vez de simplemente ser amable, y reserva 'ceder', 'evitar', 'transigir' y 'competir' para los momentos en que el contexto realmente los justifica. Te invitamos a completar el autodiagnóstico TKI del curso para identificar tu estilo dominante y tus puntos ciegos."
+}

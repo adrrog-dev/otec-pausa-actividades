@@ -1,0 +1,88 @@
+{
+  "title": "Caso Integrador: Tres Conflictos en una Semana",
+  "intro": "Eres Subgerente de Operaciones de una empresa de servicios financieros en Santiago (250 trabajadores). En una sola semana llegan a tu escritorio tres situaciones distintas. Cada decisión que tomes tendrá consecuencias. Aplica lo aprendido en los 6 módulos: diagnostica, decide si mediar, derivar o intervenir, y define tu primera acción concreta. Recuerda que no todas las situaciones se resuelven igual.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Sofía, analista junior, te pide una reunión confidencial. Te cuenta que Rodrigo, líder técnico, le hizo comentarios sobre su apariencia frente a otros dos colegas en una reunión. Está incómoda y no sabe qué hacer. ¿Cuál es tu primera acción?",
+      "options": [
+        {
+          "text": "Convocar a Sofía y Rodrigo a una mediación para que aclaren el malentendido.",
+          "outcome": "Rodrigo se siente acusado, Sofía revictimizada. La situación escala y se cuestiona tu manejo del caso.",
+          "feedback": "Incorrecto. Este caso involucra un posible acoso con desbalance jerárquico (líder técnico vs. analista junior). No corresponde mediar entre pares. Debe activarse el protocolo conforme a la Ley Karin.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Resguardar a Sofía, documentar el relato por escrito y derivar de inmediato según el protocolo Ley Karin de la empresa.",
+          "outcome": "Sofía se siente respaldada. El proceso queda formalizado y trazable. Cumples tu rol sin convertirte en juez del caso.",
+          "feedback": "Correcto. Ante un posible acoso con desbalance de poder, lo primero es resguardar a la persona afectada, documentar y derivar al canal formal. No se media internamente. Este es el manejo que exige el protocolo.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Hablar primero con Rodrigo para escuchar su versión antes de actuar.",
+          "outcome": "Rodrigo se entera de la denuncia antes de que exista resguardo, lo que pone en riesgo a Sofía y la integridad del proceso.",
+          "feedback": "Incorrecto. Indagar con el denunciado como primer paso desprotege a la afectada y puede comprometer la investigación. Primero se resguarda y se deriva por el canal formal.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Carla (jefa de Cobranzas, 8 años) reporta que Andrés (jefe de Riesgo, 2 años) no responde sus correos hace un mes y tiene 12 casos detenidos. Andrés dice que Carla lo presiona con plazos imposibles. Hay tensión, pero ambos son pares y no hay denuncia ni riesgo. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Asumir que Andrés ignora a Carla por desinterés y llamarle la atención directamente.",
+          "outcome": "Andrés se defiende, la relación entre ambos empeora y tú pierdes la oportunidad de entender el problema real de fondo.",
+          "feedback": "Incorrecto. Aquí opera el error fundamental de atribución: explicas la conducta de Andrés por su carácter en vez de por la situación (sobrecarga, plazos). Indaga antes de juzgar.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Citar a ambos a una mediación facilitada por ti, separando posiciones de intereses (plazos vs. carga de trabajo).",
+          "outcome": "Ambos exponen sus intereses reales. Acuerdan un flujo de priorización de casos. Los 12 pendientes empiezan a moverse.",
+          "feedback": "Correcto. Es un conflicto de tarea entre pares, sin desbalance ni riesgo: corresponde mediar. Pasar de posiciones a intereses (modelo Harvard) destraba el problema. El estilo colaborar/transigir es adecuado.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "No intervenir y esperar que lo resuelvan entre ellos, ya que son jefaturas con experiencia.",
+          "outcome": "El silencio se prolonga, los 12 casos siguen detenidos y el conflicto empieza a contaminar a ambos equipos.",
+          "feedback": "Incorrecto. Según Glasl, dejar correr un conflicto de tarea puede escalarlo a un conflicto de relación. El estilo 'evitar' aquí solo agrava el costo de resolverlo después.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El equipo de Operaciones lleva tres reuniones de planificación trimestral sin acordar prioridades. El tono es cordial, pero no avanzan y se acerca la fecha de entrega. ¿Cómo lo abordas?",
+      "options": [
+        {
+          "text": "Dejar que sigan deliberando hasta lograr consenso pleno entre todos.",
+          "outcome": "Llega la fecha límite sin plan trimestral. El equipo entra en modo apuro y la calidad de la planificación se resiente.",
+          "feedback": "Incorrecto. Buscar consenso perfecto cuando el tiempo apremia bloquea la decisión. Con plazo crítico conviene transigir o que la jefatura defina, no esperar acuerdo total.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Como Subgerente, facilitar una sesión con criterios objetivos de priorización y, si no hay acuerdo, definir tú las prioridades para cumplir el plazo.",
+          "outcome": "El equipo prioriza con criterios claros. Donde no hay acuerdo, tu decisión destraba y el plan queda listo a tiempo.",
+          "feedback": "Correcto. Es un conflicto de tarea de baja intensidad pero con restricción de tiempo. Intervenir con criterios objetivos y, de ser necesario, transigir/decidir, es el estilo Thomas-Kilmann adecuado.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Imponer de inmediato tu lista de prioridades sin escuchar al equipo.",
+          "outcome": "Cumples el plazo, pero el equipo siente que su análisis fue ignorado y baja el compromiso con el plan.",
+          "feedback": "Parcialmente correcto. La urgencia justifica decidir, pero saltarte la escucha activa resta legitimidad y compromiso. Primero criterios y participación, luego definición si no hay acuerdo.",
+          "score": 0,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Has cerrado el caso integrador aplicando los 6 módulos. La clave del aprendizaje es que no todos los conflictos se gestionan igual: el caso de Sofía exige derivar (riesgo y desbalance de poder, protocolo Ley Karin); el de Carla y Andrés se presta para mediar (conflicto de tarea entre pares, modelo Harvard de posiciones e intereses); y el del equipo requiere que intervengas como Subgerente con criterios objetivos y decisión oportuna por restricción de tiempo. Recuerda vigilar tus propios sesgos, especialmente el error fundamental de atribución, que te lleva a explicar la conducta ajena por el carácter en vez de la situación. Diagnosticar bien la fase del conflicto (Glasl) y elegir entre mediar, derivar o intervenir es lo que distingue a una jefatura que previene escaladas de una que las provoca. Si no apruebas la evaluación final tras dos intentos, recuerda que tienes derecho a una tutoría 1:1 de una hora con el relator. Este material es de carácter formativo y no reemplaza la asesoría legal especializada que cada empresa debe procurar para la aplicación de sus protocolos internos."
+}
