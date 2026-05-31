@@ -1,0 +1,115 @@
+{
+  "title": "Una denuncia llega a tus manos: decisiones bajo la Ley Karin",
+  "intro": "Eres jefatura de Recursos Humanos en una empresa de servicios de aseo industrial en Maipú con 42 trabajadores. Es lunes 15 de septiembre de 2024. Una operaria se acerca a tu oficina y te entrega una carta: denuncia que su supervisor directo la trata con gritos, le asigna las peores rutas como castigo cuando no acepta invitaciones a tomar café fuera de horario y, en dos ocasiones, le tocó la espalda baja al pasar. Estás en plena preparación de una fiscalización del SII. Lo que decidas ahora determina el cumplimiento de la Ley 21.643.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "La operaria está frente a ti, visiblemente afectada, y te entrega la carta de denuncia. Tienes la fiscalización del SII encima. ¿Qué haces en este primer momento?",
+      "options": [
+        {
+          "text": "Recibir la denuncia formalmente, registrar fecha y hora, y activar de inmediato el protocolo Ley Karin.",
+          "outcome": "Dejas constancia escrita de la recepción con fecha 15 de septiembre. Informas a la trabajadora sobre el procedimiento, sus derechos y las medidas de resguardo disponibles. El plazo legal comienza a correr correctamente desde hoy.",
+          "feedback": "Correcto. La Ley 21.643 obliga a actuar desde la recepción de la denuncia. Registrar la fecha es clave: desde ese día se cuentan los 3 días hábiles para derivar a la Dirección del Trabajo o iniciar la investigación interna.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Archivar la carta 'para verla con calma la próxima semana' porque la fiscalización del SII es prioridad.",
+          "outcome": "Guardas la carta en un cajón. Pasan los días y la denunciante, sin respuesta, reclama directamente en la Inspección del Trabajo 12 días después.",
+          "feedback": "Grave error. Esta es exactamente la falla del caso Karin Salgado que dio origen a la ley. Vulneraste el plazo de 3 días hábiles para derivar o investigar, exponiendo a la empresa a multas de 1 a 60 UTM por trabajador afectado.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Decirle que converse primero con su supervisor para 'aclarar el malentendido' antes de formalizar nada.",
+          "outcome": "La trabajadora se siente desprotegida y expuesta a represalias del supervisor denunciado. No registras la denuncia.",
+          "feedback": "Incorrecto y peligroso. Nunca se debe enfrentar a la persona denunciante con la denunciada. La ley exige confidencialidad y medidas de resguardo. Omitir el registro vulnera el plazo legal y agrava el riesgo.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Has decidido cómo manejar la recepción. Ahora debes definir el canal y el plazo. La empresa tiene 42 trabajadores y un protocolo interno básico. ¿Cómo procedes con la denuncia?",
+      "options": [
+        {
+          "text": "Dentro de 3 días hábiles, derivar la denuncia a la Dirección del Trabajo o iniciar la investigación interna según el protocolo del Reglamento Interno.",
+          "outcome": "Cumples el plazo legal. Adoptas medidas de resguardo inmediatas (separación de funciones, ajuste de turnos) para proteger a la denunciante mientras se investiga.",
+          "feedback": "Correcto. La ley fija 3 días hábiles para derivar o iniciar investigación, y permite medidas de resguardo desde el primer momento. La investigación tiene un máximo de 30 días hábiles.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Esperar a tener tiempo después de la fiscalización del SII; total, hay 30 días para investigar.",
+          "outcome": "Confundes los plazos. Dejas pasar más de 3 días hábiles sin derivar ni iniciar la investigación.",
+          "feedback": "Error de plazos. Los 30 días hábiles son para investigar, no para empezar. La derivación o inicio debe ocurrir dentro de 3 días hábiles. Confundir ambos plazos es uno de los puntos de fricción más comunes.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Iniciar la investigación interna y, además, cuidar de no superar los 30 días hábiles ni olvidar las medidas correctivas en 15 días.",
+          "outcome": "Tienes claro el mapa completo de plazos: 3 días para derivar/iniciar, 30 días hábiles de investigación y 15 días para aplicar medidas correctivas tras las conclusiones.",
+          "feedback": "Excelente. Dominas los tres plazos críticos de la Ley 21.643. Esta gestión ordenada protege a la persona y a la empresa.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Durante el análisis, debes clasificar las conductas denunciadas para encauzar correctamente la investigación. La carta describe: gritos reiterados, asignación de peores rutas como castigo y tocamientos en la espalda baja. ¿Cómo las calificas?",
+      "options": [
+        {
+          "text": "Reconozco que coexisten acoso laboral (gritos y castigos reiterados) y acoso sexual (tocamientos no consentidos), y los trato según corresponde.",
+          "outcome": "Calificas correctamente las conductas. La investigación abarca ambas dimensiones y se documenta cada hecho con su tipificación bajo la Ley Karin.",
+          "feedback": "Correcto. La Ley 21.643 cubre acoso laboral, acoso sexual y violencia en el trabajo. Una misma denuncia puede configurar más de una conducta y todas deben investigarse.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Lo trato todo como un 'conflicto interpersonal' menor entre jefatura y subordinada.",
+          "outcome": "Minimizas hechos que la ley considera graves, restando seriedad a la investigación.",
+          "feedback": "Incorrecto. Gritos reiterados y castigos configuran acoso laboral; los tocamientos no consentidos configuran acoso sexual. Calificarlo como 'conflicto' invisibiliza la gravedad y expone a la empresa.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Solo considero el acoso sexual por los tocamientos, dejando fuera los gritos y los castigos con las rutas.",
+          "outcome": "La investigación queda incompleta al ignorar el patrón de hostigamiento laboral.",
+          "feedback": "Parcialmente correcto, pero insuficiente. Los gritos reiterados y la asignación de peores rutas como represalia también configuran acoso laboral y deben investigarse en conjunto.",
+          "score": 0,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "La empresa presta servicios a un mandante en régimen de subcontratación. Te preguntas hasta dónde llega la responsabilidad y qué riesgo económico existe. ¿Cómo dimensionas el escenario?",
+      "options": [
+        {
+          "text": "Documento que el alcance cubre a la trabajadora y que el mandante puede ser solidariamente responsable; advierto el riesgo de multas de 1 a 60 UTM por trabajador afectado.",
+          "outcome": "Elaboras un informe de riesgo claro: cumplimiento de plazos, medidas de resguardo y exposición económica y reputacional. La empresa queda en posición de cumplir y mitigar.",
+          "feedback": "Correcto. La Ley Karin aplica a todo empleador sin importar dotación, cubre a dependientes, aprendices, practicantes y subcontratados, y el mandante puede tener responsabilidad solidaria. Las multas DT van de 1 a 60 UTM y pueden agravarse por reincidencia.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Asumo que como somos pyme de menos de 50 trabajadores la ley casi no nos aplica.",
+          "outcome": "Subestimas la obligación legal y no preparas a la empresa para una eventual fiscalización.",
+          "feedback": "Error. La Ley 21.643 aplica a TODO empleador, sin mínimo de dotación. No existe excepción por tamaño. Esta creencia es una de las brechas de cumplimiento más frecuentes.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Creo que el mandante no tiene nada que ver porque el supervisor es trabajador nuestro.",
+          "outcome": "Omites un riesgo legal relevante en la cadena de subcontratación.",
+          "feedback": "Incorrecto. En régimen de subcontratación, la empresa mandante puede ser solidariamente responsable por incumplimientos en materia de Ley Karin. Ignorarlo deja descubiertos a ambos actores.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso reproduce la situación real que dio origen a la Ley 21.643: una denuncia archivada 'para verla con calma' que terminó en una tragedia. La gestión correcta exige actuar desde el día de recepción, respetar los tres plazos críticos —3 días hábiles para derivar o iniciar, 30 días hábiles para investigar y 15 días para aplicar medidas correctivas—, calificar adecuadamente las conductas (que pueden ser acoso laboral, sexual o ambos) y reconocer que la ley aplica a todo empleador, incluso en subcontratación, con responsabilidad solidaria del mandante. Las multas van de 1 a 60 UTM por trabajador afectado y pueden agravarse por reincidencia. Si tu puntaje fue alto, demuestras dominio del marco legal y capacidad de proteger tanto a las personas como a la organización. Si fue bajo, repasa la clase 1.5 (plazos) y el caso 'La denuncia en la pyme de Maipú', poniendo especial atención a la diferencia entre días hábiles y días corridos."
+}

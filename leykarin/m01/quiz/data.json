@@ -1,0 +1,76 @@
+{
+  "title": "Quiz Ley Karin: Fundamentos legales de la Ley 21.643",
+  "intro": "Evalúa tus conocimientos sobre el marco legal de la Ley 21.643, sus obligaciones para los empleadores y los plazos legales clave. Cada pregunta tiene una sola respuesta correcta. ¡Éxito!",
+  "questions": [
+    {
+      "q": "¿En qué fecha entró en vigencia la Ley 21.643 (Ley Karin)?",
+      "options": [
+        "1 de enero de 2024",
+        "1 de marzo de 2024",
+        "1 de agosto de 2024",
+        "1 de agosto de 2023"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La Ley 21.643 rige para todo empleador chileno desde el 1 de agosto de 2024.",
+      "feedbackKo": "Incorrecto. La fecha correcta es el 1 de agosto de 2024, momento desde el cual la ley es exigible en fiscalizaciones reales.",
+      "points": 10,
+      "difficulty": "facil"
+    },
+    {
+      "q": "¿Cuál es el plazo máximo para que el empleador derive una denuncia a la Dirección del Trabajo o inicie la investigación interna?",
+      "options": [
+        "5 días corridos",
+        "3 días hábiles",
+        "10 días hábiles",
+        "30 días corridos"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El plazo para derivar o iniciar la investigación es de 3 días hábiles. Recuerda: son días hábiles, no corridos.",
+      "feedbackKo": "Incorrecto. El plazo es de 3 días hábiles. Es uno de los plazos críticos que toda jefatura debe memorizar.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "¿Cuál es el plazo máximo de investigación, ya sea interna o realizada por la Dirección del Trabajo?",
+      "options": [
+        "15 días hábiles",
+        "60 días corridos",
+        "30 días hábiles",
+        "90 días corridos"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La investigación tiene un plazo máximo de 30 días hábiles. Las medidas correctivas, en cambio, son a 15 días.",
+      "feedbackKo": "Incorrecto. El plazo de investigación es de 30 días hábiles. No confundir con los 15 días de medidas correctivas ni con los 3 días de derivación.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "El Convenio 190 de la OIT, ratificado por Chile, regula específicamente:",
+      "options": [
+        "Salud y seguridad en la minería",
+        "Violencia y acoso en el mundo del trabajo",
+        "Libertad sindical",
+        "Trabajo infantil"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El Convenio 190 (2019) es el primer instrumento internacional sobre violencia y acoso laboral y es la base internacional de la Ley Karin.",
+      "feedbackKo": "Incorrecto. El Convenio 190 OIT regula la violencia y el acoso en el mundo del trabajo, y es uno de los pilares internacionales de la Ley 21.643.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "Respecto del alcance de la Ley Karin, ¿cuál afirmación es correcta?",
+      "options": [
+        "Aplica solo a empresas con más de 10 trabajadores",
+        "Aplica únicamente al sector público",
+        "Aplica a todo empleador, sin mínimo de dotación, e incluye la responsabilidad solidaria del mandante en subcontratación",
+        "Aplica solo a contratos indefinidos"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La ley obliga a TODO empleador sin importar tamaño, y en subcontratación la empresa mandante puede ser solidariamente responsable.",
+      "feedbackKo": "Incorrecto. La Ley Karin aplica a todo empleador sin mínimo de dotación e incluye la responsabilidad solidaria del mandante en régimen de subcontratación.",
+      "points": 10,
+      "difficulty": "intermedio"
+    }
+  ]
+}

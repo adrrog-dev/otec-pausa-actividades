@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Viernes a las 17:30: una denuncia llega a tus manos — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Viernes a las 17:30: una denuncia llega a tus manos",
+  "intro": "Eres Verónica, jefa de la sucursal de Concepción de una empresa de servicios financieros. Son las 17:30 de un viernes y la oficina cierra a las 18:00. Paula, cajera de 24 años, entra llorando y te cuenta que el subgerente de operaciones, Cristián, le ha enviado mensajes de contenido sexual durante semanas y que intentó besarla en una cena de trabajo. Tiene capturas de pantalla. RR.HH. central en Santiago ya cerró hasta el lunes. Nunca has gestionado una denuncia Ley Karin. Cada decisión que tomes en los próximos 30 minutos puede fortalecer o invalidar la investigación.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Paula está frente a ti, angustiada. Lo primero que haces define el tono de toda la gestión. ¿Cómo recibes la denuncia?",
+      "options": [
+        {
+          "text": "La escuchas con calma, sin juzgar ni minimizar, le explicas que vas a registrar formalmente su relato y le aseguras confidencialidad.",
+          "outcome": "Paula baja la guardia, siente que la empresa la cuida y entrega su relato de forma ordenada. Inicias el acta de recepción.",
+          "feedback": "Correcto. La recepción debe hacerse con lenguaje no revictimizante, escucha activa y compromiso de confidencialidad. Este es el estándar de la Ley 21.643.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Le dices que se calme, que 'seguro es un malentendido' y que lo converse primero con Cristián antes de complicar las cosas.",
+          "outcome": "Paula se siente cuestionada y desconfía. Minimizaste un posible acoso y sugeriste un contacto directo con el denunciado, lo que la expone.",
+          "feedback": "Incorrecto y grave. Minimizar el relato es revictimizante y sugerir contacto con el denunciado pone en riesgo a la persona denunciante. Esto invalida la confianza y puede agravar la responsabilidad de la empresa.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Le pides que vuelva el lunes cuando esté abierto RR.HH. en Santiago, porque tú no sabes cómo manejar esto.",
+          "outcome": "Paula se va sin ser atendida. El canal de denuncia debe estar operativo en todo momento; postergar la recepción es un incumplimiento.",
+          "feedback": "Incorrecto. El canal debe ser accesible y operativo siempre. Como jefatura tienes el deber de recibir la denuncia y activar el protocolo, aunque RR.HH. central esté cerrado.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya recibiste el relato y Paula tiene capturas de WhatsApp como antecedentes. Debes documentar la denuncia antes de que cierre la oficina. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Levantas un acta de recepción con fecha, hora, relato textual y detalle de antecedentes; Paula la firma y resguardas las capturas con cadena de custodia.",
+          "outcome": "Queda registro formal con valor probatorio. Los antecedentes están protegidos y trazables.",
+          "feedback": "Correcto. El acta firmada, los antecedentes y la cadena de custodia son la base de una investigación sólida. La documentación correcta evita defectos de forma.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Anotas un resumen breve en un cuaderno personal y le devuelves el teléfono a Paula para que ella guarde las capturas.",
+          "outcome": "El registro es informal y los antecedentes quedan sin resguardo. La investigación podría caerse por defectos de forma.",
+          "feedback": "Incorrecto. La denuncia requiere acta formal y custodia de antecedentes. Un registro informal y la pérdida de evidencia debilitan todo el proceso.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Reenvías las capturas por correo a varios colegas de la sucursal para 'tener respaldo' antes de irte.",
+          "outcome": "Difundiste información sensible a personas sin rol en el proceso, vulnerando la confidencialidad.",
+          "feedback": "Incorrecto y sancionable. La confidencialidad es obligación legal. Compartir antecedentes con personal sin rol en la gestión puede ser sancionado por la Dirección del Trabajo.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El acta está lista. Cristián viaja a Concepción una vez al mes y podría coincidir con Paula. Debes aplicar medidas de resguardo inmediato. ¿Qué decides?",
+      "options": [
+        {
+          "text": "Ofreces a Paula medidas de separación (cambio de turno, teletrabajo o reasignación temporal) manteniendo su remuneración, y lo comunicas por escrito.",
+          "outcome": "Paula queda protegida sin perder ingresos. Las medidas quedan formalizadas y son proporcionales al caso.",
+          "feedback": "Correcto. Las medidas de resguardo son obligación inmediata, no un favor. Deben ser proporcionales, comunicadas formalmente y nunca afectar la remuneración de la persona denunciante.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Trasladas a Paula a otra ciudad sin consultarle, para evitar que se crucen.",
+          "outcome": "Paula siente que es ella la castigada por denunciar. Una medida así, sin su consentimiento, es improcedente.",
+          "feedback": "Incorrecto. No se puede trasladar a la denunciante sin su consentimiento ni hacer que cargue las consecuencias. Las medidas no deben perjudicar a quien denuncia.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Suspendes de inmediato a Cristián sin goce de remuneraciones como castigo anticipado.",
+          "outcome": "Aplicaste una sanción antes de investigar y sin base legal, exponiendo a la empresa a un reclamo del denunciado.",
+          "feedback": "Incorrecto. Durante el resguardo no se sanciona ni se prejuzga. Una suspensión preventiva debe ser con goce de remuneraciones; suspender sin goce como castigo es improcedente.",
+          "score": -0.5,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Has recibido y documentado la denuncia y aplicado resguardo. Ahora debes manejar el plazo legal. ¿Qué consideras correcto sobre el plazo de los 3 días hábiles?",
+      "options": [
+        {
+          "text": "El plazo de 3 días hábiles corre desde la recepción formal de la denuncia (lunes), y dentro de él debo decidir si derivo a la DT o investigo internamente, notificando a RR.HH. central el lunes a primera hora.",
+          "outcome": "Tienes claridad del cómputo y aseguras la coordinación oportuna. La empresa cumple el plazo legal.",
+          "feedback": "Correcto. El plazo de 3 días hábiles se cuenta desde la recepción formal. En ese plazo se decide derivar a la Dirección del Trabajo o iniciar investigación interna. Recibida un viernes, los días hábiles comienzan a computarse el lunes.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Como es viernes, el plazo ya venció y no hay nada que hacer hasta el próximo mes.",
+          "outcome": "Confusión total sobre el cómputo. Dejar pasar el plazo expone gravemente a la empresa.",
+          "feedback": "Incorrecto. El plazo es de 3 días hábiles desde la recepción formal y nunca 'vence' por el solo hecho de ser viernes. Debes coordinar la derivación o investigación dentro de plazo.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Decido yo sola investigar el caso de inmediato sin avisar a RR.HH. ni evaluar la derivación a la DT.",
+          "outcome": "Actuaste sin coordinación y sin evaluar la opción de derivar a la Dirección del Trabajo, que en casos sensibles puede ser lo más adecuado.",
+          "feedback": "Parcialmente incorrecto. Dentro de los 3 días hábiles la empresa debe decidir formalmente entre investigación interna o derivación a la DT. Esa decisión requiere coordinación institucional, no una acción individual aislada.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La gestión de una denuncia Ley Karin se juega en los primeros 30 minutos. Las decisiones correctas comparten un mismo eje: recibir sin juzgar, documentar formalmente, resguardar a la persona denunciante sin afectar su remuneración y respetar el plazo de 3 días hábiles para derivar a la Dirección del Trabajo o investigar internamente. Los errores más costosos son minimizar el relato, romper la confidencialidad, prejuzgar al denunciado o perjudicar a quien denuncia. Recuerda: las medidas de resguardo son obligación legal, no un favor; la confidencialidad obliga a todo el personal que tome conocimiento; y las represalias contra denunciantes o testigos son sancionables incluso si la denuncia se desestima. Como jefatura, tu rol es activar correctamente el protocolo aunque RR.HH. central esté cerrado. Refuerza estos pasos con el Kit de Recepción de Denuncias y el checklist de los primeros 30 minutos disponibles en la plataforma."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

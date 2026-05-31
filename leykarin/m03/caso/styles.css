@@ -1,0 +1,12 @@
+:root{--primary:#0B3D91;--secondary:#E63946;--ink:#0f172a;--muted:#64748b}
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI, Calibri, sans-serif;background:#f1f5f9;color:var(--ink);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
+.card{background:#fff;max-width:720px;width:100%;border-radius:16px;box-shadow:0 10px 40px rgba(2,6,23,.12);overflow:hidden;border-top:6px solid var(--secondary)}
+.pad{padding:28px}h1{margin:0 0 6px;font-size:22px;color:var(--primary)}p.intro{color:var(--muted)}
+.situation{font-size:17px;line-height:1.5;margin:14px 0;background:#f8fafc;border-left:4px solid var(--primary);padding:14px 16px;border-radius:8px}
+.opt{display:block;width:100%;text-align:left;border:1px solid #e2e8f0;background:#fff;border-radius:10px;padding:14px 16px;margin:8px 0;cursor:pointer;font-size:15px}
+.opt:hover{border-color:var(--secondary)}
+.outcome{margin-top:12px;padding:14px;border-radius:10px;background:#eff6ff}
+.fb{margin-top:8px;color:#1e3a8a;font-size:14px}
+.btn{background:var(--primary);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-size:15px;cursor:pointer;margin-top:14px}.btn.alt{background:var(--secondary)}
+.final h2{color:var(--primary)}.meter{font-size:34px;font-weight:800}
+.brandbar{margin-top:18px;color:var(--muted);font-size:12px}

@@ -1,0 +1,115 @@
+{
+  "title": "Caso Integrador AgroValles: Decisiones bajo Ley Karin",
+  "intro": "Usted asume como Jefe de Cumplimiento y Personas en AgroValles SpA (320 trabajadores, Curicó). En su primera semana recibe la denuncia escrita de Daniela, operaria de packing, contra Eduardo, jefe de planta, por gritos en público, asignación discriminatoria de turnos y un contacto físico no consentido. Además, sabe que la encargada local de RR.HH. de la planta es pareja de Eduardo, que el Reglamento Interno no fue actualizado tras la Ley 21.643 y que nunca se ha aplicado el SUSESO/ISTAS21. Cada decisión que tome tendrá consecuencias legales y organizacionales.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Acaba de recibir la denuncia escrita de Daniela. La Ley 21.643 obliga a actuar dentro de las primeras horas. ¿Qué hace primero?",
+      "options": [
+        {
+          "text": "Adoptar de inmediato medidas de resguardo para Daniela (separación de turnos respecto de Eduardo, ajuste de reporte) antes de iniciar el procedimiento formal.",
+          "outcome": "Daniela queda protegida desde el primer momento y se reduce el riesgo de represalias o de un nuevo episodio.",
+          "feedback": "Correcto. Recibida la denuncia, el empleador debe adoptar medidas de resguardo inmediatas para proteger a la víctima, incluso antes de iniciar el procedimiento formal (Módulo 2).",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Esperar a reunir más antecedentes y testigos antes de tomar cualquier medida, para no perjudicar a Eduardo sin pruebas.",
+          "outcome": "Durante la espera, Daniela sigue expuesta al denunciado y su confianza en el proceso se deteriora.",
+          "feedback": "Incorrecto. Las medidas de resguardo no requieren acreditación previa de los hechos; son preventivas y obligatorias desde la recepción de la denuncia. Postergarlas vulnera el deber de protección.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Citar a Daniela y Eduardo a una reunión conjunta para mediar y resolver rápido el malestar.",
+          "outcome": "La reunión revictimiza a Daniela y confunde una denuncia de acoso con un conflicto interpersonal mediable.",
+          "feedback": "Incorrecto. El acoso laboral y sexual no se media entre las partes. Corresponde un procedimiento formal con resguardo de la víctima, no una confrontación directa.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Debe decidir quién investiga. La encargada local de RR.HH. de la planta es pareja de Eduardo, el denunciado. ¿Cómo procede?",
+      "options": [
+        {
+          "text": "Descartar a la encargada local por conflicto de interés y evaluar si la empresa cuenta con una persona capacitada e independiente; si no la hay, derivar el caso a la Dirección del Trabajo, dejando la decisión fundamentada por escrito en el expediente.",
+          "outcome": "El proceso queda blindado en su imparcialidad y la decisión queda trazable y defendible.",
+          "feedback": "Correcto. Existe conflicto de interés por vínculo de pareja (Módulo 3-4). Si no hay investigador independiente y capacitado, se deriva a la DT, y toda decisión investigar/derivar debe fundamentarse por escrito.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Mantener a la encargada local como investigadora porque conoce mejor a las partes y agiliza el proceso.",
+          "outcome": "El expediente nace viciado: cualquier resultado será impugnable por falta de imparcialidad.",
+          "feedback": "Incorrecto. El vínculo de pareja con el denunciado configura conflicto de interés directo. Su participación invalida la investigación.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Asignar la investigación a Eduardo mismo para que entregue su versión y resuelva el área.",
+          "outcome": "Se entrega el control del caso al denunciado, vulnerando todos los principios del procedimiento.",
+          "feedback": "Incorrecto. El denunciado nunca puede investigar su propio caso. El denunciado tiene derecho a descargos, no a conducir la investigación.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Tres trabajadoras administrativas le comentan, de manera informal, que el contador externo hace 'bromas de doble sentido', pero piden no formalizar por temor a represalias. ¿Qué hace?",
+      "options": [
+        {
+          "text": "Respetar su decisión de no formalizar, pero activar el deber de prevención: registrar el antecedente de forma reservada, reforzar canales seguros de denuncia, comunicar al proveedor externo los estándares de conducta y monitorear el área.",
+          "outcome": "Cumple el deber de prevención sin exponer a las trabajadoras ni forzar una denuncia que no desean.",
+          "feedback": "Correcto. El deber de prevención es exigible aunque no exista denuncia formal (Módulo 6). Se actúa sobre el ambiente y los canales sin vulnerar la voluntad de las trabajadoras.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Ignorar el comentario porque no hay denuncia formal y no quiere exceder sus atribuciones.",
+          "outcome": "El ambiente de riesgo persiste y la empresa queda expuesta a multas y responsabilidad civil por omisión.",
+          "feedback": "Incorrecto. El incumplimiento del deber de prevención puede dar lugar a multas administrativas y responsabilidad civil, exista o no denuncia formal.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Iniciar una investigación formal con nombre de las tres trabajadoras para tomar declaraciones de inmediato.",
+          "outcome": "Las trabajadoras se sienten expuestas, pierden confianza y el clima de denuncia se cierra.",
+          "feedback": "Parcialmente incorrecto. Forzar la formalización contra su voluntad vulnera la confianza. El deber de prevención permite actuar sobre el ambiente sin exponer identidades.",
+          "score": -0.5,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Finalizada la investigación, se acreditan los hechos de la Denuncia 1. El directorio le pide la sanción y un plan de cierre. ¿Qué propone?",
+      "options": [
+        {
+          "text": "Aplicar sanción proporcional a la gravedad y al cargo de jefatura de Eduardo, evaluando despido por Art. 160 N°1 letra f del Código del Trabajo si la gravedad lo justifica, más un plan de reincorporación segura para Daniela con separación del agresor, apoyo psicosocial y monitoreo a 30, 60 y 90 días.",
+          "outcome": "El cierre es legalmente sólido, proporcional y protege la reincorporación de la víctima.",
+          "feedback": "Correcto. La causal de despido en casos graves acreditados es el Art. 160 N°1 letra f, aplicada con proporcionalidad (gravedad, reiteración y cargo). El plan de reincorporación con monitoreo a 30/60/90 días es el estándar (Módulo 5).",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Aplicar siempre la sanción máxima de despido inmediato, sin ponderar gravedad ni circunstancias.",
+          "outcome": "La sanción automática puede ser impugnada por desproporción y dejar a la empresa expuesta judicialmente.",
+          "feedback": "Incorrecto. La proporcionalidad exige relacionar la sanción con la gravedad, la reiteración y el cargo. No siempre corresponde la sanción máxima por defecto.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Trasladar a Daniela a otra área para 'evitar roces' y mantener a Eduardo en su cargo con una amonestación verbal.",
+          "outcome": "Se castiga a la víctima en lugar del agresor acreditado, profundizando el daño.",
+          "feedback": "Incorrecto. La carga de la separación no recae en la víctima. Trasladar siempre a la víctima y sancionar mínimamente al agresor acreditado contraviene el plan de reincorporación segura.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso integra los seis módulos de la Ley 21.643. Una gestión correcta sigue una secuencia clara: (1) medidas de resguardo inmediatas a la víctima desde la recepción de la denuncia; (2) investigador imparcial, descartando conflictos de interés —como el vínculo de pareja con el denunciado— y derivando a la Dirección del Trabajo cuando no exista capacidad interna independiente, con decisión fundamentada por escrito y comunicación a la DT dentro de 3 días hábiles; (3) deber de prevención activo frente a situaciones informales, sin forzar denuncias ni exponer a las trabajadoras; y (4) cierre con sanción proporcional —Art. 160 N°1 letra f del Código del Trabajo en casos graves acreditados— y plan de reincorporación con monitoreo a 30, 60 y 90 días. A nivel sistémico, AgroValles debe actualizar su Reglamento Interno, dictar una política anti-acoso, aplicar el SUSESO/ISTAS21 y capacitar a jefaturas y comité paritario. KPIs a 12 meses sugeridos: tiempo promedio de respuesta a denuncias, porcentaje de jefaturas capacitadas y nivel de riesgo psicosocial medido por ISTAS21. Recuerde que este material es formativo y no constituye asesoría legal; ante casos reales, valide cada decisión con el área jurídica y la normativa vigente."
+}

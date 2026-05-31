@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Identificar acoso laboral, sexual y violencia en el trabajo",
+  "intro": "Pon a prueba tu capacidad para distinguir los tres tipos de acoso de los conflictos laborales legítimos según la Ley 21.643 (Ley Karin). Cada pregunta tiene una sola respuesta correcta. Recuerda: tu rol no es emitir un veredicto, sino identificar cuándo corresponde activar el protocolo.",
+  "questions": [
+    {
+      "q": "Según la Ley 21.643, ¿qué requiere la configuración del acoso laboral?",
+      "options": [
+        "Que la conducta sea siempre reiterada en el tiempo",
+        "Que la conducta sea grave o reiterada y afecte la dignidad o salud del trabajador",
+        "Que exista necesariamente una relación jerárquica entre las partes",
+        "Que haya al menos un testigo presencial de los hechos"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La ley exige que la conducta sea grave o reiterada y que afecte la dignidad o salud del trabajador. No siempre necesita repetición ni jerarquía.",
+      "feedbackKo": "Recuerda: el acoso laboral se configura cuando la conducta es grave o reiterada y afecta la dignidad o salud. No requiere obligatoriamente reiteración, jerarquía ni testigos.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "El acoso sexual en su modalidad de 'ambiente hostil' se caracteriza principalmente por:",
+      "options": [
+        "Solicitar favores sexuales a cambio de un beneficio laboral",
+        "Tocamientos físicos sin consentimiento de la persona",
+        "Conductas de connotación sexual no deseadas que generan un entorno intimidatorio",
+        "Únicamente conductas verbales explícitas de tipo sexual"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El 'ambiente hostil' se refiere a conductas de connotación sexual no deseadas que generan un entorno intimidatorio, hostil o humillante.",
+      "feedbackKo": "La opción 'a' describe el chantaje sexual, no el ambiente hostil. El ambiente hostil son conductas de connotación sexual no deseadas que crean un entorno intimidatorio.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "La violencia en el trabajo regulada por la Ley Karin incluye agresiones provenientes de:",
+      "options": [
+        "Solo agresiones entre trabajadores de la misma empresa",
+        "Solo agresiones de jefaturas hacia subordinados",
+        "También terceros como clientes, usuarios o proveedores",
+        "Únicamente agresiones de carácter físico"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Una novedad relevante de la ley es que la violencia en el trabajo incluye también la ejercida por terceros: clientes, usuarios y proveedores.",
+      "feedbackKo": "La Ley Karin amplía la cobertura: la violencia en el trabajo incluye también la ejercida por terceros (clientes, usuarios, proveedores), no solo entre trabajadores.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "Una jefatura exige altos estándares, da feedback directo y aplica medidas disciplinarias formales tras incumplimientos reiterados. ¿Cómo se califica esta situación?",
+      "options": [
+        "Configura siempre acoso laboral por la exigencia",
+        "Configura acoso si el trabajador se siente afectado",
+        "No configura acoso si es proporcional, respetuoso en las formas y aplicado a todos por igual",
+        "Configura mobbing vertical descendente"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La gestión exigente pero respetuosa, proporcional y aplicada por igual es un ejercicio legítimo de la función directiva, no acoso laboral.",
+      "feedbackKo": "Recuerda los criterios DT/SUSESO: si la conducta es proporcional, respetuosa en las formas y aplicada a todos por igual, es conflicto o gestión legítima, no acoso.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "Respecto del acoso laboral y la asimetría de poder, es correcto afirmar que:",
+      "options": [
+        "Solo puede ejercerlo una jefatura sobre un subordinado",
+        "Requiere siempre una relación jerárquica entre acosador y víctima",
+        "Puede ser ejercido por un par jerárquico; no requiere asimetría de poder",
+        "Solo existe si lo ejerce un grupo contra una persona"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El acoso laboral puede ser horizontal (entre pares), vertical descendente o vertical ascendente. No exige asimetría de poder.",
+      "feedbackKo": "El acoso laboral puede darse entre pares jerárquicos (horizontal), de jefatura a subordinado o de subordinado a jefatura. No requiere asimetría de poder.",
+      "points": 10,
+      "difficulty": "intermedio"
+    }
+  ]
+}

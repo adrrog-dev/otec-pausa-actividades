@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Investigación interna Ley Karin: 30 días que definen todo — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Investigación interna Ley Karin: 30 días que definen todo",
+  "intro": "Eres Patricia, Gerente de Personas de TextiSur SpA (180 trabajadores, Concepción). Acaba de ingresar por correo una denuncia formal: María, cajera con 5 años en la empresa, acusa a Luis, jefe de tienda y su jefatura directa, de humillaciones reiteradas frente a clientes, turnos punitivos tras rechazar invitaciones personales y un episodio en que le tomó el brazo. Tienes 3 días hábiles para iniciar el procedimiento. Tus decisiones determinarán si la investigación resiste una revisión de la Dirección del Trabajo. Avancemos con criterio y debido proceso.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Lo primero es designar al investigador. Notas que la encargada de RR.HH. local es prima de Luis, y tú misma trabajaste 6 años con Luis en una empresa anterior. La casa matriz en Santiago tiene un área de Compliance corporativo independiente. ¿A quién designas para investigar?",
+      "options": [
+        {
+          "text": "Encargo la investigación a la encargada de RR.HH. local para resolverlo rápido en la tienda.",
+          "outcome": "La encargada es prima de Luis. El conflicto de interés es evidente y compromete toda la validez del procedimiento desde el inicio.",
+          "feedback": "Error grave. La DT ha detectado que el principal motivo de invalidación es investigar con conflicto de interés. Esto haría caer la denuncia en sede DT y expondría a la empresa a multas y demanda de tutela laboral.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Me hago cargo yo misma de la investigación, ya que conozco bien al equipo.",
+          "outcome": "Trabajaste 6 años con Luis: existe un potencial sesgo de afinidad que un fiscalizador podría objetar. El procedimiento queda vulnerable.",
+          "feedback": "Insuficiente. La cercanía previa con una de las partes compromete tu imparcialidad. Lo correcto es inhabilitarte y buscar una persona sin vínculo previo ni jerárquico.",
+          "score": -0.5,
+          "next": 2
+        },
+        {
+          "text": "Me inhabilito formalmente y designo al Jefe de Compliance corporativo de Santiago, que firma declaración de no conflicto.",
+          "outcome": "El investigador no tiene relación previa con las partes ni vínculo jerárquico con la tienda. Firma su declaración de no conflicto. El procedimiento parte sobre base sólida.",
+          "feedback": "Decisión correcta. La designación de un investigador independiente y capacitado es el primer pilar de una investigación válida. Documentar la inhabilitación y la declaración de no conflicto protege a la empresa.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El investigador inicia las diligencias. Debe citar a las partes y tomar declaraciones. Surge la pregunta sobre el debido proceso de Luis (el denunciado) y el resguardo de María. ¿Cómo orientas las citaciones?",
+      "options": [
+        {
+          "text": "Cito solo a María y a los testigos; a Luis le comunicaré el resultado al final para no alertarlo.",
+          "outcome": "Se vulnera el derecho a defensa del denunciado. Sin notificación de cargos ni posibilidad de descargos, el procedimiento es nulo.",
+          "feedback": "Incorrecto. El denunciado tiene derecho a ser notificado de los cargos, presentar descargos y acceder a la prueba en su contra. Omitirlo invalida la investigación.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Cito formalmente a María (con apoyo psicológico de la mutualidad), notifico cargos a Luis y cito a los testigos, todo con registro escrito.",
+          "outcome": "Las citaciones cumplen el debido proceso: notificación formal, derecho a descargos y resguardo del bienestar de la denunciante. Todo queda en el expediente.",
+          "feedback": "Muy bien. Respetar el debido proceso (citación, notificación de cargos, acceso a la prueba) y resguardar a la denunciante con apoyo de la mutualidad son prácticas exigidas y correctas.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Reúno a María y Luis en una misma sala para que aclaren los hechos cara a cara.",
+          "outcome": "Una confrontación directa expone a la denunciante a revictimización y rompe el sigilo y resguardo que exige la ley.",
+          "feedback": "Error. Las declaraciones se toman por separado, con resguardo y confidencialidad. Nunca se confronta directamente a las partes en estos procedimientos.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Para acreditar el patrón punitivo, el investigador necesita prueba. Considera registros de cámara del local, el sistema de turnos y mensajes. ¿Cómo manejas la recopilación y custodia de la prueba?",
+      "options": [
+        {
+          "text": "Solicito registros de cámara (sin audio, conforme a la ley) y del sistema de turnos, registrando fecha, fuente y quién la obtuvo, conservando los originales digitales.",
+          "outcome": "La prueba electrónica se incorpora con cadena de custodia correcta: metadatos, origen y resguardo del original. El patrón de turnos punitivos queda documentado de forma sólida.",
+          "feedback": "Correcto. La cadena de custodia exige registrar fecha, fuente, persona que obtuvo la prueba y conservar el original digital. Las cámaras se usan sin audio, conforme a la normativa.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Imprimo capturas de pantalla de WhatsApp y las archivo, eliminando los originales para ahorrar espacio.",
+          "outcome": "Sin el original digital ni metadatos, la prueba pierde valor y trazabilidad. La cadena de custodia se rompe.",
+          "feedback": "Error. Nunca se eliminan los originales. La prueba electrónica debe conservarse con sus metadatos para garantizar su integridad y valor ante la DT o tribunales.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Pido a otros trabajadores que comenten en grupo lo que vieron, para acelerar la recolección de testimonios.",
+          "outcome": "Recoger testimonios en grupo contamina las declaraciones y vulnera el sigilo. Pierdes credibilidad probatoria.",
+          "feedback": "Incorrecto. Las declaraciones se toman individualmente, con registro escrito y bajo confidencialidad, para preservar la independencia de cada testimonio.",
+          "score": -0.5,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Han transcurrido 22 días hábiles. El expediente está casi completo, pero falta una diligencia: una testigo clave estuvo con licencia médica y aún no declara. El plazo legal es de 30 días hábiles. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Cierro de inmediato sin esa declaración para no arriesgar el plazo, aunque sea una testigo clave.",
+          "outcome": "Cierras a tiempo, pero el expediente queda incompleto en una diligencia relevante, debilitando las conclusiones.",
+          "feedback": "Parcial. Cumplir el plazo es importante, pero omitir una diligencia indispensable puede afectar la calidad de la investigación. Para eso existe la prórroga excepcional fundada.",
+          "score": 0,
+          "next": null
+        },
+        {
+          "text": "Dejo correr el plazo sin cerrar ni justificar, esperando que la testigo se reincorpore cuando pueda.",
+          "outcome": "Se incumple el plazo de 30 días hábiles sin justificación documentada, uno de los errores más sancionados por la DT.",
+          "feedback": "Error grave. El incumplimiento del plazo sin fundamento invalida el procedimiento. La prórroga existe, pero debe solicitarse y documentarse antes de vencer el plazo.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Emito una resolución fundada de prórroga excepcional, dejando constancia escrita de la diligencia indispensable pendiente, y completo la declaración faltante.",
+          "outcome": "La prórroga queda documentada con fundamento. Tomas la declaración pendiente y cierras un expediente completo y defendible.",
+          "feedback": "Decisión correcta. El plazo de 30 días hábiles puede prorrogarse mediante resolución fundada cuando existen diligencias indispensables pendientes. Documentarlo por escrito protege a la empresa.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Una investigación interna Ley Karin válida se sostiene en tres pilares que recorriste en este caso: (1) un investigador independiente y capacitado, sin conflicto de interés —por eso fue clave que Patricia se inhabilitara y designara a Compliance de Santiago—; (2) un procedimiento que respete el debido proceso, con citación formal, notificación de cargos, derecho a descargos, resguardo de la denunciante y declaraciones individuales; y (3) la prueba bien recopilada con cadena de custodia y el cumplimiento estricto del plazo de 30 días hábiles, prorrogable solo de manera excepcional y fundada por escrito. Cada decisión correcta construye un expediente ordenado, que es la principal defensa de la empresa ante una fiscalización de la Dirección del Trabajo o un juicio laboral. Cuando la empresa no puede garantizar imparcialidad o capacidad técnica, la opción legalmente segura es derivar el caso a la Dirección del Trabajo dentro de 3 días hábiles. Revisa los nodos donde tu puntaje fue bajo: allí está la diferencia entre un procedimiento que protege a las personas y a la organización, y uno que se cae."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

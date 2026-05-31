@@ -1,0 +1,108 @@
+{
+  "title": "El equipo de bodega: ¿activar o no el protocolo?",
+  "intro": "Eres analista de RR.HH. en una empresa de retail en San Bernardo. Marcela, supervisora de la bodega central, llega a tu oficina tras una licencia psiquiátrica. Trae una carta donde relata cuatro meses de situaciones con Hugo, un integrante de su equipo que fue degradado en otra sucursal. Tu tarea no es juzgar si hubo acoso —eso lo define la investigación—, sino decidir, con criterios objetivos, los pasos correctos según la Ley 21.643. Cada decisión tiene consecuencias.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Marcela describe que durante 4 meses Hugo cuestionó en voz alta cada instrucción frente al equipo, miraba el teléfono ostensiblemente cuando ella hablaba, difundió por WhatsApp que 'ella llegó por palanca' y una vez le dijo frente a tres compañeros: 'a ti te dieron el puesto porque andan con cuota de mujeres'. ¿Cuál es tu primer paso como RR.HH.?",
+      "options": [
+        {
+          "text": "Le digo a Marcela que esas conductas son normales en equipos nuevos y que intente conversar directamente con Hugo.",
+          "outcome": "Marcela se siente desestimada y desprotegida. Las conductas continúan y la situación se agrava, dejando a la empresa expuesta por no actuar.",
+          "feedback": "Incorrecto. Minimizar y derivar la solución a la propia afectada es revictimizante. Conductas reiteradas que afectan la dignidad y la salud deben analizarse con el test, no descartarse de plano.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Recibo formalmente la carta, garantizo confidencialidad y aplico el test de 5 preguntas como primer filtro objetivo.",
+          "outcome": "Marcela percibe que el proceso es serio. Tienes una base ordenada para decidir si activar el protocolo o gestionar como conflicto.",
+          "feedback": "Correcto. El test de 5 preguntas (DT/SUSESO) es el filtro inicial. RR.HH. identifica si corresponde activar el protocolo; no califica ni juzga el fondo.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Activo de inmediato una sanción contra Hugo sin investigar, porque las conductas parecen graves.",
+          "outcome": "Sin investigación previa, la sanción puede ser impugnada y anular todo el proceso, dejando además a la víctima sin protección efectiva.",
+          "feedback": "Incorrecto. Sancionar sin investigación vulnera el debido proceso y puede invalidar el procedimiento. El rol de RR.HH. es activar el protocolo, no resolver el fondo.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Al aplicar el test consideras: las conductas son reiteradas (4 meses), afectan la salud de Marcela (insomnio, licencia psiquiátrica), hay un componente de género ('cuota de mujeres'), fueron presenciadas por terceros y no responden a un propósito legítimo de gestión. ¿Cómo calificas preliminarmente la situación para decidir el paso siguiente?",
+      "options": [
+        {
+          "text": "Lo trato como acoso sexual, porque hubo un comentario sobre 'cuota de mujeres'.",
+          "outcome": "Caratulas mal la denuncia. La investigación parte con un enfoque equivocado y puede debilitar la protección de Marcela.",
+          "feedback": "Incorrecto. El comentario tiene connotación de discriminación de género, no de connotación sexual ni solicitud de favores sexuales. Esto configura un agravante del acoso laboral, no acoso sexual.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Lo trato como un conflicto laboral legítimo entre dos personas con diferencias.",
+          "outcome": "La empresa no activa el protocolo y la conducta se interpreta como un simple roce, dejando desprotegida a Marcela frente a hechos reiterados y dañinos.",
+          "feedback": "Incorrecto. No hay propósito legítimo ni trato igualitario: hay descalificación reiterada y daño a la salud. No es conflicto legítimo, hay indicios serios de acoso laboral.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Lo califico preliminarmente como posible acoso laboral con agravante de género y activo el protocolo Ley Karin.",
+          "outcome": "El protocolo se activa correctamente. La investigación podrá ponderar la reiteración, el daño y el componente de género.",
+          "feedback": "Correcto. Conducta reiterada que afecta dignidad y salud configura indicios de acoso laboral. El comentario de género es un factor agravante. El acoso puede ser horizontal: no requiere asimetría jerárquica.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Un colega de RR.HH. te dice: 'Pero Hugo no es jefe de Marcela, al revés, ella lo supervisa. Sin relación jerárquica de él hacia ella, no puede haber acoso laboral'. ¿Cómo respondes?",
+      "options": [
+        {
+          "text": "Tiene razón: sin jerarquía descendente no se configura acoso laboral, así que descartamos el caso.",
+          "outcome": "Se cierra erróneamente un caso con indicios claros y se incumple la Ley 21.643.",
+          "feedback": "Incorrecto. La ley reconoce acoso horizontal, vertical descendente y vertical ascendente. La asimetría de poder es un agravante, no un requisito.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Explico que el acoso laboral puede ser horizontal o incluso ascendente, y que la jerarquía es un agravante, no un requisito.",
+          "outcome": "El equipo alinea criterios. La investigación avanza correctamente reconociendo el acoso ascendente.",
+          "feedback": "Correcto. El acoso laboral no exige asimetría de poder. Aquí Hugo busca minar la autoridad de su supervisora: es un caso de acoso vertical ascendente, plenamente regulado.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "El protocolo está activo. Te corresponde orientar sobre qué antecedentes pueden ser útiles para la investigación, cuidando la confidencialidad y el debido proceso. ¿Qué priorizas?",
+      "options": [
+        {
+          "text": "Pido a Marcela que consiga ella misma confesiones de Hugo y que comparta su caso con el equipo para reunir apoyos.",
+          "outcome": "Se expone a Marcela, se contamina la prueba y se vulnera la confidencialidad del proceso.",
+          "feedback": "Incorrecto. La recolección de pruebas no recae en la víctima ni puede comprometer la reserva. Difundir el caso revictimiza y puede invalidar la investigación.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Recopilo capturas del WhatsApp del grupo, identifico a los testigos presenciales del comentario, registro las licencias médicas y documento fechas y contextos de manera confidencial.",
+          "outcome": "La investigación cuenta con evidencia objetiva y trazable, respetando la confidencialidad y el debido proceso.",
+          "feedback": "Correcto. Mensajes con fecha, testigos identificados, licencias y una bitácora objetiva de conductas (frecuencia, contexto, presentes) son antecedentes sólidos, manejados con reserva.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Confío solo en el relato de Marcela y cierro el levantamiento de antecedentes para no demorar el proceso.",
+          "outcome": "La investigación queda débil y desequilibrada, comprometiendo tanto la protección de la víctima como el debido proceso del denunciado.",
+          "feedback": "Parcialmente incorrecto. El relato de la víctima es relevante, pero el debido proceso exige reunir antecedentes objetivos disponibles: mensajes, testigos y registros médicos.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso integra los aprendizajes clave del Módulo 2. Las conductas de Hugo —reiteradas durante 4 meses, con daño a la salud de Marcela (insomnio, licencia psiquiátrica) y sin propósito legítimo— configuran indicios de acoso laboral, no de conflicto legítimo. El comentario sobre 'cuota de mujeres' no es acoso sexual: es discriminación de género que opera como factor agravante. Un punto central es comprender que el acoso laboral puede ser horizontal o vertical ascendente: aunque Marcela supervisa a Hugo, la conducta de él busca minar su autoridad y constituye acoso ascendente. La jerarquía es un agravante, no un requisito. Como RR.HH., tu rol no es calificar ni juzgar el fondo, sino aplicar el test de 5 preguntas como primer filtro, activar el protocolo Ley Karin cuando hay indicios, garantizar confidencialidad y resguardar el debido proceso reuniendo antecedentes objetivos (mensajes con fecha, testigos, licencias) sin exponer a la víctima. Recuerda: el test es un filtro, no un veredicto."
+}

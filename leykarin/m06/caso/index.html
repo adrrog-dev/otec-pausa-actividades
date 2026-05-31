@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Andrea y el mandato del directorio: construir prevención real — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Andrea y el mandato del directorio: construir prevención real",
+  "intro": "Eres Andrea, gerenta de Personas de MineraCordillera SpA (420 trabajadores, Antofagasta). Tras una denuncia Ley Karin que terminó en despido de un supervisor, el directorio te ordena: 'que no vuelva a ocurrir'. Tienes presupuesto y 12 meses. Cada decisión que tomes construirá —o debilitará— la evidencia de que la empresa cumple su deber de prevención conforme a la Ley N° 21.643.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Es tu primera semana. El gerente general te pide una acción 'visible y rápida' para mostrar al directorio. ¿Por dónde partes?",
+      "options": [
+        {
+          "text": "Mando imprimir 30 carteles anti-acoso y los instalo en todas las faenas esta misma semana.",
+          "outcome": "Los carteles se ven en las salas de cambio, pero no hay diagnóstico ni política detrás. El comité paritario pregunta qué procedimiento respaldan esos afiches y no tienes respuesta.",
+          "feedback": "Un cartel no acredita el deber de prevención. La difusión es importante, pero debe apoyarse en un sistema (diagnóstico, política, capacitación). Empezar por la pieza más visible sin base genera una falsa sensación de cumplimiento.",
+          "score": -0.5,
+          "next": 2
+        },
+        {
+          "text": "Aplico primero el cuestionario SUSESO/ISTAS21 a toda la dotación para diagnosticar el riesgo psicosocial.",
+          "outcome": "Logras 87% de cobertura. Detectas tres áreas con riesgo alto en 'exigencias psicológicas' y 'compensaciones'. Ahora tienes evidencia objetiva para priorizar tus intervenciones.",
+          "feedback": "Excelente. El diagnóstico es la base de un sistema preventivo serio. El ISTAS21 es el instrumento oficial en Chile (Protocolo MINSAL/SUSESO) y orienta dónde intervenir en lugar de actuar a ciegas.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Redacto una política anti-acoso de inmediato y la publico en intranet sin pasarla por el comité paritario.",
+          "outcome": "La política existe en el papel, pero al no integrarla al Reglamento Interno ni validarla con el comité paritario, carece de fuerza formal y de respaldo participativo.",
+          "feedback": "Tener una política escrita es necesario, pero debe integrarse formalmente al Reglamento Interno de Orden, Higiene y Seguridad y seguir el procedimiento de modificación. Saltarse esos pasos debilita su exigibilidad.",
+          "score": -0.2,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Con el diagnóstico en mano, debes formalizar la política anti-acoso. ¿Cómo la dejas operativa?",
+      "options": [
+        {
+          "text": "Incorporo la política como capítulo nuevo del Reglamento Interno, la valido con el Comité Paritario y la deposito en la Dirección del Trabajo regional.",
+          "outcome": "El reglamento queda actualizado, aprobado y depositado en la DT. La política tiene ahora respaldo legal y procedimental claro para toda la empresa.",
+          "feedback": "Correcto. La política debe integrarse al Reglamento Interno y seguir el procedimiento de modificación: validación del comité paritario y depósito en la DT. Así se vuelve exigible y verificable ante una fiscalización.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "La agrego solo a los contratos individuales de las nuevas contrataciones.",
+          "outcome": "Las personas que ya trabajaban en la empresa quedan fuera de la política, y los contratos individuales no son el instrumento adecuado para una norma de cobertura general.",
+          "feedback": "El instrumento correcto es el Reglamento Interno, no el contrato individual. La política debe aplicar a toda la dotación, no solo a quienes ingresen después.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Publico la política solo en la página web pública de la empresa para mostrar compromiso externo.",
+          "outcome": "La web comunica la imagen corporativa, pero internamente nadie tiene un instrumento normativo aplicable ni un procedimiento claro frente a una denuncia.",
+          "feedback": "La web no reemplaza la integración al Reglamento Interno. La prevención requiere instrumentos internos exigibles, no solo comunicación reputacional.",
+          "score": -0.3,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Toca diseñar la capacitación obligatoria. Tienes líderes, mandos medios y operarios. ¿Cómo la estructuras?",
+      "options": [
+        {
+          "text": "Una sola charla de una hora para todos al ingreso, sin repetirla en el tiempo.",
+          "outcome": "La inducción cubre lo básico, pero las jefaturas no profundizan en su rol de gestión y no queda un plan periódico que sostenga el aprendizaje.",
+          "feedback": "La capacitación Ley Karin debe ser periódica (anual recomendado), no una única charla de ingreso. Además, conviene diferenciar contenidos según el rol y dejar registro de asistencia.",
+          "score": -0.4,
+          "next": 4
+        },
+        {
+          "text": "Capacito solo a las jefaturas, porque son quienes gestionan denuncias.",
+          "outcome": "Las jefaturas mejoran, pero operarios y mandos medios no conocen sus derechos ni los canales de denuncia, dejando un vacío amplio en la cultura preventiva.",
+          "feedback": "La capacitación no puede limitarse a jefaturas. Toda la organización debe conocer la política, los canales y sus derechos. Diferenciar por audiencia sí es buena práctica, pero excluir a la mayoría no.",
+          "score": -0.3,
+          "next": 4
+        },
+        {
+          "text": "Diseño tres audiencias diferenciadas (líderes 8h, mandos medios 4h, operarios 2h), anual y con registro de asistencia firmado.",
+          "outcome": "Cada grupo recibe contenidos según su rol y responsabilidad. El registro firmado se convierte en evidencia clave de cumplimiento ante cualquier fiscalización.",
+          "feedback": "Muy bien. La capacitación periódica, diferenciada por audiencia y con registro documentado es el estándar correcto. El registro firmado es la prueba del deber de cuidado activo.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Han pasado 12 meses. El directorio te pide demostrar resultados. ¿Cómo cierras el ciclo?",
+      "options": [
+        {
+          "text": "Reaplico el ISTAS21, comparo con el diagnóstico inicial y presento un tablero con KPIs y metas al directorio.",
+          "outcome": "Las tres áreas críticas bajan de riesgo alto a medio y registras cero denuncias formales en el periodo. El tablero documenta diagnóstico, intervención y medición: evidencia sólida ante cualquier fiscalización.",
+          "feedback": "Cierre ejemplar. Medir, comparar y reportar al directorio convierte la prevención en un sistema verificable. La reaplicación del ISTAS21 demuestra mejora real y deber de cuidado activo y documentado.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Presento solo un resumen narrativo de las actividades realizadas, sin métricas ni reaplicación del diagnóstico.",
+          "outcome": "El relato muestra esfuerzo, pero sin datos comparables el directorio no puede saber si el riesgo disminuyó ni la empresa puede acreditar resultados ante la DT.",
+          "feedback": "Sin métricas ni reaplicación del diagnóstico no hay forma de demostrar impacto. La prevención sistémica exige medir y reportar con indicadores, no solo describir actividades.",
+          "score": -0.3,
+          "next": null
+        },
+        {
+          "text": "Doy por cerrado el proceso porque no hubo denuncias durante el año.",
+          "outcome": "La ausencia de denuncias puede deberse a temor o desconfianza, no necesariamente a un buen clima. Sin diagnóstico de cierre, pierdes la oportunidad de verificar y mejorar.",
+          "feedback": "Cero denuncias no equivale a cero riesgo. La prevención es un ciclo continuo: diagnosticar, intervenir, medir y volver a diagnosticar. Cerrar sin evidencia debilita el sistema.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La prevención de la Ley N° 21.643 no es un afiche ni un gesto aislado: es un sistema con cuatro pilares articulados. El camino correcto que recorrió Andrea fue diagnosticar primero con el SUSESO/ISTAS21, integrar formalmente la política al Reglamento Interno con validación del comité paritario y depósito en la DT, capacitar de manera periódica y diferenciada con registro firmado, y cerrar el ciclo midiendo resultados y reportando al directorio. Cada paso documentado construye la evidencia del deber de cuidado activo que la empresa necesita ante cualquier fiscalización. Las decisiones que privilegian lo visible o lo rápido por sobre lo sistémico generan una falsa sensación de cumplimiento y dejan a la organización expuesta a multas administrativas y responsabilidad civil. Recuerda: la empresa que documenta diagnóstico, intervención y medición no solo cumple la ley, también construye una cultura donde la denuncia es la excepción y la respuesta es rápida, justa y reparadora."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

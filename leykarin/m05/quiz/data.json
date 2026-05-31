@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Informe final, sanciones y reincorporación segura (Ley Karin)",
+  "intro": "Pon a prueba lo aprendido sobre el cierre del procedimiento Ley Karin: el informe final fundado, la aplicación de sanciones proporcionales y la reincorporación segura de la víctima. Selecciona una sola respuesta por pregunta. ¡Éxito!",
+  "questions": [
+    {
+      "q": "¿Cuál es la causal legal que permite despedir sin derecho a indemnización por años de servicio en casos graves de acoso laboral o sexual acreditado?",
+      "options": [
+        "Artículo 159 N° 4 del Código del Trabajo",
+        "Artículo 160 N° 1 letra f del Código del Trabajo",
+        "Artículo 161 del Código del Trabajo",
+        "Artículo 171 del Código del Trabajo"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El artículo 160 N° 1 letra f del Código del Trabajo permite el despido sin indemnización cuando se acreditan conductas de acoso laboral o sexual.",
+      "feedbackKo": "Incorrecto. La causal aplicable es el artículo 160 N° 1 letra f del Código del Trabajo, que contempla el despido sin indemnización por conductas de acoso acreditadas.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según el Reglamento Interno, ¿cuál es el tope de la multa que puede aplicarse a un trabajador como sanción interna por acoso laboral?",
+      "options": [
+        "0,5 UTM",
+        "1 UTM",
+        "5 UTM",
+        "10 UTM"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La multa interna conforme al Reglamento Interno tiene como tope 1 UTM.",
+      "feedbackKo": "Incorrecto. El tope de la multa interna establecida en el Reglamento Interno es de 1 UTM.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "El principio de proporcionalidad en la aplicación de una sanción significa que:",
+      "options": [
+        "Siempre debe aplicarse la sanción máxima cuando se acredita acoso",
+        "La sanción debe guardar relación con la gravedad del hecho, la reiteración y el cargo del infractor",
+        "Debe sancionarse igual al denunciante si la denuncia resulta no acreditada",
+        "La sanción depende exclusivamente de la decisión de la víctima"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La proporcionalidad exige graduar la sanción según la gravedad del hecho, su reiteración y el cargo del infractor.",
+      "feedbackKo": "Incorrecto. La proporcionalidad implica que la sanción debe ajustarse a la gravedad del hecho probado, la reiteración y el cargo del infractor.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué debe contemplar como mínimo un plan de reincorporación segura de la víctima?",
+      "options": [
+        "Trasladar siempre a la víctima a otra área",
+        "Medidas físicas/organizacionales de separación del agresor, apoyo psicosocial y monitoreo posterior",
+        "Que la víctima firme un acuerdo de confidencialidad",
+        "Suspender al denunciante hasta que la víctima acepte volver"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Un plan adecuado combina separación del agresor, apoyo psicosocial y monitoreo a 30/60/90 días, sin revictimizar a la persona afectada.",
+      "feedbackKo": "Incorrecto. El plan debe incluir medidas de separación del agresor, apoyo psicosocial y monitoreo posterior, evitando revictimizar a la persona afectada.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto del informe final del procedimiento Ley Karin, ¿cuál afirmación es correcta?",
+      "options": [
+        "Puede incluir conclusiones que excedan los hechos investigados si surgen otros antecedentes",
+        "Sus conclusiones deben fundarse en la prueba y no exceder lo efectivamente investigado",
+        "Basta con señalar la sanción, sin desarrollar antecedentes ni análisis",
+        "No requiere ser comunicado a la Dirección del Trabajo"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El informe final debe ser fundado, basarse en la prueba rendida y limitar sus conclusiones a los hechos investigados, además de comunicarse a la DT y a las partes.",
+      "feedbackKo": "Incorrecto. El informe final debe ser fundado, sustentarse en la prueba y no exceder los hechos investigados, comunicándose a la DT y a las partes dentro de los plazos legales.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

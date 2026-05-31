@@ -1,0 +1,115 @@
+{
+  "title": "Cierre del caso Ley Karin: informe, sanción y reincorporación segura",
+  "intro": "Eres jefatura de RRHH en DistriCentro Ltda. (Rancagua, 95 trabajadores). Finalizó la investigación interna del caso de Camila (auxiliar administrativa) contra Pablo (supervisor de bodega). Se acreditó con prueba documental, testimonial y registro de cámara: trato vejatorio reiterado durante 4 meses y un incidente de contacto físico no consentido. Ahora debes redactar el informe final, proponer la sanción y diseñar la reincorporación. Cada decisión tiene consecuencias.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Debes redactar el informe final para remitir a la Dirección del Trabajo y a las partes. Durante la investigación surgieron rumores sobre el desempeño de Camila, no relacionados con la denuncia. ¿Cómo estructuras el informe?",
+      "options": [
+        {
+          "text": "Redacto las cinco secciones obligatorias (antecedentes, prueba rendida, análisis, conclusiones y recomendaciones) y limito las conclusiones a los hechos investigados.",
+          "outcome": "El informe queda fundado, claro y ajustado a lo investigado. Es defendible ante cualquier revisión de la DT.",
+          "feedback": "Correcto. El informe final debe contener las cinco secciones obligatorias y las conclusiones no pueden exceder los hechos investigados.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Incluyo en las conclusiones observaciones sobre el desempeño de Camila para dar contexto completo.",
+          "outcome": "El informe excede el objeto de la investigación y debilita su credibilidad; podría interpretarse como cuestionamiento a la víctima.",
+          "feedback": "Incorrecto. Las conclusiones no deben exceder los hechos investigados. Incluir antecedentes ajenos revictimiza y vulnera el estándar de motivación.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Redacto un informe breve solo con la conclusión, para agilizar el cierre dentro de plazo.",
+          "outcome": "El informe carece de antecedentes, prueba y análisis, por lo que no cumple el estándar legal ni resiste fiscalización.",
+          "feedback": "Insuficiente. Un informe fundado requiere las cinco secciones; la conclusión debe sustentarse en la prueba rendida.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Con los hechos acreditados (trato vejatorio reiterado y contacto físico no consentido), debes proponer la sanción aplicando el principio de proporcionalidad. ¿Qué recomiendas?",
+      "options": [
+        {
+          "text": "Despido de Pablo invocando el art. 160 N° 1 letra f del Código del Trabajo, con carta fundada que detalle hechos y prueba.",
+          "outcome": "La sanción es proporcional a la gravedad acreditada y queda correctamente fundada, sin derecho a indemnización por años de servicio.",
+          "feedback": "Correcto. Ante acoso laboral grave acreditado, el despido por art. 160 N° 1 letra f es la sanción proporcional. La carta debe contener hechos específicos y la prueba.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Amonestación escrita a Pablo y traslado de Camila a otra área para evitar nuevos roces.",
+          "outcome": "La sanción es desproporcionada a la gravedad del hecho y trasladar a la víctima la revictimiza.",
+          "feedback": "Incorrecto. La amonestación es insuficiente ante contacto físico no consentido y trato vejatorio reiterado. Además, nunca se debe trasladar a la víctima como medida.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Despido de Pablo y, además, presento una denuncia penal en su contra a nombre de la empresa.",
+          "outcome": "El despido es correcto, pero la acción penal corresponde exclusivamente a Camila como víctima.",
+          "feedback": "Parcialmente correcto. La sanción es adecuada, pero la empresa no debe sustituir la voluntad procesal de la víctima en lo penal.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Con la sanción definida, debes diseñar el plan de reincorporación segura de Camila, quien permanece en su puesto. ¿Qué medidas incluyes?",
+      "options": [
+        {
+          "text": "Apoyo psicosocial vía mutualidad, reorganización física del puesto, comunicación al equipo sin detalles personales y monitoreo a 30/60/90 días con encuesta confidencial.",
+          "outcome": "Camila se reincorpora con medidas físicas, organizacionales y de apoyo, además de seguimiento verificable.",
+          "feedback": "Correcto. Un plan de reincorporación segura combina separación del agresor, apoyo psicosocial y monitoreo posterior con plazos y responsables.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Solicito a Camila firmar un acuerdo de confidencialidad y doy por cerrado el caso.",
+          "outcome": "No se implementan medidas protectoras reales y la víctima queda sin acompañamiento ni seguimiento.",
+          "feedback": "Incorrecto. La confidencialidad no es un plan de reincorporación. Se requieren medidas concretas de protección, apoyo y monitoreo.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Reincorporo a Camila sin medidas especiales, confiando en que la salida de Pablo resuelve todo.",
+          "outcome": "Sin apoyo psicosocial ni monitoreo, la empresa queda expuesta a represalias indirectas y pierde la oportunidad de seguimiento.",
+          "feedback": "Insuficiente. La salida del agresor no basta: el plan debe incluir apoyo psicosocial y monitoreo a 30/60/90 días.",
+          "score": -0.5,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Resta cerrar formalmente el ciclo y prevenir represalias. ¿Qué acción priorizas?",
+      "options": [
+        {
+          "text": "Comunico los resultados a las partes y a la DT dentro de los plazos, refuerzo la prohibición de represalias y activo el monitoreo confidencial.",
+          "outcome": "El ciclo se cierra formalmente, la empresa queda en posición sólida ante revisiones y la víctima cuenta con protección efectiva.",
+          "feedback": "Correcto. La comunicación oportuna a partes y DT, junto con la prohibición de represalias y el monitoreo, cierra el procedimiento de forma sólida.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Comunico solo al denunciado para ejecutar el despido y archivo el expediente.",
+          "outcome": "Quedan sin informar la víctima y la DT, lo que incumple plazos y debilita la posición de la empresa.",
+          "feedback": "Incorrecto. Se debe comunicar a ambas partes y a la DT dentro de los plazos, además de conservar el expediente.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Recuerdo verbalmente al equipo que no debe haber represalias, sin dejar registro ni seguimiento.",
+          "outcome": "El mensaje carece de respaldo formal y no permite detectar represalias posteriores.",
+          "feedback": "Insuficiente. La prohibición de represalias requiere registro y mecanismos de detección, ya que su incumplimiento puede generar nuevas sanciones e incluso tutela laboral.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El cierre de un procedimiento Ley Karin se sostiene en tres piezas inseparables: un informe final fundado con las cinco secciones obligatorias y conclusiones ajustadas a lo investigado; una sanción proporcional a la gravedad acreditada —que ante acoso grave probado puede ser el despido por art. 160 N° 1 letra f del Código del Trabajo, sin sustituir la voluntad penal de la víctima—; y un plan de reincorporación segura con medidas físicas, organizacionales, apoyo psicosocial y monitoreo a 30/60/90 días. Recuerda nunca trasladar a la víctima como sanción, comunicar resultados a las partes y a la DT dentro de los plazos, y reforzar por escrito la prohibición de represalias. Así la empresa protege la dignidad de las personas y queda en posición sólida ante cualquier fiscalización."
+}
