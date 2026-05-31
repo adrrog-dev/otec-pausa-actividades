@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Excel Intermedio - Tablas Dinámicas, Fórmulas y Dashboards",
+  "intro": "Pon a prueba lo aprendido sobre tablas dinámicas, fórmulas avanzadas y dashboards en Excel. Cada pregunta tiene una sola respuesta correcta. Lee con atención y revisa la retroalimentación para reforzar tus conocimientos. ¡Éxito!",
+  "questions": [
+    {
+      "q": "Necesitas buscar el sueldo de un trabajador a partir de su RUT en una planilla. ¿Qué función es la más adecuada?",
+      "options": [
+        "BUSCARV",
+        "CONCATENAR",
+        "PROMEDIO",
+        "CONTAR.SI"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. BUSCARV permite buscar un valor (el RUT) en la primera columna de una tabla y devolver un dato asociado, como el sueldo.",
+      "feedbackKo": "Incorrecto. La función adecuada es BUSCARV, que busca un valor en la primera columna de una tabla y devuelve un dato relacionado.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es la principal utilidad de una tabla dinámica en Excel?",
+      "options": [
+        "Cambiar el color de las celdas automáticamente",
+        "Resumir y analizar grandes volúmenes de datos de forma rápida",
+        "Proteger el archivo con contraseña",
+        "Corregir errores ortográficos en el texto"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Las tablas dinámicas permiten resumir, agrupar y analizar grandes cantidades de datos de manera flexible y rápida.",
+      "feedbackKo": "Incorrecto. La tabla dinámica sirve para resumir y analizar grandes volúmenes de datos, no para tareas de formato o seguridad.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En un control de inventario, deseas mostrar 'Reponer' si el stock es menor a 10 y 'OK' en caso contrario. ¿Qué función usarías?",
+      "options": [
+        "SUMA",
+        "BUSCARV",
+        "SI",
+        "CONCATENAR"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La función SI evalúa una condición lógica y devuelve un resultado según se cumpla o no.",
+      "feedbackKo": "Incorrecto. La función SI es la indicada, ya que evalúa una condición y devuelve un valor según se cumpla o no.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué elemento es fundamental para construir un dashboard básico en Excel?",
+      "options": [
+        "Insertar gráficos y tablas dinámicas que se actualicen con los datos",
+        "Escribir todo el contenido en una sola celda",
+        "Eliminar las fórmulas para evitar errores",
+        "Usar exclusivamente texto sin formato"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. Un dashboard se apoya en gráficos y tablas dinámicas conectados a los datos para visualizar información de manera clara.",
+      "feedbackKo": "Incorrecto. Un dashboard básico requiere gráficos y tablas dinámicas vinculadas a los datos para mostrar la información de forma visual.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Para resaltar automáticamente con color las celdas que superan un presupuesto, ¿qué herramienta de Excel utilizarías?",
+      "options": [
+        "Validación de datos",
+        "Formato condicional",
+        "Tabla dinámica",
+        "Función CONCATENAR"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El formato condicional aplica formatos (como colores) de forma automática según reglas que tú definas.",
+      "feedbackKo": "Incorrecto. El formato condicional es la herramienta que resalta celdas automáticamente según las condiciones establecidas.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

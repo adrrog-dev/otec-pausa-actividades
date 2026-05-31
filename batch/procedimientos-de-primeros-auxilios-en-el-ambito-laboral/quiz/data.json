@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Procedimientos de Primeros Auxilios en el Ámbito Laboral",
+  "intro": "A continuación responderás 5 preguntas sobre los procedimientos estandarizados de primeros auxilios en la empresa. Este quiz evalúa tu capacidad para aplicar protocolos clave como la atención inicial, el registro de incidentes y la derivación a la mutualidad. Lee con atención y selecciona la única respuesta correcta en cada caso.",
+  "questions": [
+    {
+      "q": "Ante un accidente laboral, ¿cuál es la primera acción recomendada antes de prestar atención inicial a la persona afectada?",
+      "options": [
+        "Trasladar de inmediato a la persona en un vehículo particular",
+        "Evaluar que la zona sea segura para el rescatista y la víctima",
+        "Completar el registro de incidentes en el sistema",
+        "Llamar a un familiar de la persona accidentada"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Antes de actuar, siempre se debe verificar que el entorno sea seguro para evitar nuevas víctimas o agravar la situación.",
+      "feedbackKo": "Incorrecto. La prioridad inicial es asegurar la zona; un entorno inseguro puede poner en riesgo tanto al rescatista como a la persona afectada.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es el propósito principal del kit de primeros auxilios en la empresa?",
+      "options": [
+        "Reemplazar la atención médica profesional en todo accidente",
+        "Cumplir solo con una formalidad administrativa",
+        "Brindar elementos para una atención inicial mientras llega ayuda especializada",
+        "Almacenar medicamentos de uso permanente para los trabajadores"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El kit permite entregar una primera atención mientras se gestiona la derivación o llega el apoyo especializado.",
+      "feedbackKo": "Incorrecto. El kit no reemplaza la atención médica; su función es apoyar la atención inicial hasta que llegue ayuda especializada.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En Chile, ante un accidente del trabajo, ¿a dónde corresponde derivar al trabajador afectado?",
+      "options": [
+        "Al organismo administrador del seguro laboral (Mutual o ACHS según corresponda)",
+        "Únicamente a un servicio de urgencia particular",
+        "A la consulta médica más cercana, sin importar el convenio",
+        "A la farmacia más próxima al lugar de trabajo"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. La derivación debe realizarse al organismo administrador correspondiente (Mutual, ACHS u otro), según el convenio de la empresa.",
+      "feedbackKo": "Incorrecto. La derivación por accidente laboral se realiza al organismo administrador del seguro de la empresa (Mutual, ACHS, entre otros).",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué función cumple el protocolo DOA (Denuncia de Accidentes)?",
+      "options": [
+        "Es un instructivo para reponer insumos del kit de primeros auxilios",
+        "Permite registrar y notificar formalmente el accidente al organismo administrador",
+        "Sirve para evaluar el desempeño anual del trabajador",
+        "Es un documento opcional sin valor administrativo"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La DOA permite formalizar la denuncia del accidente, activando la cobertura y el seguimiento del caso.",
+      "feedbackKo": "Incorrecto. La DOA es la denuncia formal del accidente ante el organismo administrador y es clave para activar la cobertura del trabajador.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Por qué es importante mantener un registro de incidentes en la empresa?",
+      "options": [
+        "Solo para sancionar a los trabajadores involucrados",
+        "Para reemplazar la denuncia de accidentes ante la mutualidad",
+        "Para documentar lo ocurrido y apoyar la prevención de futuros accidentes",
+        "Porque es un trámite sin relación con la seguridad laboral"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El registro de incidentes documenta los hechos y aporta información valiosa para mejorar la prevención.",
+      "feedbackKo": "Incorrecto. El objetivo del registro no es sancionar, sino documentar lo sucedido y fortalecer la prevención de futuros accidentes.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

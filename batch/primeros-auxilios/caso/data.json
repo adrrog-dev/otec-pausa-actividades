@@ -1,0 +1,115 @@
+{
+  "title": "Emergencia en el área de bodega: actúa con criterio",
+  "intro": "Eres brigadista de primeros auxilios en una empresa de logística. Durante el turno, escuchas un grito en el sector de carga. Un compañero está tendido en el suelo, inmóvil, junto a una estructura metálica. Otro trabajador se acerca alarmado. Tus decisiones determinarán la seguridad de todos y la atención de la víctima. Recuerda aplicar el protocolo ACHS/Mutual.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Llegas al lugar y ves al compañero en el suelo. No sabes qué ocurrió. ¿Cuál es tu primera acción?",
+      "options": [
+        {
+          "text": "Corres de inmediato a tocar y mover a la víctima para reanimarla.",
+          "outcome": "Te acercas sin observar el entorno. Hay una estructura metálica inestable que podría caer sobre ambos.",
+          "feedback": "Antes de atender, siempre debes evaluar la escena. Actuar sin verificar riesgos puede generar una segunda víctima: tú.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Evalúas la escena: identificas riesgos, te aseguras de que el área sea segura y luego te aproximas.",
+          "outcome": "Detectas la estructura inestable, despejas el área y te acercas con seguridad a la víctima.",
+          "feedback": "Correcto. La evaluación de la escena es el primer paso del protocolo. Tu seguridad y la del entorno son prioridad.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Esperas a que llegue otra persona porque no quieres equivocarte.",
+          "outcome": "Pierdes tiempo valioso mientras la víctima permanece sin atención.",
+          "feedback": "La duda excesiva retrasa la atención. Como brigadista capacitado, debes actuar con criterio sin exponerte.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El área es segura. Compruebas que la víctima no responde y no respira con normalidad. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Inicias RCP de inmediato sin solicitar ayuda.",
+          "outcome": "Comienzas las compresiones, pero estás solo y nadie ha activado el sistema de emergencias.",
+          "feedback": "La RCP es vital, pero primero debes activar la cadena de ayuda. Sin llamado al SAMU, la atención avanzada no llegará a tiempo.",
+          "score": 0,
+          "next": 3
+        },
+        {
+          "text": "Indicas a un compañero que llame al 131 (SAMU) y busque el DEA, mientras tú inicias RCP.",
+          "outcome": "Delegas claramente el llamado y comienzas las compresiones torácicas de inmediato.",
+          "feedback": "Excelente. Activar el sistema de emergencias y dar instrucciones claras permite atención simultánea y oportuna.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Le das agua y esperas que reaccione antes de hacer algo más.",
+          "outcome": "La víctima sigue sin responder y la situación se agrava.",
+          "feedback": "Nunca administres líquidos a una persona inconsciente: riesgo de asfixia. Debes iniciar RCP y activar el SAMU.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Tras unos minutos de RCP, la víctima recupera la respiración pero presenta una herida en el brazo que sangra de forma abundante y continua. ¿Cómo actúas?",
+      "options": [
+        {
+          "text": "Aplicas presión directa firme sobre la herida con un apósito o paño limpio.",
+          "outcome": "Controlas el sangrado mientras mantienes la vigilancia de los signos vitales.",
+          "feedback": "Correcto. La presión directa es la primera medida para controlar hemorragias externas. Mantén la atención hasta que llegue el SAMU.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Aplicas un torniquete improvisado de inmediato.",
+          "outcome": "Inmovilizas el flujo, pero el torniquete debe reservarse para casos extremos donde la presión no funciona.",
+          "feedback": "El torniquete es una medida de último recurso. Primero intenta presión directa, ya que un torniquete mal aplicado puede causar daño.",
+          "score": 0,
+          "next": 4
+        },
+        {
+          "text": "Limpias la herida con agua y la dejas descubierta para que respire.",
+          "outcome": "El sangrado continúa y la víctima pierde más sangre.",
+          "feedback": "Frente a una hemorragia abundante, la prioridad es detener el sangrado con presión directa, no limpiar la herida.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "El SAMU está en camino. Mientras esperas, otro trabajador comienza a atragantarse con un alimento y no puede hablar ni respirar. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Le das palmadas en la espalda y, si no resulta, aplicas la maniobra de Heimlich.",
+          "outcome": "Tras compresiones abdominales, el trabajador expulsa el objeto y recupera la respiración.",
+          "feedback": "Correcto. Ante obstrucción total de la vía aérea, alternar palmadas y maniobra de Heimlich es lo indicado.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Le ofreces agua para que el alimento baje.",
+          "outcome": "El trabajador no puede tragar y su situación empeora.",
+          "feedback": "Cuando la vía aérea está obstruida, dar agua no ayuda y puede agravar el cuadro. Debes aplicar la maniobra de Heimlich.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Esperas a que tosa solo porque crees que es una obstrucción leve.",
+          "outcome": "El trabajador no logra toser y comienza a perder el conocimiento.",
+          "feedback": "Si la persona no puede hablar, toser ni respirar, la obstrucción es total y requiere intervención inmediata.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Has enfrentado una emergencia laboral compleja que integró evaluación de la escena, RCP, control de hemorragias y maniobra de Heimlich. Las decisiones correctas siguen siempre la secuencia del protocolo ACHS/Mutual: primero asegurar el entorno, luego activar el sistema de emergencias (131 SAMU), atender los riesgos vitales y mantener la vigilancia de la víctima. Recuerda que como brigadista o jefatura tu rol es actuar con criterio, delegar tareas con claridad y no exponer tu propia seguridad. La práctica frecuente de estas técnicas es clave para responder con confianza en situaciones reales."
+}

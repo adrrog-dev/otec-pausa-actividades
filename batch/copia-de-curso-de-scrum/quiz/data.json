@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Scrum aplicado al contexto SENCE",
+  "intro": "Pon a prueba tus conocimientos sobre cómo integrar el marco ágil Scrum con los lineamientos SENCE en proyectos de capacitación OTEC. Cada respuesta correcta suma puntos y recibirás retroalimentación inmediata.",
+  "questions": [
+    {
+      "q": "¿Cuál es el porcentaje mínimo de asistencia que exige el marco SENCE para validar la participación de un trabajador en un curso?",
+      "options": [
+        "50%",
+        "60%",
+        "75%",
+        "90%"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. SENCE exige una asistencia mínima del 75% para validar la participación, requisito que el equipo Scrum debe contemplar al planificar las actividades.",
+      "feedbackKo": "Incorrecto. El porcentaje mínimo de asistencia exigido por SENCE es 75%, dato clave para la planificación de cualquier proyecto OTEC.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Al aplicar Scrum en una OTEC bajo lineamientos SENCE, ¿qué requisito específico debe considerarse en la definición del trabajo terminado?",
+      "options": [
+        "El cumplimiento de las horas cronológicas comprometidas",
+        "La cantidad de reuniones diarias",
+        "El número de integrantes del equipo Scrum",
+        "La duración del Sprint en semanas"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. Las horas cronológicas comprometidas son un requisito formal de SENCE que debe reflejarse en la definición de trabajo terminado del equipo.",
+      "feedbackKo": "Incorrecto. El cumplimiento de las horas cronológicas comprometidas es el requisito que SENCE exige, y debe integrarse a la definición de trabajo terminado.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué evaluación contempla el marco SENCE para verificar los resultados del aprendizaje?",
+      "options": [
+        "Evaluación de satisfacción solamente",
+        "Evaluación de aprovechamiento",
+        "Evaluación de infraestructura",
+        "Evaluación financiera del curso"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La evaluación de aprovechamiento permite medir el logro de los aprendizajes, exigencia que el equipo Scrum debe planificar dentro de sus entregables.",
+      "feedbackKo": "Incorrecto. El marco SENCE contempla la evaluación de aprovechamiento para verificar los resultados de aprendizaje.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En un proyecto de capacitación OTEC con Scrum, ¿cómo se relaciona el marco SENCE con la metodología ágil?",
+      "options": [
+        "SENCE reemplaza por completo a Scrum",
+        "Scrum se aplica sin cambios, ignorando SENCE",
+        "Se usa el mismo Scrum, pero ajustado a los requisitos SENCE",
+        "Scrum solo aplica a proyectos sin financiamiento SENCE"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Se mantiene el mismo Scrum, pero se adapta a los requisitos del marco SENCE como horas cronológicas, asistencia y aprovechamiento.",
+      "feedbackKo": "Incorrecto. La idea es usar el mismo Scrum, ajustándolo a los requisitos del marco SENCE, no reemplazarlo ni ignorarlo.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿A qué tipo de equipos resulta aplicable este enfoque de Scrum con marco SENCE?",
+      "options": [
+        "Solo a equipos de informática",
+        "A equipos de capacitación",
+        "Únicamente a la gerencia general",
+        "Solo a proveedores externos"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Este enfoque es aplicable a equipos de capacitación, que pueden organizar su trabajo con Scrum cumpliendo los lineamientos SENCE.",
+      "feedbackKo": "Incorrecto. El enfoque está pensado para equipos de capacitación que deben cumplir el marco SENCE en sus proyectos.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

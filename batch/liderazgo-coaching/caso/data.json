@@ -1,0 +1,87 @@
+{
+  "title": "Conversación de desarrollo con un colaborador",
+  "intro": "Eres jefatura de un equipo de operaciones. Marcela, una de tus colaboradoras con buen potencial, ha bajado su rendimiento en las últimas semanas. Decides tener una conversación de desarrollo aplicando liderazgo coaching. Tus decisiones definirán la calidad y el resultado de esta conversación.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Citas a Marcela a una reunión uno a uno. Ella llega algo tensa, esperando una llamada de atención. ¿Cómo inicias la conversación?",
+      "options": [
+        {
+          "text": "\"Marcela, tu rendimiento bajó y necesito que mejores ya.\"",
+          "outcome": "Marcela se cierra y responde con monosílabos. La conversación se vuelve un monólogo de tu parte y no logras conocer la causa real del problema.",
+          "feedback": "Iniciar con un juicio directo activa la defensa del colaborador. El liderazgo coaching busca abrir el diálogo, no cerrarlo. Conviene partir generando confianza.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "\"Marcela, quiero conversar contigo sobre cómo te has sentido últimamente en tu trabajo. ¿Cómo estás viendo este período?\"",
+          "outcome": "Marcela baja los hombros, se relaja y comienza a compartir que ha tenido sobrecarga y dudas sobre sus prioridades.",
+          "feedback": "Excelente. Abrir con una pregunta poderosa y centrada en la persona genera confianza y permite explorar la realidad (R del modelo GROW) antes de juzgar.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Marcela menciona que se siente sobrecargada y que no tiene claras sus prioridades. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Le entregas de inmediato una lista de tareas reordenadas según tu criterio.",
+          "outcome": "Marcela acepta la lista, pero no se compromete realmente. Vuelve a su escritorio sin sentirse parte de la solución.",
+          "feedback": "Resolver por el colaborador limita su desarrollo y autonomía. El liderazgo coaching busca que la persona construya sus propias respuestas con tu acompañamiento.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Le preguntas: \"¿Cuáles crees tú que son hoy tus tres prioridades más importantes y qué te está dificultando enfocarte en ellas?\"",
+          "outcome": "Marcela reflexiona y logra identificar por sí misma dos tareas que la estaban distrayendo. Propone un nuevo orden de trabajo.",
+          "feedback": "Muy bien. Usar preguntas poderosas y escucha activa permite que el colaborador descubra sus propias soluciones, aumentando su compromiso y aprendizaje.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "La conversación avanza y Marcela ha identificado mejoras posibles. Es momento de cerrar la reunión. ¿Cómo concluyes?",
+      "options": [
+        {
+          "text": "Terminas diciendo: \"Bueno, ya sabes lo que tienes que hacer. Nos vemos.\"",
+          "outcome": "No queda un acuerdo concreto ni fechas. A la semana siguiente la situación sigue igual y ambos se frustran.",
+          "feedback": "Una conversación de desarrollo sin compromisos claros pierde su efecto. Faltó definir el camino (Way Forward del modelo GROW) con acciones y seguimiento.",
+          "score": -0.5,
+          "next": 4
+        },
+        {
+          "text": "Acuerdan juntos 2 acciones concretas, con plazos, y agendan una breve revisión de seguimiento en dos semanas.",
+          "outcome": "Marcela sale motivada, con un plan de desarrollo claro y sintiéndose acompañada. El seguimiento posterior muestra mejoras reales.",
+          "feedback": "Perfecto. Cerrar con compromisos concretos, plazos y seguimiento transforma la conversación en un verdadero plan de desarrollo y refuerza la confianza.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Reflexión final: como líder coach, evalúas tu propia conversación con Marcela. ¿Qué aprendizaje destacas como más relevante para tu rol?",
+      "options": [
+        {
+          "text": "Lo importante es entregar instrucciones rápidas y claras para corregir el desempeño.",
+          "outcome": "Tu equipo cumple en lo inmediato, pero depende de ti para resolver cada situación y no desarrolla autonomía.",
+          "feedback": "El liderazgo coaching no reemplaza la dirección, pero busca desarrollar capacidades. Apoyarse solo en instrucciones limita el crecimiento del equipo.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Lo clave es escuchar activamente, hacer preguntas poderosas y construir acuerdos con seguimiento.",
+          "outcome": "Adoptas un estilo de liderazgo coaching sostenible, que desarrolla a tus colaboradores y mejora el desempeño del equipo en el tiempo.",
+          "feedback": "Correcto. La escucha activa, las preguntas poderosas y los acuerdos con seguimiento son la base de conversaciones de desarrollo efectivas y del crecimiento del equipo.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El liderazgo coaching se basa en acompañar al colaborador para que descubra sus propias soluciones, en lugar de imponerlas. Como viste en el caso, abrir la conversación generando confianza, aplicar preguntas poderosas (modelo GROW: Meta, Realidad, Opciones y Camino a seguir), practicar escucha activa y cerrar con compromisos concretos y seguimiento son las claves de una conversación de desarrollo efectiva. Este estilo no elimina la dirección de la jefatura, sino que potencia la autonomía, el compromiso y el desempeño del equipo en el tiempo. Te invitamos a aplicar estas herramientas en tus próximas conversaciones uno a uno con tus colaboradores."
+}

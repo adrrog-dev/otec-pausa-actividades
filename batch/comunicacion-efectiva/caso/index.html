@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Feedback que construye: liderando con asertividad — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Feedback que construye: liderando con asertividad",
+  "intro": "Eres jefatura de un equipo en una empresa chilena. Camila, una colaboradora con buen desempeño histórico, ha entregado tarde sus dos últimos informes y eso afectó al equipo. Debes conversar con ella. Tus decisiones determinarán el clima del equipo y la efectividad de tu comunicación.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Es lunes en la mañana. Camila acaba de entregar el informe con dos días de atraso. El equipo está molesto porque tuvo que ajustar sus tiempos. ¿Cómo abordas la situación?",
+      "options": [
+        {
+          "text": "La llamas frente al equipo y le dices que su atraso es inaceptable y que perjudica a todos.",
+          "outcome": "Camila se pone a la defensiva y se nota incómoda. El equipo guarda silencio tenso. La relación se daña.",
+          "feedback": "Dar feedback correctivo en público genera vergüenza y reacciones defensivas. La asertividad implica cuidar el momento y el lugar: lo correctivo se conversa en privado.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Le pides una reunión breve en privado para conversar sobre los informes.",
+          "outcome": "Camila acepta y se muestra dispuesta a conversar. Se genera un espacio seguro para dialogar.",
+          "feedback": "Excelente. Elegir un espacio privado y anunciar el tema con respeto es la base del feedback efectivo. Demuestra asertividad y consideración.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "No dices nada para evitar el conflicto y esperas que mejore sola.",
+          "outcome": "El atraso se repite a la semana siguiente y el equipo empieza a perder confianza en tu liderazgo.",
+          "feedback": "Evitar la conversación no es asertividad, es evasión. Los problemas no resueltos suelen crecer. La comunicación asertiva busca abordar, no esquivar.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya estás frente a frente con Camila. Quieres entregar feedback correctivo sin dañar la relación. ¿Cómo inicias la conversación?",
+      "options": [
+        {
+          "text": "\"Camila, siempre llegas tarde con todo, esto ya es un patrón tuyo.\"",
+          "outcome": "Camila se siente juzgada como persona y responde defensivamente. La conversación se tensa.",
+          "feedback": "Generalizar con \"siempre\" y etiquetar a la persona activa la resistencia. El feedback efectivo describe conductas y hechos concretos, no rasgos de personalidad.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "\"Camila, noté que los dos últimos informes llegaron con atraso. Quiero entender qué pasó y cómo podemos mejorarlo.\"",
+          "outcome": "Camila se relaja, explica que tuvo una sobrecarga de tareas y agradece la apertura.",
+          "feedback": "Muy bien. Describir hechos observables, expresar el impacto y abrir la conversación con una pregunta refleja comunicación no violenta y escucha activa.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "\"No te preocupes, son cosas que pasan, sigamos no más.\"",
+          "outcome": "Camila no comprende la real importancia del tema y el problema queda sin resolver.",
+          "feedback": "Minimizar el impacto evita el conflicto, pero pierde la oportunidad de mejorar. El feedback correctivo debe ser claro sobre el efecto de la conducta, manteniendo el respeto.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Camila explica que asumió tareas adicionales que no estaban planificadas y eso la sobrecargó. ¿Cómo continúas?",
+      "options": [
+        {
+          "text": "Escuchas, validas su situación y juntos definen prioridades y un plan para los próximos informes.",
+          "outcome": "Camila se compromete con nuevos plazos realistas y la relación se fortalece. El equipo nota la mejora.",
+          "feedback": "Perfecto. La escucha activa más un acuerdo concreto transforma el feedback en un compromiso compartido. Así se construye confianza y desempeño.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Le dices que las excusas no sirven, que se organice mejor y punto.",
+          "outcome": "Camila se cierra y cumple por temor, no por compromiso. El clima se deteriora.",
+          "feedback": "Cerrar la escucha bloquea soluciones reales. La asertividad incluye firmeza en los acuerdos, pero también reconocer el contexto del otro.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Una semana después, Camila entrega el informe a tiempo y con buena calidad. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Reconoces su mejora de forma específica: \"Camila, entregaste a tiempo y el informe quedó muy completo, gracias por el esfuerzo.\"",
+          "outcome": "Camila se siente valorada y motivada. El equipo percibe un liderazgo justo y cercano.",
+          "feedback": "Excelente cierre. El feedback positivo y específico refuerza la conducta deseada y consolida la relación de confianza.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "No comentas nada, ya que entregar a tiempo es su obligación.",
+          "outcome": "Camila cumple, pero no percibe reconocimiento. La motivación se mantiene baja.",
+          "feedback": "Dar por hecho lo positivo es un error común. Reconocer los logros, aunque sean parte del trabajo, fortalece el compromiso y el clima laboral.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La comunicación asertiva combina respeto y claridad. En este caso aprendiste que el feedback correctivo se entrega en privado, describiendo hechos concretos y su impacto, sin etiquetar a la persona. La escucha activa permite comprender el contexto y construir acuerdos compartidos en lugar de imponer. Finalmente, el feedback positivo y específico refuerza las conductas que queremos mantener. Como jefatura o mando medio, tu forma de comunicar influye directamente en el clima y el desempeño del equipo: ser asertivo no es ser duro, es ser claro, respetuoso y orientado a soluciones."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

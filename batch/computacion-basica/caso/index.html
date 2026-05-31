@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Un día en la oficina: decisiones digitales seguras — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Un día en la oficina: decisiones digitales seguras",
+  "intro": "Don Mario lleva pocas semanas usando el computador en su trabajo. Hoy debe revisar su correo, trabajar con archivos y navegar en internet. Acompáñalo y ayúdalo a tomar buenas decisiones en cada situación. Recuerda que cada elección tiene una consecuencia, igual que en la vida laboral real.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Don Mario enciende el computador con Windows y recibe un correo en Gmail. El mensaje dice: 'Felicitaciones, ganó un premio. Haga clic aquí e ingrese su contraseña para reclamarlo'. El remitente es desconocido. ¿Qué debería hacer?",
+      "options": [
+        {
+          "text": "Hacer clic en el enlace e ingresar su contraseña para no perder el premio.",
+          "outcome": "Al ingresar sus datos, entrega su contraseña a desconocidos. Su cuenta de correo queda en riesgo.",
+          "feedback": "Esto es un intento de engaño llamado 'phishing'. Nunca entregue sus contraseñas por enlaces de correos sospechosos.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "No hacer clic, marcar el correo como spam y eliminarlo.",
+          "outcome": "Don Mario protege su información y evita una estafa. Su cuenta sigue segura.",
+          "feedback": "Muy bien. Los correos que piden contraseñas o prometen premios suelen ser fraudes. Eliminarlos es la decisión correcta.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Reenviar el correo a todos sus compañeros para avisar del premio.",
+          "outcome": "El correo fraudulento se propaga y otros compañeros podrían caer en el engaño.",
+          "feedback": "Antes de reenviar, verifique si el mensaje es confiable. Lo recomendable es reportarlo, no difundirlo.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ahora Don Mario debe guardar un documento de Word con un informe importante. Quiere asegurarse de poder encontrarlo después. ¿Qué hace?",
+      "options": [
+        {
+          "text": "Usar 'Guardar como', elegir la carpeta 'Documentos' y ponerle un nombre claro como 'Informe_Mensual_Marzo'.",
+          "outcome": "El archivo queda guardado en un lugar ordenado y con un nombre fácil de reconocer.",
+          "feedback": "Excelente. Guardar con nombres claros y en carpetas conocidas facilita encontrar los archivos más tarde.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Cerrar el documento sin guardar, pensando que se guarda solo.",
+          "outcome": "Se pierde todo el trabajo realizado en el informe.",
+          "feedback": "Word no siempre guarda automáticamente. Siempre use 'Guardar' o 'Guardar como' antes de cerrar.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Guardarlo con el nombre 'documento1' en el Escritorio junto a muchos otros archivos.",
+          "outcome": "El archivo se guarda, pero será difícil distinguirlo de los demás más adelante.",
+          "feedback": "Guardar está bien, pero use nombres descriptivos y carpetas organizadas para no perder tiempo buscando.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Don Mario abre Excel para registrar las horas trabajadas de su equipo. Necesita sumar una columna de números. ¿Qué opción elige?",
+      "options": [
+        {
+          "text": "Usar la fórmula =SUMA(B2:B10) para sumar automáticamente las celdas.",
+          "outcome": "Excel calcula el total al instante y sin errores.",
+          "feedback": "Perfecto. Las fórmulas básicas como SUMA ahorran tiempo y reducen errores en los cálculos.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Sumar los números con una calculadora aparte y escribir el resultado a mano.",
+          "outcome": "El total queda registrado, pero el proceso es lento y puede tener errores.",
+          "feedback": "Funciona, pero Excel está hecho para calcular por usted. Aprender la función SUMA le facilitará el trabajo.",
+          "score": 0,
+          "next": 4
+        },
+        {
+          "text": "Escribir cualquier número como total sin calcularlo.",
+          "outcome": "El registro queda con información incorrecta.",
+          "feedback": "Nunca invente datos. Use las herramientas de Excel para obtener resultados confiables.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Al terminar la jornada, Don Mario debe cerrar su sesión en el computador compartido de la oficina. ¿Qué hace?",
+      "options": [
+        {
+          "text": "Cerrar sesión correctamente y dejar su cuenta protegida con contraseña.",
+          "outcome": "Su información personal queda segura para el día siguiente.",
+          "feedback": "Muy bien. Cerrar sesión en equipos compartidos protege sus datos y los de la empresa.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Apagar el monitor pero dejar la sesión abierta.",
+          "outcome": "Cualquier persona puede acceder a su correo y archivos.",
+          "feedback": "Apagar la pantalla no cierra la sesión. Siempre cierre sesión en computadores de uso común.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Dejar todo abierto porque tiene apuro por salir.",
+          "outcome": "Su cuenta y documentos quedan expuestos durante la noche.",
+          "feedback": "La seguridad digital también es responsabilidad laboral. Tómese unos segundos para cerrar sesión.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Don Mario aprendió que el uso del computador en el trabajo va más allá de escribir o abrir archivos: implica tomar decisiones seguras y ordenadas. Las claves son: desconfiar de correos sospechosos que piden contraseñas, guardar documentos con nombres claros y en carpetas ordenadas, aprovechar las fórmulas de Excel para evitar errores, y siempre cerrar sesión en equipos compartidos. Estas buenas prácticas protegen su información, mejoran su productividad y demuestran responsabilidad digital en el entorno laboral. Continúe practicando: cada decisión correcta fortalece su autonomía y confianza frente a la tecnología."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

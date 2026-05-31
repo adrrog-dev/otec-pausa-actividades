@@ -1,0 +1,76 @@
+{
+  "title": "Quiz Scrum: Roles, Ceremonias y Artefactos",
+  "intro": "Pon a prueba lo aprendido sobre el framework Scrum y su aplicación en equipos chilenos. Responde las 5 preguntas y revisa la retroalimentación de cada una para reforzar tus conocimientos.",
+  "questions": [
+    {
+      "q": "¿Cuáles son los 3 roles definidos en el framework Scrum?",
+      "options": [
+        "Gerente de Proyecto, Analista y Tester",
+        "Scrum Master, Product Owner y Equipo de Desarrollo",
+        "Líder Técnico, Cliente y Sponsor",
+        "Jefe de Área, Coordinador y Desarrollador"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Scrum define tres roles: el Scrum Master, el Product Owner y el Equipo de Desarrollo, cada uno con responsabilidades específicas.",
+      "feedbackKo": "Respuesta incorrecta. Los 3 roles de Scrum son: Scrum Master, Product Owner y Equipo de Desarrollo. Scrum no contempla roles jerárquicos tradicionales.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es la duración habitual de un Sprint en Scrum?",
+      "options": [
+        "Entre 1 y 4 semanas",
+        "Entre 1 y 2 días",
+        "Entre 3 y 6 meses",
+        "No tiene una duración definida"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. Un Sprint suele durar entre 1 y 4 semanas, manteniendo siempre una duración fija para favorecer el ritmo del equipo.",
+      "feedbackKo": "Respuesta incorrecta. Un Sprint dura entre 1 y 4 semanas, con una duración constante en cada ciclo de trabajo.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál de las siguientes corresponde a una ceremonia o evento de Scrum?",
+      "options": [
+        "Comité de Crisis",
+        "Reunión de Cierre Anual",
+        "Daily (reunión diaria)",
+        "Auditoría de Calidad"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La Daily es una de las ceremonias de Scrum, junto con la Planning, la Review y la Retrospectiva.",
+      "feedbackKo": "Respuesta incorrecta. La ceremonia válida es la Daily. Las ceremonias Scrum son: Planning, Daily, Review y Retrospectiva.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál de estos elementos es un artefacto de Scrum?",
+      "options": [
+        "Carta Gantt",
+        "Product Backlog",
+        "Informe de Gestión Mensual",
+        "Manual de Procedimientos"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El Product Backlog es uno de los tres artefactos de Scrum, junto con el Sprint Backlog y el Incremento.",
+      "feedbackKo": "Respuesta incorrecta. El artefacto correcto es el Product Backlog. Los artefactos de Scrum son: Product Backlog, Sprint Backlog e Incremento.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En una empresa chilena, ¿en qué áreas se puede aplicar el framework Scrum?",
+      "options": [
+        "Únicamente en equipos de Tecnologías de la Información (TI)",
+        "Solo en empresas de gran tamaño",
+        "En diversas áreas como TI, Marketing y Recursos Humanos",
+        "Exclusivamente en proyectos de software a gran escala"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Scrum es flexible y puede aplicarse en distintas áreas como TI, Marketing y Recursos Humanos dentro de organizaciones chilenas.",
+      "feedbackKo": "Respuesta incorrecta. Scrum es aplicable a múltiples áreas, incluyendo TI, Marketing y Recursos Humanos, no solo a equipos de software.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

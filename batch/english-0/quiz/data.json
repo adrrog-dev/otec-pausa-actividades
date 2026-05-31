@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Inglés Básico A1 para el Trabajo",
+  "intro": "Pon a prueba lo aprendido sobre saludos, números, presentaciones y verbos básicos en inglés. Este quiz está pensado para trabajadores de turismo y servicios. Lee cada pregunta con calma y selecciona la opción correcta. ¡Mucho éxito!",
+  "questions": [
+    {
+      "q": "Un cliente extranjero llega a su recepción por la mañana. ¿Cuál es el saludo más adecuado?",
+      "options": [
+        "Good night",
+        "Good morning",
+        "Goodbye",
+        "Good luck"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "¡Correcto! 'Good morning' significa 'Buenos días' y se usa hasta el mediodía.",
+      "feedbackKo": "Recuerda: 'Good morning' significa 'Buenos días'. 'Good night' es para despedirse de noche.",
+      "points": 10,
+      "difficulty": "Fácil"
+    },
+    {
+      "q": "Usted quiere presentarse y decir su nombre. ¿Qué frase es la correcta?",
+      "options": [
+        "My name is Carlos",
+        "I are Carlos",
+        "Me Carlos is",
+        "Name my Carlos"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "¡Muy bien! 'My name is...' es la forma correcta para presentar su nombre.",
+      "feedbackKo": "La forma correcta es 'My name is Carlos'. El orden de las palabras es importante en inglés.",
+      "points": 10,
+      "difficulty": "Fácil"
+    },
+    {
+      "q": "Un huésped le pregunta cuántas personas hay en su grupo y usted responde 'three'. ¿Qué número es?",
+      "options": [
+        "Dos",
+        "Cuatro",
+        "Tres",
+        "Cinco"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "¡Exacto! 'Three' significa 'tres'.",
+      "feedbackKo": "'Three' significa 'tres'. Repasa los números: one (1), two (2), three (3), four (4), five (5).",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Complete la oración con el verbo 'to be' correcto: 'She ___ a tourist.'",
+      "options": [
+        "am",
+        "are",
+        "is",
+        "be"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "¡Correcto! Con 'she', 'he' o 'it' se usa 'is'.",
+      "feedbackKo": "Con 'she' se usa 'is'. Recuerda: I am, you are, he/she/it is, we/they are.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Un cliente le agradece y usted desea responder cortésmente 'De nada'. ¿Qué frase usa?",
+      "options": [
+        "Thank you",
+        "You're welcome",
+        "Please",
+        "Excuse me"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "¡Muy bien! 'You're welcome' significa 'De nada' y demuestra buena atención.",
+      "feedbackKo": "'You're welcome' significa 'De nada'. 'Thank you' es 'Gracias'.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

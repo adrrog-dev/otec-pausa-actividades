@@ -1,0 +1,115 @@
+{
+  "title": "Imagen profesional bajo presión: el caso de Daniela",
+  "intro": "Daniela es asesora comercial de una empresa de servicios financieros. La próxima semana liderará una presentación clave ante un cliente corporativo importante. Quiere proyectar credibilidad, cercanía y profesionalismo aplicando conceptos de asesoría de imagen: colorimetría, morfología, estilo y presencia. Acompáñala en sus decisiones y observa las consecuencias.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Daniela hizo su análisis de colorimetría y sabe que pertenece a la estación 'invierno' (colores fríos y contrastados le favorecen). Para la reunión corporativa debe elegir el color base de su vestuario. ¿Qué le recomiendas?",
+      "options": [
+        {
+          "text": "Un traje en azul marino, combinado con blanco puro.",
+          "outcome": "Daniela proyecta una imagen sobria, confiable y alineada con su colorimetría de invierno.",
+          "feedback": "Excelente elección. Los tonos fríos y contrastados favorecen a la estación invierno y, además, el azul marino transmite confianza y seriedad, muy adecuados para un contexto financiero.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Tonos tierra y mostaza, porque están de moda esta temporada.",
+          "outcome": "Los colores cálidos opacan su rostro y restan presencia, pese a estar de tendencia.",
+          "feedback": "La moda no reemplaza la colorimetría personal. Los tonos cálidos no favorecen a una estación invierno; conviene priorizar los colores que armonizan con tu tono de piel, ojos y cabello.",
+          "score": -0.5,
+          "next": 2
+        },
+        {
+          "text": "Negro completo de pies a cabeza para no equivocarse.",
+          "outcome": "Se ve correcta, pero la imagen resulta plana y poco memorable.",
+          "feedback": "El negro es seguro y favorece al invierno, pero un look totalmente monocromático puede restar cercanía. Sumar un punto de contraste habría dado más presencia.",
+          "score": 0.3,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ahora Daniela debe definir el estilo del conjunto. Conoce los estilos clásico, romántico y dramático. La reunión es formal, con ejecutivos del sector financiero. ¿Qué estilo le conviene priorizar?",
+      "options": [
+        {
+          "text": "Estilo clásico: cortes limpios, líneas estructuradas y accesorios discretos.",
+          "outcome": "El conjunto comunica orden, profesionalismo y credibilidad.",
+          "feedback": "Muy acertado. El estilo clásico es el más alineado con el dress code corporativo formal y refuerza la percepción de seriedad y competencia.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Estilo dramático con prendas llamativas y muchos accesorios grandes.",
+          "outcome": "Daniela destaca, pero los detalles distraen del mensaje de la presentación.",
+          "feedback": "El estilo dramático tiene su lugar, pero en una reunión financiera formal puede competir con el contenido. La imagen debe acompañar, no robar protagonismo.",
+          "score": -0.3,
+          "next": 3
+        },
+        {
+          "text": "Estilo romántico con telas fluidas y volados.",
+          "outcome": "El look se ve agradable pero poco alineado con la formalidad esperada.",
+          "feedback": "El estilo romántico transmite cercanía, pero resulta poco coherente con el código corporativo formal. Conviene reservarlo para contextos más relajados.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Faltan minutos para presentar. Daniela revisa su presencia profesional: postura, lenguaje corporal y actitud. Está algo nerviosa. ¿Qué decisión refuerza mejor su imagen?",
+      "options": [
+        {
+          "text": "Respira, endereza la postura, mantiene contacto visual y habla con voz pausada.",
+          "outcome": "Daniela proyecta seguridad y control, complementando su vestuario impecable.",
+          "feedback": "Perfecto. La presencia profesional integra postura, mirada y voz. La imagen no es solo la ropa: el lenguaje corporal comunica tanto o más que la vestimenta.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Se queda revisando el celular en un rincón hasta el último segundo.",
+          "outcome": "Llega apurada y dispersa, lo que resta firmeza a su entrada.",
+          "feedback": "La preparación previa también es parte de la presencia. Un momento de calma y enfoque antes de presentar fortalece la seguridad que se proyecta.",
+          "score": -0.5,
+          "next": 4
+        },
+        {
+          "text": "Habla muy rápido y cruza los brazos para disimular los nervios.",
+          "outcome": "El lenguaje corporal cerrado transmite inseguridad al cliente.",
+          "feedback": "Cruzar los brazos y acelerar el discurso son señales de tensión. Una postura abierta y un ritmo pausado refuerzan la credibilidad.",
+          "score": -0.3,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Tras la reunión, Daniela quiere optimizar su vestuario laboral para no improvisar cada vez. ¿Qué estrategia le recomiendas?",
+      "options": [
+        {
+          "text": "Armar un guardarropa cápsula con prendas base versátiles dentro de su paleta de color.",
+          "outcome": "Daniela ahorra tiempo, reduce gastos y mantiene una imagen coherente cada día.",
+          "feedback": "Excelente. El guardarropa cápsula combina prendas intercambiables alineadas a la colorimetría y al estilo personal, facilitando una imagen profesional consistente.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Comprar muchas prendas de moda cada temporada sin un criterio definido.",
+          "outcome": "Acumula ropa difícil de combinar y gasta más de lo necesario.",
+          "feedback": "Comprar sin estrategia genera un clóset desordenado. Un guardarropa cápsula es más eficiente y sostenible para la imagen profesional.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Usar siempre exactamente el mismo conjunto para no pensar.",
+          "outcome": "Mantiene coherencia, pero pierde versatilidad y frescura.",
+          "feedback": "La constancia es valiosa, pero la idea del guardarropa cápsula es justamente lograr variedad combinando pocas piezas bien elegidas.",
+          "score": 0.2,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El caso de Daniela muestra que la asesoría de imagen profesional integra varios elementos: la colorimetría guía la elección de tonos que favorecen; el estilo debe ser coherente con el contexto y el dress code; la presencia profesional —postura, mirada y voz— comunica seguridad; y el guardarropa cápsula permite sostener una imagen consistente en el tiempo. Una imagen profesional sólida no depende de seguir tendencias ni de gastar más, sino de tomar decisiones alineadas con tus características personales y con el contexto laboral. Revisa tus decisiones: cada acierto suma credibilidad y cada error es una oportunidad de aprendizaje para tu propia gestión de imagen."
+}

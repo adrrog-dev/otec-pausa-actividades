@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VIF en el Trabajo: Detectar y Apoyar a Tiempo — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "VIF en el Trabajo: Detectar y Apoyar a Tiempo",
+  "intro": "Eres jefatura de un equipo administrativo. Carolina, una colaboradora habitualmente puntual y participativa, ha cambiado en las últimas semanas: llega tarde, se aísla, ha presentado licencias breves y notaste un moretón en su brazo que intentó cubrir. Hoy faltó sin aviso y luego envió un mensaje pidiendo disculpas, diciendo que 'tuvo un problema en casa'. Como líder, debes decidir cómo actuar conforme a un protocolo de apoyo y a la Ley 20.066. Cada decisión tiene consecuencias.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Carolina regresa al trabajo al día siguiente. Notas que está retraída y evita contacto visual. ¿Cuál es tu primer paso como jefatura?",
+      "options": [
+        {
+          "text": "Llamarla la atención frente al equipo por sus atrasos y la falta sin aviso.",
+          "outcome": "Carolina se cierra aún más, se siente expuesta y avergonzada. El ambiente del equipo se tensa y ella deja de comunicarse contigo.",
+          "feedback": "Exponer o sancionar públicamente sin indagar el contexto puede revictimizar a la persona y cerrar toda posibilidad de apoyo. La señal de cambio conductual merece una mirada empática, no punitiva.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Invitarla a una conversación privada, en un espacio reservado y sin juzgar.",
+          "outcome": "Carolina accede a hablar contigo en una sala privada. Se muestra nerviosa, pero agradece que no la hayas expuesto frente a sus compañeros.",
+          "feedback": "Correcto. El primer abordaje debe ser confidencial, respetuoso y sin juicios. Generar un espacio seguro es clave para que la persona se sienta acompañada y no fiscalizada.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Ignorar la situación para 'no entrometerte' en su vida personal.",
+          "outcome": "Las señales continúan y se agravan. Carolina se siente sola y su desempeño y salud siguen deteriorándose sin apoyo.",
+          "feedback": "La omisión no protege la privacidad: deja desprotegida a la persona. Un líder atento puede ofrecer ayuda sin invadir, respetando los límites que ella defina.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Durante la conversación privada, Carolina rompe en llanto y comenta que su pareja la ha agredido en varias ocasiones. Te pide que 'no le digas a nadie'. ¿Cómo respondes?",
+      "options": [
+        {
+          "text": "Prometer guardar el secreto absoluto y no hacer nada más.",
+          "outcome": "Carolina se siente escuchada por un momento, pero queda sin orientación ni acceso a redes de apoyo especializadas. La situación de riesgo se mantiene.",
+          "feedback": "Escuchar es valioso, pero no basta. Como jefatura no eres especialista: debes orientar hacia las redes de apoyo. La confidencialidad se cuida, pero no puede impedir activar el protocolo de derivación.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Validar lo que siente, asegurar manejo confidencial y orientarla hacia las redes de apoyo disponibles.",
+          "outcome": "Carolina se calma al sentirse contenida. Le explicas que respetarás su privacidad dentro del protocolo y que existen redes que pueden ayudarla.",
+          "feedback": "Excelente. Validar la experiencia, cuidar la confidencialidad dentro del marco del protocolo y orientar hacia la red especializada es la respuesta adecuada. No debes investigar ni asumir el rol de terapeuta o policía.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Insistir en conocer todos los detalles del agresor para enfrentarlo tú mismo.",
+          "outcome": "Carolina se asusta, siente que pierde el control de su situación y se arrepiente de haber hablado.",
+          "feedback": "Tomar acciones por cuenta propia contra el agresor puede aumentar el riesgo para la víctima y exceder tu rol. La intervención debe canalizarse por las vías formales y especializadas.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Decides actuar conforme al protocolo de apoyo. ¿Qué pasos priorizas para derivar y acompañar a Carolina?",
+      "options": [
+        {
+          "text": "Entregar información de SernamEG (Fono 1455), recordar el 149 de Carabineros ante emergencia, coordinar con RRHH y ofrecer apoyo en salud mental.",
+          "outcome": "Carolina cuenta con orientación clara, contacta a la red de SernamEG y RRHH activa medidas de apoyo internas como flexibilidad y resguardo de su información.",
+          "feedback": "Respuesta correcta. La derivación a redes formales (SernamEG 1455, Carabineros 149 en emergencias, apoyo en salud mental) junto a la coordinación con RRHH es el núcleo del protocolo de apoyo en el contexto laboral.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Derivarla solo a RRHH y desentenderte del seguimiento.",
+          "outcome": "RRHH recibe el caso, pero sin tu acompañamiento como jefatura directa Carolina siente que el apoyo es frío y distante.",
+          "feedback": "Derivar a RRHH es parte del protocolo, pero la jefatura mantiene un rol de acompañamiento y seguimiento respetuoso. El apoyo es un proceso, no un trámite único.",
+          "score": 0,
+          "next": 4
+        },
+        {
+          "text": "Darle un par de días libres y esperar que 'todo se resuelva solo'.",
+          "outcome": "Carolina descansa, pero al regresar la situación de violencia persiste y no recibió ninguna orientación hacia las redes de apoyo.",
+          "feedback": "Las medidas de bienestar puntuales no reemplazan la activación del protocolo ni la derivación a redes especializadas. La VIF requiere apoyo sostenido y orientación profesional.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Semanas después, RRHH te consulta cómo mantener el acompañamiento sin vulnerar la privacidad de Carolina. ¿Qué recomiendas?",
+      "options": [
+        {
+          "text": "Mantener seguimiento confidencial, ofrecer flexibilidad razonable y resguardar su información, registrando solo lo necesario según protocolo.",
+          "outcome": "Carolina percibe un entorno laboral seguro y de confianza. Su desempeño se estabiliza y mantiene contacto con las redes de apoyo.",
+          "feedback": "Muy bien. El acompañamiento debe ser sostenido, confidencial y proporcional, cuidando los datos sensibles y ofreciendo apoyos concretos sin exponer a la persona.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Comentar el caso en reuniones de equipo para que 'todos la apoyen'.",
+          "outcome": "La información se difunde y Carolina se siente expuesta, perdiendo la confianza en la organización.",
+          "feedback": "Difundir información sensible vulnera la confidencialidad y puede revictimizar. El apoyo del entorno debe gestionarse sin divulgar detalles del caso.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Abordar la violencia intrafamiliar en el contexto laboral exige sensibilidad, confidencialidad y acción conforme a un protocolo. Las claves son: detectar señales (ausentismo, lesiones, aislamiento, cambios conductuales) sin emitir juicios; generar un espacio privado y seguro para conversar; validar la experiencia de la persona; y derivar a las redes formales (SernamEG Fono 1455, Carabineros 149 en emergencias y apoyo en salud mental), coordinando con RRHH. La jefatura no investiga, no enfrenta al agresor ni asume roles clínicos: acompaña, orienta y resguarda la información sensible. La Ley 20.066 y un entorno laboral protector permiten que el trabajo sea un espacio de contención y no de revictimización."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

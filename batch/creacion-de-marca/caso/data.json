@@ -1,0 +1,101 @@
+{
+  "title": "Construyendo la marca de Aroma Sur",
+  "intro": "Eres Camila, fundadora de Aroma Sur, una PYME chilena de cafés de especialidad del sur del país. Tu producto es excelente, pero tu marca aún no comunica con claridad quién eres ni por qué deberían elegirte. Decides aplicar los 5 pilares de marca (propósito, valores, personalidad, voz e identidad visual) que aprendiste en el curso de Marcelo Guital. A lo largo de este caso tomarás decisiones que definirán la coherencia y fuerza de tu marca.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Antes de diseñar logos o colores, debes definir el corazón de Aroma Sur. Un asesor te pregunta: ¿cuál será tu punto de partida para construir la marca?",
+      "options": [
+        {
+          "text": "Definir primero el propósito y los valores de la marca.",
+          "outcome": "Estableces que Aroma Sur existe para acercar el café de especialidad chileno a hogares y oficinas, con valores de cercanía, origen local y calidad. Todo el equipo entiende hacia dónde va la marca.",
+          "feedback": "Correcto. El propósito y los valores son la base de los 5 pilares. Sin ellos, la identidad visual y la voz quedan sin sustento.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Encargar de inmediato un logo llamativo a un diseñador.",
+          "outcome": "Obtienes un logo bonito, pero no representa nada concreto. Más adelante deberás rehacer la identidad visual al no tener claro el propósito.",
+          "feedback": "La identidad visual es importante, pero es la consecuencia de los pilares previos, no el inicio. Primero define el propósito y los valores.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Copiar la estética de una marca grande como Falabella o Latam.",
+          "outcome": "La marca se ve genérica y poco auténtica. Los clientes no logran distinguir qué hace especial a Aroma Sur.",
+          "feedback": "Inspirarse en casos chilenos es válido, pero copiar diluye tu autenticidad. Tu marca necesita su propio propósito y personalidad.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Con el propósito definido, debes elegir la personalidad y la voz de Aroma Sur para comunicarte en redes sociales y empaques.",
+      "options": [
+        {
+          "text": "Una voz cercana, cálida y experta, que cuenta el origen de cada café.",
+          "outcome": "Tu comunicación conecta con clientes que valoran el origen y la calidad. La personalidad de marca refuerza el propósito y los valores definidos.",
+          "feedback": "Muy bien. La personalidad y la voz deben alinearse con el propósito y los valores. La coherencia genera confianza.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Una voz técnica y distante, llena de tecnicismos del café.",
+          "outcome": "Algunos expertos te entienden, pero la mayoría de tus clientes se sienten excluidos y poco conectados.",
+          "feedback": "La voz debe acercar, no alejar. Para una PYME cercana, un tono demasiado técnico contradice los valores de cercanía.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Cambiar el tono cada semana según las modas del momento.",
+          "outcome": "Tu audiencia se confunde: a veces eres formal, a veces informal. La marca pierde reconocimiento.",
+          "feedback": "La inconsistencia debilita la marca. La voz debe ser estable y coherente con tu personalidad definida.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Llega el momento de la identidad visual: colores, tipografía y logo para empaques y redes. ¿Cómo procedes?",
+      "options": [
+        {
+          "text": "Diseñar una identidad visual que refleje el origen sureño y los valores ya definidos.",
+          "outcome": "Eliges verdes y maderas que evocan el sur de Chile, con una tipografía cálida y artesanal. La marca luce coherente en todos los puntos de contacto.",
+          "feedback": "Excelente. La identidad visual es el quinto pilar y debe ser la expresión visual de propósito, valores, personalidad y voz.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Usar colores de moda sin relación con tu propósito.",
+          "outcome": "La marca se ve actual, pero no transmite el origen ni los valores de Aroma Sur. Hay una desconexión visual.",
+          "feedback": "Seguir tendencias sin alinearlas con tus pilares genera incoherencia. La identidad visual debe contar tu historia.",
+          "score": -0.5,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Lanzas la marca completa. Un cliente importante te pregunta: '¿Qué hace diferente a Aroma Sur?'. ¿Cómo respondes?",
+      "options": [
+        {
+          "text": "Comunicas con claridad tu propósito, valores y origen en una frase simple.",
+          "outcome": "El cliente entiende de inmediato tu propuesta de valor y decide comprar. Tu marca queda en su memoria.",
+          "feedback": "Perfecto. Cuando los 5 pilares están alineados, tu propuesta de valor se comunica de forma simple y memorable.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Respondes solo destacando el precio bajo.",
+          "outcome": "El cliente te ve como una opción más barata, no como una marca con valor diferenciado. Compites solo por precio.",
+          "feedback": "Competir por precio debilita la marca. Tu diferenciación debe basarse en tu propósito y propuesta de valor.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Has recorrido el proceso de construcción de marca aplicando los 5 pilares de Marcelo Guital. La clave es el orden y la coherencia: primero el propósito y los valores, luego la personalidad y la voz, y finalmente la identidad visual como expresión de todo lo anterior. Una marca sólida —sea personal o empresarial, como las PYMEs chilenas o los casos de Falabella y Latam— se construye desde adentro hacia afuera. Cuando los cinco pilares están alineados, tu propuesta de valor se comunica con claridad, genera confianza y diferencia tu negocio sin necesidad de competir solo por precio. Revisa las decisiones donde obtuviste menor puntaje: en ellas suele estar la oportunidad de fortalecer la coherencia de tu marca."
+}

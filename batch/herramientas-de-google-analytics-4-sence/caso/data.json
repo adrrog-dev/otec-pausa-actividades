@@ -1,0 +1,101 @@
+{
+  "title": "GA4 con código SENCE: Decisiones de implementación en una OTEC",
+  "intro": "Eres parte del equipo de Marketing de una OTEC que ofrece cursos con franquicia tributaria SENCE. La gerencia quiere medir correctamente las visitas, las inscripciones y la efectividad de las campañas usando Google Analytics 4 (GA4). Cada decisión que tomes afectará la calidad de los datos y el cumplimiento de buenas prácticas. Avancemos paso a paso.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "El sitio web de la OTEC ya tiene instalado el antiguo Universal Analytics, que dejó de recibir datos. La gerencia pide migrar a GA4 antes del próximo periodo de postulación de cursos SENCE. ¿Por dónde partes?",
+      "options": [
+        {
+          "text": "Crear una nueva propiedad GA4 e instalar la etiqueta mediante Google Tag Manager (GTM).",
+          "outcome": "Configuras una propiedad GA4 limpia y administras la etiqueta desde GTM, lo que facilita el control de eventos futuros.",
+          "feedback": "Correcto. Usar GTM permite gestionar etiquetas y eventos sin tocar el código del sitio cada vez. Es la práctica recomendada para equipos OTEC.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Esperar a que Universal Analytics vuelva a funcionar para no perder el historial.",
+          "outcome": "El tiempo pasa y el sitio queda sin medición durante el periodo de postulación, perdiendo datos clave de la campaña SENCE.",
+          "feedback": "Incorrecto. Universal Analytics fue descontinuado y no volverá. Debes migrar a GA4 cuanto antes para no quedar sin datos.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Pegar el código de GA4 directamente en el HTML sin documentarlo.",
+          "outcome": "GA4 empieza a registrar datos, pero nadie del equipo sabe dónde está el código ni cómo modificarlo.",
+          "feedback": "Parcialmente válido. Mide datos, pero sin documentación ni GTM se dificulta el mantenimiento y el trabajo en equipo.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya tienes GA4 funcionando. Ahora necesitas medir cuántas personas completan el formulario de inscripción a un curso con código SENCE. ¿Qué configuras?",
+      "options": [
+        {
+          "text": "Crear un evento personalizado 'inscripcion_sence' marcado como conversión (evento clave).",
+          "outcome": "Cada inscripción queda registrada como conversión, permitiendo medir el rendimiento real de las campañas.",
+          "feedback": "Correcto. Marcar la inscripción como evento clave (conversión) es fundamental para evaluar el retorno de la inversión en marketing.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Solo mirar las visitas totales a la página del formulario.",
+          "outcome": "Sabes cuántos visitan, pero no cuántos realmente se inscriben, lo que entrega una visión incompleta.",
+          "feedback": "Insuficiente. Las visitas no equivalen a inscripciones. Necesitas medir la acción concreta de conversión.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Configurar el evento, pero sin marcarlo como conversión.",
+          "outcome": "El evento se registra, pero no aparece destacado en los informes de conversión, dificultando su análisis.",
+          "feedback": "A medias. Registrar el evento es bueno, pero marcarlo como evento clave facilita mucho el análisis y los informes.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Marketing lanzará una campaña pagada para promover cursos SENCE. La jefatura pregunta cómo sabrán qué campaña trae más inscripciones. ¿Qué propones?",
+      "options": [
+        {
+          "text": "Usar parámetros UTM en los enlaces de cada campaña para identificar el origen del tráfico en GA4.",
+          "outcome": "Cada canal queda identificado y puedes comparar qué campaña genera más inscripciones SENCE.",
+          "feedback": "Correcto. Los UTM permiten atribuir correctamente las conversiones a cada campaña y optimizar el presupuesto.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Asumir que todo el tráfico nuevo viene de la campaña pagada.",
+          "outcome": "Mezclas tráfico orgánico, directo y pagado, y tomas decisiones de inversión con datos erróneos.",
+          "feedback": "Incorrecto. Sin UTM no puedes distinguir el origen real del tráfico y arriesgas malas decisiones de presupuesto.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "La campaña termina y la gerencia pide un reporte. Necesitas mostrar resultados claros y respetar la privacidad de los datos de los trabajadores inscritos. ¿Cómo procedes?",
+      "options": [
+        {
+          "text": "Presentar conversiones por canal desde los informes de GA4, sin exponer datos personales identificables.",
+          "outcome": "Entregas un reporte útil y responsable, alineado con buenas prácticas de protección de datos.",
+          "feedback": "Correcto. GA4 trabaja con datos agregados y no debe usarse para almacenar información personal identificable de los participantes.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Exportar correos y RUT de los inscritos desde GA4 para el reporte.",
+          "outcome": "Intentas extraer datos personales, lo que no corresponde a la función de GA4 y vulnera la privacidad.",
+          "feedback": "Incorrecto. GA4 no debe usarse para almacenar ni reportar datos personales. Esa información se gestiona en sistemas internos con resguardo de privacidad.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Implementar GA4 en una OTEC con foco SENCE requiere orden y buenas prácticas: migrar correctamente desde Universal Analytics usando Google Tag Manager, definir eventos clave como las inscripciones, etiquetar las campañas con parámetros UTM para conocer su origen, y reportar con datos agregados respetando la privacidad de los trabajadores. Cuando estos pasos se cumplen, el equipo de Marketing puede medir el impacto real de sus campañas, optimizar la inversión y tomar mejores decisiones, manteniendo siempre el cumplimiento responsable en el manejo de datos."
+}

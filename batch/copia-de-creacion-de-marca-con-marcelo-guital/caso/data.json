@@ -1,0 +1,67 @@
+{
+  "title": "Caso interactivo: Creación de marca: réplica del programa con Marcelo Guital",
+  "intro": "Te enfrentarás a una situación laboral relacionada con creación de marca: réplica del programa con marcelo guital. Toma decisiones y observa sus consecuencias.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "En tu jornada surge una situación que pone a prueba lo aprendido sobre creación de marca: réplica del programa con marcelo guital. ¿Qué haces primero?",
+      "options": [
+        {
+          "text": "Evalúo la situación según las buenas prácticas vistas.",
+          "outcome": "Tomas distancia y analizas con criterio.",
+          "feedback": "Buena decisión: actuar con criterio reduce riesgos.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Actúo por impulso sin analizar.",
+          "outcome": "La situación se complica.",
+          "feedback": "Cuidado: actuar sin analizar suele empeorar las cosas.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "La situación avanza y debes decidir cómo proceder formalmente.",
+      "options": [
+        {
+          "text": "Sigo el procedimiento establecido por la empresa.",
+          "outcome": "Resuelves de forma correcta y trazable.",
+          "feedback": "Correcto: seguir el procedimiento protege a todos.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Improviso una solución informal.",
+          "outcome": "Queda sin respaldo y genera dudas.",
+          "feedback": "Una solución informal puede dejarte sin respaldo.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Cierre del caso: ¿cómo registras lo ocurrido?",
+      "options": [
+        {
+          "text": "Documento la decisión y el resultado.",
+          "outcome": "Queda registro claro para el futuro.",
+          "feedback": "Excelente: la trazabilidad es clave.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "No registro nada.",
+          "outcome": "Se pierde la trazabilidad.",
+          "feedback": "Sin registro, no hay aprendizaje organizacional.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Tu desempeño depende de cuántas decisiones alineadas con las buenas prácticas tomaste. Repite el caso para mejorar tu puntaje y consolidar el criterio."
+}

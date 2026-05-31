@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: De los datos al dashboard con Power BI",
+  "intro": "Pon a prueba lo que aprendiste sobre conexión de fuentes, transformación de datos en Power Query y creación de visualizaciones interactivas en Power BI Desktop. Lee cada pregunta con calma y selecciona la alternativa correcta. ¡Éxito!",
+  "questions": [
+    {
+      "q": "¿Cuál es la función principal de Power Query dentro de Power BI?",
+      "options": [
+        "Diseñar la portada del informe final",
+        "Conectar, limpiar y transformar los datos antes de visualizarlos (ETL)",
+        "Compartir el dashboard con otros usuarios en la nube",
+        "Calcular medidas avanzadas con lenguaje DAX"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Power Query es la herramienta de ETL (extraer, transformar y cargar) que permite preparar los datos antes de modelarlos y visualizarlos.",
+      "feedbackKo": "Respuesta incorrecta. Power Query se utiliza para conectar, limpiar y transformar los datos (proceso ETL) antes de crear las visualizaciones.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál de los siguientes componentes de Power BI se usa principalmente para crear y diseñar informes en el computador?",
+      "options": [
+        "Power BI Mobile",
+        "Power BI Service",
+        "Power BI Desktop",
+        "Power Query Online"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Power BI Desktop es la aplicación de escritorio donde se construyen y diseñan los informes y modelos de datos.",
+      "feedbackKo": "Respuesta incorrecta. Power BI Desktop es el componente de escritorio para crear informes; Service es la nube y Mobile es para visualizar desde dispositivos móviles.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En DAX, ¿qué se entiende por una 'medida'?",
+      "options": [
+        "Un cálculo que se evalúa según el contexto del informe, por ejemplo una suma o promedio",
+        "Una imagen que se agrega al dashboard",
+        "Una conexión a una fuente de datos externa",
+        "Un filtro visual que aparece en el reporte"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. Una medida es un cálculo en DAX que se evalúa de forma dinámica según el contexto del informe, como totales, promedios o porcentajes.",
+      "feedbackKo": "Respuesta incorrecta. En DAX, una medida es un cálculo dinámico (como una suma o promedio) que responde al contexto del informe.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Si necesitas mostrar un único valor destacado, como el total de ventas del mes, ¿qué visualización es la más adecuada?",
+      "options": [
+        "Un mapa geográfico",
+        "Una tarjeta (card) o KPI",
+        "Un gráfico de barras apiladas",
+        "Una tabla con todas las transacciones"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La tarjeta o el KPI son ideales para resaltar un valor único e importante, como el total de ventas del mes.",
+      "feedbackKo": "Respuesta incorrecta. Para destacar un valor único, como el total del mes, lo más apropiado es una tarjeta (card) o un KPI.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué permite la función de 'drill-down' en una visualización de Power BI?",
+      "options": [
+        "Cambiar el color de fondo del informe automáticamente",
+        "Profundizar en los datos pasando de un nivel general a uno más detallado",
+        "Exportar el informe a formato PDF",
+        "Conectar dos archivos de Excel diferentes"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El drill-down permite navegar desde un nivel general hacia un mayor detalle, por ejemplo desde el año hacia el mes o el día.",
+      "feedbackKo": "Respuesta incorrecta. El drill-down sirve para profundizar en los datos, pasando de una vista general a niveles más detallados.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

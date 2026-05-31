@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: VIF en el Trabajo",
+  "intro": "Evalúa tus conocimientos sobre cómo identificar y abordar el impacto de la violencia intrafamiliar (VIF) en el contexto laboral chileno. Este quiz está orientado a jefaturas, equipos de RRHH y líderes de equipo. Responde cada pregunta seleccionando la alternativa correcta.",
+  "questions": [
+    {
+      "q": "¿Qué ley regula la violencia intrafamiliar en Chile?",
+      "options": [
+        "Ley 20.066",
+        "Ley 16.744",
+        "Ley 21.643 (Ley Karin)",
+        "Ley 20.348"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. La Ley 20.066 establece el marco legal sobre violencia intrafamiliar en Chile.",
+      "feedbackKo": "Respuesta incorrecta. La normativa que regula la VIF en Chile es la Ley 20.066. Las otras leyes abordan accidentes laborales, acoso laboral e igualdad de remuneraciones, respectivamente.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál de las siguientes situaciones puede ser una señal de alerta de VIF en un colaborador?",
+      "options": [
+        "Cumplimiento puntual de horarios y metas",
+        "Ausentismo reiterado, lesiones inexplicadas y aislamiento del equipo",
+        "Mayor participación en actividades sociales de la empresa",
+        "Solicitud de capacitación voluntaria"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El ausentismo reiterado, las lesiones inexplicadas y el aislamiento son señales que pueden indicar una situación de VIF.",
+      "feedbackKo": "Respuesta incorrecta. Las señales de alerta incluyen ausentismo reiterado, lesiones sin explicación clara y aislamiento del equipo. Las demás opciones no corresponden a indicadores de riesgo.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Ante la sospecha de un caso de VIF en un colaborador, ¿cuál es la actitud adecuada de una jefatura?",
+      "options": [
+        "Confrontar públicamente a la persona frente al equipo",
+        "Ignorar la situación para no entrometerse en su vida privada",
+        "Generar un espacio de conversación privado, confidencial y sin juicios, ofreciendo apoyo",
+        "Comunicar la situación a todos los compañeros para que ayuden"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El abordaje debe ser privado, confidencial y respetuoso, ofreciendo apoyo y orientación a las redes correspondientes.",
+      "feedbackKo": "Respuesta incorrecta. Lo adecuado es generar un espacio privado, confidencial y sin juicios. Exponer o ignorar la situación puede aumentar el riesgo de la persona afectada.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es un organismo de la red de derivación al que se puede orientar a una persona afectada por VIF en Chile?",
+      "options": [
+        "Servicio Nacional de la Mujer y la Equidad de Género (SernamEG)",
+        "Servicio de Impuestos Internos (SII)",
+        "Dirección del Trabajo exclusivamente",
+        "Instituto Nacional de Estadísticas (INE)"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. SernamEG cuenta con programas de orientación y apoyo, junto a Carabineros y la red de salud mental.",
+      "feedbackKo": "Respuesta incorrecta. SernamEG es la entidad que ofrece orientación y apoyo en casos de VIF, junto a Carabineros y la red de salud mental.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Por qué es relevante que la empresa aborde el impacto de la VIF en el ámbito laboral?",
+      "options": [
+        "Porque permite descontar las ausencias del sueldo del trabajador",
+        "Porque la VIF puede afectar el desempeño, la seguridad y el bienestar del colaborador, y la organización tiene un rol de apoyo y derivación",
+        "Porque obliga legalmente a despedir a las personas afectadas",
+        "Porque no tiene ningún impacto en el trabajo"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La VIF impacta el desempeño, la seguridad y el bienestar; la empresa cumple un rol clave de apoyo y derivación a las redes especializadas.",
+      "feedbackKo": "Respuesta incorrecta. La importancia radica en que la VIF afecta el desempeño, la seguridad y el bienestar de la persona, y la organización debe orientar y apoyar, no sancionar.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "title": "Coordinando un proyecto de capacitación SENCE con metodologías ágiles",
+  "intro": "Eres coordinador de proyectos en una OTEC y debes ejecutar un curso financiado con franquicia tributaria SENCE. El equipo te propone usar Scrum y Kanban para organizar el trabajo, pero debes asegurar que cada decisión mantenga el cumplimiento normativo (registro de asistencia, declaración de cursos, plazos y respaldos). Cada decisión que tomes tendrá consecuencias para el proyecto y para la empresa.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "El proyecto recién comienza. El equipo quiere trabajar en sprints de dos semanas. Antes de iniciar, debes definir cómo organizar el backlog del proyecto SENCE.",
+      "options": [
+        {
+          "text": "Construir el backlog priorizando los hitos normativos SENCE (comunicación de inicio, registro de asistencia y declaración) junto a las tareas pedagógicas.",
+          "outcome": "El equipo visualiza claramente qué tareas son críticas para el cumplimiento y cuáles aportan al aprendizaje. El sprint parte ordenado.",
+          "feedback": "Correcto. En proyectos SENCE, los hitos normativos deben estar integrados al backlog y priorizados, no tratados como un anexo de último momento.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Armar el backlog solo con tareas de contenido y dejar los temas administrativos SENCE para el final del proyecto.",
+          "outcome": "El sprint avanza rápido en contenido, pero quedan sin planificar tareas de comunicación de inicio y registro de asistencia.",
+          "feedback": "Riesgoso. Postergar los hitos normativos puede provocar incumplimientos de plazos ante SENCE. Lo ágil no reemplaza la obligación de cumplir la normativa.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Durante el sprint, el equipo usa un tablero Kanban para seguir el avance. Notas que la columna 'En proceso' está saturada y que el registro de asistencia de las primeras sesiones aún no se completa.",
+      "options": [
+        {
+          "text": "Aplicar un límite de trabajo en proceso (WIP) y mover el registro de asistencia a prioridad inmediata.",
+          "outcome": "El flujo se ordena, el equipo termina tareas antes de abrir nuevas y la asistencia queda respaldada a tiempo.",
+          "feedback": "Muy bien. Limitar el WIP es una práctica Kanban clave, y asegurar el registro de asistencia protege el financiamiento del curso.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Seguir agregando tareas nuevas al tablero para no frenar al equipo y revisar la asistencia más adelante.",
+          "outcome": "El tablero se vuelve confuso, varias tareas quedan a medias y la asistencia se acumula sin respaldo formal.",
+          "feedback": "Incorrecto. Sin límites de WIP el flujo colapsa, y un registro de asistencia atrasado o incompleto puede comprometer la rendición ante SENCE.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "En la reunión de revisión del sprint (sprint review), detectas que se acerca el plazo de declaración del curso y un respaldo documental está incompleto.",
+      "options": [
+        {
+          "text": "Levantar el riesgo en la retrospectiva, asignar responsable y plazo, y dejarlo documentado como acción de mejora.",
+          "outcome": "El respaldo se completa antes del plazo y el equipo aprende a anticipar este tipo de riesgos en próximos sprints.",
+          "feedback": "Excelente. La retrospectiva sirve para corregir a tiempo y para mejorar el proceso de cumplimiento normativo de forma continua.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Asumir que se resolverá solo y avanzar con la planificación del siguiente sprint.",
+          "outcome": "El respaldo no se completa a tiempo y el curso queda expuesto a observaciones en la declaración.",
+          "feedback": "Error. Ignorar un riesgo conocido contradice el principio ágil de inspección y adaptación, y pone en riesgo el cumplimiento SENCE.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "El proyecto está por cerrar. Debes decidir cómo dejar instalada la forma de trabajo para los próximos cursos SENCE.",
+      "options": [
+        {
+          "text": "Documentar un tablero modelo y un backlog tipo que integren los hitos normativos SENCE como estándar del equipo.",
+          "outcome": "Los siguientes proyectos parten con una base ágil y un cumplimiento normativo ya integrado.",
+          "feedback": "Decisión acertada. Estandarizar el modelo permite replicar buenas prácticas y reduce el riesgo de incumplimiento en futuros cursos.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Cerrar el proyecto sin registrar aprendizajes, confiando en que el próximo equipo improvisará.",
+          "outcome": "El conocimiento se pierde y los errores normativos vuelven a aparecer en el siguiente curso.",
+          "feedback": "No recomendado. Sin documentar el modelo, cada proyecto vuelve a empezar de cero y aumenta la probabilidad de fallas ante SENCE.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Aplicar Scrum y Kanban en proyectos SENCE entrega orden, visibilidad y mejora continua, pero su valor real aparece cuando los hitos normativos —comunicación de inicio, registro de asistencia, declaración del curso, plazos y respaldos documentales— se integran al backlog y a los tableros como tareas prioritarias. Priorizar lo normativo, limitar el trabajo en proceso, gestionar riesgos en las retrospectivas y estandarizar el modelo para futuros cursos permite combinar agilidad con cumplimiento. Recuerda: las metodologías ágiles organizan el trabajo, pero no reemplazan las obligaciones establecidas por SENCE."
+}

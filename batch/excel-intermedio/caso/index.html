@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Decisiones con Excel: El reporte de ventas trimestral — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Decisiones con Excel: El reporte de ventas trimestral",
+  "intro": "Camila trabaja en el área administrativa de una PYME chilena de distribución. Su jefatura le pide consolidar las ventas del trimestre, cruzar datos de productos y entregar un dashboard claro para la reunión de gerencia. Tiene una planilla extensa, con códigos de producto, montos y vendedores. Acompaña a Camila en sus decisiones y observa las consecuencias de cada una.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Camila necesita traer el nombre y precio de cada producto desde otra hoja, usando solo el código. La planilla tiene más de 2.000 filas. ¿Qué hace?",
+      "options": [
+        {
+          "text": "Buscar manualmente cada producto y copiar los datos a mano.",
+          "outcome": "Camila tarda toda la tarde y comete varios errores de digitación que descuadran los montos.",
+          "feedback": "El trabajo manual en planillas grandes es lento y propenso a errores. Excel ofrece funciones diseñadas justamente para automatizar este cruce de datos.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Usar la función BUSCARV para traer automáticamente nombre y precio según el código.",
+          "outcome": "En minutos, todos los productos quedan correctamente identificados y con su precio asociado.",
+          "feedback": "Correcto. BUSCARV permite cruzar información entre tablas de forma rápida y confiable. Recuerda fijar el rango con $ para arrastrar la fórmula sin errores.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Pedirle a un compañero que lo haga porque 'eso es muy técnico'.",
+          "outcome": "El compañero tampoco alcanza y el reporte queda incompleto para la reunión.",
+          "feedback": "Delegar sin intentar resolver limita tu desarrollo profesional. Estas funciones son accesibles con práctica y forman parte del nivel intermedio de Excel.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ahora Camila debe clasificar las ventas como 'Meta cumplida' o 'Bajo meta' según si superan los $500.000, y además marcar 'Destacado' sobre $1.000.000. ¿Cómo lo resuelve?",
+      "options": [
+        {
+          "text": "Aplicar una función SI anidada que evalúe ambos umbrales en una sola fórmula.",
+          "outcome": "Cada venta queda clasificada automáticamente en las tres categorías sin revisar fila por fila.",
+          "feedback": "Muy bien. La función SI anidada permite evaluar varias condiciones en cadena. Ordena los rangos de mayor a menor para evitar resultados incorrectos.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Revisar visualmente y escribir la categoría a mano en cada fila.",
+          "outcome": "Camila se confunde con los montos y clasifica mal varias ventas importantes.",
+          "feedback": "Clasificar manualmente abre la puerta a errores. El SI anidado entrega resultados consistentes y se actualiza si cambian los datos.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Usar formato condicional con colores en vez de clasificar el texto.",
+          "outcome": "Los colores ayudan visualmente, pero la jefatura pide una columna con la categoría escrita para filtrar.",
+          "feedback": "El formato condicional es útil para resaltar, pero no reemplaza una columna de clasificación. Lo ideal es combinar SI anidado para el texto y formato condicional para destacar.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Con los datos listos, Camila debe presentar el resumen por vendedor y por categoría de producto para la gerencia. ¿Qué herramienta elige?",
+      "options": [
+        {
+          "text": "Crear una tabla dinámica para resumir ventas por vendedor y categoría.",
+          "outcome": "En pocos clics obtiene totales y subtotales ordenados, fáciles de filtrar y actualizar.",
+          "feedback": "Excelente. Las tablas dinámicas resumen grandes volúmenes de datos sin fórmulas complejas y permiten reorganizar la información al instante.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Sumar manualmente con varias fórmulas SUMA separadas por vendedor.",
+          "outcome": "Logra el resultado, pero demora mucho y debe rehacerlo cuando llegan ventas nuevas.",
+          "feedback": "Funciona, pero es poco eficiente y difícil de mantener. La tabla dinámica entrega el mismo resultado en segundos y se actualiza al refrescar.",
+          "score": -0.5,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Para la reunión, Camila quiere que la gerencia vea la información de un vistazo. ¿Cómo presenta el resultado final?",
+      "options": [
+        {
+          "text": "Armar un dashboard básico con gráficos enlazados a la tabla dinámica e indicadores clave.",
+          "outcome": "La gerencia comprende de inmediato el desempeño del trimestre y felicita el trabajo de Camila.",
+          "feedback": "Correcto. Un dashboard reúne gráficos e indicadores en una vista clara y profesional, ideal para la toma de decisiones.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Entregar la planilla completa con todas las filas y dejar que la gerencia la revise.",
+          "outcome": "La reunión se vuelve confusa porque nadie identifica los datos importantes entre tantas filas.",
+          "feedback": "Mostrar datos en bruto dificulta la lectura. Un dashboard sintetiza lo relevante y facilita las decisiones en reuniones gerenciales.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Copiar la tabla dinámica a un correo sin gráficos ni formato.",
+          "outcome": "La información llega, pero sin impacto visual ni claridad para destacar lo importante.",
+          "feedback": "Es un avance, pero un dashboard con gráficos comunica mucho mejor. Agrega visualizaciones y formato condicional para resaltar los indicadores clave.",
+          "score": 0,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "A lo largo del caso, Camila aplicó las herramientas centrales de Excel intermedio: BUSCARV para cruzar datos entre tablas, la función SI anidada para clasificar según condiciones, las tablas dinámicas para resumir grandes volúmenes de información y un dashboard básico para comunicar resultados con claridad. La clave del trabajo profesional con Excel es automatizar tareas repetitivas, reducir errores manuales y presentar la información de forma comprensible para la toma de decisiones. Practica estas funciones con tus propias planillas de trabajo —planillas de remuneraciones, control de inventario o presupuestos— para consolidar lo aprendido."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

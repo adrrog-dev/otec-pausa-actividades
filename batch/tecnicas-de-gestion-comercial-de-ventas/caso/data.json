@@ -1,0 +1,101 @@
+{
+  "title": "Cierre de venta B2B: La cuenta clave de Distribuidora Andes",
+  "intro": "Eres ejecutivo comercial de una empresa de software de gestión. Tras semanas de prospección, conseguiste una reunión con la gerencia de compras de Distribuidora Andes, una empresa mediana con 40 sucursales. Es una oportunidad importante: tu objetivo es calificar bien al prospecto, presentar valor, manejar objeciones y avanzar hacia el cierre. Cada decisión que tomes tendrá consecuencias en el proceso de venta.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Llegas a la reunión inicial con el Gerente de Operaciones. Tienes 30 minutos. ¿Cómo inicias la conversación para calificar correctamente la oportunidad?",
+      "options": [
+        {
+          "text": "Presentas de inmediato todas las funcionalidades del software para impresionar al cliente.",
+          "outcome": "El gerente escucha sin mostrar interés. No mencionaste nada relevante para su realidad y la conversación se vuelve genérica.",
+          "feedback": "Presentar características antes de entender la necesidad es un error común. La calificación (metodología BANT: Presupuesto, Autoridad, Necesidad y Plazo) debe ir antes de la presentación de valor.",
+          "score": -0.5,
+          "next": 2
+        },
+        {
+          "text": "Haces preguntas para entender sus necesidades, quién decide la compra, su presupuesto y plazos de implementación.",
+          "outcome": "El gerente se abre y comenta que pierden tiempo coordinando inventario entre sucursales. Confirma que él influye en la decisión, pero la firma final la da Gerencia General.",
+          "feedback": "Excelente. Aplicaste la calificación BANT correctamente. Conocer la necesidad, la autoridad, el presupuesto y el plazo te permite enfocar tu propuesta y no desgastar esfuerzos.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Le pides directamente que firme un contrato porque la promoción vence esta semana.",
+          "outcome": "El gerente se incomoda con la presión y acorta la reunión. La relación de confianza se daña desde el inicio.",
+          "feedback": "Presionar con un cierre prematuro genera rechazo. En ventas B2B el proceso requiere construir confianza y calificar antes de avanzar al cierre.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Tras conocer su necesidad de coordinar inventario entre sucursales, debes presentar tu propuesta de valor. ¿Qué enfoque eliges?",
+      "options": [
+        {
+          "text": "Conectas tu solución directamente con su problema: muestras cómo el software reduce los quiebres de stock y el tiempo de coordinación entre sucursales.",
+          "outcome": "El gerente asiente con interés y pide ejemplos concretos de ahorro. La conversación avanza hacia los detalles.",
+          "feedback": "Muy bien. La presentación de valor debe responder al dolor específico del cliente, no a un catálogo de funciones. Esto aumenta la percepción de utilidad.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Le entregas un folleto con todas las funciones y le dices que lo revise cuando pueda.",
+          "outcome": "El gerente recibe el material pero no se compromete. La oportunidad queda fría y sin próximos pasos claros.",
+          "feedback": "Delegar la venta a un folleto pierde el impacto de la reunión. Debes vincular el valor con la necesidad y definir un siguiente paso concreto.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El gerente plantea una objeción: 'Su solución se ve interesante, pero es más cara que la competencia'. ¿Cómo respondes?",
+      "options": [
+        {
+          "text": "Bajas el precio de inmediato para no perder la venta.",
+          "outcome": "Logras interés, pero el cliente queda con la idea de que tu producto valía menos y presionará por más descuentos.",
+          "feedback": "Ceder en precio sin justificar el valor debilita tu posición y reduce el margen. La objeción de precio se maneja reforzando el retorno de la inversión, no rebajando.",
+          "score": -0.5,
+          "next": 4
+        },
+        {
+          "text": "Reconoces la objeción y cuantificas el retorno: el ahorro por reducir quiebres de stock supera la diferencia de precio en pocos meses.",
+          "outcome": "El gerente valora el argumento y pide una propuesta formal para presentar a Gerencia General.",
+          "feedback": "Correcto. Manejar la objeción de precio mostrando el retorno de la inversión convierte el costo en una inversión rentable. Validar la objeción antes de responder genera confianza.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Le dices que la competencia es de mala calidad y no sirve.",
+          "outcome": "El gerente se molesta; ya trabaja con esa empresa en otra área. Pierdes credibilidad.",
+          "feedback": "Desprestigiar a la competencia genera desconfianza y puede ofender al cliente. Enfócate siempre en tu propuesta de valor, no en hablar mal de otros.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "El cliente está interesado pero la decisión final depende de Gerencia General. ¿Cómo cierras esta etapa?",
+      "options": [
+        {
+          "text": "Propones una reunión conjunta con Gerencia General y acuerdas fecha, dejando registrado todo en el CRM con próximos pasos.",
+          "outcome": "Se agenda la reunión decisiva y mantienes el control del proceso. El gerente se convierte en tu aliado interno.",
+          "feedback": "Excelente cierre. Acercarte a quien tiene la autoridad, comprometer un próximo paso concreto y registrar en el CRM asegura seguimiento y no dejar la venta al azar.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Esperas a que el gerente te llame cuando tenga novedades.",
+          "outcome": "Pasan tres semanas sin respuesta. La oportunidad se enfría y un competidor avanza primero.",
+          "feedback": "Dejar el seguimiento en manos del cliente hace perder oportunidades. El cierre exige iniciativa, próximos pasos definidos y seguimiento sistemático.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso refleja el ciclo completo de una venta B2B en el mercado chileno: prospección, calificación (BANT), presentación de valor, manejo de objeciones y cierre. Las mejores decisiones comparten un patrón: entender primero la necesidad del cliente, vincular la solución a su problema real, manejar las objeciones con argumentos de retorno de inversión y avanzar siempre hacia un próximo paso concreto registrado en el CRM. Evita presionar con cierres prematuros, desprestigiar a la competencia o ceder en precio sin justificar valor. Una venta sólida se construye sobre confianza, escucha activa y seguimiento disciplinado."
+}

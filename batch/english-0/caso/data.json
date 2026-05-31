@@ -1,0 +1,88 @@
+{
+  "title": "Un turista en recepción: tu primer contacto en inglés",
+  "intro": "Trabajas en la recepción de un hotel en Valparaíso. Llega un turista que solo habla inglés. Tu objetivo es atenderlo usando inglés básico A1: saludos, presentaciones, números y verbos simples. Cada decisión que tomes tendrá una consecuencia en la experiencia del cliente. ¡Tú decides cómo responder!",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "El turista se acerca al mesón y dice: 'Hello! Good morning.' ¿Cómo respondes para iniciar bien la conversación?",
+      "options": [
+        {
+          "text": "'Good morning! Welcome. My name is Pedro. How can I help you?'",
+          "outcome": "El turista sonríe y se siente bien recibido. La conversación comienza de forma cálida y profesional.",
+          "feedback": "Excelente. Usaste un saludo formal ('Good morning'), te presentaste ('My name is...') y ofreciste ayuda. Esto refleja un buen dominio de las presentaciones A1.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "'Hola, ¿qué necesita?' (respondes en español)",
+          "outcome": "El turista no entiende y se ve algo confundido. Repite 'Sorry, do you speak English?'",
+          "feedback": "Recuerda que el cliente solo habla inglés. Practicar saludos básicos como 'Good morning' y 'How can I help you?' te ayudará a iniciar la atención.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Solo asientes con la cabeza y esperas en silencio.",
+          "outcome": "El turista se siente incómodo por la falta de respuesta verbal.",
+          "feedback": "Un saludo simple como 'Hello' o 'Good morning' siempre genera una buena primera impresión. No dejes pasar la oportunidad de comunicarte.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El turista pregunta: 'I have a reservation. What is the room number?' Necesitas indicarle el número de habitación: la 305.",
+      "options": [
+        {
+          "text": "'Your room is number three zero five (305). Here is your key.'",
+          "outcome": "El turista entiende perfectamente y toma su llave con confianza.",
+          "feedback": "Muy bien. Dominar los números en inglés es clave en turismo y servicios. Decir cada dígito ('three zero five') es la forma correcta para números de habitación.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "'Your room... eh... tres cero cinco.'",
+          "outcome": "El turista no comprende los números en español y debe preguntar de nuevo.",
+          "feedback": "Repasa los números del 0 al 9 en inglés. Son fundamentales para entregar información como precios, habitaciones y horarios.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Le muestras el número escrito en un papel sin decir nada.",
+          "outcome": "El turista recibe la información, pero la atención se siente impersonal.",
+          "feedback": "Apoyarte en lo escrito está bien, pero combinarlo con palabras en inglés mejora mucho la comunicación y la cercanía con el cliente.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Antes de irse, el turista pregunta: 'What time is breakfast?' El desayuno es a las 8:00 AM. ¿Cómo respondes?",
+      "options": [
+        {
+          "text": "'Breakfast is at eight o'clock in the morning. Have a nice day!'",
+          "outcome": "El turista agradece, sonríe y se despide muy conforme con la atención recibida.",
+          "feedback": "Perfecto. Usaste números para la hora ('eight o'clock') y un cierre amable ('Have a nice day'). Una despedida cortés deja una excelente impresión final.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "'Breakfast... morning... eight.' (palabras sueltas)",
+          "outcome": "El turista capta la idea general, pero la respuesta suena poco clara.",
+          "feedback": "Vas por buen camino al usar palabras clave. Practicar frases simples completas como 'Breakfast is at eight' hará tu comunicación más profesional.",
+          "score": 0,
+          "next": null
+        },
+        {
+          "text": "'No sé, pregunte en el restaurante.' (en español)",
+          "outcome": "El turista se va sin la información y algo frustrado.",
+          "feedback": "Si no estás seguro de la frase completa, igual puedes apoyarte en palabras básicas en inglés. Frases como 'at eight o'clock' resuelven la mayoría de las consultas de horario.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Has completado el caso 'Un turista en recepción'. En este ejercicio aplicaste habilidades clave del nivel A1: saludos formales, presentaciones personales, uso de números (habitaciones y horas) y despedidas corteses. Si elegiste mayormente las opciones en inglés, demuestras que ya puedes manejar situaciones cotidianas básicas de atención a clientes. Si tuviste dudas, te recomendamos reforzar especialmente los números del 0 al 9, las frases de saludo y las expresiones de cortesía. Recuerda: en turismo y servicios, incluso un inglés básico bien usado marca una gran diferencia en la experiencia del cliente. ¡Sigue practicando con confianza!"
+}

@@ -1,0 +1,101 @@
+{
+  "title": "Migración a GA4: decisiones que definen tus reportes",
+  "intro": "Eres analista de marketing digital en una tienda de e-commerce chilena. La gerencia te informa que Universal Analytics dejará de procesar datos y debes liderar la transición a Google Analytics 4. Cada decisión que tomes afectará la calidad de los datos y la utilidad de tus reportes. Acompañemos el proceso paso a paso.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "La gerencia te pide migrar a GA4 con urgencia. Tienes acceso a la cuenta de Universal Analytics que lleva años funcionando. ¿Cómo inicias la transición?",
+      "options": [
+        {
+          "text": "Crear una nueva propiedad GA4 en paralelo y mantener UA activa durante la transición.",
+          "outcome": "Configuras la propiedad GA4 junto a UA. Ambas recolectan datos simultáneamente y puedes comparar resultados durante el período de adaptación.",
+          "feedback": "Correcto. Mantener ambas propiedades en paralelo permite validar datos y aprender el nuevo modelo sin perder historial inmediato. Es la práctica recomendada.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Eliminar la propiedad de Universal Analytics y crear GA4 desde cero.",
+          "outcome": "Al eliminar UA pierdes acceso comparativo y referencias históricas que aún podían orientar tus decisiones durante la migración.",
+          "feedback": "Decisión riesgosa. UA y GA4 usan modelos distintos de medición; conviene mantener UA mientras consolidas GA4 para no quedar sin puntos de comparación.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Esperar a que Google migre todo automáticamente sin intervenir.",
+          "outcome": "La migración asistida de Google no replica configuraciones personalizadas ni eventos específicos de tu negocio, dejando vacíos en la medición.",
+          "feedback": "Insuficiente. La configuración asistida es un punto de partida, pero requiere revisión y ajuste manual para tu caso de e-commerce.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "GA4 funciona con un modelo basado en eventos, distinto a las sesiones de UA. Necesitas medir cuando un usuario agrega un producto al carrito. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Configurar un evento personalizado 'add_to_cart' con parámetros de producto y valor.",
+          "outcome": "El evento captura el producto, su valor y la moneda. Ahora puedes analizar el comportamiento de compra con detalle.",
+          "feedback": "Excelente. GA4 recomienda usar eventos de e-commerce con parámetros estandarizados, lo que habilita reportes y audiencias más precisas.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Usar solo los eventos recolectados automáticamente sin parámetros adicionales.",
+          "outcome": "GA4 registra interacciones básicas, pero sin parámetros de producto no puedes saber qué se agregó al carrito ni su valor.",
+          "feedback": "Limitado. Los eventos automáticos son útiles, pero para e-commerce necesitas eventos personalizados con parámetros que aporten contexto comercial.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Replicar exactamente la estructura de objetivos de Universal Analytics.",
+          "outcome": "Intentas trasladar el modelo de objetivos de UA, pero GA4 no funciona así y la configuración no entrega los datos esperados.",
+          "feedback": "Incorrecto. GA4 abandona el concepto de objetivos de UA; debes pensar en eventos y conversiones bajo el nuevo modelo.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "La gerencia quiere reactivar campañas en Google Ads dirigidas a usuarios que abandonaron el carrito. ¿Cómo lo resuelves en GA4?",
+      "options": [
+        {
+          "text": "Crear una audiencia basada en el evento 'add_to_cart' sin 'purchase' y vincularla a Google Ads.",
+          "outcome": "Construyes una audiencia de carritos abandonados y la enlazas con Google Ads para remarketing efectivo.",
+          "feedback": "Muy bien. La integración entre GA4 y Google Ads permite activar audiencias basadas en eventos, una de las grandes ventajas del nuevo modelo.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Exportar manualmente una lista de correos y subirla a Google Ads.",
+          "outcome": "La carga manual es lenta, queda desactualizada y no aprovecha la actualización automática de audiencias de GA4.",
+          "feedback": "Poco eficiente. Las audiencias dinámicas de GA4 se actualizan solas y se sincronizan con Google Ads, ahorrando tiempo y mejorando precisión.",
+          "score": -0.5,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Debes presentar a gerencia un reporte que muestre el rendimiento de la migración y el comportamiento de compra. ¿Qué herramienta de GA4 usas?",
+      "options": [
+        {
+          "text": "Combinar reportes estándar para visión general y exploraciones para análisis profundos de la ruta de compra.",
+          "outcome": "Presentas un panorama claro con reportes estándar y un análisis detallado del embudo con las exploraciones personalizadas.",
+          "feedback": "Correcto. Los reportes estándar entregan vistas rápidas y las exploraciones permiten análisis accionables como embudos y rutas, ideales para decisiones de negocio.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Mostrar solo capturas de pantalla del panel principal sin profundizar.",
+          "outcome": "La gerencia recibe datos superficiales y no logra identificar dónde se pierden las conversiones.",
+          "feedback": "Insuficiente. Un reporte accionable requiere análisis de exploraciones que revelen oportunidades concretas de mejora.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La migración a GA4 exige cambiar la mentalidad desde sesiones hacia un modelo basado en eventos. Las mejores decisiones implican: mantener UA y GA4 en paralelo durante la transición, definir eventos personalizados con parámetros relevantes para tu e-commerce, aprovechar las audiencias dinámicas integradas con Google Ads y combinar reportes estándar con exploraciones para entregar información accionable. Si tomaste las opciones recomendadas, lograste una migración ordenada que protege tus datos y potencia las decisiones de marketing. Recuerda revisar periódicamente la configuración de eventos y conversiones para mantener la calidad de la medición."
+}

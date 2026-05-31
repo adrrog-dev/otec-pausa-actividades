@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reportería de Capacitación con Power BI bajo criterios SENCE — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Reportería de Capacitación con Power BI bajo criterios SENCE",
+  "intro": "Eres analista de capacitación en una empresa que utiliza la franquicia tributaria SENCE. Te piden construir un informe en Power BI que respalde la rendición de cursos ante SENCE. Debes tomar decisiones que aseguren la consistencia de las horas cronológicas, la asistencia y la evidencia de aprendizaje. Cada elección tendrá consecuencias para la calidad y validez del reporte.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Recibes las planillas de los cursos con datos de asistencia, horas y notas. Notas que las horas aparecen registradas en formatos distintos: algunas en horas pedagógicas (45 min) y otras en horas cronológicas (60 min). ¿Qué haces antes de cargar los datos a Power BI?",
+      "options": [
+        {
+          "text": "Cargar todo tal cual y dejar la conversión para después, dentro de los visuales.",
+          "outcome": "El informe muestra totales de horas inconsistentes y el cálculo de horas cronológicas queda mezclado con horas pedagógicas.",
+          "feedback": "SENCE exige reportar horas cronológicas de forma clara. Mezclar formatos genera diferencias en la rendición. Conviene estandarizar antes de modelar.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Estandarizar en Power Query a horas cronológicas, dejando documentada la regla de conversión.",
+          "outcome": "Los datos quedan homogéneos y trazables. El total de horas cronológicas coincide con lo declarado en SENCE.",
+          "feedback": "Correcto. Transformar y documentar en Power Query asegura consistencia y facilita auditorías de la franquicia SENCE.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Al revisar la asistencia, detectas participantes con registros incompletos: marcan ingreso pero no salida en algunas sesiones. El plazo de entrega del informe es ajustado. ¿Cómo procedes?",
+      "options": [
+        {
+          "text": "Completar los datos faltantes con un supuesto de asistencia total para no atrasar el informe.",
+          "outcome": "El informe se entrega a tiempo, pero la asistencia reportada no coincide con la evidencia real de las sesiones.",
+          "feedback": "Inventar asistencia compromete la validez ante SENCE y puede invalidar la rendición. La evidencia debe respaldar cada registro.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Marcar los registros incompletos como pendientes y solicitar verificación al relator antes de consolidar.",
+          "outcome": "El informe distingue claramente la asistencia validada de la pendiente y refleja la situación real.",
+          "feedback": "Adecuado. Mantener la trazabilidad y solicitar respaldo protege la rendición SENCE y evita observaciones.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Debes incorporar la evidencia de aprendizaje (notas y resultados de evaluaciones) al tablero. La jefatura pide un visual atractivo para presentar a gerencia. ¿Qué priorizas en el diseño?",
+      "options": [
+        {
+          "text": "Un tablero muy visual con muchos colores y gráficos, sin indicar la fuente ni el criterio de aprobación SENCE.",
+          "outcome": "Gerencia queda impresionada visualmente, pero al revisar SENCE no se entiende cómo se determinó la aprobación.",
+          "feedback": "El atractivo visual no reemplaza la trazabilidad. SENCE valora indicadores claros: % aprobación, asistencia mínima y horas efectivas.",
+          "score": -0.5,
+          "next": 4
+        },
+        {
+          "text": "Un tablero claro con indicadores clave (horas cronológicas, % asistencia, % aprobación) y referencia a la fuente de cada dato.",
+          "outcome": "El tablero sirve tanto para gerencia como para respaldar la rendición ante SENCE, con datos verificables.",
+          "feedback": "Excelente. Un diseño funcional y trazable cumple el doble objetivo corporativo y de cumplimiento SENCE.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Antes de enviar el informe, tienes tiempo para una última revisión. ¿Qué control aplicas?",
+      "options": [
+        {
+          "text": "Enviar directamente, confiando en que Power BI calculó todo de forma automática.",
+          "outcome": "Pasan errores menores de duplicación de participantes que afectan el total de horas reportadas.",
+          "feedback": "La revisión final es clave. Power BI calcula según el modelo, pero los datos de origen pueden contener duplicados o vacíos.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Cruzar los totales del tablero contra las planillas de origen y verificar que coincidan con lo declarado a SENCE.",
+          "outcome": "Detectas y corriges un duplicado antes del envío. El informe queda consistente y listo para la rendición.",
+          "feedback": "Muy bien. El cruce de control final garantiza la integridad del informe y reduce el riesgo de observaciones SENCE.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La reportería de capacitación con Power BI bajo criterios SENCE exige más que buenos gráficos: requiere datos estandarizados, trazables y respaldados por evidencia. Las mejores decisiones fueron estandarizar las horas cronológicas en Power Query, mantener la trazabilidad de la asistencia, diseñar tableros con indicadores claros y verificables, y aplicar un control final cruzando totales contra las fuentes. Estas prácticas aseguran informes confiables para la gerencia y consistentes para la rendición ante SENCE, evitando observaciones que puedan afectar la franquicia tributaria."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

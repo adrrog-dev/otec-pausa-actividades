@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scrum en acción: tu primer Sprint como equipo — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Scrum en acción: tu primer Sprint como equipo",
+  "intro": "Trabajas en una empresa de tecnología en Santiago. Tu equipo acaba de adoptar Scrum para desarrollar una nueva plataforma de atención al cliente. Como integrante clave, deberás tomar decisiones sobre roles, ceremonias y artefactos durante el primer Sprint. Cada elección tendrá consecuencias en la dinámica del equipo y en los resultados del proyecto.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Es el inicio del proyecto y el equipo debe organizarse. La gerencia pregunta quién definirá las prioridades del producto y quién facilitará el proceso Scrum. ¿Cómo propones distribuir los roles?",
+      "options": [
+        {
+          "text": "Designar un Product Owner para priorizar el backlog y un Scrum Master para facilitar el proceso, dejando al Dev Team autoorganizado.",
+          "outcome": "El equipo queda con roles claros: el Product Owner gestiona el valor del producto, el Scrum Master remueve impedimentos y el Dev Team se enfoca en construir.",
+          "feedback": "Correcto. Scrum define 3 roles: Product Owner (prioriza el valor), Scrum Master (facilita y elimina obstáculos) y Dev Team (desarrolla el incremento). Esta separación es la base del framework.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Que el jefe de proyecto asuma todos los roles para mantener el control centralizado.",
+          "outcome": "El jefe se sobrecarga y el equipo pierde autonomía. Las decisiones se demoran y nadie facilita las ceremonias.",
+          "feedback": "Incorrecto. Concentrar los roles contradice el espíritu de Scrum, que distribuye responsabilidades para fomentar la autoorganización y la agilidad.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "No asignar roles formales y dejar que el equipo decida sobre la marcha.",
+          "outcome": "Surge confusión: nadie prioriza el backlog ni facilita las reuniones, generando retrabajo desde el primer día.",
+          "feedback": "Parcialmente incorrecto. Aunque la autoorganización es valiosa, Scrum requiere roles definidos para funcionar correctamente. Sin ellos, el equipo pierde foco.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya con los roles definidos, deben planificar el primer Sprint de 2 semanas. El equipo discute cómo organizar las ceremonias. ¿Qué propones?",
+      "options": [
+        {
+          "text": "Realizar Sprint Planning al inicio, Daily diaria de 15 minutos, Sprint Review al final y Retrospectiva para mejorar.",
+          "outcome": "El equipo adopta un ritmo claro: planifica, sincroniza diariamente, muestra resultados y reflexiona sobre cómo mejorar.",
+          "feedback": "Correcto. Scrum contempla 5 eventos: el Sprint (que contiene a los demás), Planning, Daily, Review y Retrospective. Cada uno cumple un propósito específico para la mejora continua.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Hacer solo la reunión de planificación y avanzar sin más reuniones para no perder tiempo.",
+          "outcome": "El equipo pierde sincronización: aparecen bloqueos no detectados y al final del Sprint hay sorpresas en el avance.",
+          "feedback": "Incorrecto. La Daily permite detectar impedimentos a tiempo, y la Review y Retrospectiva aseguran transparencia y mejora. Omitirlas reduce la efectividad del Sprint.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Reemplazar la Daily por correos electrónicos de avance para ser más eficientes.",
+          "outcome": "La comunicación se vuelve lenta y fragmentada. Los problemas se acumulan y nadie tiene una visión común del avance.",
+          "feedback": "Parcialmente incorrecto. La Daily es una sincronización rápida y presencial del Dev Team; los correos no reemplazan la coordinación ni la detección oportuna de bloqueos.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Durante el Sprint, surge la duda sobre cómo registrar y controlar el trabajo. El equipo necesita visibilidad de lo que falta y de lo que ya está listo. ¿Qué artefactos utilizas?",
+      "options": [
+        {
+          "text": "Mantener un Product Backlog priorizado, un Sprint Backlog con las tareas del Sprint y entregar un Increment funcional al final.",
+          "outcome": "El equipo tiene total transparencia: sabe qué construir, en qué orden y entrega valor real al cierre del Sprint.",
+          "feedback": "Correcto. Los 3 artefactos de Scrum son el Product Backlog (todo el trabajo del producto), el Sprint Backlog (lo comprometido en el Sprint) y el Increment (el producto terminado y utilizable).",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Usar solo una lista de tareas en un cuaderno personal del líder.",
+          "outcome": "La información queda centralizada en una persona y el equipo no tiene visibilidad compartida del avance.",
+          "feedback": "Incorrecto. Los artefactos de Scrum buscan transparencia para todo el equipo. Una lista privada impide la colaboración y el seguimiento conjunto.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Trabajar sin registrar nada y confiar en la memoria del equipo.",
+          "outcome": "Se olvidan tareas, no hay trazabilidad y al final no queda claro qué se completó realmente.",
+          "feedback": "Incorrecto. Sin artefactos no hay transparencia ni control. El Product Backlog, Sprint Backlog e Increment son esenciales para gestionar el trabajo y el valor entregado.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Finaliza el primer Sprint. En la Retrospectiva, el equipo evalúa cómo aplicó Scrum. La gerencia pregunta qué aprendieron para extender el marco a otras áreas como Marketing y RR.HH. ¿Qué recomiendas?",
+      "options": [
+        {
+          "text": "Compartir que Scrum, con sus 3 roles, 5 eventos y 3 artefactos, es adaptable a equipos no técnicos siempre que se mantenga la transparencia y la mejora continua.",
+          "outcome": "La gerencia valora la propuesta y proyecta pilotos de Scrum en otras áreas, reforzando una cultura ágil en la empresa.",
+          "feedback": "Excelente. Scrum es aplicable más allá de TI, también en Marketing y RR.HH., siempre que se respeten sus pilares: transparencia, inspección y adaptación.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Afirmar que Scrum solo sirve para equipos de desarrollo de software y no debería extenderse.",
+          "outcome": "La empresa descarta oportunidades de mejora en otras áreas que podrían beneficiarse del marco ágil.",
+          "feedback": "Incorrecto. Scrum es un marco general aplicable a diversos contextos, no exclusivamente a TI. Limitarlo reduce su potencial organizacional.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Has completado el caso aplicando los fundamentos de Scrum en un contexto laboral chileno. Recuerda que el marco se sostiene sobre 3 roles (Product Owner, Scrum Master y Dev Team), 5 eventos (Sprint, Planning, Daily, Review y Retrospective) y 3 artefactos (Product Backlog, Sprint Backlog e Increment). Las mejores decisiones favorecen la transparencia, la autoorganización y la mejora continua. Estos principios permiten que Scrum funcione no solo en equipos de tecnología, sino también en áreas como Marketing y RR.HH. dentro de empresas chilenas. Tu desempeño refleja qué tan bien comprendes la lógica colaborativa del framework. Te invitamos a seguir practicando estos conceptos en tus proyectos reales."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Técnicas de Gestión Comercial y Cierre de Ventas",
+  "intro": "Pon a prueba tus conocimientos sobre el proceso comercial: prospección, calificación, manejo de objeciones y cierre, tanto en ventas B2B como B2C. Responde cada pregunta seleccionando la alternativa correcta y revisa la retroalimentación para reforzar tu aprendizaje.",
+  "questions": [
+    {
+      "q": "¿Cuál es el objetivo principal de la etapa de prospección en el proceso comercial?",
+      "options": [
+        "Cerrar la venta lo antes posible con cualquier contacto",
+        "Identificar y contactar potenciales clientes que podrían necesitar el producto o servicio",
+        "Gestionar reclamos de clientes actuales",
+        "Registrar la facturación de las ventas realizadas"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La prospección busca identificar y contactar potenciales clientes para alimentar el embudo de ventas.",
+      "feedbackKo": "Respuesta incorrecta. La prospección no es cerrar de inmediato, sino identificar y contactar potenciales clientes adecuados.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En la metodología BANT, ¿qué representan sus siglas para calificar a un prospecto?",
+      "options": [
+        "Beneficio, Acuerdo, Negocio y Tiempo",
+        "Budget (Presupuesto), Authority (Autoridad), Need (Necesidad) y Timing (Tiempo)",
+        "Banco, Aval, Notificación y Trámite",
+        "Base, Análisis, Negociación y Tarifa"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. BANT evalúa Presupuesto, Autoridad, Necesidad y Tiempo para determinar si un prospecto está calificado.",
+      "feedbackKo": "Respuesta incorrecta. BANT corresponde a Budget, Authority, Need y Timing, claves para calificar un prospecto.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Ante una objeción del cliente sobre el precio, ¿cuál es la conducta comercial más recomendable?",
+      "options": [
+        "Bajar el precio inmediatamente para no perder la venta",
+        "Ignorar la objeción y seguir con la presentación",
+        "Escuchar, comprender la objeción y reforzar la propuesta de valor del producto o servicio",
+        "Discutir con el cliente para demostrar que está equivocado"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Manejar objeciones implica escuchar activamente y reforzar el valor antes de negociar el precio.",
+      "feedbackKo": "Respuesta incorrecta. Lo recomendable es escuchar la objeción y reforzar la propuesta de valor, no ceder ni ignorar de inmediato.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es la principal función de un CRM en la gestión comercial?",
+      "options": [
+        "Reemplazar al ejecutivo comercial en la venta",
+        "Registrar y administrar la información e interacciones con clientes y prospectos",
+        "Calcular automáticamente los impuestos de la empresa",
+        "Diseñar campañas publicitarias en redes sociales"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El CRM permite registrar y administrar la información e interacciones con clientes para hacer seguimiento del proceso comercial.",
+      "feedbackKo": "Respuesta incorrecta. El CRM es una herramienta para registrar y gestionar la información e interacciones con clientes y prospectos.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Por qué es importante la etapa de post-venta en ventas B2B y B2C?",
+      "options": [
+        "Porque permite olvidar al cliente una vez concretada la venta",
+        "Porque fideliza al cliente, genera recompra y abre oportunidades de recomendación",
+        "Porque elimina la necesidad de prospectar nuevos clientes",
+        "Porque reemplaza la fase de calificación del prospecto"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La post-venta fortalece la relación, fomenta la recompra y favorece las recomendaciones.",
+      "feedbackKo": "Respuesta incorrecta. La post-venta es clave para fidelizar al cliente, generar recompra y obtener recomendaciones.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

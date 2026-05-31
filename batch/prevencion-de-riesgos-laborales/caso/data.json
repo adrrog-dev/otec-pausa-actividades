@@ -1,0 +1,108 @@
+{
+  "title": "IPER en faena: decisiones que previenen accidentes",
+  "intro": "Eres Marcela, integrante del Comité Paritario en una empresa constructora. Durante una ronda de inspección detectas situaciones de riesgo en faena. Deberás aplicar la metodología IPER (Identificación de Peligros y Evaluación de Riesgos) para tomar las mejores decisiones. Cada elección tiene consecuencias reales en la seguridad de los trabajadores.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Observas a un trabajador operando una sierra circular sin protección en el disco y sin lentes de seguridad. Hay aserrín acumulado y conexiones eléctricas expuestas cerca. ¿Cuál es tu primer paso según la metodología IPER?",
+      "options": [
+        {
+          "text": "Identificar todos los peligros presentes antes de proponer medidas.",
+          "outcome": "Registras los peligros: mecánico (disco sin resguardo), proyección de partículas (sin lentes), eléctrico (conexiones expuestas) y orden y aseo (aserrín).",
+          "feedback": "Correcto. El primer paso del IPER es la identificación de peligros. Reconocer todos los peligros permite una evaluación completa antes de actuar.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Entregar de inmediato lentes al trabajador y seguir la ronda.",
+          "outcome": "El trabajador usa los lentes, pero el disco sin resguardo y el riesgo eléctrico siguen presentes.",
+          "feedback": "Insuficiente. Actuar sobre un solo peligro sin identificar los demás deja riesgos críticos sin controlar. Primero debes identificar todos los peligros.",
+          "score": -0.5,
+          "next": 2
+        },
+        {
+          "text": "Detener la faena y reportar después sin registrar detalles.",
+          "outcome": "Detienes la actividad, pero sin registro los peligros pueden repetirse y no quedan trazables.",
+          "feedback": "Parcial. Detener una actividad de riesgo es válido, pero la metodología IPER exige identificar y registrar los peligros para gestionarlos.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya identificaste los peligros. Ahora debes evaluar el riesgo del disco sin resguardo usando la matriz de riesgo. La probabilidad de contacto es alta y la consecuencia es grave (amputación). ¿Cómo clasificas y priorizas este riesgo?",
+      "options": [
+        {
+          "text": "Riesgo crítico/intolerable: acción inmediata, prioridad máxima.",
+          "outcome": "Clasificas correctamente combinando probabilidad alta y consecuencia grave, priorizando su control inmediato.",
+          "feedback": "Correcto. En la matriz de riesgo, probabilidad alta más consecuencia grave da un riesgo intolerable que exige acción inmediata.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Riesgo moderado: programar revisión para la próxima semana.",
+          "outcome": "Subestimas el riesgo y postergas el control de una situación que puede causar una amputación.",
+          "feedback": "Incorrecto. Un riesgo con consecuencia grave y alta probabilidad nunca debe postergarse. La matriz lo clasifica como intolerable.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Riesgo bajo: basta con recordar al trabajador que tenga cuidado.",
+          "outcome": "Confías solo en la conducta individual, dejando el peligro sin control efectivo.",
+          "feedback": "Incorrecto. La advertencia verbal no reduce el riesgo de un equipo sin resguardo. La evaluación debe basarse en probabilidad y consecuencia, no en suposiciones.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Debes definir las medidas de control para el disco sin resguardo. Aplicando la jerarquía de controles, ¿qué opción priorizas?",
+      "options": [
+        {
+          "text": "Instalar el resguardo del disco y verificar su funcionamiento (control de ingeniería).",
+          "outcome": "Reduces el riesgo en la fuente, protegiendo a todos los trabajadores que operen el equipo.",
+          "feedback": "Correcto. La jerarquía de controles prioriza eliminación, sustitución e ingeniería antes que el EPP. El resguardo es un control de ingeniería efectivo.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Entregar guantes anticorte y dejar el equipo sin resguardo.",
+          "outcome": "El EPP ofrece una protección limitada frente a un disco sin resguardo en movimiento.",
+          "feedback": "Insuficiente. El EPP es el último nivel de la jerarquía de controles. No reemplaza un control de ingeniería como el resguardo.",
+          "score": -0.5,
+          "next": 4
+        },
+        {
+          "text": "Capacitar al trabajador en uso seguro, manteniendo el equipo igual.",
+          "outcome": "Mejoras la conducta, pero el peligro físico permanece sin control.",
+          "feedback": "Parcial. La capacitación es un control administrativo útil, pero por sí sola no elimina el peligro. Debe combinarse con controles de ingeniería.",
+          "score": 0,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Implementaste las medidas. Para cerrar el ciclo IPER, ¿qué acción aseguras dentro del sistema de gestión preventiva?",
+      "options": [
+        {
+          "text": "Registrar en la matriz, informar al Comité Paritario y programar seguimiento de las medidas.",
+          "outcome": "Dejas trazabilidad, involucras al Comité Paritario y verificas la efectividad de los controles en el tiempo.",
+          "feedback": "Correcto. El IPER es un proceso continuo: registrar, comunicar al Comité Paritario, actualizar la matriz y hacer seguimiento cierran correctamente el ciclo.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Considerar el caso resuelto y no documentarlo.",
+          "outcome": "Sin registro ni seguimiento, no hay evidencia de la gestión ni control de su eficacia.",
+          "feedback": "Incorrecto. La trazabilidad y el seguimiento son esenciales. Bajo la Ley 16.744 y la gestión preventiva, los riesgos deben quedar documentados y monitoreados.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La metodología IPER sigue una secuencia lógica: primero identificar todos los peligros, luego evaluar el riesgo con la matriz (probabilidad x consecuencia), después aplicar medidas según la jerarquía de controles (eliminación, sustitución, ingeniería, administrativos y, por último, EPP) y finalmente registrar, comunicar al Comité Paritario y hacer seguimiento. Recordar que el IPER es un proceso continuo y participativo. Como integrante del Comité Paritario, tu rol es clave para que la prevención sea efectiva y se ajuste a las exigencias de la Ley 16.744 y al Reglamento Interno de la empresa."
+}

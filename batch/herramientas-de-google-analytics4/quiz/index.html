@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quiz: De Universal Analytics a GA4 — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Actividad interactiva</footer>
+<script>window.__DATA__ = {
+  "title": "Quiz: De Universal Analytics a GA4",
+  "intro": "Pon a prueba tus conocimientos sobre la migración a Google Analytics 4, el modelo basado en eventos, las audiencias y los reportes accionables. Cada respuesta correcta suma puntos. ¡Adelante!",
+  "questions": [
+    {
+      "q": "¿Cuál es la principal diferencia entre Universal Analytics y Google Analytics 4 en cuanto a su modelo de medición?",
+      "options": [
+        "GA4 se basa en sesiones y páginas vistas, igual que Universal Analytics.",
+        "GA4 utiliza un modelo basado en eventos, donde cada interacción se registra como un evento.",
+        "GA4 solo mide datos de aplicaciones móviles y no de sitios web.",
+        "GA4 elimina por completo el seguimiento de usuarios."
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. GA4 abandona el modelo de sesiones de Universal Analytics y adopta un modelo basado en eventos, donde cada interacción (vista de página, clic, descarga, compra) se registra como un evento.",
+      "feedbackKo": "Incorrecto. La diferencia clave es que GA4 utiliza un modelo basado en eventos, a diferencia de Universal Analytics que se centraba en sesiones y páginas vistas.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En GA4, ¿qué tipo de eventos se registran automáticamente sin necesidad de configuración adicional?",
+      "options": [
+        "Solo los eventos de compra en e-commerce.",
+        "Únicamente los eventos personalizados que defina el usuario.",
+        "Los eventos recopilados automáticamente, como las vistas de página y el primer inicio de sesión.",
+        "Ningún evento se registra de forma automática."
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. GA4 recopila automáticamente ciertos eventos básicos, como vistas de página, desplazamientos y primeras visitas, sin requerir configuración manual.",
+      "feedbackKo": "Incorrecto. GA4 sí registra eventos automáticamente, como las vistas de página y el primer inicio de sesión, sin necesidad de configuración adicional.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Para qué sirven las audiencias en Google Analytics 4?",
+      "options": [
+        "Para agrupar usuarios según criterios y comportamientos, permitiendo análisis y remarketing.",
+        "Para almacenar el historial de facturación de la cuenta.",
+        "Para reemplazar la necesidad de definir eventos personalizados.",
+        "Para configurar la velocidad de carga del sitio web."
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. Las audiencias permiten agrupar usuarios según criterios y comportamientos específicos, lo que facilita el análisis segmentado y la activación en campañas de remarketing.",
+      "feedbackKo": "Incorrecto. Las audiencias en GA4 sirven para agrupar usuarios según criterios y comportamientos, útiles para análisis y remarketing.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué caracteriza a los reportes explorativos (Explorar) en GA4 frente a los reportes estándar?",
+      "options": [
+        "Son reportes fijos que no permiten modificaciones.",
+        "Permiten un análisis flexible y personalizado, combinando dimensiones y métricas a medida.",
+        "Solo muestran datos de Google Ads.",
+        "Están disponibles únicamente en la versión de pago."
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Los reportes explorativos ofrecen un análisis flexible y personalizado, permitiendo combinar dimensiones y métricas para obtener insights accionables a la medida del negocio.",
+      "feedbackKo": "Incorrecto. Los reportes explorativos se caracterizan por su flexibilidad, permitiendo combinar dimensiones y métricas de forma personalizada, a diferencia de los reportes estándar.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En un e-commerce chileno, ¿cuál sería un evento personalizado útil para medir el comportamiento de compra?",
+      "options": [
+        "Registrar el color del logo de la tienda.",
+        "Medir un evento como 'agregar_al_carrito' para analizar la intención de compra.",
+        "Contar la cantidad de empleados de la empresa.",
+        "Registrar la temperatura ambiente del servidor."
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Un evento personalizado como 'agregar_al_carrito' permite analizar la intención de compra y optimizar el embudo de conversión del e-commerce.",
+      "feedbackKo": "Incorrecto. Un evento personalizado relevante para e-commerce es, por ejemplo, 'agregar_al_carrito', que ayuda a medir la intención de compra de los usuarios.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

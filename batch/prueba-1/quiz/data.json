@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Autocuidado y Prevención de Infecciones Respiratorias en el Trabajo",
+  "intro": "Pon a prueba lo aprendido sobre cómo prevenir el contagio de COVID-19, influenza y virus sincicial en tu lugar de trabajo. Responde las 5 preguntas y revisa la retroalimentación de cada una. ¡Tu autocuidado protege a todo el equipo!",
+  "questions": [
+    {
+      "q": "¿Cuál es una de las medidas más efectivas y económicas para prevenir el contagio de infecciones respiratorias en el trabajo?",
+      "options": [
+        "Tomar antibióticos de forma preventiva",
+        "Lavarse las manos frecuentemente con agua y jabón",
+        "Usar guantes durante toda la jornada laboral",
+        "Mantener las ventanas siempre cerradas"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La higiene de manos con agua y jabón, o alcohol gel cuando no hay agua disponible, es una de las medidas más simples y eficaces para cortar la cadena de contagio.",
+      "feedbackKo": "Respuesta incorrecta. La medida más efectiva y económica es lavarse las manos frecuentemente con agua y jabón. Los antibióticos no actúan contra los virus respiratorios.",
+      "points": 20,
+      "difficulty": "facil"
+    },
+    {
+      "q": "¿Por qué es importante ventilar los espacios de trabajo cerrados?",
+      "options": [
+        "Para reducir el costo de la calefacción",
+        "Porque renueva el aire y disminuye la concentración de partículas con virus",
+        "Solo es necesario en oficinas con muchas personas",
+        "Para evitar el uso de mascarillas por completo"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La ventilación renueva el aire interior y reduce la concentración de partículas que pueden transportar virus respiratorios, disminuyendo el riesgo de contagio.",
+      "feedbackKo": "Respuesta incorrecta. La ventilación es clave porque renueva el aire y reduce la concentración de partículas con virus en el ambiente, en cualquier tipo de espacio cerrado.",
+      "points": 20,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "Según los lineamientos del MINSAL, ¿qué debería hacer un trabajador que presenta síntomas respiratorios?",
+      "options": [
+        "Continuar trabajando con normalidad sin avisar",
+        "Esperar a sentirse muy grave antes de actuar",
+        "Avisar a su jefatura, usar mascarilla y seguir las indicaciones de aislamiento o consulta médica",
+        "Compartir sus implementos para no generar gastos"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Ante síntomas respiratorios, lo recomendado es informar a la jefatura, usar mascarilla y seguir las indicaciones del MINSAL respecto a aislamiento o consulta médica, protegiendo así a todo el equipo.",
+      "feedbackKo": "Respuesta incorrecta. Frente a síntomas respiratorios se debe avisar a la jefatura, usar mascarilla y seguir las indicaciones del MINSAL, evitando exponer a los demás trabajadores.",
+      "points": 20,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "¿Cuál de las siguientes afirmaciones sobre la vacunación es correcta?",
+      "options": [
+        "La vacuna contra la influenza protege también contra el COVID-19",
+        "La vacunación reduce el riesgo de enfermar gravemente y complementa otras medidas preventivas",
+        "Vacunarse reemplaza la necesidad de lavarse las manos y ventilar",
+        "Las vacunas solo sirven para personas mayores"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La vacunación reduce el riesgo de enfermar gravemente y es un complemento de las demás medidas preventivas, no un reemplazo de ellas.",
+      "feedbackKo": "Respuesta incorrecta. La vacunación reduce el riesgo de enfermedad grave y complementa otras medidas como la higiene de manos y la ventilación. Cada vacuna protege contra enfermedades específicas.",
+      "points": 20,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "En un trabajo en terreno o en una industria, ¿cómo se deben aplicar las medidas preventivas contra infecciones respiratorias?",
+      "options": [
+        "No aplican, porque son solo para oficinas",
+        "Se adaptan al contexto, manteniendo higiene de manos, ventilación, uso de mascarilla cuando corresponda y autocuidado",
+        "Solo se aplican si lo solicita un cliente",
+        "Basta con usar mascarilla una vez por semana"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Las medidas preventivas aplican en oficinas, terreno e industria, adaptándose a cada contexto: higiene de manos, ventilación, uso de mascarilla cuando corresponda y autocuidado permanente.",
+      "feedbackKo": "Respuesta incorrecta. Las medidas preventivas aplican en todos los contextos laborales, incluyendo terreno e industria, adaptándose a las condiciones de cada lugar de trabajo.",
+      "points": 20,
+      "difficulty": "avanzado"
+    }
+  ]
+}

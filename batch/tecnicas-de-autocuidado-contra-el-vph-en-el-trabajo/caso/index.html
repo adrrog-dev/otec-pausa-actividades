@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Decisiones de autocuidado: VPH en el entorno laboral — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Decisiones de autocuidado: VPH en el entorno laboral",
+  "intro": "Camila trabaja en una empresa que acaba de lanzar un programa de salud para colaboradores junto a su comité paritario. Durante una pausa, surge una conversación sobre el Virus Papiloma Humano (VPH) y aparecen dudas, mitos y oportunidades de prevención. Acompaña a Camila en sus decisiones y observa cómo el autocuidado, basado en lineamientos del MINSAL, marca la diferencia.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "En la sala de descanso, un compañero comenta: 'El VPH solo les da a personas con muchas parejas, así que a mí no me preocupa'. Camila recuerda la charla de prevención. ¿Qué decide hacer?",
+      "options": [
+        {
+          "text": "Aclarar con respeto que el VPH es muy común y cualquier persona sexualmente activa puede contagiarse.",
+          "outcome": "El compañero escucha y reconoce que tenía información equivocada. La conversación se vuelve más informada.",
+          "feedback": "Correcto. El VPH es una de las infecciones de transmisión sexual más frecuentes. Desmontar mitos con información validada por el MINSAL fortalece la prevención en el equipo.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Quedarse callada para no incomodar a nadie.",
+          "outcome": "El mito queda instalado en la conversación y otros colegas asienten.",
+          "feedback": "Comprensible, pero perdiste una oportunidad de prevención. Compartir información correcta, con respeto, ayuda a cuidar a todo el equipo.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Reírse y seguir la broma sin entrar en el tema.",
+          "outcome": "La desinformación se refuerza y el tema se trivializa.",
+          "feedback": "El humor no debe reemplazar la información. Banalizar el VPH dificulta el autocuidado. Es mejor aportar datos confiables.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "RRHH informa que la empresa, en coordinación con el programa nacional, facilitará permisos para realizarse el examen PAP o test de VPH. Camila no se hace este control desde hace años. ¿Qué hace?",
+      "options": [
+        {
+          "text": "Agendar su control y aprovechar el permiso ofrecido por la empresa.",
+          "outcome": "Camila se realiza el control preventivo dentro del plazo recomendado.",
+          "feedback": "Excelente decisión. El PAP y el test de VPH permiten detectar lesiones de forma temprana. El programa MINSAL recomienda controles periódicos según edad y antecedentes.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Postergarlo porque 'no tiene síntomas'.",
+          "outcome": "Camila deja pasar la oportunidad y no agenda el examen.",
+          "feedback": "Cuidado: el VPH y las lesiones iniciales suelen no dar síntomas. Por eso el control preventivo es clave aunque te sientas bien.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Pedir más información a RRHH sobre cómo y cuándo realizarse el examen.",
+          "outcome": "Camila recibe orientación clara y agenda con seguridad.",
+          "feedback": "Muy bien. Informarse antes de actuar es parte del autocuidado responsable y ayuda a tomar mejores decisiones de salud.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El comité paritario invita a Camila a apoyar una campaña interna de prevención del VPH. Un colega le dice que la vacuna 'ya no sirve si uno es adulto'. ¿Cómo responde Camila?",
+      "options": [
+        {
+          "text": "Sugerir que cada persona consulte con su centro de salud, ya que existen indicaciones específicas según edad y antecedentes.",
+          "outcome": "El equipo decide derivar las dudas a fuentes oficiales de salud.",
+          "feedback": "Correcto. La vacunación contra el VPH tiene indicaciones definidas por el MINSAL. Lo responsable es orientar hacia el centro de salud y no afirmar ni descartar por cuenta propia.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Afirmar que la vacuna no sirve para nadie mayor de edad.",
+          "outcome": "Se difunde una afirmación incorrecta en la campaña.",
+          "feedback": "Evita generalizar. Las indicaciones de vacunación dependen de cada caso. Lo adecuado es derivar a profesionales y fuentes oficiales.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Ignorar el comentario y centrar la campaña solo en el uso de preservativo.",
+          "outcome": "La campaña queda incompleta al omitir otras medidas preventivas.",
+          "feedback": "El preservativo reduce el riesgo, pero la prevención del VPH es integral: incluye vacunación, controles y educación. No conviene dejar fuera información relevante.",
+          "score": 0,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Al cierre de la campaña, Camila debe transmitir un mensaje final al equipo sobre autocuidado y VPH. ¿Qué enfoque elige?",
+      "options": [
+        {
+          "text": "Recordar que la prevención es integral: información confiable, controles periódicos, vacunación según indicación y uso de preservativo.",
+          "outcome": "El equipo recibe un mensaje claro, completo y respaldado en lineamientos oficiales.",
+          "feedback": "Mensaje ideal. El autocuidado frente al VPH combina varias medidas y se basa en información validada por el MINSAL, sin generar alarma ni falsas promesas.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Enfocarse solo en generar miedo para que la gente reaccione.",
+          "outcome": "Algunos colegas se sienten incómodos y otros restan importancia al tema.",
+          "feedback": "El miedo no es una buena estrategia educativa. La prevención efectiva se construye con información clara, respeto y orientación hacia la red de salud.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El caso muestra que el autocuidado frente al VPH en el trabajo se construye con decisiones cotidianas: desmontar mitos con respeto, aprovechar los controles preventivos (PAP y test de VPH), orientar las dudas sobre vacunación hacia el centro de salud y promover una prevención integral que incluye el uso de preservativo. El rol de RRHH y de los comités paritarios es clave para facilitar permisos, difundir información validada por el MINSAL y crear espacios de confianza. Recuerda: este contenido es educativo y no reemplaza la evaluación de un profesional de salud. Ante cualquier duda específica, deriva siempre a la red de salud y a las fuentes oficiales del programa nacional."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

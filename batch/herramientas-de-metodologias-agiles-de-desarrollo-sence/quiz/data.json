@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Metodologías Ágiles con Foco SENCE",
+  "intro": "Pon a prueba tus conocimientos sobre la aplicación de Scrum y Kanban en proyectos de capacitación bajo el marco normativo SENCE. Cada respuesta incluye retroalimentación para reforzar tu aprendizaje. ¡Mucho éxito!",
+  "questions": [
+    {
+      "q": "En un proyecto de capacitación SENCE gestionado con Scrum, ¿cuál es el propósito principal del sprint?",
+      "options": [
+        "Entregar un incremento de trabajo funcional en un período corto y definido.",
+        "Eliminar la necesidad de documentación exigida por SENCE.",
+        "Reemplazar la asistencia de los participantes por reportes automáticos.",
+        "Reducir la duración total del curso sin planificación previa."
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. El sprint busca entregar incrementos de valor en ciclos cortos, lo que ayuda a avanzar de forma controlada sin perder el cumplimiento normativo.",
+      "feedbackKo": "Revisa el concepto: el sprint es un ciclo corto y definido para entregar incrementos de trabajo, no para eliminar la documentación ni los registros que SENCE exige.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cómo aporta el tablero Kanban a un proyecto de capacitación con franquicia tributaria SENCE?",
+      "options": [
+        "Permite saltar etapas de registro de asistencia.",
+        "Hace visible el flujo de tareas y el estado de cada actividad del proyecto.",
+        "Garantiza automáticamente la aprobación de los participantes.",
+        "Sustituye la liquidación del curso ante SENCE."
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Kanban visualiza el flujo de trabajo y el estado de cada tarea, facilitando el seguimiento del proyecto y sus hitos de cumplimiento.",
+      "feedbackKo": "No es así. Kanban es una herramienta de visualización del flujo de trabajo; no reemplaza los registros ni la liquidación que exige SENCE.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En el contexto SENCE, ¿qué elemento debe mantenerse siempre actualizado al aplicar metodologías ágiles?",
+      "options": [
+        "Únicamente las reuniones diarias del equipo.",
+        "Solo el backlog de tareas internas.",
+        "Los registros de asistencia y la documentación del curso.",
+        "El nombre comercial de la OTEC."
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Aunque trabajes con métodos ágiles, los registros de asistencia y la documentación son obligatorios para cumplir la normativa SENCE.",
+      "feedbackKo": "Recuerda que el marco SENCE exige mantener actualizados los registros de asistencia y la documentación del curso, independiente de la metodología usada.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es el rol principal del Product Owner en un proyecto de capacitación ágil?",
+      "options": [
+        "Definir y priorizar las necesidades del proyecto según el valor para el cliente.",
+        "Controlar exclusivamente la asistencia diaria.",
+        "Reemplazar al relator del curso.",
+        "Aprobar pagos de la franquicia tributaria."
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. El Product Owner prioriza las necesidades y define qué aporta más valor, asegurando que el proyecto avance alineado a los objetivos.",
+      "feedbackKo": "Revisa el rol: el Product Owner define y prioriza las necesidades del proyecto según su valor, no se ocupa solo de la asistencia ni de los pagos.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Por qué conviene combinar agilidad con el cumplimiento normativo en proyectos SENCE?",
+      "options": [
+        "Porque la agilidad permite ignorar los plazos legales.",
+        "Porque mejora la flexibilidad del equipo manteniendo la trazabilidad exigida.",
+        "Porque elimina la necesidad de liquidar los cursos.",
+        "Porque reduce la calidad para acelerar la entrega."
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Las metodologías ágiles aportan flexibilidad y mejora continua, siempre que se respete la trazabilidad y los requisitos normativos de SENCE.",
+      "feedbackKo": "No es correcto. La agilidad mejora la flexibilidad, pero debe convivir con la trazabilidad y los plazos que exige la normativa SENCE.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

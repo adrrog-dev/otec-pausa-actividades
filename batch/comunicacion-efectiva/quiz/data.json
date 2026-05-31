@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Comunicación Asertiva y Feedback en Equipos",
+  "intro": "Pon a prueba lo aprendido sobre comunicación asertiva, escucha activa y entrega de feedback efectivo en contextos laborales chilenos. Lee cada pregunta con atención y selecciona la mejor alternativa. ¡Éxito!",
+  "questions": [
+    {
+      "q": "¿Cuál de las siguientes conductas refleja mejor una comunicación asertiva en el trabajo?",
+      "options": [
+        "Evitar el conflicto y quedarse callado para no incomodar al equipo.",
+        "Expresar las ideas y necesidades de forma clara y respetuosa, sin agredir ni someterse.",
+        "Imponer la propia opinión elevando la voz para marcar autoridad.",
+        "Esperar a que otros adivinen lo que uno piensa o necesita."
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La asertividad consiste en expresar lo que pensamos y necesitamos con claridad y respeto, equilibrando nuestros derechos con los de los demás.",
+      "feedbackKo": "La respuesta correcta es la segunda. Ser asertivo no es callar ni imponerse, sino comunicar con claridad y respeto.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Un colaborador comete un error reiterado. ¿Cuál es la forma más adecuada de entregar feedback correctivo?",
+      "options": [
+        "Comentarlo frente a todo el equipo para que sirva de ejemplo.",
+        "Guardar silencio para evitar tensiones en el ambiente laboral.",
+        "Conversar en privado, describir el hecho concreto y acordar acciones de mejora.",
+        "Enviar un correo general recordando las reglas, sin nombrar a nadie."
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El feedback correctivo se entrega en privado, enfocándose en hechos concretos y orientado a la mejora, no a la persona.",
+      "feedbackKo": "La opción correcta es la tercera. El feedback correctivo debe ser privado, basado en hechos y orientado a soluciones.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué caracteriza a la escucha activa durante una conversación de feedback?",
+      "options": [
+        "Preparar la respuesta mientras la otra persona habla.",
+        "Prestar atención plena, parafrasear y confirmar lo que se entendió.",
+        "Interrumpir para corregir cuanto antes los errores detectados.",
+        "Asentir sin mirar a la persona para no perder tiempo."
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Escuchar activamente implica atención plena, parafrasear y verificar la comprensión del mensaje.",
+      "feedbackKo": "La respuesta correcta es la segunda. La escucha activa requiere atención real, parafrasear y confirmar lo comprendido.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según la comunicación no violenta, ¿cómo conviene plantear una observación a un compañero?",
+      "options": [
+        "Siempre tú llegas tarde y arruinas el trabajo del equipo.",
+        "Eres una persona poco comprometida con tus tareas.",
+        "Cuando la entrega llega después del plazo, me cuesta avanzar; necesito que coordinemos los tiempos.",
+        "No sé qué te pasa, pero deberías cambiar de actitud."
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La comunicación no violenta describe el hecho, expresa el impacto y plantea una necesidad, evitando juicios y descalificaciones.",
+      "feedbackKo": "La opción correcta es la tercera. La comunicación no violenta separa los hechos de los juicios y expresa necesidades de forma respetuosa.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Ante un conflicto verbal con un integrante del equipo, ¿cuál es la actitud más recomendable para una jefatura?",
+      "options": [
+        "Ganar la discusión a toda costa para demostrar autoridad.",
+        "Mantener la calma, enfocarse en el problema y buscar acuerdos en conjunto.",
+        "Postergar indefinidamente la conversación para que el tema se olvide.",
+        "Responder con el mismo tono elevado para igualar la situación."
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El manejo de conflictos requiere autocontrol, centrarse en el problema y no en la persona, y construir acuerdos colaborativos.",
+      "feedbackKo": "La respuesta correcta es la segunda. Manejar un conflicto implica calma, foco en el problema y búsqueda de acuerdos.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

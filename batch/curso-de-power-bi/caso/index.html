@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>De los datos al dashboard: decisiones con Power BI — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "De los datos al dashboard: decisiones con Power BI",
+  "intro": "Eres Camila, analista de gestión en una empresa de retail. La gerencia comercial te pide un reporte mensual de ventas que hoy se arma manualmente en planillas Excel, con errores frecuentes y demoras. Te solicitan automatizar y presentar un dashboard interactivo en Power BI. Tus decisiones definirán la calidad y confiabilidad del resultado.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Recibes tres archivos: ventas diarias (CSV), maestro de productos (Excel) y datos de sucursales (base de datos SQL). Necesitas integrarlos para construir el reporte. ¿Cómo inicias el trabajo en Power BI Desktop?",
+      "options": [
+        {
+          "text": "Conectar cada fuente desde 'Obtener datos' y revisar las relaciones entre tablas antes de transformar.",
+          "outcome": "Power BI carga las tres fuentes y detectas que el maestro de productos y las ventas comparten un campo de código. Estableces el modelo de datos con relaciones claras.",
+          "feedback": "Correcto. Conectar las fuentes nativas y modelar las relaciones desde el inicio evita duplicar datos y asegura un análisis confiable.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Copiar y pegar manualmente los datos de los tres archivos en una sola hoja de Excel y luego importarla.",
+          "outcome": "El proceso es lento, se mantiene la dependencia manual y se introducen errores al consolidar. Pierdes la posibilidad de actualizar automáticamente.",
+          "feedback": "No recomendable. Power BI permite conectar fuentes directamente y actualizarlas. La consolidación manual reproduce los problemas que buscas resolver.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Al revisar los datos de ventas notas fechas en formatos distintos, montos con texto y filas vacías. Debes preparar los datos antes de visualizar. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Usar el Editor de Power Query para limpiar formatos, cambiar tipos de datos y eliminar filas vacías.",
+          "outcome": "Power Query registra cada paso aplicado, dejando una transformación documentada y repetible en cada actualización.",
+          "feedback": "Muy bien. Power Query es la herramienta de ETL de Power BI: transforma los datos de forma ordenada y automatizable, sin alterar las fuentes originales.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Crear las visualizaciones de inmediato y corregir los errores directamente en cada gráfico.",
+          "outcome": "Los gráficos muestran cifras incorrectas y categorías duplicadas. La gerencia detecta inconsistencias y se cuestiona la validez del reporte.",
+          "feedback": "Incorrecto. Visualizar sobre datos sucios genera resultados poco confiables. La limpieza debe hacerse antes, en Power Query.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Los datos ya están limpios y modelados. La gerencia quiere ver el total de ventas, la evolución mensual y el desempeño por sucursal, con posibilidad de explorar el detalle. ¿Cómo construyes el dashboard?",
+      "options": [
+        {
+          "text": "Combinar una tarjeta o KPI para el total, un gráfico de barras por sucursal y un gráfico de líneas mensual, habilitando drill-down y filtros.",
+          "outcome": "El dashboard queda claro e interactivo. La gerencia puede filtrar por período y profundizar en cada sucursal con un clic.",
+          "feedback": "Excelente. Elegir el tipo de visual adecuado para cada mensaje y habilitar interactividad convierte los datos en información útil para decidir.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Mostrar toda la información en una sola tabla extensa con todos los campos disponibles.",
+          "outcome": "El reporte se ve recargado y poco legible. La gerencia debe buscar manualmente los datos relevantes y pierde tiempo.",
+          "feedback": "Poco efectivo. Una tabla extensa no aprovecha la interactividad de Power BI. Selecciona visualizaciones según la pregunta de negocio.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "El dashboard está listo. La gerencia quiere acceder a él periódicamente y desde sus celulares. ¿Qué propones?",
+      "options": [
+        {
+          "text": "Publicar el informe en Power BI Service, programar la actualización de datos y habilitar el acceso desde Power BI Mobile.",
+          "outcome": "El equipo gerencial recibe datos actualizados automáticamente y los consulta desde cualquier dispositivo. El reporte manual queda obsoleto.",
+          "feedback": "Correcto. El ecosistema Power BI (Desktop, Service y Mobile) permite distribuir, actualizar y consultar la información de forma segura y oportuna.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Exportar el dashboard como imagen y enviarlo por correo cada mes.",
+          "outcome": "La imagen no es interactiva ni se actualiza sola. Vuelves a depender de un envío manual y la gerencia no puede explorar los datos.",
+          "feedback": "Limitado. Exportar imágenes elimina la interactividad y la automatización. Publicar en Power BI Service entrega mucho más valor.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El flujo de trabajo en Power BI sigue una secuencia lógica: conectar fuentes, transformar y limpiar los datos en Power Query, modelar las relaciones, construir visualizaciones interactivas adecuadas y, finalmente, publicar en Power BI Service para su distribución. Las mejores decisiones de Camila apuntaron a la automatización, la limpieza previa de los datos, la elección consciente de cada visual y el aprovechamiento del ecosistema Power BI. Si optaste por procesos manuales, recuerda que reproducen errores y demoras que esta herramienta busca eliminar. Un buen dashboard no solo muestra datos: entrega información confiable, oportuna y comprensible para apoyar la toma de decisiones."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

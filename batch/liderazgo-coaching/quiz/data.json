@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Liderazgo Coaching y Conversaciones de Desarrollo",
+  "intro": "Pon a prueba lo aprendido sobre liderazgo coaching, preguntas poderosas y conversaciones de desarrollo. Responde las 5 preguntas y revisa la retroalimentación para reforzar tu aprendizaje. ¡Mucho éxito!",
+  "questions": [
+    {
+      "q": "¿Qué caracteriza principalmente al liderazgo coaching frente a otros estilos?",
+      "options": [
+        "Entregar siempre las respuestas y soluciones al colaborador",
+        "Acompañar al colaborador para que descubra sus propias soluciones mediante preguntas",
+        "Supervisar de cerca cada tarea sin delegar responsabilidades",
+        "Evitar conversaciones de desarrollo para no generar presión"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El liderazgo coaching busca que el colaborador desarrolle autonomía y descubra sus propias soluciones a través de preguntas y reflexión guiada.",
+      "feedbackKo": "Incorrecto. El liderazgo coaching no consiste en dar respuestas, sino en acompañar al colaborador para que encuentre sus propias soluciones mediante preguntas poderosas.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "El modelo GROW se utiliza para estructurar conversaciones de coaching. ¿Qué representa la letra 'G'?",
+      "options": [
+        "Guía: instrucciones que entrega la jefatura",
+        "Grupo: el equipo de trabajo involucrado",
+        "Goal (Meta): el objetivo que se quiere alcanzar",
+        "Gestión: la administración de los recursos"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. En el modelo GROW, la 'G' corresponde a Goal (Meta), es decir, definir con claridad el objetivo de la conversación.",
+      "feedbackKo": "Incorrecto. En el modelo GROW, la 'G' significa Goal (Meta), que es el punto de partida para definir qué se quiere lograr.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es un ejemplo de pregunta poderosa en una conversación de desarrollo?",
+      "options": [
+        "¿Por qué no hiciste bien la tarea?",
+        "¿Qué opciones has considerado para avanzar en este objetivo?",
+        "¿No crees que deberías esforzarte más?",
+        "¿Estás de acuerdo con lo que te indico?"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Las preguntas poderosas son abiertas, invitan a la reflexión y no juzgan. '¿Qué opciones has considerado?' abre posibilidades en el colaborador.",
+      "feedbackKo": "Incorrecto. Las preguntas poderosas son abiertas y libres de juicio. Las opciones que culpan o cierran la conversación no favorecen el desarrollo.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué rol cumple la escucha activa en el liderazgo coaching?",
+      "options": [
+        "Permite preparar la respuesta mientras el colaborador habla",
+        "Es opcional cuando la jefatura ya conoce el tema",
+        "Permite comprender de verdad al colaborador y generar confianza",
+        "Sirve para identificar rápidamente los errores cometidos"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La escucha activa implica prestar atención plena, sin interrumpir ni juzgar, lo que genera confianza y mejora la calidad de la conversación.",
+      "feedbackKo": "Incorrecto. La escucha activa busca comprender genuinamente al colaborador y construir confianza, no preparar respuestas ni buscar errores.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es el propósito principal del feedback formativo en una conversación de desarrollo?",
+      "options": [
+        "Señalar las fallas para justificar una sanción",
+        "Ayudar al colaborador a mejorar y crecer con orientaciones concretas",
+        "Comparar el desempeño con el de otros integrantes del equipo",
+        "Registrar evidencia para futuras evaluaciones de rendimiento"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El feedback formativo entrega orientaciones concretas y oportunas para que el colaborador mejore y desarrolle su potencial.",
+      "feedbackKo": "Incorrecto. El feedback formativo no busca sancionar ni comparar, sino orientar al colaborador para que mejore y crezca.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

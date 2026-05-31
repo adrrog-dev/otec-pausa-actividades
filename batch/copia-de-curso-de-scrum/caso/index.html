@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Scrum en proyectos OTEC bajo marco SENCE — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Scrum en proyectos OTEC bajo marco SENCE",
+  "intro": "Eres Carolina, Scrum Master de un equipo de capacitación en OTEC Pausa. El equipo está ejecutando un curso e-learning con franquicia SENCE. Durante el sprint surgen decisiones que afectan tanto la entrega ágil como el cumplimiento de los requisitos SENCE: horas cronológicas, asistencia mínima de 75% y evaluación de aprovechamiento. Tus decisiones tendrán consecuencias.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "En la Sprint Planning, el equipo propone reducir las horas cronológicas del curso para terminar antes y avanzar más rápido en el backlog. El cliente está de acuerdo con entregar antes. ¿Qué decides?",
+      "options": [
+        {
+          "text": "Mantener las horas cronológicas comprometidas según el diseño aprobado por SENCE.",
+          "outcome": "El equipo conserva la carga horaria comprometida y ajusta el alcance del sprint para cumplir los plazos sin afectar el curso.",
+          "feedback": "Correcto. Las horas cronológicas son un requisito SENCE no negociable; reducirlas pone en riesgo la franquicia tributaria del cliente.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Reducir las horas para acelerar la entrega, ya que el cliente lo aprobó.",
+          "outcome": "El curso se entrega antes, pero al cierre SENCE objeta las horas declaradas y el cliente queda expuesto a perder el beneficio.",
+          "feedback": "Incorrecto. La conformidad del cliente no reemplaza el cumplimiento normativo SENCE. Scrum debe operar dentro del marco regulatorio.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "A mitad del sprint detectas que la plataforma e-learning no está registrando correctamente la asistencia de los participantes, que debe alcanzar al menos 75%. El equipo está enfocado en otras tareas del backlog. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Priorizar de inmediato la corrección del registro de asistencia como impedimento crítico.",
+          "outcome": "Como Scrum Master, remueves el impedimento y el equipo corrige el registro antes de que se acumulen sesiones sin respaldo.",
+          "feedback": "Correcto. La asistencia mínima del 75% es condición SENCE para validar la capacitación. Es un impedimento prioritario.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Dejar la corrección para el próximo sprint y seguir con las tareas planificadas.",
+          "outcome": "Avanza el backlog, pero se pierden registros de varias sesiones y luego es muy difícil reconstruir la asistencia.",
+          "feedback": "Incorrecto. Postergar este problema compromete la validación SENCE del curso completo. Debe atenderse como impedimento urgente.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Llega el momento de la evaluación de aprovechamiento. El equipo propone usar solo una encuesta de satisfacción para cerrar más rápido el sprint. ¿Qué decides?",
+      "options": [
+        {
+          "text": "Incluir una evaluación de aprovechamiento que mida los aprendizajes según los objetivos del curso.",
+          "outcome": "Se aplica una evaluación válida que demuestra el logro de competencias, cumpliendo la exigencia SENCE.",
+          "feedback": "Correcto. SENCE requiere evaluar el aprovechamiento, no solo la satisfacción. Ambos instrumentos son distintos y complementarios.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Usar solo la encuesta de satisfacción para cerrar antes el sprint.",
+          "outcome": "El cierre es rápido, pero falta evidencia del aprendizaje real y SENCE puede rechazar la evaluación de aprovechamiento.",
+          "feedback": "Incorrecto. La encuesta de satisfacción no reemplaza la evaluación de aprovechamiento exigida por SENCE.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "En la Sprint Review final con el cliente, debes presentar el incremento del curso. ¿Cómo enfocas la revisión?",
+      "options": [
+        {
+          "text": "Mostrar el curso terminado junto con la evidencia SENCE: horas, asistencia y evaluación de aprovechamiento.",
+          "outcome": "El cliente recibe un producto funcional y respaldado normativamente, listo para declarar la franquicia con tranquilidad.",
+          "feedback": "Excelente. Integrar la entrega ágil con la evidencia de cumplimiento SENCE es la clave del trabajo OTEC con Scrum.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Presentar solo el curso funcional y dejar la evidencia SENCE para después.",
+          "outcome": "El cliente queda conforme con el producto, pero sin la documentación queda incierto el cierre administrativo del beneficio.",
+          "feedback": "Mejorable. En OTEC, el incremento 'terminado' incluye la evidencia de cumplimiento SENCE, no solo el contenido del curso.",
+          "score": 0,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Aplicar Scrum en una OTEC chilena significa combinar la agilidad con el cumplimiento estricto del marco SENCE. Las decisiones clave son: respetar las horas cronológicas comprometidas, tratar el registro de asistencia mínima (75%) como impedimento crítico, asegurar la evaluación de aprovechamiento más allá de la satisfacción, y entregar incrementos 'terminados' que incluyan la evidencia normativa. El Scrum Master debe remover impedimentos sin sacrificar requisitos legales. Un equipo ágil maduro entiende que la velocidad nunca puede comprometer la validación SENCE ni el beneficio tributario del cliente."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Caso interactivo: Respuesta ante un accidente laboral — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Caso interactivo: Respuesta ante un accidente laboral",
+  "intro": "Eres integrante de la brigada de emergencia de una empresa de manufactura. Durante el turno de la tarde, un compañero del área de bodega sufre una caída desde una escalera y queda en el suelo, consciente pero con dolor intenso en una pierna y una herida sangrante en el brazo. Tus decisiones determinarán la calidad de la atención inicial y el correcto cumplimiento de los procedimientos. Toma cada decisión con criterio profesional.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Llegas al lugar del accidente. El trabajador está en el suelo, consciente y quejándose. Hay otras personas alrededor mirando. ¿Cuál es tu primera acción?",
+      "options": [
+        {
+          "text": "Evaluar la seguridad de la escena antes de acercarte y delimitar el área.",
+          "outcome": "Verificas que no haya riesgos adicionales (caída de objetos, derrames) y pides a los curiosos que se retiren para dar espacio.",
+          "feedback": "Correcto. El primer paso de todo procedimiento de primeros auxilios es asegurar la escena para protegerte a ti, a la víctima y a terceros.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Levantar de inmediato al trabajador para sentarlo y que esté más cómodo.",
+          "outcome": "Al moverlo bruscamente, el trabajador grita de dolor y existe riesgo de agravar una posible lesión.",
+          "feedback": "Incorrecto. Nunca movilices a un accidentado sin evaluar primero. Movimientos innecesarios pueden agravar fracturas o lesiones.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Buscar el kit de primeros auxilios antes de hacer cualquier evaluación.",
+          "outcome": "Pierdes tiempo valioso buscando el kit mientras la escena sigue sin asegurarse.",
+          "feedback": "Parcialmente incorrecto. El kit es importante, pero lo primero es asegurar la escena y evaluar a la víctima.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "La escena está segura. Observas que el brazo sangra de forma continua y el trabajador refiere mucho dolor en la pierna. ¿Cómo procedes con la atención inicial?",
+      "options": [
+        {
+          "text": "Controlar la hemorragia con compresión directa usando material del kit y evitar mover la pierna.",
+          "outcome": "Aplicas presión sobre la herida con gasa estéril y guantes, deteniendo el sangrado, e inmovilizas la zona sin manipular la pierna lesionada.",
+          "feedback": "Correcto. La hemorragia es una prioridad y la compresión directa es la técnica adecuada. Inmovilizar evita agravar una posible fractura.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Acomodar la pierna en su posición 'normal' para reducir el dolor.",
+          "outcome": "Al manipular la pierna, el trabajador empeora y aumenta el riesgo de daño en caso de fractura.",
+          "feedback": "Incorrecto. No debes alinear ni manipular extremidades con sospecha de fractura. Solo inmoviliza en la posición encontrada.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Limpiar la herida con agua y revisar después la hemorragia.",
+          "outcome": "El sangrado continúa mientras intentas limpiar; la prioridad estaba mal jerarquizada.",
+          "feedback": "Parcialmente incorrecto. Ante hemorragia activa, primero se controla con compresión directa; la limpieza profunda es responsabilidad del centro asistencial.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El trabajador está estabilizado y la hemorragia controlada. Debes activar el procedimiento formal de la empresa. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Coordinar la derivación al organismo administrador (Mutual/ACHS) y dar aviso a la jefatura para iniciar la Denuncia Individual de Accidente del Trabajo (DIAT).",
+          "outcome": "Contactas a la Mutual correspondiente, se gestiona el traslado y la jefatura comienza el registro del incidente y la denuncia.",
+          "feedback": "Correcto. La derivación al organismo administrador y la emisión de la DIAT son obligatorias y deben gestionarse oportunamente según la normativa.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Esperar a que el trabajador se recupere solo antes de avisar a alguien.",
+          "outcome": "El incidente queda sin registrar y sin atención profesional oportuna, exponiendo a la empresa y al trabajador.",
+          "feedback": "Incorrecto. Todo accidente laboral debe derivarse al organismo administrador y registrarse formalmente, independiente de la gravedad aparente.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Trasladar tú mismo al trabajador en tu vehículo a un hospital cualquiera.",
+          "outcome": "El traslado informal puede agravar lesiones y no asegura la cobertura del seguro laboral.",
+          "feedback": "Incorrecto. La derivación debe hacerse al organismo administrador (Mutual/ACHS) por los canales establecidos, no por medios informales.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "El trabajador fue derivado correctamente. Ahora corresponde cerrar el procedimiento interno. ¿Qué acción completa el proceso?",
+      "options": [
+        {
+          "text": "Registrar el incidente en el sistema de la empresa, reponer el material usado del kit e informar al prevencionista para análisis de causas.",
+          "outcome": "Documentas el evento, repones gasas y guantes, y entregas los antecedentes al prevencionista para la investigación del accidente.",
+          "feedback": "Correcto. El registro, la reposición del kit y la investigación de causas permiten cumplir la normativa y prevenir futuros accidentes.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Considerar el caso cerrado una vez que el trabajador fue derivado.",
+          "outcome": "El kit queda incompleto y no se registra el incidente, dejando vacíos en la trazabilidad.",
+          "feedback": "Incorrecto. El proceso no termina con la derivación: faltan el registro, la reposición de materiales y el análisis preventivo.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Una respuesta adecuada ante un accidente laboral sigue una secuencia clara: asegurar la escena, evaluar y dar atención inicial controlando prioridades como hemorragias, inmovilizar sin manipular lesiones, derivar al organismo administrador (Mutual/ACHS), emitir la DIAT y completar el registro interno con reposición del kit y análisis de causas. Cada paso protege la salud del trabajador y asegura el cumplimiento normativo. Como integrante de brigada o jefatura, tu rol es actuar con criterio, sin improvisar, y dejar siempre trazabilidad del incidente para fortalecer la prevención en la organización."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

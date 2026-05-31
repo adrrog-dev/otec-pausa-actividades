@@ -1,0 +1,81 @@
+{
+  "title": "Decisiones que cuidan: prevención de infecciones respiratorias en el trabajo",
+  "intro": "Marcela trabaja en una empresa con oficinas y operaciones en terreno. Es temporada de invierno y han aumentado los casos de influenza, COVID-19 y virus sincicial. Durante su jornada deberá tomar decisiones que afectan su salud y la de sus compañeros. Acompáñala y elige cómo actuar en cada situación, aplicando las medidas preventivas recomendadas por el MINSAL.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Marcela amanece con dolor de garganta, congestión nasal y un malestar general leve. Tiene una reunión presencial importante con su equipo en la oficina. ¿Qué debería hacer?",
+      "options": [
+        {
+          "text": "Asistir igual a la reunión, sin avisar, para no atrasar el trabajo del equipo.",
+          "outcome": "Marcela asiste con síntomas y, sin saberlo, contagia a dos compañeros que luego deben ausentarse.",
+          "feedback": "Asistir con síntomas respiratorios aumenta el riesgo de contagio en el equipo. Ante síntomas, lo recomendable es no presentarse al lugar de trabajo y avisar a la jefatura.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Avisar a su jefatura, evaluar trabajo remoto o licencia, y usar mascarilla si debe trasladarse.",
+          "outcome": "La jefatura agradece el aviso, reprograma la reunión a modalidad remota y Marcela cuida al equipo.",
+          "feedback": "Excelente decisión. Comunicar los síntomas, optar por teletrabajo o licencia según corresponda y usar mascarilla son medidas alineadas con los lineamientos del MINSAL.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Ir a la oficina pero sentarse lejos del resto, sin mascarilla ni aviso.",
+          "outcome": "La distancia ayuda parcialmente, pero al compartir espacios comunes y sin mascarilla persiste el riesgo de contagio.",
+          "feedback": "La distancia física sola no es suficiente. Si presenta síntomas, debe avisar y, de ser necesario asistir, usar mascarilla y reforzar la ventilación.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Más tarde, Marcela debe trabajar en una sala de reuniones cerrada junto a otras personas durante varias horas. El ambiente está cargado y nadie ha abierto ventanas. ¿Qué propone?",
+      "options": [
+        {
+          "text": "Sugerir abrir ventanas o activar la ventilación y hacer pausas para renovar el aire.",
+          "outcome": "El grupo ventila la sala periódicamente y disminuye la concentración de partículas en el aire.",
+          "feedback": "Muy bien. La ventilación natural o mecánica reduce la carga viral en espacios cerrados y es una de las medidas más efectivas contra las infecciones respiratorias.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "No decir nada, ya que abrir ventanas dará frío y nadie lo ha pedido.",
+          "outcome": "La sala permanece cerrada toda la jornada, aumentando el riesgo de transmisión entre los presentes.",
+          "feedback": "Evitar la ventilación por comodidad incrementa el riesgo. Es posible ventilar de forma intermitente y abrigarse, equilibrando confort y prevención.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Al final del día, un compañero comenta que no se vacunará contra la influenza este año porque 'igual nunca se enferma' y que la higiene de manos le parece exagerada. ¿Cómo responde Marcela?",
+      "options": [
+        {
+          "text": "Compartir información clara sobre los beneficios de la vacunación y la higiene de manos, sin imponer.",
+          "outcome": "El compañero reflexiona, agradece los datos y decide informarse en su centro de salud.",
+          "feedback": "Buena estrategia. Promover la vacunación y la higiene frecuente de manos con información confiable fortalece la cultura preventiva del equipo.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Darle la razón para evitar conflictos, aunque no esté de acuerdo.",
+          "outcome": "Se pierde una oportunidad de reforzar conductas preventivas en el equipo.",
+          "feedback": "Validar información incorrecta debilita la prevención. Se puede dialogar con respeto y aportar datos confiables sin generar conflicto.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Decirle que se vacune obligatoriamente o tendrá problemas con la empresa.",
+          "outcome": "El compañero se molesta y se cierra a la conversación, sin cambiar su conducta.",
+          "feedback": "La vacunación es una recomendación de salud que debe promoverse con información y respeto. La imposición agresiva suele generar rechazo.",
+          "score": 0,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El autocuidado y la prevención de infecciones respiratorias en el trabajo dependen de decisiones cotidianas. Las mejores prácticas incluyen: no asistir al trabajo con síntomas y avisar a la jefatura, usar mascarilla cuando corresponda, mantener una buena ventilación en espacios cerrados, reforzar la higiene de manos y promover la vacunación con información confiable. Aplicar estas medidas, alineadas con los lineamientos del MINSAL, protege tanto la salud individual como la del equipo, ya sea en oficinas, terreno o industria. Cuidarse a uno mismo es también cuidar a los demás."
+}

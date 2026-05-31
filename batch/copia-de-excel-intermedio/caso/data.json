@@ -1,0 +1,88 @@
+{
+  "title": "Cierre de mes con Excel: decisiones que ahorran tiempo",
+  "intro": "Carolina es analista administrativa en una PYME comercializadora de la Región Metropolitana. Son las 16:00 y debe entregar el informe de ventas mensual antes de las 18:00. Recibe una planilla con más de 3.000 filas de datos de ventas por vendedor, región y producto. Cada decisión que tome impactará en su tiempo y en la calidad del informe.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "La gerencia pide un resumen de ventas totales por región y por vendedor. La planilla tiene 3.000 filas sin consolidar. ¿Cómo aborda Carolina la tarea?",
+      "options": [
+        {
+          "text": "Filtra manualmente cada región y suma los montos con una calculadora",
+          "outcome": "Carolina avanza, pero a las 16:45 solo lleva dos regiones de cinco y comete un error de suma.",
+          "feedback": "El cálculo manual es lento y propenso a errores en grandes volúmenes de datos. Conviene usar herramientas que automaticen la consolidación.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Crea una Tabla Dinámica para resumir ventas por región y vendedor",
+          "outcome": "En pocos minutos obtiene un resumen claro y editable que puede reorganizar según lo solicitado.",
+          "feedback": "Correcto. Las tablas dinámicas son la forma más eficiente de consolidar y analizar grandes volúmenes de datos sin fórmulas complejas.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Escribe una fórmula SUMAR.SI para cada combinación posible de región y vendedor",
+          "outcome": "Logra resultados correctos, pero demora bastante escribiendo y revisando decenas de fórmulas.",
+          "feedback": "SUMAR.SI funciona, pero para resúmenes multidimensionales una tabla dinámica es más rápida y flexible.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "La gerencia quiere destacar visualmente a los vendedores que superaron la meta de $5.000.000. ¿Qué hace Carolina?",
+      "options": [
+        {
+          "text": "Revisa fila por fila y pinta manualmente las celdas que superan la meta",
+          "outcome": "Pierde tiempo y, al agregarse nuevos datos, debe repetir todo el proceso.",
+          "feedback": "El formato manual no se actualiza solo. Es ineficiente cuando los datos cambian.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Aplica Formato Condicional con una regla 'mayor que 5.000.000'",
+          "outcome": "Las celpas sobre la meta se resaltan automáticamente y se mantienen actualizadas si cambian los datos.",
+          "feedback": "Excelente. El formato condicional resalta información clave de forma automática y dinámica.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Ordena de mayor a menor y marca a ojo los primeros de la lista",
+          "outcome": "El criterio visual es impreciso y no garantiza identificar a todos los que superaron la meta.",
+          "feedback": "Ordenar ayuda, pero no reemplaza una regla objetiva como el formato condicional.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Faltan 30 minutos para la entrega y Carolina debe replicar este mismo informe el próximo mes. ¿Qué decisión toma para optimizar su trabajo futuro?",
+      "options": [
+        {
+          "text": "Guarda el archivo como plantilla y memoriza los atajos de teclado que usó",
+          "outcome": "El próximo mes solo deberá actualizar los datos y refrescar la tabla dinámica, ahorrando gran parte del tiempo.",
+          "feedback": "Muy bien. Las plantillas y los atajos (como Ctrl+T, Alt+ para tablas dinámicas) son claves para la productividad recurrente.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Cierra el archivo sin guardar la estructura, pensando que lo hará igual de rápido la próxima vez",
+          "outcome": "El mes siguiente debe rehacer todo desde cero, repitiendo el esfuerzo completo.",
+          "feedback": "No reutilizar el trabajo previo genera reprocesos. Documentar y plantillar es una inversión de tiempo.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Guarda el archivo, pero no documenta los pasos ni crea plantilla",
+          "outcome": "Conserva el avance, aunque tendrá que recordar el procedimiento desde su memoria.",
+          "feedback": "Guardar es positivo, pero sin una plantilla estandarizada el ahorro de tiempo es parcial.",
+          "score": 0,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El caso muestra que la productividad en Excel no depende del esfuerzo manual, sino del uso inteligente de sus herramientas. Las tablas dinámicas consolidan grandes volúmenes de datos en minutos; el formato condicional automatiza el análisis visual; y las plantillas junto con los atajos de teclado reducen los reprocesos mes a mes. Para profesionales y mandos medios, dominar estas funciones significa entregar informes confiables en menos tiempo y dedicar más energía al análisis y a la toma de decisiones."
+}

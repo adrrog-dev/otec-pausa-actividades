@@ -1,0 +1,87 @@
+{
+  "title": "Eligiendo el framework ágil correcto",
+  "intro": "Eres líder técnico en una empresa tecnológica chilena. La gerencia te pide implementar metodologías ágiles en tres equipos distintos. Cada equipo tiene un contexto diferente y deberás recomendar el framework más adecuado. Tus decisiones impactarán la productividad y la satisfacción de los equipos.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "El primer equipo desarrolla un producto nuevo con requerimientos cambiantes. El cliente quiere ver avances frecuentes y necesitan planificación por períodos cortos con roles definidos. ¿Qué framework recomiendas?",
+      "options": [
+        {
+          "text": "Scrum, con sprints de 2 semanas, roles y ceremonias definidas.",
+          "outcome": "El equipo adopta sprints, daily meetings y revisiones quincenales. El cliente recibe incrementos del producto regularmente y puede ajustar prioridades.",
+          "feedback": "Correcto. Scrum es ideal para productos en desarrollo con requerimientos cambiantes, entregas iterativas y necesidad de roles claros (Product Owner, Scrum Master, equipo).",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Kanban, sin iteraciones fijas, solo visualizando el flujo de trabajo.",
+          "outcome": "El equipo visualiza tareas, pero al no tener cadencia definida, las entregas al cliente se vuelven irregulares y cuesta sincronizar las prioridades cambiantes.",
+          "feedback": "Parcialmente adecuado. Kanban sirve para flujo continuo, pero en un producto nuevo con requerimientos cambiantes y necesidad de entregas frecuentes, Scrum entrega mejor estructura iterativa.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El segundo equipo es de soporte y mantenimiento. Recibe solicitudes impredecibles que llegan en cualquier momento y deben priorizarse según urgencia. No hay sentido en planificar sprints fijos. ¿Qué recomiendas?",
+      "options": [
+        {
+          "text": "Kanban, con tablero visual y límites de trabajo en progreso (WIP).",
+          "outcome": "El equipo gestiona el flujo continuo de solicitudes, prioriza según urgencia y limita el trabajo simultáneo, reduciendo cuellos de botella.",
+          "feedback": "Correcto. Kanban es óptimo para trabajo continuo y demanda impredecible, como soporte y mantenimiento, gracias a la visualización del flujo y los límites de WIP.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Scrum, forzando los tickets de soporte dentro de sprints de 2 semanas.",
+          "outcome": "Los tickets urgentes rompen la planificación del sprint constantemente, generando frustración y reprogramaciones permanentes.",
+          "feedback": "Inadecuado. Scrum no se ajusta bien a trabajo reactivo e impredecible. Para soporte, Kanban gestiona mejor el flujo y las urgencias.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El tercer equipo construye software crítico donde la calidad técnica del código es prioritaria: hay errores frecuentes y mucha deuda técnica. ¿Qué enfoque propones para reforzar las prácticas de ingeniería?",
+      "options": [
+        {
+          "text": "Incorporar prácticas de XP (Extreme Programming): TDD, programación en parejas e integración continua.",
+          "outcome": "El equipo mejora la calidad del código, reduce defectos y disminuye la deuda técnica mediante pruebas automatizadas e integración continua.",
+          "feedback": "Correcto. XP se enfoca en la excelencia técnica: pruebas automatizadas, refactorización y entregas frecuentes, ideal cuando la calidad del código es crítica.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Aplicar Lean para eliminar desperdicios, sin abordar las prácticas técnicas.",
+          "outcome": "Se optimizan algunos procesos, pero los problemas de calidad de código y deuda técnica persisten porque no se atacaron las prácticas de ingeniería.",
+          "feedback": "Insuficiente. Lean ayuda a eliminar desperdicios y optimizar el flujo de valor, pero los problemas técnicos específicos requieren prácticas de ingeniería como las de XP.",
+          "score": -0.5,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "La gerencia te pregunta cómo escalar las metodologías ágiles a varios equipos que trabajan en un mismo producto grande y coordinado. ¿Qué sugieres?",
+      "options": [
+        {
+          "text": "Evaluar un marco de escalamiento como SAFe para coordinar múltiples equipos ágiles.",
+          "outcome": "Se establece una coordinación entre equipos con planificación conjunta y alineación de objetivos, manteniendo la agilidad a nivel de cada equipo.",
+          "feedback": "Correcto. SAFe (Scaled Agile Framework) está diseñado para coordinar múltiples equipos ágiles en iniciativas grandes, alineando estrategia y ejecución.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Mantener cada equipo independiente sin ningún mecanismo de coordinación.",
+          "outcome": "Los equipos avanzan en direcciones distintas, surgen dependencias no gestionadas y se generan retrasos en la entrega del producto integrado.",
+          "feedback": "Inadecuado. En productos grandes con varios equipos, se requiere un marco de escalamiento que coordine dependencias y alinee objetivos comunes.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La selección del framework ágil depende del contexto de cada proyecto, no de modas. El Manifiesto Ágil (2001) y sus 12 principios son la base común, pero cada marco responde a necesidades distintas: Scrum para productos iterativos con requerimientos cambiantes y entregas frecuentes; Kanban para flujo continuo y demanda impredecible como soporte; XP cuando la calidad técnica del código es prioritaria; Lean para optimizar el flujo de valor y eliminar desperdicios; y SAFe para escalar la agilidad a múltiples equipos. La clave profesional está en analizar el tipo de trabajo, la previsibilidad de la demanda, la madurez técnica del equipo y la escala del proyecto antes de decidir. Un buen líder ágil combina y adapta estas herramientas según el caso real, evitando aplicar un mismo marco a todos los contextos."
+}

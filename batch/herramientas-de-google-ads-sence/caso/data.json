@@ -1,0 +1,87 @@
+{
+  "title": "Decidiendo la campaña de Google Ads para una PYME con código SENCE",
+  "intro": "Eres encargado de marketing digital en una PYME chilena que vende productos de aseo industrial. La gerencia te pide capacitarte en Google Ads usando la franquicia tributaria SENCE y, además, lanzar una primera campaña. Deberás tomar decisiones que afectan el cumplimiento normativo y el resultado comercial. Recuerda que la franquicia SENCE financia la capacitación de los trabajadores, no el gasto publicitario de las campañas.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "La gerencia te dice: 'Inscribe el curso de Google Ads con código SENCE y aprovechemos para que el franquicia cubra también la inversión en avisos'. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Explico que SENCE financia la capacitación, no el gasto en publicidad, y que ambos presupuestos deben separarse.",
+          "outcome": "La gerencia comprende la diferencia y aprueba un presupuesto independiente para la inversión publicitaria.",
+          "feedback": "Correcto. La franquicia tributaria SENCE subvenciona acciones de capacitación realizadas por una OTEC autorizada, no el gasto comercial de las campañas. Separar ambos presupuestos evita rechazos en la liquidación.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Acepto cargar el gasto de avisos al código SENCE para ahorrar dinero.",
+          "outcome": "Más adelante la rendición es observada y la empresa arriesga la pérdida del beneficio tributario.",
+          "feedback": "Incorrecto. Usar el código SENCE para financiar gasto publicitario no corresponde y puede generar observaciones en la liquidación. La franquicia solo cubre la capacitación.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya en el curso, debes definir la primera campaña. Tienes un presupuesto acotado y necesitas resultados medibles. ¿Cómo estructuras la campaña?",
+      "options": [
+        {
+          "text": "Creo una campaña de búsqueda segmentada por comunas, con palabras clave específicas del rubro y una página de destino clara.",
+          "outcome": "La campaña atrae consultas reales de clientes interesados en aseo industrial.",
+          "feedback": "Muy bien. Para PYMEs con presupuesto acotado, la búsqueda segmentada y las palabras clave específicas optimizan el gasto y mejoran la conversión.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Lanzo una campaña amplia sin segmentación geográfica ni palabras clave definidas para 'llegar a más gente'.",
+          "outcome": "El presupuesto se agota rápido con clics poco relevantes y baja conversión.",
+          "feedback": "Conviene revisar. Sin segmentación, el presupuesto se diluye en audiencias que no compran. La precisión es clave en PYMEs.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "A los 15 días, la campaña gasta el presupuesto pero las ventas no suben como esperabas. ¿Qué decisión tomas?",
+      "options": [
+        {
+          "text": "Reviso métricas (CTR, costo por conversión, palabras que gastan sin convertir) y ajusto la campaña con datos.",
+          "outcome": "Detectas palabras clave de bajo rendimiento, las pausas y mejoras el retorno de la inversión.",
+          "feedback": "Excelente. La optimización basada en datos es lo que enseña el enfoque profesional de Google Ads. Medir y ajustar es parte del ciclo.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Subo el presupuesto diario al doble esperando que con más gasto lleguen más ventas.",
+          "outcome": "El gasto aumenta, pero la baja conversión persiste y el costo por venta se eleva.",
+          "feedback": "Cuidado. Aumentar el presupuesto sin corregir la segmentación no resuelve el problema de fondo. Primero se optimiza, luego se escala.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Al cierre del curso, debes elaborar un informe interno y la documentación de la capacitación. ¿Qué priorizas?",
+      "options": [
+        {
+          "text": "Resguardo la documentación de la capacitación SENCE (asistencia, evaluación) y entrego un informe con resultados de la campaña por separado.",
+          "outcome": "La empresa cumple con la rendición SENCE y dispone de aprendizajes claros para futuras campañas.",
+          "feedback": "Correcto. Documentar la capacitación de forma ordenada respalda la franquicia, y separar el informe comercial mantiene la transparencia.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Mezclo los resultados comerciales con los registros de capacitación en un solo documento informal.",
+          "outcome": "La rendición SENCE queda poco clara y dificulta futuras fiscalizaciones.",
+          "feedback": "Conviene mejorar. Mantener la documentación de capacitación separada y completa facilita la liquidación de la franquicia y evita observaciones.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "En este caso aprendiste a distinguir el alcance real de la franquicia SENCE: financia la capacitación de los trabajadores, no la inversión publicitaria. Además practicaste decisiones clave de Google Ads para PYMEs: segmentar campañas, optimizar con datos antes de escalar el presupuesto y documentar correctamente. Aplicar bien el marco SENCE y una gestión profesional de campañas permite a las PYMEs chilenas capacitarse aprovechando el beneficio tributario y, al mismo tiempo, lograr resultados comerciales medibles y sostenibles."
+}

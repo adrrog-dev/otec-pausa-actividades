@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Manejo de sustancias y residuos peligrosos (DS 43, 148, 298)",
+  "intro": "Responde las siguientes preguntas. Recibirás retroalimentación inmediata.",
+  "questions": [
+    {
+      "q": "Respecto a manejo de sustancias y residuos peligrosos (ds 43, 148, 298), ¿cuál afirmación es correcta sobre \"Qué es manejo de sustancias y residuos peligrosos \"?",
+      "options": [
+        "Es una buena práctica recomendada.",
+        "No tiene relación con el trabajo.",
+        "Debe evitarse siempre.",
+        "Solo aplica a la gerencia."
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "¡Correcto! Esa es la práctica adecuada en el contexto laboral.",
+      "feedbackKo": "Revisa el video: esa no es la opción más adecuada.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto a manejo de sustancias y residuos peligrosos (ds 43, 148, 298), ¿cuál afirmación es correcta sobre \"Buenas prácticas aplicables en la empresa\"?",
+      "options": [
+        "Es una buena práctica recomendada.",
+        "No tiene relación con el trabajo.",
+        "Debe evitarse siempre.",
+        "Solo aplica a la gerencia."
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "¡Correcto! Esa es la práctica adecuada en el contexto laboral.",
+      "feedbackKo": "Revisa el video: esa no es la opción más adecuada.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto a manejo de sustancias y residuos peligrosos (ds 43, 148, 298), ¿cuál afirmación es correcta sobre \"Errores frecuentes y cómo evitarlos\"?",
+      "options": [
+        "Es una buena práctica recomendada.",
+        "No tiene relación con el trabajo.",
+        "Debe evitarse siempre.",
+        "Solo aplica a la gerencia."
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "¡Correcto! Esa es la práctica adecuada en el contexto laboral.",
+      "feedbackKo": "Revisa el video: esa no es la opción más adecuada.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto a manejo de sustancias y residuos peligrosos (ds 43, 148, 298), ¿cuál afirmación es correcta sobre \"Cómo aplicar lo aprendido en tu rol\"?",
+      "options": [
+        "Es una buena práctica recomendada.",
+        "No tiene relación con el trabajo.",
+        "Debe evitarse siempre.",
+        "Solo aplica a la gerencia."
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "¡Correcto! Esa es la práctica adecuada en el contexto laboral.",
+      "feedbackKo": "Revisa el video: esa no es la opción más adecuada.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es el objetivo principal de este tema?",
+      "options": [
+        "Aplicar DS 43, 148 y 298 en manejo, transporte y disposición de sustancias y residuos peligrosos.",
+        "Aprobar sin estudiar",
+        "Memorizar definiciones sin aplicarlas",
+        "Ninguna de las anteriores"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "¡Exacto! Ese es el propósito del tema.",
+      "feedbackKo": "El objetivo es aplicar lo aprendido en tu rol.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

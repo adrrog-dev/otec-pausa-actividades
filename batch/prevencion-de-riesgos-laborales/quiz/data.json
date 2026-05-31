@@ -1,0 +1,76 @@
+{
+  "title": "Quiz IPER: Identificación de Peligros y Evaluación de Riesgos",
+  "intro": "Pon a prueba tus conocimientos sobre la metodología IPER y su aplicación en faenas. Este quiz consta de 5 preguntas de selección única. Lee con atención cada caso y selecciona la alternativa correcta. ¡Mucho éxito!",
+  "questions": [
+    {
+      "q": "¿Qué significa la sigla IPER en el contexto de la prevención de riesgos laborales?",
+      "options": [
+        "Inspección Periódica de Equipos y Recursos",
+        "Identificación de Peligros y Evaluación de Riesgos",
+        "Informe de Prevención y Evaluación de Resultados",
+        "Instrucción de Personal en Emergencias y Rescate"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. IPER corresponde a Identificación de Peligros y Evaluación de Riesgos, base metodológica para gestionar la seguridad en faenas.",
+      "feedbackKo": "Respuesta incorrecta. IPER significa Identificación de Peligros y Evaluación de Riesgos, herramienta clave para anticipar y controlar los riesgos laborales.",
+      "points": 20,
+      "difficulty": "Fácil"
+    },
+    {
+      "q": "Según la metodología IPER, ¿cuál es la diferencia conceptual correcta entre peligro y riesgo?",
+      "options": [
+        "Peligro y riesgo son sinónimos en el ámbito laboral",
+        "El peligro es la probabilidad de daño y el riesgo es la fuente que lo origina",
+        "El peligro es la fuente o situación con potencial de causar daño y el riesgo es la combinación de la probabilidad y la severidad de ese daño",
+        "El riesgo solo existe cuando ya ocurrió un accidente"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El peligro es la fuente con potencial de daño, mientras que el riesgo combina la probabilidad de ocurrencia con la severidad de las consecuencias.",
+      "feedbackKo": "Respuesta incorrecta. Recuerda: el peligro es la fuente o situación con potencial de causar daño, y el riesgo es la combinación entre la probabilidad y la severidad de ese daño.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En la jerarquía de controles, ¿cuál es la medida que se debe priorizar por ser la más efectiva?",
+      "options": [
+        "Entregar elementos de protección personal (EPP)",
+        "Eliminar el peligro en su origen",
+        "Aplicar controles administrativos como señalización",
+        "Sustituir el material por uno menos peligroso"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La eliminación del peligro es la medida más efectiva, ya que suprime el riesgo en su origen. El EPP es siempre la última barrera.",
+      "feedbackKo": "Respuesta incorrecta. La jerarquía de controles prioriza la eliminación del peligro, seguida de sustitución, controles de ingeniería, controles administrativos y, en último lugar, el EPP.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Para qué se utiliza la matriz de riesgo dentro del proceso IPER?",
+      "options": [
+        "Para registrar la asistencia del personal a las charlas de seguridad",
+        "Para cruzar la probabilidad y la severidad de un riesgo y determinar su nivel de criticidad",
+        "Para calcular las remuneraciones del Comité Paritario",
+        "Para reemplazar el Reglamento Interno de la empresa"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La matriz de riesgo cruza probabilidad y severidad, permitiendo clasificar el nivel de criticidad y priorizar las medidas de control.",
+      "feedbackKo": "Respuesta incorrecta. La matriz de riesgo se utiliza para cruzar la probabilidad y la severidad de cada riesgo, definiendo su nivel de criticidad y prioridad de control.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En el marco legal chileno, ¿qué cuerpo normativo establece el seguro social contra riesgos de accidentes del trabajo y enfermedades profesionales?",
+      "options": [
+        "Ley 16.744",
+        "Código Sanitario",
+        "Ley 20.001 sobre manejo de carga",
+        "Decreto Supremo 40 únicamente"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. La Ley 16.744 establece el seguro social contra accidentes del trabajo y enfermedades profesionales, fundamento de la prevención de riesgos en Chile.",
+      "feedbackKo": "Respuesta incorrecta. Es la Ley 16.744 la que establece el seguro social contra accidentes del trabajo y enfermedades profesionales en Chile.",
+      "points": 20,
+      "difficulty": "Fácil"
+    }
+  ]
+}
