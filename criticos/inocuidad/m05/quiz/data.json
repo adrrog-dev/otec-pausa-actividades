@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Cadena de Frío y Temperaturas Críticas",
+  "intro": "Evalúe sus conocimientos sobre la gestión de la cadena de frío en empresas chilenas. Recuerde que el correcto manejo de las temperaturas críticas protege la inocuidad de los alimentos y respalda el cumplimiento del DS 977/1996 ante las fiscalizaciones de la SEREMI de Salud. Responda cada pregunta seleccionando una sola alternativa.",
+  "questions": [
+    {
+      "q": "¿Cuál es el rango conocido como 'zona de peligro' en inocuidad alimentaria, donde las bacterias patógenas se multiplican rápidamente?",
+      "options": [
+        "0 °C a 5 °C",
+        "5 °C a 60 °C",
+        "−18 °C a 0 °C",
+        "63 °C a 100 °C"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La zona de peligro va de 5 °C a 60 °C, rango donde patógenos como Salmonella y E. coli se multiplican con mayor rapidez.",
+      "feedbackKo": "Incorrecto. La zona de peligro corresponde al rango de 5 °C a 60 °C, donde el crecimiento microbiano es acelerado. Mantener los alimentos fuera de este rango es clave para la inocuidad.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según el DS 977, ¿cuál es la temperatura máxima de almacenamiento para carnes congeladas y pescados congelados?",
+      "options": [
+        "0 °C",
+        "−5 °C",
+        "−10 °C",
+        "≤ −18 °C"
+      ],
+      "correctIndex": 3,
+      "feedbackOk": "Correcto. Las carnes y pescados congelados deben mantenerse a −18 °C o inferior para preservar su inocuidad y calidad.",
+      "feedbackKo": "Incorrecto. La temperatura exigida para productos congelados es ≤ −18 °C. Temperaturas más altas comprometen la conservación del producto.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué método de descongelación está prohibido por representar un riesgo sanitario?",
+      "options": [
+        "En refrigerador a ≤5 °C",
+        "Bajo agua corriente fría a ≤21 °C",
+        "A temperatura ambiente",
+        "En microondas con cocción inmediata"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Descongelar a temperatura ambiente expone el alimento a la zona de peligro y favorece el crecimiento microbiano. Es una práctica prohibida.",
+      "feedbackKo": "Incorrecto. El método prohibido es descongelar a temperatura ambiente. Los métodos seguros son: en refrigerador, bajo agua corriente fría, en microondas con cocción inmediata o cocción directa desde congelado.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "De acuerdo con la 'regla de las 2 horas', ¿qué debe ocurrir con un alimento perecedero que permaneció más de 2 horas continuas en la zona de peligro?",
+      "options": [
+        "Refrigerarlo de inmediato y reutilizarlo",
+        "Decomisar o desechar el lote",
+        "Recongelarlo para detener las bacterias",
+        "Recalentarlo a 40 °C antes de servir"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Si el alimento supera las 2 horas en zona de peligro, corresponde decomisar o desechar el lote y documentar el evento como no conformidad.",
+      "feedbackKo": "Incorrecto. La acción correcta es decomisar o desechar el lote. Refrigerar o recongelar no elimina el riesgo generado por la multiplicación microbiana.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según las buenas prácticas de almacenamiento y registro, ¿cuál es la frecuencia mínima de registro de temperaturas en refrigeradores y congeladores?",
+      "options": [
+        "Una vez por semana",
+        "Dos veces al día (mañana y tarde)",
+        "Solo cuando hay fiscalización",
+        "Una vez al mes"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El registro mínimo es dos veces al día, en turnos de mañana y tarde. Estos registros auditables son la principal defensa ante una fiscalización de la SEREMI.",
+      "feedbackKo": "Incorrecto. La frecuencia mínima es dos veces al día. Sin registros auditables, la SEREMI presume incumplimiento de la normativa.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

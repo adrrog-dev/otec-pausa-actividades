@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quiz: Matriz de Riesgo 5x5 y Jerarquía de Controles — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Actividad interactiva</footer>
+<script>window.__DATA__ = {
+  "title": "Quiz: Matriz de Riesgo 5x5 y Jerarquía de Controles",
+  "intro": "Pon a prueba lo aprendido sobre la construcción de la matriz de riesgo 5x5, la clasificación de riesgos y la jerarquía de controles. Cada pregunta tiene una sola respuesta correcta. ¡Adelante!",
+  "questions": [
+    {
+      "q": "En la matriz 5x5, ¿cómo se calcula el nivel de riesgo de un peligro?",
+      "options": [
+        "Sumando probabilidad y severidad (P + S)",
+        "Multiplicando probabilidad por severidad (P × S)",
+        "Restando severidad a la probabilidad (P - S)",
+        "Dividiendo la severidad por la probabilidad (S / P)"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El riesgo se obtiene multiplicando probabilidad por severidad (R = P × S), generando un valor entre 1 y 25.",
+      "feedbackKo": "Recuerda: el riesgo se calcula multiplicando probabilidad por severidad (R = P × S), no sumando ni restando.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Un peligro con probabilidad 4 (probable) y severidad 4 (mayor) obtiene un riesgo de 16. ¿En qué categoría se clasifica?",
+      "options": [
+        "Bajo",
+        "Medio",
+        "Alto",
+        "Extremo"
+      ],
+      "correctIndex": 3,
+      "feedbackOk": "Correcto. 4 × 4 = 16, y los valores entre 16 y 25 corresponden a la categoría Extremo, que exige paralizar la actividad hasta reducir el riesgo.",
+      "feedbackKo": "Revisa las categorías: 4 × 4 = 16. Los valores entre 16 y 25 corresponden a riesgo Extremo, no a categorías inferiores.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según la jerarquía de controles NIOSH, ¿cuál es la medida más eficaz para reducir un riesgo?",
+      "options": [
+        "Entregar elementos de protección personal (EPP)",
+        "Aplicar controles administrativos como procedimientos",
+        "Eliminar la fuente del peligro",
+        "Instalar resguardos de ingeniería"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Eliminar la fuente del peligro es siempre la medida más eficaz, ya que el riesgo desaparece en su origen.",
+      "feedbackKo": "La medida más eficaz es eliminar la fuente del peligro. El EPP y los controles administrativos son niveles inferiores de la jerarquía.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Por qué el EPP se considera el último recurso en la jerarquía de controles?",
+      "options": [
+        "Porque es el control más caro de implementar",
+        "Porque no elimina el peligro, solo protege al expuesto si todo lo demás falla",
+        "Porque no cuenta con normativa que lo respalde",
+        "Porque es incómodo de usar para los trabajadores"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El EPP no actúa sobre la fuente del peligro: solo protege a la persona expuesta cuando los controles superiores no han sido suficientes.",
+      "feedbackKo": "El EPP es el último recurso porque no elimina el peligro: solo protege al trabajador si las medidas superiores fallan.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué se entiende por riesgo residual?",
+      "options": [
+        "El riesgo inicial antes de aplicar cualquier control",
+        "El riesgo que persiste después de aplicar los controles",
+        "El riesgo de mayor severidad de la matriz",
+        "El riesgo que la organización decide ignorar"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El riesgo residual es el que permanece tras aplicar los controles. Debe documentarse y ser aceptable según el criterio de la organización.",
+      "feedbackKo": "El riesgo residual es el que persiste después de aplicar los controles, no el inicial ni el más severo.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

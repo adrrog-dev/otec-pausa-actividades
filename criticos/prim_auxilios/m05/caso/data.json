@@ -1,0 +1,101 @@
+{
+  "title": "Salpicadura de soda cáustica en planta de celulosa",
+  "intro": "Eres prevencionista de turno en una planta de celulosa en la Región del Bío Bío. Son las 08:40 hrs cuando un operario sufre una salpicadura de soda cáustica (NaOH) en el brazo derecho y parte de la cara. Debes actuar de inmediato, sin ponerte en riesgo. Cada decisión tiene consecuencias para el trabajador.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "El operario grita y se sujeta el brazo afectado. Tiene restos de soda cáustica visibles en la piel y la ropa. ¿Cuál es tu primera acción?",
+      "options": [
+        {
+          "text": "Llevar al trabajador de inmediato a la ducha de emergencia y comenzar a lavar con abundante agua corriente, retirando la ropa contaminada con guantes.",
+          "outcome": "El lavado temprano comienza a diluir y arrastrar el químico, reduciendo el daño en la piel y la cara.",
+          "feedback": "Correcto. En quemaduras químicas la prioridad es lavar con agua corriente durante 20-30 minutos y retirar la ropa contaminada usando guantes para protegerte. Cada segundo cuenta.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Buscar un ácido suave (vinagre) para neutralizar la soda cáustica antes de lavar.",
+          "outcome": "La reacción de neutralización genera calor adicional y agrava la quemadura del trabajador.",
+          "feedback": "Incorrecto y peligroso. NUNCA se neutraliza un químico sobre la piel: la reacción libera calor y empeora la lesión. Solo se lava con abundante agua.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Cubrir la zona con un paño seco y esperar a que llegue ayuda externa.",
+          "outcome": "El químico sigue actuando sobre la piel mientras esperas, profundizando la quemadura.",
+          "feedback": "Incorrecto. No debes esperar ni cubrir en seco: el químico continúa dañando el tejido. Lo primero es lavar con agua corriente de inmediato.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El lavado con agua corriente ya está en marcha. Mientras un compañero sostiene la atención, debes activar la cadena de ayuda. ¿A quién llamas para orientación técnica sobre el manejo del tóxico?",
+      "options": [
+        {
+          "text": "Llamar al CITUC 2 2635 3800 y, en paralelo, al SAMU 131 y a la mutual 1407.",
+          "outcome": "El CITUC orienta a continuar el lavado y a no neutralizar; el SAMU coordina traslado y la mutual activa la cobertura.",
+          "feedback": "Correcto. El CITUC (24/7, gratuito) entrega orientación técnica específica del tóxico. En paralelo se activa SAMU 131 y la mutual. Toda emergencia se deriva a la mutual.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Detener el lavado para poder hacer las llamadas con tranquilidad.",
+          "outcome": "Al cortar el lavado, el químico residual vuelve a actuar sobre la piel.",
+          "feedback": "Incorrecto. Nunca interrumpas el lavado para llamar. Designa a otra persona para las llamadas mientras continúa la irrigación con agua.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Llamar solo a Bomberos al 132, sin contactar al CITUC.",
+          "outcome": "Pierdes la orientación toxicológica específica para soda cáustica que solo entrega el CITUC.",
+          "feedback": "Insuficiente. Para intoxicaciones y quemaduras químicas el recurso técnico clave es el CITUC 2 2635 3800, junto con SAMU 131 y la mutual.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El CITUC te pide datos para orientar el manejo. ¿Qué información le entregas?",
+      "options": [
+        {
+          "text": "Producto exacto (soda cáustica / NaOH leído de la HDS), vía de exposición, tiempo transcurrido, edad y estado de la víctima y síntomas actuales.",
+          "outcome": "Con la información completa, el CITUC indica continuar el lavado y descartar irrigación con suero, orientando un manejo seguro.",
+          "feedback": "Correcto. El CITUC requiere: producto exacto, cantidad y vía, tiempo transcurrido, edad/peso/estado y síntomas. La HDS es tu mejor fuente para el nombre del químico.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Le dices solo que 'es un químico de la planta' sin revisar la Hoja de Datos de Seguridad.",
+          "outcome": "El CITUC no puede dar indicaciones precisas sin saber el agente exacto y pierde tiempo valioso.",
+          "feedback": "Insuficiente. Sin el nombre exacto del producto el CITUC no puede orientar el manejo específico. Siempre identifica el químico mediante la HDS.",
+          "score": -0.5,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "El trabajador completó el lavado y será trasladado. La quemadura se estima 2° del 6% de superficie corporal, comprometiendo la cara. ¿Cómo finalizas el procedimiento?",
+      "options": [
+        {
+          "text": "Cubrir la zona con gasa estéril sin pomadas, asegurar el traslado al Hospital del Trabajador vía mutual y presentar la DIAT.",
+          "outcome": "El trabajador es trasladado y recupera función completa. La empresa documenta el accidente y refuerza el procedimiento de manejo de químicos.",
+          "feedback": "Correcto. Cubrir con gasa estéril sin remedios caseros, derivar a la mutual y presentar la DIAT. Compromete la cara, por lo que siempre se considera quemadura grave que requiere atención médica.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Aplicar pasta dental o pomada casera sobre la quemadura antes de cubrirla.",
+          "outcome": "Los productos caseros dificultan la evaluación médica y aumentan el riesgo de infección.",
+          "feedback": "Incorrecto. Nunca apliques pasta dental, hielo, aceite ni pomadas caseras. Solo gasa estéril o paño limpio y derivación a la mutual.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El manejo de una quemadura química se define en los primeros minutos. Las claves: lavar de inmediato con abundante agua corriente durante 20-30 minutos sin interrumpir, retirar la ropa contaminada con guantes y NUNCA neutralizar el químico sobre la piel. En paralelo se activa el CITUC 2 2635 3800 (orientación toxicológica gratuita 24/7), el SAMU 131 y la mutual. Para que el CITUC oriente bien, entrega los 5 datos requeridos identificando el producto con la Hoja de Datos de Seguridad. Finalmente, cubre con gasa estéril sin remedios caseros, deriva a la mutual y presenta la DIAT. Toda quemadura que comprometa la cara se considera grave. Recuerda mantener guardados en tu celular: CITUC 2 2635 3800, SAMU 131 y el número de tu mutual."
+}

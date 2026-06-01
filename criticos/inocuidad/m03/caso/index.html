@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Turno crítico en cocina: decisiones BPM en terreno — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Turno crítico en cocina: decisiones BPM en terreno",
+  "intro": "Eres manipulador de alimentos en un restaurante de gastronomía marina en Puerto Montt. Es viernes con alta demanda y recién comienzas tu turno. A lo largo de la jornada deberás tomar decisiones que afectan la inocuidad de los alimentos y el cumplimiento del DS 977. Cada elección tiene consecuencias reales.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Llegas a la cocina apurado. Notas que traes puesto tu reloj y un anillo, y aún no te has lavado las manos. El jefe de cocina te pide que partas de inmediato cortando el pescado fresco. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Empiezas a cortar de inmediato para no atrasar el servicio.",
+          "outcome": "Manipulas pescado crudo con joyas puestas y sin lavado de manos previo. Las joyas acumulan suciedad y dificultan la higiene; además no eliminaste la carga microbiana de tus manos.",
+          "feedback": "Incorrecto. El DS 977 prohíbe joyas y reloj en el área de producción y exige lavado de manos al ingresar (técnica de 40-60 seg con jabón). Apurarse no justifica saltarse las BPM.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Te retiras las joyas, las guardas en el casillero, te lavas las manos y recién partes.",
+          "outcome": "Cumples con la higiene personal básica antes de manipular alimentos. Pierdes un par de minutos, pero inicias la tarea de forma segura.",
+          "feedback": "Correcto. Retirar joyas y lavarse las manos al ingresar son exigencias del DS 977 Título III. Es una corrección barata que evita contaminación.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Te lavas las manos rápido pero dejas puestas las joyas para no perder tiempo.",
+          "outcome": "Mejoras parcialmente, pero las joyas siguen siendo un foco de contaminación y están expresamente prohibidas en el área.",
+          "feedback": "Parcialmente correcto. El lavado de manos es positivo, pero el reloj y el anillo deben retirarse siempre. Es un punto frecuente de hallazgo en fiscalizaciones SEREMI.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Vas a cortar el pescado, pero la única tabla limpia disponible es la verde (vegetales), porque la azul (pescado) está en lavado. El servicio te presiona. ¿Qué decides?",
+      "options": [
+        {
+          "text": "Usas la tabla verde igual, ya que está limpia.",
+          "outcome": "Generas riesgo de contaminación cruzada entre pescado crudo y la línea de vegetales, que muchas veces van a preparaciones que no se cocinan.",
+          "feedback": "Incorrecto. La separación por colores existe justamente para evitar contaminación cruzada. La tabla verde es exclusiva de vegetales.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Esperas o lavas y sanitizas la tabla azul antes de cortar el pescado.",
+          "outcome": "Mantienes la separación por colores y la inocuidad. El servicio se atrasa unos minutos, pero evitas un riesgo sanitario.",
+          "feedback": "Correcto. Cada color tiene un uso definido (azul: pescado). Respetar el sistema previene ETA y hallazgos en fiscalización.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Avisas al jefe que no hay tabla azul disponible y pides una solución antes de continuar.",
+          "outcome": "Escalas el problema correctamente. La jefatura habilita otra tabla azul o acelera el lavado, manteniendo el sistema de colores.",
+          "feedback": "Correcto. Comunicar las brechas a la jefatura es parte de una cultura de inocuidad. No improvises con materiales del color equivocado.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Al guardar el pescado crudo sobrante en el refrigerador, ves que en el estante superior hay postres sin tapa y abajo hay espacio libre. ¿Dónde ubicas el pescado crudo?",
+      "options": [
+        {
+          "text": "Lo dejas en el estante superior, junto a los postres, porque queda más a mano.",
+          "outcome": "El líquido del pescado crudo puede gotear sobre los postres listos para consumo. Es exactamente la causa de ETA detectada en el caso real de Puerto Montt.",
+          "feedback": "Incorrecto. Los productos crudos siempre van abajo y los listos para consumo arriba, para evitar goteo de líquidos crudos.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Ubicas el pescado crudo abajo y dejas los postres tapados en la parte superior.",
+          "outcome": "Ordenas correctamente el refrigerador: crudos abajo, listos arriba y tapados. Eliminas el riesgo de goteo y contaminación cruzada.",
+          "feedback": "Correcto. El orden del refrigerador (crudos abajo, listos arriba y cubiertos) es una de las correcciones más importantes y baratas de las BPM.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Terminando el turno, notas que el basurero del área de producción no tiene tapa y está lleno. Llega un fiscalizador de la SEREMI a inspeccionar. ¿Cómo actúas?",
+      "options": [
+        {
+          "text": "Ignoras el basurero y esperas que el fiscalizador no lo note.",
+          "outcome": "El fiscalizador detecta el basurero sin tapa, un hallazgo BPM típico que puede sumar a un sumario sanitario.",
+          "feedback": "Incorrecto. Ocultar brechas no resuelve el riesgo. Un basurero sin tapa en producción es no conformidad frecuente en fiscalizaciones.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Retiras la basura, dejas el área limpia e informas a la jefatura que falta un basurero con tapa y pedal.",
+          "outcome": "Demuestras disciplina diaria y disposición a corregir. La jefatura compromete instalar un basurero con accionamiento no manual.",
+          "feedback": "Correcto. Mantener residuos en basureros con tapa y accionamiento no manual es exigencia del DS 977. Actuar de inmediato y escalar la mejora es la conducta esperada.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Las BPM no dependen de grandes inversiones, sino de disciplina diaria: retirar joyas, lavarse las manos, respetar la separación por colores, ordenar el refrigerador con crudos abajo y mantener residuos tapados. Como mostró el caso real de Puerto Montt, la mayoría de las brechas son baratas de corregir, pero requieren constancia en cada turno. Si tu puntaje fue alto, aplicaste correctamente el DS 977 Títulos II y III. Si tuviste decisiones negativas, identifica esos puntos y conviértelos en acciones inmediatas: cumplir las BPM protege a los consumidores, evita sumarios sanitarios y sostiene cualquier sistema HACCP."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

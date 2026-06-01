@@ -1,0 +1,101 @@
+{
+  "title": "Decisión en la bodega: ¿Cómo evaluamos y controlamos el riesgo?",
+  "intro": "Eres jefe de turno en una bodega de retail en Maipú. Un operario conduce una grúa horquilla eléctrica por pasillos de 2,2 metros con racks de 6 niveles. Hace cuatro meses hubo un atropello leve en un cruce ciego, hay filtraciones que dejan el piso húmedo y faltan espejos en los cruces. Hoy te toca evaluar el riesgo de 'colisión grúa-peatón en cruce ciego' y proponer controles. Tus decisiones tendrán consecuencias reales para la seguridad del equipo.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Debes clasificar el riesgo de colisión grúa-peatón en el cruce ciego usando la matriz 5x5. Ya ocurrió un atropello leve y las condiciones (cruce sin visibilidad, tránsito frecuente de peatones) se mantienen. ¿Qué niveles asignas?",
+      "options": [
+        {
+          "text": "Probabilidad 4 (probable) y Severidad 4 (mayor): Riesgo = 16, categoría Extremo.",
+          "outcome": "Clasificas el riesgo como Extremo y lo escalas como prioridad inmediata. Ya hubo un evento real y las consecuencias de un atropello con grúa pueden ser graves.",
+          "feedback": "Correcto. Con un antecedente de atropello y condiciones inseguras vigentes, la probabilidad es alta y la severidad potencial es mayor. R = 4 × 4 = 16, lo que ubica el riesgo en categoría Extremo y exige acción inmediata.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Probabilidad 2 (improbable) y Severidad 2 (menor): Riesgo = 4, categoría Bajo.",
+          "outcome": "Registras el riesgo como Bajo y decides solo monitorearlo. La situación de peligro permanece sin medidas correctivas.",
+          "feedback": "Incorrecto. Subestimas el riesgo. Ya ocurrió un atropello (el evento es probable, no improbable) y un impacto con grúa horquilla puede causar lesiones mayores. Asignar valores bajos te lleva a no actuar cuando sí debes hacerlo.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Probabilidad 3 (posible) y Severidad 3 (moderado): Riesgo = 9, categoría Medio.",
+          "outcome": "Clasificas el riesgo como Medio. Programas medidas, pero sin urgencia inmediata.",
+          "feedback": "Parcialmente correcto en la lógica de cálculo (R = P × S), pero el antecedente de atropello y las condiciones actuales justifican valores más altos. Revisa el contexto antes de cerrar la evaluación: este riesgo merece mayor prioridad.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El riesgo está clasificado y debes proponer controles. La presión de la operación es alta y quieren una solución rápida. ¿Por dónde partes según la jerarquía de controles?",
+      "options": [
+        {
+          "text": "Entrego chaleco reflectante y casco a los peatones, y damos por resuelto el problema.",
+          "outcome": "El equipo recibe EPP, pero el cruce ciego sigue igual. El riesgo de colisión permanece prácticamente intacto.",
+          "feedback": "Incorrecto. El EPP es el último recurso: no elimina el peligro, solo protege al expuesto si todo lo demás falla. Saltar directamente al EPP es el error más común en terreno. Primero hay que agotar los niveles superiores de la jerarquía.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Evalúo primero eliminar o sustituir el peligro: rediseñar el flujo para separar rutas de grúa y peatones.",
+          "outcome": "Analizas si es posible segregar físicamente el tránsito de peatones y grúas, o reorganizar la operación para que no coincidan en el cruce ciego.",
+          "feedback": "Excelente. Comienzas por el nivel más eficaz de la jerarquía. Eliminar la coincidencia entre grúa y peatón (o sustituir el flujo) ataca la fuente del peligro y reduce el riesgo de forma estructural.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Publico un procedimiento que obliga a tocar bocina antes de cada cruce.",
+          "outcome": "Implementas un control administrativo. Ayuda, pero depende del cumplimiento humano y no modifica la condición física del cruce.",
+          "feedback": "Es una medida válida, pero pasaste por alto los niveles superiores. Los controles administrativos dependen de que las personas siempre los cumplan. Antes debiste evaluar eliminación, sustitución y controles de ingeniería.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "No es posible eliminar por completo el cruce. Decides reforzar con controles de ingeniería para reducir el riesgo residual. ¿Qué combinación aplicas?",
+      "options": [
+        {
+          "text": "Instalo espejos convexos en los cruces, barreras físicas peatonales, semáforo de tránsito y reparo la filtración del techo.",
+          "outcome": "Aumenta la visibilidad, se separan físicamente los flujos y se elimina el piso húmedo. El riesgo residual baja de forma significativa, por ejemplo de Extremo (16) a Medio.",
+          "feedback": "Muy bien. Los controles de ingeniería actúan sobre la condición sin depender del comportamiento individual. Combinados, reducen la probabilidad de colisión y mejoran el riesgo residual, que igual debe documentarse y ser aceptable según el criterio ALARP.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Coloco solo señalética de 'Precaución, cruce de grúas' en el pasillo.",
+          "outcome": "La señalética advierte, pero el cruce sigue siendo ciego y el piso húmedo. El riesgo residual se mantiene alto.",
+          "feedback": "Insuficiente. La señalética es un control administrativo, no de ingeniería, y no modifica la visibilidad ni la condición del piso. El riesgo residual seguiría siendo elevado. Necesitas medidas que actúen sobre la fuente física del peligro.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Con los controles de ingeniería aplicados, el riesgo residual bajó pero no desaparece. Debes decidir el cierre de la evaluación.",
+      "options": [
+        {
+          "text": "Sumo controles administrativos (procedimiento de tránsito, capacitación) y EPP de alta visibilidad como capa final, documento el riesgo residual y lo someto a revisión periódica.",
+          "outcome": "Completas la jerarquía con capas complementarias y dejas registro del riesgo residual. La gestión queda trazable y revisable.",
+          "feedback": "Correcto. Tras agotar los niveles superiores, los controles administrativos y el EPP refuerzan la protección como últimas capas. Documentar el riesgo residual y revisarlo periódicamente cierra correctamente el ciclo de evaluación.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Doy por cerrado el caso sin documentar el riesgo residual ni programar revisión.",
+          "outcome": "El riesgo bajó, pero no queda registro ni seguimiento. Si las condiciones cambian, nadie lo notará a tiempo.",
+          "feedback": "Incorrecto. El riesgo residual siempre debe documentarse y ser aceptable según el criterio de la organización. Sin registro ni revisión periódica, pierdes trazabilidad y capacidad de reaccionar ante nuevos cambios.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso resume el método correcto de gestión del riesgo: primero evaluar con la matriz 5x5 (R = Probabilidad × Severidad) considerando los antecedentes reales, y luego aplicar la jerarquía de controles en orden de eficacia: eliminación, sustitución, controles de ingeniería, controles administrativos y, como último recurso, EPP. El error más frecuente en terreno es entregar EPP y dar por resuelto el problema, sin atacar la fuente del peligro. Recuerde que el riesgo residual nunca llega a cero: debe documentarse, ser aceptable según el criterio de la organización (ALARP) y revisarse de forma periódica. Una buena evaluación protege vidas y respalda la gestión preventiva de su empresa."
+}

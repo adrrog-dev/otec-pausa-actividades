@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>El nudge correcto: cambiar la cultura sin imponer — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "El nudge correcto: cambiar la cultura sin imponer",
+  "intro": "Eres Carolina, prevencionista de riesgos en una empresa de retail con 150 trabajadores en Santiago. La gerencia te pide mejorar el clima de respeto entre equipos, pero el presupuesto es cero y nadie quiere más capacitaciones obligatorias ni sermones. Decides aplicar lo aprendido sobre nudges y arquitectura de elección. Cada decisión que tomes tendrá consecuencias en la cultura del equipo.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "En las reuniones de equipo, casi siempre hablan las mismas tres personas y varios trabajadores nunca dan su opinión. La jefatura te pregunta cómo lograr que más personas participen sin obligar a nadie. ¿Qué propones?",
+      "options": [
+        {
+          "text": "Enviar un correo recordando que 'todos deben participar' bajo amenaza de evaluación negativa.",
+          "outcome": "La gente participa por miedo durante una semana, pero luego vuelve al silencio y aumenta la incomodidad en las reuniones.",
+          "feedback": "Esto es coerción, no un nudge. Altera incentivos y prohíbe implícitamente el silencio. Recuerda: un nudge deja libertad de elegir y no impone sanciones.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Implementar un 'facilitador del día' rotativo y una ronda breve donde cada persona puede aportar una idea.",
+          "outcome": "Las reuniones se ordenan, participan personas que antes callaban y el clima se siente más equilibrado. Costo: cero.",
+          "feedback": "Excelente. Aplicaste el principio de estructurar opciones y rotación, un nudge ético que facilita la conducta deseada sin obligar. Coincide con la práctica recomendada en el módulo.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "No hacer nada, porque 'quien quiere hablar, habla'.",
+          "outcome": "Las dinámicas no cambian. Las mismas voces dominan y se pierde el aporte de buena parte del equipo.",
+          "feedback": "La arquitectura de elección actual ya está moldeando el comportamiento. No intervenir es dejar que el sesgo continúe. Un pequeño rediseño puede mejorar la participación.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Detectas que llegan correos de trabajo a las 23:00 hrs y algunos colaboradores se sienten obligados a responder de inmediato. Quieres proteger el descanso sin prohibir el trabajo flexible. ¿Cómo lo abordas?",
+      "options": [
+        {
+          "text": "Configurar como opción por defecto el 'envío programado' al día siguiente en horario hábil, dejando libertad de enviar igual si es urgente.",
+          "outcome": "Los correos nocturnos disminuyen notoriamente. Quien necesita enviar de noche aún puede hacerlo, pero ya no es lo automático.",
+          "feedback": "Muy bien. Usaste un default ético: lo respetuoso pasa a ser lo fácil, sin prohibir. Es el mismo principio del módulo para cuidar el horario de descanso.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Bloquear el servidor de correo desde las 20:00 para que nadie pueda enviar mensajes.",
+          "outcome": "Se generan conflictos con turnos especiales y emergencias reales. Algunos sienten que se les trata como niños.",
+          "feedback": "Esto es una prohibición, no un nudge. Altera la libertad de elección. El objetivo es facilitar la conducta deseada, no imponerla rígidamente.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Esconder un botón complicado para que sea muy difícil enviar correos de noche.",
+          "outcome": "La gente se frustra, pierde tiempo y desconfía del sistema cuando descubre la traba.",
+          "feedback": "Eso es un 'dark pattern': manipula al usuario en contra de su autonomía. La regla práctica es: si te daría vergüenza explicarlo, no lo uses.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "La gerencia quiere que el cambio se mantenga en el tiempo y no sea solo una moda. Te piden convertir un micro-comportamiento respetuoso en un hábito colectivo. ¿Qué diseñas?",
+      "options": [
+        {
+          "text": "Un ritual breve al inicio del turno: cada equipo lee en voz alta una 'carta de respeto' (90 segundos), con señal, rutina y recompensa claras.",
+          "outcome": "El ritual se instala como hábito, mejora la percepción de respeto entre compañeros y baja las quejas internas. Costo: cero.",
+          "feedback": "Aplicaste el ciclo señal-rutina-recompensa de Duhigg, igual que el caso real de Walmart Chile. Convertiste un micro-comportamiento en hábito colectivo sostenible.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Una charla anual obligatoria de 3 horas sobre respeto.",
+          "outcome": "La gente asiste, pero a los pocos días olvida el contenido. No se forma ningún hábito diario.",
+          "feedback": "Las grandes campañas tienen menos impacto que los pequeños empujones repetidos. Los hábitos se forman con micro-comportamientos diarios, no con eventos puntuales.",
+          "score": -0.5,
+          "next": 4
+        },
+        {
+          "text": "Repartir un manual de 50 páginas con todas las normas de convivencia.",
+          "outcome": "El documento queda guardado y casi nadie lo lee. No hay cambio conductual observable.",
+          "feedback": "Falta mapeo y traducción: la información técnica densa no genera acción. Prefiere formatos simples y comportamientos concretos de menos de 30 segundos.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Tras seis meses, debes presentar resultados a gerencia. Te preguntan cómo demostrar que los nudges funcionaron. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Mostrar métricas concretas: indicador de respeto antes/después, reducción de quejas y porcentaje de adopción del ritual.",
+          "outcome": "La gerencia valora la evidencia, aprueba mantener los nudges y replicarlos en otras áreas.",
+          "feedback": "Perfecto. Definiste métricas de éxito desde el inicio, tal como pide la plantilla del módulo. Sin medición, un nudge no puede demostrar impacto.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Decir que 'se siente un mejor ambiente' sin datos que lo respalden.",
+          "outcome": "La gerencia duda del valor del proyecto y considera no continuarlo.",
+          "feedback": "Las percepciones son útiles, pero los nudges deben vincularse a métricas medibles para sostener su continuidad y justificar la inversión.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Un buen diseño conductual transforma la cultura sin imponer ni sancionar: hace que lo correcto sea también lo fácil. A lo largo del caso viste que los nudges éticos respetan la libertad de elección (a diferencia de la coerción o los dark patterns), que los defaults bien diseñados protegen comportamientos respetuosos, y que los micro-comportamientos repetidos —con señal, rutina y recompensa— se convierten en hábitos colectivos sostenibles, como en los casos reales de Walmart Chile, Santander y BHP Spence. Finalmente, recuerda que todo nudge debe tener una métrica de éxito definida desde el inicio: sin medición, no hay evidencia de cambio. Como prevencionista o jefatura, tu rol es diseñar entornos respetuosos de bajo costo y alto impacto, alineados con un clima laboral sano y con la prevención de conductas de riesgo en el trabajo."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Caso Integrador de Inocuidad Alimentaria (HACCP + BPM + POES)",
+  "intro": "Pon a prueba lo aprendido aplicando el marco legal chileno y las herramientas de inocuidad a situaciones reales de fiscalización. Selecciona una sola respuesta por pregunta. Este quiz refuerza tu capacidad de anticipar exigencias de la SEREMI de Salud y prevenir sanciones.",
+  "questions": [
+    {
+      "q": "Durante una fiscalización en una planta de alimentos, la SEREMI de Salud detecta registros de POES y temperaturas en blanco. ¿Qué herramienta del sistema de inocuidad está fallando principalmente?",
+      "options": [
+        "El etiquetado nutricional según Ley 20.606",
+        "El registro y verificación documental de los procedimientos operativos (POES)",
+        "La autorización publicitaria de la ACHIPIA",
+        "La clasificación arancelaria de Aduanas"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Los POES exigen registros diarios verificables. Su ausencia es una de las causas más frecuentes de sumario sanitario.",
+      "feedbackKo": "Revisa el caso integrador: los registros en blanco corresponden a una falla en los Procedimientos Operativos Estandarizados de Saneamiento (POES) y su verificación documental.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En el caso de la Panadería 'El Trigal', el establecimiento fue sancionado por capacitación vencida del personal manipulador. ¿Qué exigencia legal chilena se vincula directamente con este hallazgo?",
+      "options": [
+        "El Título III del DS 977/1996 sobre salud, higiene y capacitación obligatoria del personal",
+        "La Ley 20.869 de publicidad de alimentos",
+        "El DS 162/2011 que crea ACHIPIA",
+        "La NCh 2861 de requisitos HACCP exclusivamente"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. El Título III del DS 977 regula la capacitación obligatoria del personal manipulador, que debe mantenerse vigente.",
+      "feedbackKo": "El hallazgo se relaciona con el Título III del DS 977/1996, que exige capacitación vigente del personal manipulador de alimentos.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Un prevencionista aplica HACCP en una línea de productos cárneos. Identifica un Punto Crítico de Control (PCC) en la etapa de cocción. ¿Qué acción es coherente con la aplicación integrada de HACCP, BPM y POES?",
+      "options": [
+        "Esperar la próxima fiscalización SEREMI para definir el límite crítico",
+        "Establecer un límite crítico de temperatura, monitorearlo y registrar los resultados con acciones correctivas definidas",
+        "Eliminar los registros para simplificar la operación",
+        "Delegar el control únicamente al etiquetado del producto"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Un PCC requiere límite crítico, monitoreo, registro y acciones correctivas. Así se integra HACCP con BPM y POES.",
+      "feedbackKo": "En HACCP cada Punto Crítico de Control debe tener un límite crítico definido, monitoreo, registro y acciones correctivas documentadas.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Tras una ampliación del local sin actualizar la Resolución Sanitaria, ¿qué riesgo enfrenta el establecimiento durante una fiscalización?",
+      "options": [
+        "Solo una amonestación verbal sin consecuencias",
+        "Una notificación previa de 48 horas para regularizar",
+        "Sumario sanitario con multa de 0,1 a 1.000 UTM y posible clausura temporal o definitiva",
+        "Una sanción aplicada exclusivamente por la Municipalidad"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La SEREMI puede iniciar sumario sanitario con multas de 0,1 a 1.000 UTM y clausura, sin aviso previo.",
+      "feedbackKo": "La Resolución Sanitaria desactualizada habilita a la SEREMI para iniciar sumario con multas de 0,1 a 1.000 UTM y clausura, sin necesidad de aviso previo.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Una jefatura prepara a su equipo para una posible fiscalización. ¿Cuál es la mejor estrategia preventiva según el aprendizaje del caso integrador?",
+      "options": [
+        "Mantener registros vigentes, capacitación al día y procedimientos documentados (BPM, POES, HACCP)",
+        "Esperar la alerta internacional de RASFF/INFOSAN antes de actuar",
+        "Confiar solo en la limpieza visible del local el día de la inspección",
+        "Centrar todo el esfuerzo en el diseño del etiquetado"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. La defensa preventiva real está en los registros vigentes, la capacitación al día y los procedimientos documentados.",
+      "feedbackKo": "El aprendizaje del caso es claro: la prevención efectiva se basa en registros vigentes, capacitación al día y procedimientos documentados, no en acciones de último minuto.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

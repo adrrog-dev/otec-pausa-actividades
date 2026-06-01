@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: EPP y Jerarquía de Controles",
+  "intro": "Pon a prueba lo aprendido sobre selección de Equipos de Protección Personal y aplicación de la jerarquía de controles operacionales, según la normativa chilena vigente (DS 594 y DS 18). Cada respuesta incluye retroalimentación para reforzar los conceptos clave.",
+  "questions": [
+    {
+      "q": "Según el DS 594, ¿a partir de qué nivel de exposición diaria a ruido se obliga el uso de protección auditiva?",
+      "options": [
+        "Sobre 70 dB(A) diarios",
+        "Sobre 82 dB(A) diarios",
+        "Sobre 90 dB(A) diarios",
+        "Solo cuando el trabajador lo solicita"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El DS 594 fija el umbral de 82 dB(A) de exposición diaria como criterio para activar el uso obligatorio de protección auditiva.",
+      "feedbackKo": "Respuesta incorrecta. El DS 594 establece que la exposición sobre 82 dB(A) diarios obliga al uso de protección auditiva. Recuerda este umbral, ya que es un dato normativo clave.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál de las siguientes acciones corresponde a un control de 'sustitución' en la jerarquía de controles?",
+      "options": [
+        "Entregar guantes resistentes a químicos",
+        "Cambiar el solvente tolueno por uno base agua",
+        "Instalar un resguardo en la sierra",
+        "Capacitar al operario en el uso del químico"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La sustitución consiste en reemplazar un agente, material o método por uno menos peligroso, como cambiar un solvente clorado por uno base agua.",
+      "feedbackKo": "Respuesta incorrecta. La sustitución reemplaza el peligro por algo menos dañino (ej. cambiar el solvente). Entregar guantes es EPP, el resguardo es control de ingeniería y capacitar es control administrativo.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Desde qué altura es obligatorio el uso del arnés de seguridad para trabajos en altura?",
+      "options": [
+        "Desde 1,0 m",
+        "Desde 1,5 m",
+        "Desde 1,8 m",
+        "Desde 3,0 m"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El arnés de seguridad es obligatorio para trabajos en altura desde 1,8 m, según la normativa aplicable.",
+      "feedbackKo": "Respuesta incorrecta. El umbral correcto es 1,8 m. A partir de esa altura el uso del arnés con doble cola es obligatorio.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto a la entrega del EPP por parte del empleador, ¿qué condición exige la normativa chilena?",
+      "options": [
+        "Solo cuando el trabajador lo solicite",
+        "Con descuento proporcional al sueldo",
+        "Gratuitamente y certificado cuando aplique",
+        "Solo si está estipulado en el contrato"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El EPP debe ser entregado gratuitamente, ser adecuado al riesgo y estar certificado cuando corresponda (DS 594 y DS 18).",
+      "feedbackKo": "Respuesta incorrecta. El empleador debe entregar el EPP de forma gratuita y certificada cuando aplique. No puede condicionarse a solicitud, descuento ni al contrato.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál de las siguientes afirmaciones es correcta respecto a la relación entre EPP y los controles de ingeniería?",
+      "options": [
+        "Entregar EPP libera al empleador de aplicar controles de ingeniería",
+        "El EPP es la primera barrera de control que debe aplicarse",
+        "El EPP no reemplaza los controles superiores; estos se aplican primero",
+        "Los controles de ingeniería solo se usan si no hay EPP disponible"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El EPP es la última barrera de protección. Siempre deben aplicarse primero los controles factibles de niveles superiores (eliminación, sustitución, ingeniería y administrativos).",
+      "feedbackKo": "Respuesta incorrecta. La entrega de EPP nunca exime de aplicar los controles superiores de la jerarquía. El EPP es el último escalón, no el primero.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

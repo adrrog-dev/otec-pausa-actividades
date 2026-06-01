@@ -1,0 +1,88 @@
+{
+  "title": "Atragantamiento en el casino: tu decisión salva vidas",
+  "intro": "Son las 13:20 hrs en el casino de una planta de alimentos en la Región del Bío Bío. Almuerzas junto a un compañero de 42 años que come pollo asado. De pronto, deja de hablar, se lleva ambas manos al cuello y su rostro empieza a ponerse azulado. Eres trabajador capacitado en primeros auxilios. ¿Qué haces?",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Tu compañero se lleva las manos al cuello, no emite ningún sonido y comienza a tornarse cianótico (labios azulados). Necesitas evaluar la situación de inmediato.",
+      "options": [
+        {
+          "text": "Le pregunto '¿te estás atragantando?' y observo si puede toser o hablar",
+          "outcome": "Confirmas que no puede toser, hablar ni respirar. Es una obstrucción TOTAL de la vía aérea (OVACE grave).",
+          "feedback": "Correcto. Identificar el signo universal (manos al cuello) y verificar si puede toser permite distinguir obstrucción parcial de total. Aquí es total y exige acción inmediata.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Le ofrezco un vaso de agua para que pase el bocado",
+          "outcome": "El compañero no puede tragar ni respirar. Pierdes segundos valiosos y su estado empeora.",
+          "feedback": "Incorrecto. En una obstrucción total nunca se ofrece agua ni alimentos. El recuerdo: en 4 a 6 minutos puede haber daño cerebral irreversible. Actúa de inmediato.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Lo dejo tranquilo porque seguramente toserá solo",
+          "outcome": "El compañero no logra toser y su cianosis aumenta. La situación se vuelve crítica.",
+          "feedback": "Incorrecto. Si NO puede toser, es obstrucción total y no se resolverá sola. Esperar es peligroso. Debes intervenir ya.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Confirmaste obstrucción total. El compañero sigue consciente pero no respira. Debes actuar para desobstruir la vía aérea.",
+      "options": [
+        {
+          "text": "Me paro detrás, ubico el puño encima del ombligo y comprimo hacia adentro y hacia arriba (movimiento en J)",
+          "outcome": "Aplicas la Maniobra de Heimlich correctamente. A la tercera compresión el trozo de pollo es expulsado y el compañero vuelve a respirar.",
+          "feedback": "Excelente. Esa es la técnica estándar: detrás de la víctima, puño en zona epigástrica (encima del ombligo), compresiones rápidas en J. Según AHA 2024, si no resulta se alternan 5 golpes interescapulares.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Le doy palmadas suaves en la espalda mientras está sentado",
+          "outcome": "Las palmadas suaves no generan presión suficiente. El bocado no se mueve y pierdes tiempo.",
+          "feedback": "Insuficiente para una obstrucción total. Debes aplicar Heimlich; si no expulsa, se alternan hasta 5 golpes interescapulares firmes entre los omóplatos según protocolo AHA 2024.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Coloco el puño bajo el ombligo y comprimo hacia abajo",
+          "outcome": "La posición es incorrecta y la compresión no genera la presión necesaria sobre el diafragma.",
+          "feedback": "Incorrecto. El puño va ENCIMA del ombligo (zona epigástrica), debajo del esternón, y la compresión es hacia adentro y hacia arriba, nunca hacia abajo.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El compañero expulsó el alimento y recupera la respiración. Está pálido pero consciente y agradecido. ¿Cómo cierras la atención?",
+      "options": [
+        {
+          "text": "Activo la Mutual (1407) y lo derivo a control médico para descartar lesiones internas",
+          "outcome": "El compañero es trasladado, se le realiza una radiografía de tórax sin hallazgos y la empresa registra el incidente y reporta la DIAT.",
+          "feedback": "Correcto. Toda víctima que recibió Heimlich debe ser evaluada médicamente por posibles lesiones internas (costillas, bazo, hígado, estómago). Recuerda: Mutual 1407, ACHS 600 600 2247, IST 600 390 1000 o SAMU 131.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Le digo que descanse y vuelva al trabajo, ya que está respirando bien",
+          "outcome": "El compañero regresa a su puesto sin evaluación. Existe riesgo no detectado de lesiones internas tras las compresiones.",
+          "feedback": "Incorrecto. Aunque respire bien, la maniobra puede causar lesiones internas. Siempre debe ser evaluado por la mutual o un centro asistencial.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Lo dejo solo unos minutos para buscar al supervisor",
+          "outcome": "Dejar sola a una persona que acaba de superar una emergencia respiratoria es riesgoso si recae.",
+          "feedback": "Mejor no dejarlo solo. Pide ayuda sin alejarte, activa la mutual y mantén la observación hasta que llegue apoyo médico.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Una respuesta eficaz ante un atragantamiento sigue tres pasos clave: (1) Reconocer rápido el signo universal (manos al cuello) y distinguir obstrucción parcial de total: si la víctima tose con fuerza, se la anima a seguir tosiendo; si NO puede toser, hablar ni respirar, es total y exige acción inmediata. (2) Aplicar correctamente la Maniobra de Heimlich: detrás de la víctima, puño encima del ombligo, compresiones rápidas en movimiento J hacia adentro y arriba, alternando con golpes interescapulares si no expulsa. Recuerda las adaptaciones: compresiones torácicas en embarazadas u obesos, y NUNCA Heimlich abdominal en lactantes. (3) Derivar siempre: toda persona que recibió Heimlich debe ser evaluada médicamente y el evento registrado y reportado mediante DIAT. La acción oportuna y la activación de la mutual (1407 / ACHS 600 600 2247 / IST 600 390 1000 / SAMU 131) marcan la diferencia entre la vida y un daño irreversible."
+}

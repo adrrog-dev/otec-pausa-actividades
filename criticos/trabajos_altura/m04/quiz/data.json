@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Puntos de anclaje y líneas de vida",
+  "intro": "Evalúa tus conocimientos sobre la resistencia, selección y verificación de puntos de anclaje según la NCh 2272. Recuerda: el punto de anclaje es el eslabón crítico del sistema anticaídas. Responde cada pregunta seleccionando una sola alternativa.",
+  "questions": [
+    {
+      "q": "¿Cuál es la resistencia mínima exigida para un punto de anclaje por cada trabajador anclado, según la NCh 2272?",
+      "options": [
+        "6 kN",
+        "10 kN",
+        "15 kN",
+        "22 kN"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La NCh 2272, en línea con OSHA y EN 795, exige 15 kN (aproximadamente 1.500 kgf) por cada trabajador anclado.",
+      "feedbackKo": "Respuesta incorrecta. La resistencia mínima exigida es de 15 kN (≈ 1.500 kgf) por trabajador anclado, según la NCh 2272.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Si dos trabajadores se conectan al mismo punto de anclaje, ¿qué resistencia mínima debe tener ese punto?",
+      "options": [
+        "15 kN",
+        "22 kN",
+        "30 kN",
+        "45 kN"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La resistencia se multiplica por el número de trabajadores conectados: 2 personas × 15 kN = 30 kN.",
+      "feedbackKo": "Respuesta incorrecta. Debe multiplicarse 15 kN por la cantidad de trabajadores anclados, por lo que para dos personas se requieren 30 kN.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En una línea de vida vertical, ¿qué dispositivo sigue al trabajador y se bloquea ante una aceleración por caída?",
+      "options": [
+        "Absorbedor de energía",
+        "Rope grab (deslizante anticaídas)",
+        "Mosquetón",
+        "Anillo D"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El rope grab o dispositivo deslizante anticaídas acompaña el desplazamiento del trabajador y se bloquea ante una aceleración brusca.",
+      "feedbackKo": "Respuesta incorrecta. El dispositivo es el rope grab o deslizante anticaídas, que se bloquea automáticamente ante la aceleración de una caída.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Antes de usar un andamio, este porta una tarjeta verde. ¿Qué significa?",
+      "options": [
+        "Andamio en montaje",
+        "Uso autorizado",
+        "Prohibido usar",
+        "En reparación"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La tarjeta verde indica que el andamio fue inspeccionado y su uso está autorizado, conforme a la NCh 997.",
+      "feedbackKo": "Respuesta incorrecta. La tarjeta verde significa uso autorizado; la tarjeta roja indica que el andamio no debe usarse.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto a la cantidad de personas que puede usar una línea de vida horizontal, ¿qué afirmación es correcta?",
+      "options": [
+        "La pueden usar todas las personas que quepan en la línea",
+        "El número máximo depende del cálculo de diseño (típicamente 2-3 personas)",
+        "Solo puede usarla una persona en cualquier caso",
+        "No tiene límite si está certificada"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El número máximo de usuarios simultáneos depende del cálculo de diseño de la línea, generalmente entre 2 y 3 personas.",
+      "feedbackKo": "Respuesta incorrecta. El número de usuarios simultáneos no es ilimitado; depende del cálculo de diseño, habitualmente 2 a 3 personas.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

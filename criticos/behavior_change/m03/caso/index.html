@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>La conversación que cuida: liderar con lenguaje inclusivo y CNV — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "La conversación que cuida: liderar con lenguaje inclusivo y CNV",
+  "intro": "Eres jefatura de un equipo mixto en una empresa de servicios en Santiago. Una trabajadora, Carla, ha llegado tarde a las últimas tres reuniones de coordinación. Hoy debes hablar con ella, y además preparar un correo para todo el personal. Tus decisiones afectarán el clima de respeto del equipo. Aplica lo aprendido sobre lenguaje inclusivo, Comunicación No Violenta y escucha empática.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Carla acaba de llegar 20 minutos tarde a la reunión, por tercera vez en la semana. El equipo la mira. Tú sientes molestia. ¿Cómo inicias la conversación con ella, en privado, al terminar la reunión?",
+      "options": [
+        {
+          "text": "\"Carla, eres impuntual y eso no respeta al equipo.\"",
+          "outcome": "Carla se pone a la defensiva y cruza los brazos. La conversación se tensa antes de empezar y no se aclara qué está pasando.",
+          "feedback": "Esto es un juicio, no una observación. En CNV, etiquetar a la persona ('eres impuntual') bloquea el diálogo. Conviene describir el hecho concreto sin evaluar.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "\"Vi que llegaste 20 minutos tarde a las últimas 3 reuniones. Quería entender qué está pasando.\"",
+          "outcome": "Carla baja los hombros y se muestra dispuesta a conversar. La descripción del hecho, sin ataque, abre espacio para escuchar.",
+          "feedback": "Excelente. Iniciaste con una Observación (paso 1 de CNV): un hecho concreto y verificable, sin juicio. Esto facilita que la otra persona no se defienda.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "No le dices nada para evitar el conflicto y solo le envías un mensaje escrito recordando los horarios.",
+          "outcome": "Carla recibe el mensaje como algo impersonal. El tema queda sin resolver y la incomodidad sigue en el equipo.",
+          "feedback": "Evitar la conversación no cuida el vínculo. Los conflictos que no se abordan suelen escalar. Una conversación directa y respetuosa previene problemas mayores.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Carla te responde: \"Es que estoy sola con mi hijo enfermo y dejarlo en la mañana se me hace muy difícil.\" Te das cuenta de que hay algo más detrás. ¿Cómo continúas?",
+      "options": [
+        {
+          "text": "\"Deberías organizarte mejor en las mañanas, hay muchas opciones de cuidado.\"",
+          "outcome": "Carla se siente juzgada y deja de compartir. Vuelve al modo formal y la confianza se enfría.",
+          "feedback": "Saltar al consejo no validado interrumpe la escucha empática. Muchas veces la persona no busca soluciones inmediatas, sino sentirse comprendida primero.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "\"Lo que escucho es que estás enfrentando una situación difícil con tu hijo, y eso te complica las mañanas. Tiene sentido que te cueste.\"",
+          "outcome": "Carla se relaja y agradece sentirse escuchada. Ahora está abierta a buscar juntos una solución.",
+          "feedback": "Muy bien. Reflejaste lo que entendiste y validaste su sentimiento, sin saltar al consejo. Esto es escucha empática (Carl Rogers): comprender antes de resolver.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "\"Entiendo, pero el trabajo es el trabajo y todos tenemos problemas.\"",
+          "outcome": "Carla siente que su realidad fue minimizada. Acepta de palabra, pero la conexión se pierde.",
+          "feedback": "Minimizar el sentimiento ('todos tenemos problemas') invalida a la persona. La escucha empática implica validar lo que siente antes de hablar de las obligaciones laborales.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Llegan a un acuerdo: Carla avisará si llegará tarde y podrá conectarse de forma remota los primeros minutos. Ahora debes enviar un correo a todo el equipo recordando el horario de las reuniones. ¿Cómo lo redactas?",
+      "options": [
+        {
+          "text": "\"Estimados trabajadores: les recuerdo que los empleados deben llegar puntuales a las reuniones.\"",
+          "outcome": "El correo se envía, pero usa masculino genérico en un equipo mixto. Algunas personas no se sienten nombradas.",
+          "feedback": "El masculino genérico ('trabajadores', 'empleados') puede invisibilizar a parte del equipo. La guía chilena recomienda sustantivos colectivos o desdoblamiento moderado.",
+          "score": -0.5,
+          "next": 4
+        },
+        {
+          "text": "\"Estimado equipo: recordamos a todo el personal la importancia de llegar a horario a nuestras reuniones de coordinación. Si alguien tiene una dificultad, puede avisar con anticipación.\"",
+          "outcome": "El correo es claro, inclusivo y abre la puerta a comunicar dificultades. El equipo lo recibe bien.",
+          "feedback": "Excelente. Usaste sustantivos colectivos ('equipo', 'personal') y un tono que cuida. Inclusivo no es complicado: es nombrar con precisión y respeto.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "\"Estimad@s tod@s: l@s trabajador@s deben ser puntuales.\"",
+          "outcome": "El correo intenta ser inclusivo, pero el uso de '@' genera problemas con los lectores de pantalla del compañero que usa apoyo de accesibilidad.",
+          "feedback": "La intención es buena, pero la guía chilena (2024) no recomienda '@' ni 'x' porque dificultan la accesibilidad. Mejor usar colectivos: 'el personal', 'el equipo'.",
+          "score": 0,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Una semana después, Carla cumple el acuerdo y avisa cuando se atrasa. Un compañero te comenta: \"¿Por qué a ella le permites llegar tarde y a nosotros no?\" ¿Cómo respondes?",
+      "options": [
+        {
+          "text": "\"Cada situación es distinta. Conversemos: si tú también tienes alguna dificultad, podemos buscar una solución que funcione para ti.\"",
+          "outcome": "El compañero entiende que el trato no es desigual, sino flexible según cada realidad. La confianza en tu liderazgo crece.",
+          "feedback": "Muy bien. Mantuviste un trato equitativo (no idéntico) y abriste la conversación con escucha. El liderazgo respetuoso adapta sin perder justicia.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "\"Eso es entre Carla y yo, no te corresponde.\"",
+          "outcome": "El compañero se siente cortado y queda con la sensación de favoritismo. El malestar circula en el equipo.",
+          "feedback": "Cerrar la conversación alimenta percepciones de injusticia. Sin revelar datos privados de Carla, sí puedes explicar el principio: trato equitativo según cada situación.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "\"Tienes razón, mejor le exijo lo mismo a ella para que sea parejo.\"",
+          "outcome": "Vuelves atrás en el acuerdo. Carla pierde confianza y el problema original regresa.",
+          "feedback": "La equidad no es tratar a todas las personas igual, sino dar a cada una lo que necesita. Retroceder en el acuerdo daña la relación que habías cuidado.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso integra las tres herramientas del módulo. Las mejores decisiones siguen un patrón: primero observar el hecho sin juzgar (CNV), luego escuchar con empatía y validar antes de aconsejar (Rogers), y finalmente comunicar de forma inclusiva y equitativa. El lenguaje inclusivo no se trata de símbolos como '@' o 'x', sino de nombrar con precisión y cuidado usando recursos accesibles como los sustantivos colectivos. Recuerda: un buen liderazgo no trata a todas las personas de forma idéntica, sino de manera justa según cada situación. Como muestran los casos de Achs y Codelco en Chile, estas prácticas reducen conflictos y mejoran el clima de respeto. Practicar, equivocarse y corregir es parte del aprendizaje."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

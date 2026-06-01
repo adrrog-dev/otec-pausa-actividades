@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IPER en faena minera de Atacama: decisiones que previenen el daño — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "IPER en faena minera de Atacama: decisiones que previenen el daño",
+  "intro": "Eres prevencionista de una faena minera de pequeña escala en la Región de Atacama. La cuadrilla de 8 trabajadores realiza tronaduras, carguío con cargador frontal y transporte en camión tolva, jornada 7x7. Es media tarde, la temperatura supera los 35°C y se observa polvo respirable visible en el sector de carguío. Debes aplicar correctamente la metodología IPER. Cada decisión tiene consecuencias.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Llegas al sector de carguío y notas el polvo en suspensión. El jefe de faena te pide actualizar la matriz IPER. ¿Cómo inicias el trabajo de identificación de peligros?",
+      "options": [
+        {
+          "text": "Recorres la faena en terreno, observas las tareas reales y conversas con los trabajadores que ejecutan el carguío.",
+          "outcome": "Detectas el polvo respirable con sílice, la exposición a altas temperaturas y el riesgo de atropello por equipo móvil. Registras información valiosa de quienes conocen la tarea.",
+          "feedback": "Correcto. La IPER no es un ejercicio de gabinete: requiere observación en terreno y participación de los trabajadores. Así identificas peligros reales, no supuestos.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Completas la matriz desde la oficina usando una IPER de otra faena similar para ahorrar tiempo.",
+          "outcome": "La matriz omite condiciones propias de esta faena, como la temperatura extrema y el polvo específico del sector de carguío. Quedan peligros sin controlar.",
+          "feedback": "Incorrecto. Cada faena tiene condiciones particulares. Copiar una matriz ajena sin verificación en terreno deja expuestos a los trabajadores y debilita el sistema preventivo.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Revisas solo los registros de accidentes pasados de la empresa y con eso elaboras la matriz.",
+          "outcome": "Obtienes datos útiles del historial, pero no detectas peligros que aún no han causado accidentes, como la exposición acumulada a sílice.",
+          "feedback": "Parcialmente correcto. Los registros DIAT/DIEP son una fuente válida, pero deben combinarse con observación en terreno y entrevistas. La IPER anticipa el daño, no solo reacciona a lo ya ocurrido.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Debes clasificar el peligro 'polvo respirable con sílice'. Un colega lo anota como 'riesgo' en la columna de peligros. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Corriges el registro: el polvo con sílice es el peligro (fuente con potencial de daño); el riesgo es la combinación de probabilidad y severidad de la silicosis.",
+          "outcome": "La matriz queda con conceptos correctos. Identificas fuente (carguío), ruta de exposición (inhalación) y daño potencial (silicosis), permitiendo evaluar bien probabilidad y severidad.",
+          "feedback": "Correcto. Distinguir peligro de riesgo es la base de la IPER. El peligro es la fuente; el riesgo combina la probabilidad de que ocurra el daño con su severidad.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Lo dejas como está, total se entiende lo que se quiere decir.",
+          "outcome": "La confusión conceptual se propaga al resto de la matriz y a los procedimientos de trabajo seguro derivados de ella.",
+          "feedback": "Incorrecto. Confundir peligro y riesgo genera matrices mal construidas y evaluaciones erróneas. La precisión conceptual es exigible según ISO 45001.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El riesgo de sílice está confirmado. La jefatura pregunta qué exigencia adicional aplica a esta faena por ese motivo.",
+      "options": [
+        {
+          "text": "Indicas que corresponde incorporar al trabajador al PLANESI (Plan Nacional de Erradicación de la Silicosis) y mantener vigilancia de la salud.",
+          "outcome": "La faena queda alineada con la normativa de exposición a sílice y se gestiona la vigilancia médica de los trabajadores expuestos.",
+          "feedback": "Correcto. La exposición a sílice exige incorporación al PLANESI y vigilancia de salud, además de medidas de control en la fuente como humectación y protección respiratoria.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Respondes que basta con entregar mascarillas y no se requiere documentación adicional.",
+          "outcome": "Se omite la incorporación al PLANESI y la vigilancia de salud, dejando un vacío legal y preventivo frente al riesgo de silicosis.",
+          "feedback": "Incorrecto. La protección respiratoria es necesaria, pero no reemplaza la incorporación al PLANESI ni la vigilancia médica exigida para trabajadores expuestos a sílice.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Has terminado de actualizar la matriz IPER. El jefe te pregunta cómo se cierra el proceso y cada cuánto se revisa.",
+      "options": [
+        {
+          "text": "El registro IPER debe quedar documentado y firmado por la línea de mando, el experto en prevención y representantes de los trabajadores, y actualizarse ante cada cambio de condiciones, procesos o equipos.",
+          "outcome": "El proceso queda formalizado, participativo y vigente. La faena cuenta con una IPER válida como insumo para procedimientos y programas preventivos.",
+          "feedback": "Correcto. Toda IPER debe quedar documentada, firmada de forma participativa y actualizarse cada vez que cambian condiciones, procesos o equipos.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Archivas la matriz sin firmas y defines revisarla solo una vez al año, pase lo que pase.",
+          "outcome": "Ante un cambio de equipo o de método de carguío, la matriz queda desactualizada y los nuevos peligros no se gestionan a tiempo.",
+          "feedback": "Incorrecto. La IPER debe firmarse de forma participativa y actualizarse ante cada cambio de condiciones, no solo en un plazo fijo. Una matriz desactualizada pierde su valor preventivo.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La aplicación correcta de la IPER en faena exige cuatro conductas clave que recorriste en este caso: observar en terreno y conversar con los trabajadores en vez de copiar matrices ajenas; distinguir con precisión peligro (fuente) de riesgo (probabilidad y severidad); reconocer exigencias específicas como la incorporación al PLANESI y la vigilancia de salud frente a la sílice; y cerrar el proceso con un registro documentado, firmado de forma participativa y actualizado ante cada cambio. Si tus decisiones sumaron puntaje alto, aplicaste la metodología de manera rigurosa y preventiva. Si obtuviste puntajes negativos, revisa el Módulo 2 y las guías de SUSESO y mutualidades: una IPER bien hecha anticipa el daño antes de que ocurra y protege la vida de las personas."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

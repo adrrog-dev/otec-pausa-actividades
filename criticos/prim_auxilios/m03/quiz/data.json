@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Maniobra de Heimlich en el ámbito laboral",
+  "intro": "Evalúa tus conocimientos sobre cómo reconocer y actuar ante un atragantamiento en el trabajo. Cada respuesta incluye retroalimentación para reforzar el procedimiento correcto según las Guías AHA 2024.",
+  "questions": [
+    {
+      "q": "Un trabajador en el casino se lleva ambas manos al cuello, no emite sonidos y comienza a ponerse azulado. ¿Qué tipo de obstrucción presenta y qué debe hacer?",
+      "options": [
+        "Obstrucción parcial: animarlo a seguir tosiendo",
+        "Obstrucción total: aplicar la Maniobra de Heimlich de inmediato",
+        "Obstrucción parcial: ofrecerle agua para que pase el alimento",
+        "Obstrucción total: esperar la llegada del SAMU sin intervenir"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Cuando la víctima no puede toser, hablar ni respirar y presenta cianosis, es una obstrucción total y se debe aplicar la Maniobra de Heimlich sin demora.",
+      "feedbackKo": "Incorrecto. La ausencia de sonidos, tos y la cianosis indican obstrucción total. En este caso se aplica la Maniobra de Heimlich de inmediato, sin esperar.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Dónde se ubica el puño para realizar la compresión de Heimlich en un adulto consciente?",
+      "options": [
+        "Bajo el ombligo, presionando hacia los pies",
+        "En el centro del pecho, sobre el esternón",
+        "Encima del ombligo (zona epigástrica), comprimiendo hacia adentro y hacia arriba",
+        "En el costado del abdomen, presionando hacia los lados"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El puño se coloca justo encima del ombligo, bajo el esternón, y se comprime con un movimiento en J: hacia adentro y hacia arriba.",
+      "feedbackKo": "Incorrecto. La compresión correcta se realiza encima del ombligo, en la zona epigástrica, con movimiento hacia adentro y hacia arriba (movimiento en J).",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Una compañera embarazada en el tercer trimestre sufre una obstrucción total. ¿Cuál es la maniobra adecuada?",
+      "options": [
+        "Heimlich abdominal estándar sobre el ombligo",
+        "Compresiones torácicas sobre el esternón, en lugar de las abdominales",
+        "Solo golpes interescapulares hasta que llegue ayuda",
+        "Acostarla e iniciar RCP de inmediato"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. En embarazadas del tercer trimestre y personas con obesidad se realizan compresiones torácicas sobre el esternón en lugar de las abdominales.",
+      "feedbackKo": "Incorrecto. En una embarazada del tercer trimestre no se aplica Heimlich abdominal; se usan compresiones torácicas sobre el esternón.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Ante un lactante menor de 1 año atragantado, ¿qué procedimiento corresponde?",
+      "options": [
+        "Maniobra de Heimlich abdominal con menor fuerza",
+        "5 golpes interescapulares más 5 compresiones torácicas con dos dedos, sin Heimlich abdominal",
+        "Solo barrido digital a ciegas dentro de la boca",
+        "Compresiones abdominales rápidas hacia arriba"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. En lactantes menores de 1 año NUNCA se usa Heimlich abdominal; se alternan 5 golpes interescapulares con 5 compresiones torácicas con dos dedos.",
+      "feedbackKo": "Incorrecto. En lactantes menores de 1 año no se aplica Heimlich abdominal. Se realizan 5 golpes interescapulares y 5 compresiones torácicas con dos dedos.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Tras una Maniobra de Heimlich exitosa que expulsó el cuerpo extraño, ¿qué debe hacerse con la víctima?",
+      "options": [
+        "Puede retomar sus labores sin necesidad de control",
+        "Debe ser evaluada médicamente por posibles lesiones internas",
+        "Solo se la observa una hora y luego se la deja ir a casa",
+        "Se registra el incidente, sin requerir atención clínica"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Toda víctima que recibió la Maniobra de Heimlich debe ser evaluada médicamente por riesgo de lesiones internas (costillas, bazo, hígado o estómago).",
+      "feedbackKo": "Incorrecto. Aunque la maniobra haya sido exitosa, la víctima siempre debe ser evaluada médicamente por posibles lesiones internas. Derive a la mutual o llame al 131.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

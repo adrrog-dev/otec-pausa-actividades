@@ -1,0 +1,76 @@
+{
+  "title": "Quiz Integrador: Cultura y Cambio de Comportamiento",
+  "intro": "Pon a prueba tu capacidad para aplicar los modelos Kotter, ADKAR y COM-B en un caso real de cultura organizacional chilena. Cada pregunta integra teoría y aplicación práctica en entornos laborales respetuosos. ¡Adelante!",
+  "questions": [
+    {
+      "q": "Una empresa chilena lanza un programa cultural tras denuncias de acoso. La gerencia graba videos, forma un comité guía con líderes naturales y celebra logros tempranos. ¿Qué modelo describe mejor estas acciones?",
+      "options": [
+        "Modelo ADKAR, centrado en la transición individual",
+        "Modelo de Kotter, enfocado en liderar el cambio organizacional",
+        "Modelo COM-B, enfocado en la oportunidad física",
+        "Modelo de change readiness individual"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Crear coalición guía, comunicar la visión y generar logros tempranos (quick wins) son pasos característicos del modelo de Kotter, ideal para la dimensión organizacional del cambio.",
+      "feedbackKo": "Revisa el caso BCI: las acciones descritas (comité guía, comunicación desde la gerencia, logros tempranos) corresponden a los 8 pasos del modelo de Kotter, no a ADKAR ni COM-B.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En un equipo, los trabajadores saben que deben respetar turnos para hablar en reuniones y quieren hacerlo, pero las salas no tienen agenda ni tiempos definidos. Según COM-B, ¿qué dimensión falla principalmente?",
+      "options": [
+        "Capacidad (Capability)",
+        "Motivación (Motivation)",
+        "Oportunidad (Opportunity)",
+        "Refuerzo (Reinforcement)"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. No falta voluntad ni conocimiento: falta la oportunidad física y social. COM-B nos permite intervenir el sistema (agenda, salas, calendarios) y no solo a la persona.",
+      "feedbackKo": "Fíjate: las personas saben (capacidad) y quieren (motivación), pero el entorno no lo permite. Eso corresponde a la Oportunidad (O) en COM-B.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Un programa de capacitación contra el acoso fracasó. Al diagnosticar con ADKAR, se detecta que las personas entendieron el problema y querían cambiar, pero no recibieron seguimiento ni reconocimiento posterior. ¿En qué etapa se atascó?",
+      "options": [
+        "Awareness (conciencia)",
+        "Desire (deseo)",
+        "Knowledge (conocimiento)",
+        "Reinforcement (refuerzo)"
+      ],
+      "correctIndex": 3,
+      "feedbackOk": "Correcto. Hubo conciencia, deseo y conocimiento, pero sin refuerzo (Reinforcement) el cambio no se sostiene en el tiempo y termina fracasando.",
+      "feedbackKo": "Recuerda que en ADKAR el cambio falla en la etapa donde se detiene. Aquí existió conciencia, deseo y conocimiento; lo ausente fue el refuerzo para sostener el cambio.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Una jefatura propone solo capacitaciones para mejorar el clima laboral, sin modificar políticas, procesos ni incentivos. Según la evidencia citada, ¿qué riesgo enfrenta?",
+      "options": [
+        "Un éxito asegurado por enfocarse en las personas",
+        "Un alto riesgo de fracaso por no rediseñar el sistema",
+        "Un ahorro presupuestario que garantiza resultados",
+        "Cumplir automáticamente con la Ley Karin"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Según McKinsey, intervenir solo al individuo sin tocar el sistema (políticas, procesos, incentivos) lleva al fracaso en la mayoría de los casos. El cambio sostenible requiere rediseño sistémico.",
+      "feedbackKo": "Las capacitaciones por sí solas no bastan. La evidencia muestra que sin intervenir el sistema, los programas centrados solo en el individuo tienden a fracasar.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Una empresa debe alinear su programa cultural con el marco legal vigente en Chile. ¿Qué obligación establece la Ley Karin (21.643) en vigor desde el 1 de agosto de 2024?",
+      "options": [
+        "Reducir la jornada laboral a 40 horas",
+        "Investigar denuncias de acoso y violencia con perspectiva de género",
+        "Entregar bonos por buen clima laboral",
+        "Eliminar la fiscalización de la Dirección del Trabajo"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La Ley Karin obliga a investigar denuncias de acoso laboral, sexual y violencia con perspectiva de género. Incumplir expone a multas, indemnizaciones y daño reputacional.",
+      "feedbackKo": "Recuerda: la Ley Karin (vigente desde el 1 de agosto de 2024) obliga a investigar denuncias de acoso y violencia con perspectiva de género. Las demás opciones corresponden a otras normativas o no existen.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

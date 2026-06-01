@@ -1,0 +1,115 @@
+{
+  "title": "Emergencia eléctrica en faena: tu primera decisión cuenta",
+  "intro": "Eres el primer respondedor en una faena. Un compañero operador de maquinaria pesada acaba de sufrir una electrocución al contactar un cable de media tensión expuesto y yace inconsciente en el suelo. Son las 14:30 hrs. El cable sigue energizado. Tus decisiones en los próximos 60 segundos serán determinantes. Aplica todo lo aprendido: principio 3S, secuencia CABDE, activación de la cadena de emergencia y protocolo DOA/DIAT.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Ves a tu compañero inconsciente junto al cable energizado. Tu instinto te empuja a ayudar de inmediato. ¿Qué haces primero?",
+      "options": [
+        {
+          "text": "Corro a tomarlo y lo aparto del cable con mis manos.",
+          "outcome": "Recibes la descarga eléctrica al tocar a la víctima aún en contacto con la corriente. Ahora hay dos víctimas y la cadena de auxilio se complica gravemente.",
+          "feedback": "Error crítico. Frente a un accidente eléctrico nunca se toca a la víctima sin antes cortar la energía o usar un elemento aislante. La Seguridad propia (principio 3S) es siempre lo primero.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Corto la energía con el interruptor general antes de acercarme (principio 3S).",
+          "outcome": "Desconectas la corriente desde el tablero general. La escena queda segura para acercarte sin riesgo de convertirte en una segunda víctima.",
+          "feedback": "Correcto. Aplicaste el principio 3S: Seguridad propia, del paciente y del equipo. Eliminar la fuente de peligro antes de actuar es la decisión que salva vidas, incluida la tuya.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Le grito que reaccione desde lejos y espero que despierte solo.",
+          "outcome": "Pierdes tiempo valioso. La víctima sigue inconsciente y el riesgo de paro cardiorrespiratorio aumenta con cada segundo sin intervención.",
+          "feedback": "Insuficiente. La observación a distancia no reemplaza la acción. Debes asegurar la escena cortando la energía y luego iniciar la evaluación primaria.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "La escena ya es segura. Te acercas a tu compañero inconsciente. ¿Cómo evalúas su estado?",
+      "options": [
+        {
+          "text": "Aplico la secuencia CABDE: verifico pulso y hemorragias, vía aérea, respiración, conciencia y exposición.",
+          "outcome": "En menos de 60 segundos obtienes un diagnóstico funcional claro: detectas ausencia de respiración normal y comienzas a organizar la respuesta.",
+          "feedback": "Excelente. La evaluación primaria CABDE comienza por Circulación y hemorragias masivas, y entrega información vital de forma rápida y ordenada.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Le doy agua y lo siento contra la pared para que se recupere.",
+          "outcome": "Mover y dar líquidos a una víctima inconsciente puede agravar lesiones y provocar aspiración. La situación empeora.",
+          "feedback": "Error. Nunca administres líquidos a una persona inconsciente. Primero realiza la evaluación primaria CABDE antes de cualquier maniobra.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Reviso solo si respira y omito el resto de la evaluación.",
+          "outcome": "Detectas que no respira bien, pero al saltarte la verificación de circulación y hemorragias podrías pasar por alto un sangrado crítico.",
+          "feedback": "Parcial. La secuencia CABDE es completa por una razón: cada letra cubre un riesgo vital. Evalúa de forma ordenada y completa.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "La víctima requiere atención urgente. Debes activar la cadena de emergencia. ¿A quién y cómo llamas?",
+      "options": [
+        {
+          "text": "Llamo al SAMU 131 con los 5 datos obligatorios y, en paralelo, a la mutual y al supervisor.",
+          "outcome": "Entregas ubicación exacta, número de víctimas, tipo de incidente (eléctrico), estado de conciencia y teléfono de contacto. No cortas la línea hasta que el operador lo autorice. La ambulancia se despacha de inmediato.",
+          "feedback": "Perfecto. Activaste correctamente la cadena chilena: SAMU 131 + mutual (ACHS 600 600 2247 / Mutual 1407 / IST 600 390 1000) + supervisor. Mantener la línea abierta es clave.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Llamo al 131 pero corto rápido para no ocupar la línea.",
+          "outcome": "El operador necesitaba confirmar el estado de la víctima y darte instrucciones de soporte mientras llega la ambulancia. Al cortar, se pierde coordinación.",
+          "feedback": "Incorrecto. No debes cortar la llamada al 131 hasta que el operador lo autorice. La línea sirve para guiarte en la atención.",
+          "score": -0.5,
+          "next": 4
+        },
+        {
+          "text": "Llamo solo a la mutual y dejo el 131 para después.",
+          "outcome": "La mutual coordina la atención, pero ante un paro respiratorio el SAMU 131 ofrece respuesta prehospitalaria inmediata. Pierdes minutos críticos.",
+          "feedback": "Parcial. Ambos canales son complementarios, pero frente a una emergencia vital el SAMU 131 debe activarse de inmediato, junto con la mutual y el supervisor.",
+          "score": 0,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "La ambulancia se llevó al trabajador. Ahora debes cerrar el ciclo administrativo conforme a la Ley 16.744. ¿Qué corresponde hacer?",
+      "options": [
+        {
+          "text": "La empresa presenta la DIAT a la mutual dentro de las 24 horas hábiles y entrega la DOA al trabajador.",
+          "outcome": "El accidente queda formalmente declarado y cubierto. Se cumple el artículo 76 de la Ley 16.744 y se evita la multa SUSESO de 1 a 150 UTM.",
+          "feedback": "Correcto. La DOA permite que la mutual atienda al trabajador y la DIAT debe presentarse dentro de 24 horas hábiles. El cumplimiento legal protege al trabajador y a la empresa.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Espero una semana a ver cómo evoluciona antes de declarar nada.",
+          "outcome": "Se vence el plazo legal. La empresa se expone a una multa de SUSESO y el trabajador puede quedar sin cobertura oportuna.",
+          "feedback": "Error. La DIAT tiene un plazo máximo de 24 horas hábiles (art. 76 Ley 16.744). La omisión genera multas y deja desprotegido al trabajador.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Dejo todo el trámite a la mutual sin entregar documentación.",
+          "outcome": "La mutual no puede gestionar correctamente la atención sin la DOA y la DIAT que debe aportar la empresa. El proceso se traba.",
+          "feedback": "Insuficiente. La responsabilidad de presentar la DIAT recae en el empleador. La documentación debe gestionarse activamente dentro del plazo legal.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "En una emergencia laboral, la secuencia correcta es clara: primero asegurar la escena (principio 3S) para no convertirte en una segunda víctima, luego evaluar con CABDE para obtener un diagnóstico funcional en menos de 60 segundos, después activar la cadena de emergencia llamando al SAMU 131 con los 5 datos obligatorios junto con la mutual y el supervisor, y finalmente cerrar el ciclo cumpliendo el protocolo DOA y presentando la DIAT dentro de las 24 horas hábiles. Cada decisión tiene consecuencias reales sobre la vida del trabajador y el cumplimiento de la Ley 16.744. Revisa tus elecciones: actuar con orden y disciplina protege tanto a la víctima como a quienes responden."
+}

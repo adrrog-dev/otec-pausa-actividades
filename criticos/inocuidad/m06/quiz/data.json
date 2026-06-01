@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Trazabilidad y Gestión de Retiros (Recall)",
+  "intro": "Pon a prueba lo aprendido sobre trazabilidad y retiros de producto. Cada pregunta tiene una sola respuesta correcta. Lee con atención y selecciona la opción que mejor refleje las buenas prácticas y la normativa aplicable en Chile.",
+  "questions": [
+    {
+      "q": "¿Qué permite identificar la trazabilidad descendente (hacia adelante)?",
+      "options": [
+        "De qué proveedor vino cada materia prima y su lote",
+        "A qué clientes se despachó cada lote del producto terminado",
+        "El flujo del lote dentro de la planta",
+        "La temperatura de almacenamiento del producto"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La trazabilidad descendente identifica a qué clientes se despachó cada lote, clave para un retiro acotado.",
+      "feedbackKo": "Revisa el concepto: la trazabilidad descendente sigue el producto 'hacia adelante', es decir, hacia los clientes a quienes se despachó cada lote.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Un recall Clase I corresponde a:",
+      "options": [
+        "Un etiquetado incorrecto menor sin riesgo a la salud",
+        "Un cambio de fórmula sin impacto sanitario",
+        "Un riesgo serio para la salud, como alérgeno no declarado o Listeria",
+        "La ausencia de un sello 'Alto en'"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El recall Clase I implica un riesgo serio para la salud y exige acción inmediata y notificación obligatoria a la autoridad.",
+      "feedbackKo": "Recuerda: la Clase I es la más grave, asociada a riesgo serio para la salud (alérgeno no declarado, Listeria, botulismo).",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según el estándar internacional GFSI, ¿en qué plazo se deben identificar los destinos de un lote?",
+      "options": [
+        "En 24 horas",
+        "En 12 horas",
+        "En 4 horas o menos",
+        "En una semana"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El estándar internacional GFSI exige identificar los destinos de un lote en 4 horas o menos.",
+      "feedbackKo": "El indicador clave es la velocidad: el estándar internacional GFSI fija un plazo de 4 horas o menos para identificar destinos de un lote.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Ante un recall Clase I en Chile, ¿a quién se debe notificar obligatoriamente?",
+      "options": [
+        "Solo a los clientes directos",
+        "A la SEREMI de Salud, ACHIPIA, ISP o SAG según corresponda",
+        "Solo al Servicio de Impuestos Internos (SII)",
+        "A nadie, si se resuelve internamente"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. En un recall Clase I la notificación a la autoridad sanitaria (SEREMI Salud, ACHIPIA, ISP o SAG según corresponda) es obligatoria.",
+      "feedbackKo": "Recuerda que un recall Clase I obliga a notificar a la autoridad: SEREMI de Salud, ACHIPIA, ISP o SAG según corresponda.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es el principal beneficio de contar con una buena trazabilidad por lote?",
+      "options": [
+        "Permite eliminar los controles de calidad en planta",
+        "Permite acotar el retiro a un lote en lugar de toda la producción",
+        "Evita tener que notificar a la autoridad sanitaria",
+        "Reemplaza la necesidad de un procedimiento de recall escrito"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Una buena trazabilidad permite un retiro acotado a un lote, reduciendo pérdidas y protegiendo al consumidor.",
+      "feedbackKo": "El gran beneficio es la precisión: una buena trazabilidad permite acotar el retiro a un lote específico en lugar de toda la producción.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

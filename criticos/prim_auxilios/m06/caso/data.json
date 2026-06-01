@@ -1,0 +1,101 @@
+{
+  "title": "Decisión bajo presión: corte profundo en bodega",
+  "intro": "Eres Marcela, encargada de turno en una tienda retail del Mall Plaza Vespucio. Es sábado 16:30 hrs y hay alta afluencia de público. Una vendedora de 28 años se corta profundamente con un cúter al abrir cajas en la bodega. La herida sangra de forma evidente. Tus decisiones definirán la calidad de la atención, la cobertura por la Ley 16.744 y la prevención futura. Responde con criterio profesional.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "La trabajadora sangra y está angustiada. ¿Cuál es tu primera acción inmediata?",
+      "options": [
+        {
+          "text": "Ir al botiquín, ponerte guantes y aplicar presión directa con gasa estéril.",
+          "outcome": "Controlas el sangrado de forma segura, protegiéndote con guantes de nitrilo y usando material estéril del botiquín.",
+          "feedback": "Correcto. El control del sangrado con presión directa y el uso de guantes son la prioridad. El botiquín conforme al DS 594 cuenta con gasas estériles y guantes para este fin.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Buscar paracetamol en el botiquín para calmar el dolor antes de actuar.",
+          "outcome": "Pierdes tiempo valioso. Además, el botiquín de primeros auxilios NO debe contener analgésicos sin prescripción médica.",
+          "feedback": "Incorrecto. El botiquín no es una farmacia: no debe contener aspirina, paracetamol ni otros medicamentos. La prioridad ante un corte profundo es controlar el sangrado.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Llevarla de inmediato en tu auto a una clínica cercana sin atención previa.",
+          "outcome": "Trasladas a la trabajadora sangrando, sin control inicial de la herida ni activación de la mutual correspondiente.",
+          "feedback": "Riesgoso. Primero se debe controlar el sangrado y activar la derivación a la mutual adherente. El traslado por medios propios solo aplica a lesiones leves y siguiendo protocolo.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya controlaste el sangrado con gasa y venda compresiva. La herida es profunda y requiere atención médica. ¿A quién llamas?",
+      "options": [
+        {
+          "text": "Llamar al teléfono de emergencia de la mutual adherente (ej. ACHS 600 600 2247).",
+          "outcome": "La mutual activa el traslado a su centro asistencial bajo cobertura de la Ley 16.744.",
+          "feedback": "Correcto. El primer paso de derivación es identificar la mutual adherente y llamar a su línea de emergencia para coordinar la atención.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Llamar solo a un familiar de la trabajadora para que la retire.",
+          "outcome": "Demoras la atención médica y omites la activación de la cobertura laboral.",
+          "feedback": "Insuficiente. Aunque avisar a la familia es considerado, la prioridad es activar la mutual para asegurar atención y cobertura por accidente del trabajo.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Esperar a que pase el sangrado y enviarla a su casa a descansar.",
+          "outcome": "Una herida profunda con corte de cúter requiere evaluación médica; postergarla puede agravar la lesión y comprometer la cobertura.",
+          "feedback": "Incorrecto. Toda lesión que requiere atención médica debe derivarse a la mutual. Postergarla pone en riesgo la salud y la cobertura legal.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "La trabajadora será trasladada al centro de la mutual. Mientras esperas, ¿qué documentación gestionas?",
+      "options": [
+        {
+          "text": "Completar el registro interno del incidente y entregar la DOA firmada para el acceso al centro asistencial.",
+          "outcome": "Documentas hora exacta, testigos y mecanismo, y entregas la Declaración de Origen del Accidente firmada por la administradora.",
+          "feedback": "Correcto. El registro interno con campos mínimos y la entrega de la DOA permiten la atención y la trazabilidad del incidente.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "No registrar nada por ahora, ya lo harás la próxima semana cuando haya tiempo.",
+          "outcome": "Sin registro inmediato se pierden datos clave (hora, testigos, mecanismo) y se arriesga el plazo de la DIAT.",
+          "feedback": "Incorrecto. El registro debe hacerse de inmediato. Además, la DIAT debe presentarse dentro de 24 horas hábiles; postergarlo expone a multas SUSESO de 1 a 150 UTM.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "La trabajadora recibió 8 puntos y 5 días de reposo cubiertos por la Ley 16.744. Es lunes, primer día hábil. ¿Cómo cierras el proceso?",
+      "options": [
+        {
+          "text": "Presentar la DIAT vía portal de la mutual dentro de 24 hrs hábiles e informar al Comité Paritario para analizar la causa.",
+          "outcome": "La DIAT queda presentada en plazo y el Comité Paritario propone reemplazar los cúter por cuchillos de seguridad retráctiles en toda la cadena.",
+          "feedback": "Excelente. Cumples el plazo legal de la DIAT (art. 76 Ley 16.744) y activas la prevención: el Comité Paritario investiga y propone medidas correctivas.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Considerar el caso cerrado porque la trabajadora ya fue atendida.",
+          "outcome": "Omites la DIAT y la investigación de causa, dejando el riesgo presente para otros trabajadores.",
+          "feedback": "Incorrecto. Faltan dos pasos clave: presentar la DIAT en plazo y el análisis del Comité Paritario para evitar que el accidente se repita.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La gestión correcta de un accidente laboral combina respuesta técnica y cumplimiento normativo. Lo aprendido: 1) Controlar primero el sangrado usando guantes y material estéril del botiquín DS 594 —que nunca debe contener medicamentos; 2) Activar la derivación llamando a la mutual adherente; 3) Documentar el incidente en el registro interno y entregar la DOA; 4) Presentar la DIAT dentro de 24 horas hábiles y derivar el caso al Comité Paritario para investigar la causa y proponer mejoras. Cada paso protege la salud del trabajador, asegura la cobertura por la Ley 16.744 y previene futuros accidentes. Recuerda los teléfonos de emergencia: ACHS 600 600 2247, Mutual CChC 1407, IST 600 390 1000, ISL 101 y SAMU 131."
+}

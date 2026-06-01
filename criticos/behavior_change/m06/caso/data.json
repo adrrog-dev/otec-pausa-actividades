@@ -1,0 +1,115 @@
+{
+  "title": "Liderando el Plan de Cambio Cultural 30-60-90",
+  "intro": "Eres Carolina, jefa de Recursos Humanos de una empresa chilena de logística con 600 trabajadores. La gerencia te pidió liderar un plan de cambio cultural orientado al respeto y la equidad, alineado a la Ley Karin. Tienes 90 días para mostrar resultados al directorio. Las decisiones que tomes definirán si el programa transforma la cultura o queda solo en un discurso.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Estás en los primeros 30 días del plan. La gerencia tiene urgencia por ver resultados rápidos y te presiona para lanzar de inmediato la formación y los talleres. ¿Por dónde partes?",
+      "options": [
+        {
+          "text": "Lanzar de inmediato la formación masiva para mostrar acción rápida.",
+          "outcome": "El programa avanza, pero no tienes una línea base. Tres meses después no puedes demostrar al directorio si hubo mejora real porque nunca mediste el punto de partida.",
+          "feedback": "En los días 1-30 la prioridad es el diagnóstico y diseño: encuesta de línea base, mapeo de stakeholders y definición del problema. Sin medición inicial, no podrás demostrar el impacto.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Aplicar una encuesta de línea base, mapear stakeholders e identificar 3 quick wins antes de lanzar.",
+          "outcome": "Obtienes datos iniciales de clima, percepción de equidad y microagresiones. Identificas al sponsor ejecutivo y a líderes naturales. Defines el problema en una frase y aseguras quick wins visibles.",
+          "feedback": "Correcto. Los días 1-30 son para diagnóstico y diseño. La línea base es esencial para medir el cambio y los quick wins generan credibilidad temprana.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Esperar a tener un plan perfecto a 12 meses antes de hacer cualquier movimiento.",
+          "outcome": "Pasan las semanas sin acciones visibles. La gerencia pierde interés y empieza a dudar del programa por falta de avances concretos.",
+          "feedback": "La parálisis por análisis es un riesgo real. La metodología 30-60-90 busca disciplina con acción: diagnosticar rápido y mostrar quick wins en los primeros 30 días.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Estás en los días 31-60. Vas a comunicar el lanzamiento masivo del programa a toda la empresa. ¿Cómo lo haces?",
+      "options": [
+        {
+          "text": "Enviar un correo desde Recursos Humanos con el reglamento y los plazos.",
+          "outcome": "El mensaje se percibe como un trámite administrativo más. Muchos trabajadores lo ignoran y las jefaturas no se sienten involucradas.",
+          "feedback": "La voz del sponsor en los hitos clave es fundamental. No conviene delegar la comunicación del cambio solo al área de RR.HH., porque resta peso y compromiso.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Grabar un video del gerente general explicando el compromiso, sumado a capacitación intensiva a jefaturas como multiplicadoras.",
+          "outcome": "El mensaje del gerente general visibiliza el respaldo de la alta dirección. Las jefaturas capacitadas replican el mensaje en sus equipos y se activan los canales de denuncia.",
+          "feedback": "Excelente. En los días 31-60 corresponde la comunicación masiva con sponsor visible y la capacitación a jefaturas como multiplicadores. El compromiso de la dirección es decisivo.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Delegar todo el lanzamiento en un consultor externo para que la empresa no se desgaste.",
+          "outcome": "El consultor hace una buena presentación, pero los trabajadores perciben el programa como algo externo y ajeno, no como un compromiso propio de la organización.",
+          "feedback": "Un consultor puede apoyar, pero el liderazgo visible debe venir desde dentro. El cambio cultural se sostiene cuando la propia organización se hace dueña del proceso.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Estás en los días 61-90 y revisas las métricas. Notas que el número de denuncias formales SUBIÓ respecto a la línea base. La gerencia se alarma y pide frenar el programa. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Frenar el programa porque el aumento de denuncias indica que está fallando.",
+          "outcome": "Al detener el programa, se interrumpe el avance y los trabajadores que empezaban a confiar en los canales sienten que no fueron escuchados. La confianza retrocede.",
+          "feedback": "Un error de lectura. El N° de denuncias idealmente sube primero (mayor confianza para denunciar) y luego baja. Frenar el programa por esto es contraproducente.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Explicar al directorio que el alza de denuncias refleja mayor confianza, mostrar que el tiempo de cierre baja, y proponer ajustes con datos.",
+          "outcome": "El directorio comprende que el aumento es una buena señal de confianza en los canales. Presentas el indicador de tiempo de cierre de denuncias (bajo los 30 días de la Ley Karin) como evidencia de buen funcionamiento.",
+          "feedback": "Correcto. El alza inicial de denuncias indica que las personas confían en el sistema. Lo clave es cerrarlas a tiempo (meta menor a 30 días según Ley Karin) y ajustar con datos.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Ocultar las cifras al directorio para no generar preocupación.",
+          "outcome": "La falta de transparencia te juega en contra. Cuando las cifras salen a la luz más adelante, el directorio pierde confianza en tu gestión del programa.",
+          "feedback": "La transparencia es una regla de la comunicación del cambio: hay que comunicar también los retrocesos y dificultades. Ocultar datos erosiona la credibilidad del programa.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "El plan 30-60-90 va concluyendo y necesitas asegurar que el cambio se sostenga en el tiempo, más allá del entusiasmo inicial. ¿Qué decides?",
+      "options": [
+        {
+          "text": "Dar por cerrado el programa una vez entregado el reporte al directorio.",
+          "outcome": "Sin una estructura de continuidad, el entusiasmo se enfría en pocos meses y la cultura vuelve gradualmente a sus patrones anteriores.",
+          "feedback": "El plan 30-60-90 es el inicio, no el final. Sin mecanismos de continuidad como las comunidades de práctica, el cambio se diluye.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Lanzar una comunidad de práctica con 8 a 15 voluntarios de áreas y jerarquías distintas, sponsor asignado y un entregable concreto por trimestre.",
+          "outcome": "La comunidad de práctica genera continuidad: reuniones mensuales con agenda, embajadores hacia sus áreas y propuestas de mejora trimestrales que mantienen vivo el cambio.",
+          "feedback": "Excelente. Las comunidades de práctica (8-15 personas voluntarias mixtas, con sponsor ejecutivo) dan continuidad cuando los entusiasmos iniciales se enfrían. Esa es la clave de la sostenibilidad.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Formar un comité solo con gerentes para controlar el programa desde arriba.",
+          "outcome": "El comité toma decisiones, pero al no incluir voces diversas ni voluntarias, el programa pierde legitimidad y se percibe como una imposición jerárquica.",
+          "feedback": "Una comunidad de práctica efectiva mezcla jerarquías y áreas, con participación voluntaria. Limitarla solo a gerentes reduce su alcance y representatividad.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El cambio cultural es un proyecto disciplinado, no un discurso. A lo largo del caso pudiste comprobar que la metodología 30-60-90 exige: medir antes de actuar (línea base en los días 1-30), comunicar con la voz del sponsor y formar multiplicadores (días 31-60), interpretar correctamente las métricas con transparencia (días 61-90), y asegurar continuidad mediante comunidades de práctica. Recuerda que el alza inicial de denuncias es señal de confianza, que el tiempo de cierre debe estar bajo los 30 días de la Ley Karin, y que la sistematicidad —medir, comunicar, ajustar y repetir— es lo que diferencia a las organizaciones que transforman su clima de las que solo lo declaran."
+}

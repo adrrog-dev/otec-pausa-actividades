@@ -1,0 +1,87 @@
+{
+  "title": "Decisión en altura: el caso del montaje solar",
+  "intro": "Eres parte de una cuadrilla que debe montar paneles solares sobre una estructura metálica a 3,2 metros del suelo en un parque fotovoltaico en la Región de Antofagasta. Como trabajador, jefatura o prevencionista, deberás tomar decisiones que determinan si la tarea se ejecuta de forma segura y conforme al marco legal chileno (DS 594, NCh 1258 y NCh 2272). Cada decisión tiene consecuencias reales.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Antes de subir, revisas el equipo disponible. Te ofrecen un cinturón de seguridad clásico que la empresa ha usado por años, o un arnés de cuerpo completo con cinco puntos de ajuste y anillo dorsal 'D'. ¿Qué eliges?",
+      "options": [
+        {
+          "text": "Uso el cinturón de seguridad clásico, total siempre lo hemos usado.",
+          "outcome": "Subes con un elemento que está prohibido como dispositivo anticaídas en Chile. Ante una eventual caída, el cinturón concentra la fuerza en el abdomen, con alto riesgo de lesión grave.",
+          "feedback": "El cinturón de seguridad clásico está prohibido como elemento anticaídas. La NCh 1258 exige arnés de cuerpo completo con cinco puntos de ajuste y anillo dorsal 'D'. Esta fue una de las causas de la incapacidad permanente en el caso real de Antofagasta 2024.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Exijo el arnés de cuerpo completo certificado bajo NCh 1258.",
+          "outcome": "Te entregan un arnés de cuerpo completo. Verificas el marcado de certificación y los cinco puntos de ajuste antes de continuar.",
+          "feedback": "Correcto. La NCh 1258 establece los requisitos de diseño, materiales, ensayos y marcado de los arneses. El arnés de cuerpo completo reemplaza definitivamente al antiguo cinturón.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya tienes el arnés puesto. Ahora debes conectar tu línea de vida. Observas que hay un punto de anclaje certificado a la estructura, pero está un poco más lejos, y un tubo metálico cercano más cómodo, aunque no certificado. ¿Dónde te anclas?",
+      "options": [
+        {
+          "text": "Me anclo al tubo metálico cercano, es más cómodo y rápido.",
+          "outcome": "El tubo no fue diseñado ni certificado para resistir las fuerzas de una detención de caída. En caso de caída, el anclaje podría fallar.",
+          "feedback": "Un arnés certificado no basta. La NCh 2272 regula el sistema completo: arnés + línea de vida + absorbedor + conector + punto de anclaje. Un anclaje no certificado anula la protección. En el caso de Antofagasta, la línea no estaba anclada a un punto certificado.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Me anclo al punto certificado, aunque implique reubicarme.",
+          "outcome": "Conectas la línea de vida con absorbedor de energía al punto de anclaje certificado. El sistema completo queda integrado.",
+          "feedback": "Muy bien. La NCh 2272 exige un sistema integral capaz de limitar la fuerza máxima de detención a 6 kN (≈600 kgf) y respetar la distancia libre de caída. El anclaje certificado es parte esencial del sistema.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El jefe de terreno te apura para empezar. Notas que la cuadrilla trabajará a 3,2 m de altura y no existe un plan de rescate definido ni protecciones colectivas (barandas o redes) instaladas. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Empiezo igual; 3,2 m no es tanto y hay que cumplir el plazo.",
+          "outcome": "La tarea avanza sin protecciones colectivas ni plan de rescate. Ante una fiscalización de la SEREMI de Salud o la Dirección del Trabajo, la empresa quedaría expuesta a multas.",
+          "feedback": "Toda tarea sobre 1,8 m se considera trabajo en altura y debe cumplir el DS 594. Los artículos 36 a 40 exigen protecciones colectivas y las modificaciones recientes incorporan la obligación de plan de rescate. En el caso real, la SEREMI cursó una multa de 150 UTM por incumplir los art. 36 y 53.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Detengo la tarea y exijo protecciones colectivas y plan de rescate antes de continuar.",
+          "outcome": "Se instalan barandas y se define un plan de rescate. La cuadrilla retoma el trabajo con todas las medidas exigidas.",
+          "feedback": "Decisión correcta. A 3,2 m la tarea califica como trabajo en altura (umbral de 1,8 m). El DS 594 obliga al empleador a proteger mediante medidas colectivas (art. 36-40), EPP certificado (art. 53) y plan de rescate. Detener una tarea insegura es legítimo y protege vidas.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Finalizada la jornada, la jefatura te pide ayudar a documentar el cumplimiento normativo para una posible fiscalización. ¿Cómo organizas la información del marco legal?",
+      "options": [
+        {
+          "text": "Indico que basta con tener los arneses comprados; el resto es trámite.",
+          "outcome": "La documentación queda incompleta. Tener arneses no demuestra cumplimiento del sistema ni de las obligaciones del empleador.",
+          "feedback": "Incorrecto. La sola compra de arnés no basta. El marco articula tres niveles que deben evidenciarse en conjunto: DS 594 (obligación del empleador), NCh 1258 (arnés certificado) y NCh 2272 (sistema integral de detención).",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Documento la triada: DS 594, NCh 1258 (arnés) y NCh 2272 (sistema completo), con anclajes y plan de rescate.",
+          "outcome": "Presentas un respaldo ordenado que demuestra cumplimiento legal y técnico ante la SEREMI de Salud y la Dirección del Trabajo.",
+          "feedback": "Excelente. El marco normativo chileno articula tres niveles: el DS 594 fija la obligación legal del empleador, la NCh 1258 define el arnés certificado y la NCh 2272 regula el sistema integral. Cualquier trabajo sobre 1,8 m debe cumplir esta triada.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso refleja la realidad del trabajo en altura en Chile, donde las caídas concentran cerca del 25% de los accidentes fatales en construcción. Las decisiones seguras se sostienen en una triada normativa: el DS 594 establece la obligación legal del empleador (protecciones colectivas en art. 36-40, EPP certificado en art. 53 y plan de rescate); la NCh 1258 exige arnés de cuerpo completo certificado, reemplazando el cinturón clásico prohibido; y la NCh 2272 regula el sistema completo de detención, limitando la fuerza a 6 kN y exigiendo anclaje certificado. Recuerda: toda tarea a 1,8 m o más sobre un nivel inferior estable es trabajo en altura. El caso de Antofagasta 2024 demuestra que la sola compra de 'arnés' no basta; se requiere un sistema integral certificado para evitar accidentes graves y sanciones de la SEREMI de Salud y la Dirección del Trabajo."
+}

@@ -1,0 +1,87 @@
+{
+  "title": "Decisiones en altura: la cubierta de Pudahuel",
+  "intro": "Eres Marcos, montajista de una empresa contratista en Santiago. Hoy debes reparar una filtración en el techo de una bodega industrial. La cubierta es de fibrocemento y se ve envejecida. Tu supervisor te entrega el permiso de trabajo, pero notas que algo falta. Cada decisión que tomes tendrá consecuencias reales para tu seguridad y la de tu cuadrilla.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Llegas a la obra a las 08:00. El supervisor te entrega un permiso de trabajo genérico, pero no ves un IPER específico para esta cubierta ni un ATS firmado por la cuadrilla. El viento sopla con cierta fuerza. ¿Qué haces antes de subir?",
+      "options": [
+        {
+          "text": "Subir de inmediato: el permiso de trabajo ya está firmado y no quieres atrasarte.",
+          "outcome": "Subes sin IPER ni ATS. La cubierta de fibrocemento no fue evaluada como soporte frágil. Pisas una plancha debilitada y sientes que cede.",
+          "feedback": "Decisión crítica. Sin IPER que evalúe el estado del soporte ni ATS firmado antes de iniciar, ninguna tarea sobre 1,8 m puede ejecutarse legalmente en Chile (DS 594, Art. 184 CT). El estado del soporte es el peligro más subestimado en caídas fatales.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Detener la tarea y solicitar el IPER específico de la cubierta y el ATS de la jornada antes de subir.",
+          "outcome": "Le pides al supervisor el IPER específico y propones realizar el ATS con la cuadrilla. Él reconoce que el IPER no contempló el estado de la cubierta.",
+          "feedback": "Correcto. El IPER es un producto vivo que se actualiza ante cada cambio de condición, y el ATS debe firmarse antes de iniciar la tarea. Detener el trabajo ante una evaluación deficiente es lo que evita fatalidades.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Junto al prevencionista actualizan el IPER. La cubierta de fibrocemento envejecida se clasifica como soporte frágil y la consecuencia de una caída se evalúa como fatal con probabilidad media. La matriz da resultado 'Intolerable'. ¿Qué control priorizas?",
+      "options": [
+        {
+          "text": "Entregar arnés y línea de vida a la cuadrilla y subir directamente, ya que el EPP es lo más rápido.",
+          "outcome": "Aplicas solo EPP. Aunque reduce el daño de una caída, no impide pisar una plancha que puede ceder, y el riesgo intolerable se mantiene.",
+          "feedback": "Insuficiente. El EPP es el último recurso de la jerarquía de controles, no el primero. Primero hay que explorar eliminación, sustitución e ingeniería.",
+          "score": -0.5,
+          "next": 4
+        },
+        {
+          "text": "Instalar pasarelas portátiles certificadas (NCh 2272) y líneas de vida fijas, y recién luego complementar con arnés y absorbedor.",
+          "outcome": "Aplicas controles de ingeniería: pasarelas que distribuyen el peso y líneas de vida, sumados al EPP. El riesgo intolerable se reduce a un nivel controlado.",
+          "feedback": "Excelente. Aplicas correctamente la jerarquía: controles de ingeniería antes del EPP. Un IPER bien hecho habría exigido pasarelas desde el inicio, tal como concluyó la pericia del caso de Pudahuel 2023.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "La plancha de fibrocemento cede bajo tu peso. Por suerte alcanzas a sujetarte de una viga. Tus compañeros logran asistirte. Estás ileso, pero el susto es enorme. El supervisor baja la faena. ¿Qué haces ahora?",
+      "options": [
+        {
+          "text": "Minimizar lo ocurrido y volver a subir rápido para no perder el día de trabajo.",
+          "outcome": "Insistes en volver sin corregir nada. Repites el mismo riesgo que casi te cuesta la vida.",
+          "feedback": "Decisión inaceptable. Un cuasi accidente es una alerta seria. Repetir la tarea sin IPER actualizado ni controles deja al empleador sin defensa de diligencia (Art. 184 CT) y expone a la cuadrilla a una fatalidad.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Reportar el cuasi accidente, exigir actualizar el IPER incorporando el estado del soporte y construir el ATS antes de cualquier reintento.",
+          "outcome": "Reportas el evento. El prevencionista reclasifica la cubierta como 'no transitable' y se planifican pasarelas certificadas y líneas de vida.",
+          "feedback": "Muy bien. Aprender del cuasi accidente y documentar IPER + ATS es lo correcto. Así se transforma un casi-incidente en una mejora real de seguridad.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Antes de subir, el supervisor te indica que el viento ha aumentado. La medición marca 34 km/h y parte del trabajo requiere uso de andamio auxiliar en el borde. ¿Qué decides?",
+      "options": [
+        {
+          "text": "Continuar igual: el plazo apremia y el andamio está certificado.",
+          "outcome": "Trabajas en andamio con viento sobre el límite permitido. Una ráfaga desestabiliza la plataforma y obliga a una evacuación de emergencia.",
+          "feedback": "Error grave. El trabajo en andamio está prohibido con viento superior a 30 km/h. La certificación del andamio no anula esta condición meteorológica de la norma.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Suspender la parte en andamio hasta que el viento baje de 30 km/h y dejarlo registrado en el ATS.",
+          "outcome": "Detienes la actividad en andamio y registras la condición en el ATS. Cuando el viento cede, retoman la tarea de forma segura.",
+          "feedback": "Correcto. El viento superior a 30 km/h prohíbe el trabajo en andamio. Documentarlo en el ATS demuestra control activo del riesgo y protege a la cuadrilla.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso refuerza tres pilares de la evaluación de riesgo en altura. Primero, ninguna tarea sobre 1,8 m puede ejecutarse sin IPER específico y ATS firmado antes de subir; el IPER es un documento vivo que debe contemplar el estado del soporte, el peligro más subestimado en caídas fatales como la ocurrida en Pudahuel 2023. Segundo, la jerarquía de controles obliga a explorar primero eliminación, sustitución e ingeniería (pasarelas y líneas de vida), dejando el EPP solo como último recurso. Tercero, condiciones como viento superior a 30 km/h prohíben el trabajo en andamio, independiente de su certificación. Detener una tarea ante una evaluación deficiente no es perder tiempo: es la decisión que evita fatalidades y mantiene la defensa de diligencia del empleador conforme al Art. 184 del Código del Trabajo."
+}

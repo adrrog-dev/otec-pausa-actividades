@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Marco Legal DS 977 — Reglamento Sanitario de los Alimentos",
+  "intro": "Evalúa tus conocimientos sobre el marco legal chileno de inocuidad alimentaria. Cada pregunta tiene una sola respuesta correcta. Responde con calma; al final recibirás retroalimentación para reforzar lo aprendido. Este contenido es referencial para la aplicación práctica en su lugar de trabajo.",
+  "questions": [
+    {
+      "q": "¿Qué norma corresponde al Reglamento Sanitario de los Alimentos (RSA) en Chile?",
+      "options": [
+        "Ley 20.606 de Etiquetado Nutricional",
+        "DS 977 de 1996 del MINSAL",
+        "Código del Trabajo (DFL 1)",
+        "Norma Chilena NCh 2861 de HACCP"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El DS 977/1996 del MINSAL es la norma matriz que regula la inocuidad de los alimentos en Chile.",
+      "feedbackKo": "Incorrecto. La norma matriz es el DS 977/1996 del MINSAL. Las demás son normas complementarias o de otra materia.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué organismo fiscaliza en terreno el cumplimiento del DS 977 en restaurantes y plantas de alimentos?",
+      "options": [
+        "ACHIPIA",
+        "El SAG",
+        "La SEREMI de Salud regional",
+        "La Municipalidad respectiva"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La SEREMI de Salud de cada región realiza la fiscalización en terreno y otorga la Resolución Sanitaria.",
+      "feedbackKo": "Incorrecto. La fiscalización en terreno la realiza la SEREMI de Salud regional. ACHIPIA coordina políticas, no fiscaliza.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es la función principal de ACHIPIA?",
+      "options": [
+        "Otorgar la Resolución Sanitaria a cada establecimiento",
+        "Coordinar las políticas país de inocuidad y calidad alimentaria",
+        "Aplicar multas en los sumarios sanitarios",
+        "Capacitar directamente a los manipuladores de alimentos"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. ACHIPIA coordina a MINSAL, MINAGRI, SAG, SERNAPESCA y otros, y mantiene el SNICA.",
+      "feedbackKo": "Incorrecto. ACHIPIA coordina las políticas país de inocuidad. Otorgar Resolución y multar corresponde a la SEREMI de Salud.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En un sumario sanitario por incumplimiento del DS 977, ¿cuál es el rango de multa aplicable?",
+      "options": [
+        "De 1 a 10 UTM",
+        "Solo amonestación verbal",
+        "De 0,1 a 1.000 UTM",
+        "Un monto fijo de 50 UTM"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El rango va de 0,1 a 1.000 UTM, además de posibles decomisos y clausura temporal o definitiva.",
+      "feedbackKo": "Incorrecto. El rango de multa es de 0,1 a 1.000 UTM, según el Código Sanitario. También puede haber clausura.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según el caso de la panadería fiscalizada, ¿cuál es la causa más frecuente de sanciones por parte de la SEREMI?",
+      "options": [
+        "Registros faltantes y capacitación del personal vencida",
+        "Reclamos de clientes por sabor del producto",
+        "Falta de cámaras de seguridad en el local",
+        "No contar con publicidad autorizada del producto"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. La mayoría de las sanciones se origina por registros faltantes y capacitación vencida, no por hallazgos espectaculares.",
+      "feedbackKo": "Incorrecto. La causa más frecuente son los registros faltantes y la capacitación del personal vencida. Mantenerlos al día es la mejor defensa preventiva.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

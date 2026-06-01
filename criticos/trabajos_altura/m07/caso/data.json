@@ -1,0 +1,87 @@
+{
+  "title": "Caso integrador: Montaje en altura en faena fotovoltaica",
+  "intro": "Eres Rodrigo, técnico montajista en un parque solar de la Región de Antofagasta. Hoy debes instalar paneles sobre una estructura metálica a 3,2 metros del suelo. El prevencionista entregó la charla matinal, pero el equipo viene atrasado con la planificación. Cada decisión que tomes impacta tu seguridad y el cumplimiento del marco normativo chileno (DS 594, NCh 1258 y NCh 2272). Aplica el protocolo completo paso a paso.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Antes de subir, revisas el equipo disponible. En el pañol encuentras un cinturón de seguridad clásico en buen estado y, en otra caja, un arnés de cuerpo completo con etiqueta NCh 1258. El supervisor te apura: 'Sube luego, da lo mismo'. ¿Qué eliges para trabajar a 3,2 m?",
+      "options": [
+        {
+          "text": "Tomar el cinturón de seguridad clásico porque es más rápido de poner",
+          "outcome": "Subes con un elemento prohibido como anticaídas. Si llega una fiscalización de la SEREMI de Salud, la empresa arriesga una multa similar a las 150 UTM aplicadas en el caso real de Antofagasta 2024.",
+          "feedback": "El cinturón de seguridad clásico está prohibido como elemento anticaídas en Chile. Solo el arnés de cuerpo completo NCh 1258 es válido.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Usar el arnés de cuerpo completo certificado NCh 1258",
+          "outcome": "Eliges el equipo correcto. El arnés cuenta con sus cinco puntos de ajuste y anillo dorsal 'D' como punto principal de conexión.",
+          "feedback": "Correcto. La NCh 1258 exige arnés de cuerpo completo certificado. Es la pieza base de un sistema seguro.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya con el arnés puesto, debes conectar tu línea de vida. Observas dos opciones de anclaje: un fierro suelto de la estructura que parece firme, y un punto de anclaje certificado instalado por el contratista, ubicado a tres metros de tu posición de trabajo. ¿Dónde te conectas?",
+      "options": [
+        {
+          "text": "Al fierro suelto, para no caminar hasta el punto certificado",
+          "outcome": "El anclaje no certificado podría no soportar la fuerza de detención de hasta 6 kN exigida por la NCh 2272. En una caída real, podría desprenderse.",
+          "feedback": "Incorrecto. La NCh 2272 regula el sistema completo: el punto de anclaje debe estar certificado para resistir la fuerza máxima de detención.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Al punto de anclaje certificado, verificando el absorbedor y conector",
+          "outcome": "Conectas tu línea con absorbedor de energía al punto certificado. El sistema arnés + línea + absorbedor + conector + anclaje queda integrado según NCh 2272.",
+          "feedback": "Correcto. Un sistema seguro no es solo el arnés: requiere anclaje certificado y todos los componentes NCh 2272 integrados.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Antes de iniciar, notas que nadie ha verificado la distancia libre de caída ni existe un plan de rescate disponible si alguien queda suspendido tras una caída. El supervisor dice que 'no alcanza el tiempo'. ¿Cómo procedes?",
+      "options": [
+        {
+          "text": "Comenzar igual, total el arnés ya está conectado",
+          "outcome": "Trabajas sin verificar el claro mínimo ni contar con rescate. Si caes, podrías impactar el suelo o quedar suspendido sin auxilio oportuno, agravando lesiones.",
+          "feedback": "Incorrecto. Las modificaciones al DS 594 exigen plan de rescate, y la NCh 2272 obliga a calcular la distancia libre de caída.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Detener la tarea y exigir verificación de distancia libre y plan de rescate",
+          "outcome": "Ejerces tu derecho y aplicas el protocolo. El prevencionista valida el claro mínimo y activa el plan de rescate antes de autorizar el trabajo.",
+          "feedback": "Correcto. La distancia libre de caída (NCh 2272) y el plan de rescate (DS 594) son obligatorios. Detener una tarea insegura es la decisión profesional adecuada.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Terminada la jornada, el prevencionista te pide un reporte sobre lo ocurrido en la faena para mejorar el procedimiento. ¿Qué informas?",
+      "options": [
+        {
+          "text": "Que todo salió bien y no es necesario registrar nada",
+          "outcome": "Se pierde la oportunidad de corregir las brechas detectadas y de dejar respaldo ante una eventual fiscalización de la Dirección del Trabajo.",
+          "feedback": "Insuficiente. El registro y la mejora continua son parte de la gestión preventiva exigible al empleador.",
+          "score": 0,
+          "next": null
+        },
+        {
+          "text": "Reportar las brechas: equipo prohibido en pañol, anclaje no certificado disponible y falta de plan de rescate",
+          "outcome": "El reporte permite retirar el cinturón clásico, señalizar anclajes y formalizar el plan de rescate. La faena queda alineada con DS 594, NCh 1258 y NCh 2272.",
+          "feedback": "Excelente. Documentar hallazgos cierra el ciclo del protocolo y fortalece el cumplimiento normativo de la empresa.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El trabajo seguro en altura no depende de un solo elemento, sino de aplicar el protocolo completo. En Chile, toda tarea sobre 1,8 m exige cumplir la triada normativa: el DS 594 establece la obligación legal del empleador (EPP certificado y plan de rescate), la NCh 1258 define el arnés de cuerpo completo como pieza certificada, y la NCh 2272 regula el sistema integral de detención (anclaje certificado, absorbedor, conector y distancia libre de caída). El caso real de Antofagasta 2024 demuestra que la sola compra de un 'arnés' no basta: el incumplimiento expone a multas de la SEREMI de Salud, fiscalización de la Dirección del Trabajo y, sobre todo, a lesiones graves o fatales. Detener una tarea insegura y reportar las brechas no es una falta, sino el comportamiento profesional esperado de trabajadores, jefaturas y prevencionistas."
+}

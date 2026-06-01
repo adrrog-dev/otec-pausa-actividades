@@ -1,0 +1,87 @@
+{
+  "title": "Decisión en altura: PTA y LOTO en la correa transportadora",
+  "intro": "Eres mantenedor en una faena minera del cobre. Te asignan el cambio de un rodillo en una correa transportadora a 7 metros de altura. El equipo se alimenta con energía eléctrica de 220 V. Tu supervisor te entrega un Permiso de Trabajo en Altura (PTA) firmado y te pide avanzar para no atrasar el turno. Tus decisiones determinarán si el trabajo es seguro o se convierte en un accidente grave.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Recibes el PTA firmado por el supervisor. Al revisarlo, notas que tiene la descripción de la tarea y las firmas, pero no aparece ninguna sección de LOTO documentada. La correa tiene energía eléctrica activa. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Comienzo el trabajo: el PTA está firmado y el supervisor me apura.",
+          "outcome": "Subes a la estructura sin aislar la energía. La correa podría activarse en cualquier momento, tal como ocurrió en Faena Andina 2023.",
+          "feedback": "Un PTA sin LOTO documentado en trabajos con energía residual es 'papel mojado'. La firma no reemplaza el bloqueo físico de la fuente de energía. Estás expuesto a un arrastre grave.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Detengo el inicio y exijo que se complemente el PTA con el procedimiento LOTO antes de subir.",
+          "outcome": "El supervisor reconoce la observación. Se detiene la tarea para documentar y ejecutar el bloqueo de energía.",
+          "feedback": "Correcto. Cualquier persona puede suspender o frenar un trabajo si detecta energía sin LOTO controlada. El PTA debe complementarse con LOTO cuando hay energía peligrosa.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Se autoriza aplicar LOTO sobre la correa de 220 V. El equipo ya fue apagado en condición controlada y se aisló el tablero eléctrico. El supervisor te pasa un candado del pañol que queda guardado en la sala de control. ¿Cómo procedes con el bloqueo?",
+      "options": [
+        {
+          "text": "Uso el candado del pañol y dejo la llave con el operador de sala para que abra al final del turno.",
+          "outcome": "El bloqueo queda bajo control de un tercero. Si la sala reactiva el tablero por error, no tienes protección.",
+          "feedback": "Esto rompe la regla 'una persona, un candado'. Solo el trabajador que instala el bloqueo debe retirarlo, y la llave debe permanecer en su poder.",
+          "score": -0.5,
+          "next": 4
+        },
+        {
+          "text": "Instalo mi candado personal con etiqueta (responsable, fecha y motivo) y verifico energía cero con un intento de arranque controlado.",
+          "outcome": "El tablero queda bloqueado con tu candado individual. Confirmas que el equipo no arranca: energía cero verificada.",
+          "feedback": "Excelente. Aplicaste correctamente bloquear, etiquetar y verificar. La regla 'una persona, un candado' garantiza que solo tú puedas reactivar la energía.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Mientras avanzas sin LOTO, un compañero detecta que la correa tiene energía activa y que el tablero no está bloqueado. Además, el viento comienza a superar los 30 km/h. ¿Qué decides?",
+      "options": [
+        {
+          "text": "Continúo: ya estoy arriba y bajar me hace perder tiempo.",
+          "outcome": "Permaneces en altura con energía sin controlar y condiciones meteorológicas adversas. El riesgo de arrastre y caída es crítico.",
+          "feedback": "Decisión muy peligrosa. Tanto la energía sin LOTO como el viento sobre 30 km/h son causales de suspensión inmediata del PTA. La presión de tiempo nunca justifica exponerse a una lesión grave.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Suspendo el trabajo, desciendo y notifico para aplicar LOTO y reevaluar las condiciones.",
+          "outcome": "Bajas de forma segura. Se suspende el PTA, se aplica LOTO y se espera a que el viento disminuya antes de renovar el permiso.",
+          "feedback": "Buena reacción. Reconociste a tiempo dos causales de suspensión: energía sin LOTO y viento sobre 30 km/h. El PTA debe renovarse si cambian las condiciones.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Terminas el cambio del rodillo sin incidentes. El turno está por finalizar y el supervisor del turno siguiente pide reutilizar el mismo PTA y retirar tu candado para reactivar la correa rápidamente. ¿Qué respondes?",
+      "options": [
+        {
+          "text": "Retiro yo mismo mi candado tras confirmar el fin del trabajo, y se emite un PTA nuevo para el turno siguiente.",
+          "outcome": "Reactivas la energía de forma controlada. El nuevo turno emite su propio permiso, ya que el PTA tiene vigencia máxima de un turno.",
+          "feedback": "Correcto en ambos puntos: solo quien instala el bloqueo lo retira, y el PTA no puede extenderse a otro turno. El documento se archiva por al menos 3 años para fiscalización.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Dejo mi candado puesto y autorizo al turno siguiente a usar el mismo PTA para no rehacer papeleo.",
+          "outcome": "El nuevo turno opera bajo un permiso vencido y con un bloqueo que no les pertenece, generando confusión sobre las responsabilidades.",
+          "feedback": "Incorrecto. El PTA tiene vigencia máxima de un turno y debe renovarse. Además, ningún trabajador debe operar bajo el candado de otra persona.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso refleja la lección de Faena Andina 2023: un PTA firmado no garantiza seguridad si no se complementa con LOTO cuando existe energía residual. Las decisiones clave fueron: (1) exigir LOTO antes de iniciar, (2) aplicar la regla 'una persona, un candado' con etiquetado y verificación de energía cero, (3) suspender el trabajo ante energía sin control o viento sobre 30 km/h, y (4) respetar la vigencia de un turno y el retiro personal del bloqueo. Recuerda: cualquier persona puede suspender un PTA al detectar un riesgo, el permiso se archiva mínimo 3 años, y un PTA sin LOTO en trabajos con energía es papel mojado ante una fiscalización de la autoridad."
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Decisiones frente al riesgo psicosocial: el caso del call center — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Decisiones frente al riesgo psicosocial: el caso del call center",
+  "intro": "Trabajas como prevencionista de riesgos en un call center de cobranza en Santiago Centro, con 240 trabajadores. Durante el último año las licencias por salud mental aumentaron un 40%. Hay metas agresivas de llamadas por hora, supervisión por audio en vivo y sin pausas estandarizadas. Además, una trabajadora acaba de presentar una denuncia formal por hostigamiento de su supervisor. La gerencia te pide orientación. Cada decisión que tomes tendrá consecuencias para la empresa y los trabajadores.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "La gerencia te pregunta si la empresa está obligada a aplicar alguna evaluación de riesgo psicosocial. ¿Qué recomiendas?",
+      "options": [
+        {
+          "text": "Aplicar el cuestionario CEAL-SM/SUSESO, ya que es obligatorio para toda empresa con trabajadores afiliados a la Ley 16.744.",
+          "outcome": "La empresa inicia el proceso de evaluación con un instrumento válido y reconocido por la SUSESO.",
+          "feedback": "Correcto. El CEAL-SM/SUSESO reemplazó al ISTAS21 chileno y es obligatorio para todas las empresas afiliadas al seguro Ley 16.744, con reaplicación al menos cada 2 años.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Esperar a que la mutualidad lo solicite formalmente antes de evaluar.",
+          "outcome": "El proceso se posterga y la empresa queda expuesta a fiscalización por incumplimiento.",
+          "feedback": "Incorrecto. La aplicación del CEAL-SM/SUSESO es una obligación permanente de la empresa, no depende de una solicitud de la mutualidad. El no cumplimiento puede generar multas y cotización diferenciada al alza.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Aplicar el protocolo PREXOR, porque mide el ambiente laboral.",
+          "outcome": "Se evalúa ruido ocupacional, que no aborda el problema de salud mental detectado.",
+          "feedback": "Incorrecto. PREXOR vigila la exposición a ruido. Para el riesgo psicosocial corresponde el cuestionario CEAL-SM/SUSESO.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Al revisar las condiciones del call center, analizas qué dimensiones del CEAL-SM/SUSESO podrían salir en riesgo alto. ¿Cuál priorizas como más afectada por el contexto descrito?",
+      "options": [
+        {
+          "text": "Exigencias psicológicas y trabajo activo, por las metas agresivas y la supervisión por audio en vivo sin pausas.",
+          "outcome": "Identificas correctamente las dimensiones más expuestas según las condiciones reales del puesto.",
+          "feedback": "Muy bien. Las metas agresivas, el monitoreo constante y la falta de pausas afectan directamente las exigencias psicológicas y reducen el control sobre el trabajo (trabajo activo). El apoyo social y las compensaciones también pueden verse comprometidos.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Solo doble presencia, porque es la dimensión más importante.",
+          "outcome": "Se analiza únicamente una dimensión y se pierde la visión integral del riesgo.",
+          "feedback": "Parcialmente incorrecto. El cuestionario evalúa 5 dimensiones: exigencias psicológicas, trabajo activo, apoyo social, compensaciones y doble presencia. En este caso, las exigencias y el control aparecen como las más críticas.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Respecto a la denuncia por hostigamiento, la gerencia consulta el plazo para iniciar la investigación bajo la Ley Karin (21.643). ¿Qué informas?",
+      "options": [
+        {
+          "text": "La empresa debe iniciar el procedimiento conforme a su protocolo y completar la investigación en un plazo de 30 días hábiles.",
+          "outcome": "La denuncia se gestiona con el procedimiento formal de investigación y sanción dentro del marco legal vigente.",
+          "feedback": "Correcto. La Ley Karin, vigente desde agosto de 2024, exige a toda empresa contar con protocolo de prevención y procedimiento de investigación, con un plazo de 30 días hábiles para la investigación.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "No corresponde investigar internamente; basta con derivar el caso a la mutualidad.",
+          "outcome": "Se omite el procedimiento obligatorio y la empresa incumple la Ley Karin.",
+          "feedback": "Incorrecto. La empresa tiene la obligación de aplicar su procedimiento de investigación y sanción. La denuncia también puede presentarse ante la Dirección del Trabajo, pero ello no exime a la empresa de actuar.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Los resultados confirman riesgo psicosocial alto. La gerencia propone documentar el resultado por escrito y dejarlo así para evitar costos. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Elaborar un plan de intervención con medidas como pausas estandarizadas, revisión de metas y fortalecimiento del apoyo de jefaturas.",
+          "outcome": "La empresa implementa medidas correctivas de ingeniería organizacional y programa la reevaluación.",
+          "feedback": "Correcto. El riesgo alto obliga a un plan de intervención; no es válido mantener el resultado sin intervenir. Medidas como pausas, ajuste de metas, mejora del clima y capacitación de jefaturas reducen el riesgo y favorecen la reevaluación.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Aceptar la propuesta de la gerencia y justificar el resultado por escrito sin intervenir.",
+          "outcome": "El riesgo se mantiene, las licencias siguen aumentando y la empresa queda expuesta a sanciones.",
+          "feedback": "Incorrecto. Frente a riesgo psicosocial alto existe la obligación legal de implementar un plan de intervención. Justificarlo por escrito no reemplaza la acción correctiva.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso integra los principales aprendizajes del módulo. La empresa estaba obligada a aplicar el cuestionario CEAL-SM/SUSESO, que reemplazó al ISTAS21 chileno y se reaplica al menos cada 2 años. Las condiciones del call center —metas agresivas, supervisión constante y falta de pausas— afectan especialmente las dimensiones de exigencias psicológicas y trabajo activo. La denuncia por hostigamiento se rige por la Ley Karin (21.643), vigente desde agosto de 2024, con un plazo de 30 días hábiles para investigar. Finalmente, ante un resultado de riesgo alto, la empresa no puede limitarse a documentar: debe implementar un plan de intervención con medidas concretas y programar la reevaluación. Una buena gestión preventiva protege la salud mental de los trabajadores y reduce la exposición legal de la organización."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

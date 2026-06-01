@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Cultura de Prevención, CPHS y RIOHS",
+  "intro": "Pon a prueba tus conocimientos sobre cultura preventiva, el Comité Paritario de Higiene y Seguridad (CPHS) y el Reglamento Interno (RIOHS) en el marco de la normativa chilena. Cada respuesta correcta suma puntos. ¡Adelante!",
+  "questions": [
+    {
+      "q": "¿A partir de cuántos trabajadores es obligatorio constituir un Comité Paritario de Higiene y Seguridad (CPHS) según el DS 54?",
+      "options": [
+        "Más de 10 trabajadores",
+        "Más de 15 trabajadores",
+        "Más de 25 trabajadores",
+        "Más de 50 trabajadores"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El DS 54 exige constituir un CPHS en toda empresa con más de 25 trabajadores.",
+      "feedbackKo": "Respuesta incorrecta. El DS 54 establece que el CPHS es obligatorio en empresas con más de 25 trabajadores.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Con qué frecuencia mínima debe reunirse el CPHS en sus sesiones ordinarias?",
+      "options": [
+        "Semanalmente",
+        "Mensualmente",
+        "Trimestralmente",
+        "Anualmente"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Las reuniones ordinarias del CPHS deben realizarse al menos una vez al mes, además de las extraordinarias ante accidentes graves o fatales.",
+      "feedbackKo": "Incorrecto. El CPHS debe sesionar de forma ordinaria al menos mensualmente, sin perjuicio de las reuniones extraordinarias.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿A partir de cuántos trabajadores es obligatorio contar con un Departamento de Prevención de Riesgos (DPR) según el DS 40?",
+      "options": [
+        "Más de 50 trabajadores",
+        "Más de 100 trabajadores",
+        "Más de 200 trabajadores",
+        "Más de 500 trabajadores"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El DPR es obligatorio en empresas con más de 100 trabajadores y debe ser dirigido por un experto en prevención.",
+      "feedbackKo": "Incorrecto. El DS 40 exige un Departamento de Prevención de Riesgos en empresas con más de 100 trabajadores.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es la característica principal de una cultura preventiva en nivel 'generativo'?",
+      "options": [
+        "Cumplir únicamente con lo mínimo exigido por la ley",
+        "Actuar solo después de que ocurre un accidente",
+        "Aprender de forma continua e integrar la seguridad en todas las decisiones",
+        "Concentrarse en identificar culpables tras un accidente"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La cultura generativa es proactiva, participativa y orientada al aprendizaje continuo, integrando la seguridad en cada decisión.",
+      "feedbackKo": "Incorrecto. La cultura generativa se distingue por el aprendizaje continuo y por integrar la seguridad en todas las decisiones, no por cumplir lo mínimo ni buscar culpables.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto a la entrega del RIOHS, ¿cuál afirmación es correcta?",
+      "options": [
+        "Basta con entregarlo solo al supervisor de cada área",
+        "Debe entregarse gratuitamente a cada trabajador al inicio de la relación laboral",
+        "Solo se entrega si el trabajador lo solicita por escrito",
+        "Es suficiente publicarlo en la página web de la empresa"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El RIOHS debe entregarse de forma gratuita a cada trabajador al inicio de la relación laboral, conforme al Código del Trabajo y al DS 40.",
+      "feedbackKo": "Incorrecto. El RIOHS debe entregarse gratuitamente a cada trabajador, no solo a la jefatura ni únicamente bajo solicitud.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

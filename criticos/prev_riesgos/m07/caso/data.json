@@ -1,0 +1,108 @@
+{
+  "title": "Decisión en obra: integrando la prevención de riesgos",
+  "intro": "Eres Carolina, prevencionista de riesgos en la obra residencial de la Constructora Andes Sur, en Puente Alto. Durante una inspección detectas situaciones que exigen aplicar de manera integrada el proceso IPER (Identificación de Peligros y Evaluación de Riesgos), la matriz de riesgos, la jerarquía de controles y la cultura preventiva. Tus decisiones tendrán consecuencias para los trabajadores propios y contratistas.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Al recorrer la obra observas a un trabajador contratista de instalaciones eléctricas trabajando sobre un andamio a 3 metros, sin línea de vida ni barandas, mientras dos compañeros transitan justo debajo. La faena debe entregarse en dos días. ¿Qué haces primero?",
+      "options": [
+        {
+          "text": "Detener de inmediato la tarea y aislar el área bajo el andamio.",
+          "outcome": "Detienes la actividad y delimitas la zona. Nadie queda expuesto a caída de altura ni a objetos desde arriba.",
+          "feedback": "Correcto. El primer paso del IPER aplicado es controlar el riesgo inminente. Detener una tarea con peligro grave e inminente es una facultad y un deber preventivo.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Anotar la observación en tu informe para revisarla al final de la jornada.",
+          "outcome": "El trabajo continúa y el trabajador pierde el equilibrio momentáneamente; alcanza a sujetarse del marco del andamio.",
+          "feedback": "Insuficiente. Frente a un peligro grave e inminente, postergar la acción expone a las personas. La identificación de peligros debe traducirse en control inmediato.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Avisar verbalmente al trabajador que tenga cuidado y seguir tu recorrido.",
+          "outcome": "El trabajador asiente, pero mantiene la misma condición de riesgo unos minutos después.",
+          "feedback": "Débil. Un llamado de atención no elimina ni controla el peligro de caída de altura. Se requiere una medida efectiva, no solo una advertencia.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Con la tarea detenida, debes priorizar el control. En la matriz de riesgos, la caída de altura aparece con probabilidad alta y consecuencia grave. ¿Qué control propones según la jerarquía de controles?",
+      "options": [
+        {
+          "text": "Instalar barandas y plataforma segura, y usar arnés con línea de vida anclada.",
+          "outcome": "Se implementa una protección colectiva (barandas) reforzada con elemento de protección personal (arnés).",
+          "feedback": "Correcto. La jerarquía de controles prioriza medidas de ingeniería y protección colectiva por sobre el EPP, que es la última barrera. Combinas ambas adecuadamente.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Entregar solo un casco y zapatos de seguridad al trabajador.",
+          "outcome": "El trabajador recibe EPP básico, pero el riesgo de caída de altura sigue sin control.",
+          "feedback": "Incorrecto. El EPP no controla el peligro principal de caída. Quedarse solo en la base de la jerarquía deja el riesgo crítico sin tratamiento.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Pedir al trabajador que termine rápido para reducir el tiempo de exposición.",
+          "outcome": "La presión por tiempo aumenta el apuro y la probabilidad de error.",
+          "feedback": "Incorrecto. Reducir el tiempo de exposición no es un control válido para un peligro grave; además incentiva conductas inseguras. La matriz exige bajar la probabilidad o la consecuencia con medidas reales.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "El trabajador contratista te comenta que nunca recibió información formal sobre los riesgos de su tarea al ingresar a la obra. ¿Cómo abordas la dimensión de cultura preventiva y cumplimiento normativo?",
+      "options": [
+        {
+          "text": "Coordinar con la empresa contratista la entrega de la ODI y registrar la capacitación, e integrar el caso al CPHS.",
+          "outcome": "Se regulariza el Derecho a Saber (ODI) y el Comité Paritario analiza la situación para evitar repetición.",
+          "feedback": "Correcto. El DS 40 obliga a informar oportunamente los riesgos (ODI). Llevarlo al CPHS fortalece la cultura preventiva y el aprendizaje organizacional.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Asumir que la ODI es responsabilidad exclusiva del contratista y no intervenir.",
+          "outcome": "El trabajador sigue sin información formal y la empresa principal queda expuesta a incumplimiento.",
+          "feedback": "Incorrecto. Bajo la Ley 20.123, la empresa principal tiene deberes de coordinación y vigilancia sobre los contratistas. Desentenderse aumenta el riesgo legal y operativo.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Entregar tú misma un documento ODI sin registrar firma ni capacitación.",
+          "outcome": "Existe un papel, pero sin trazabilidad ni evidencia de comprensión.",
+          "feedback": "Parcial. Avanzas, pero la ODI exige registro y verificación de comprensión. Sin evidencia, no se cumple el espíritu del DS 40 ni se consolida la cultura preventiva.",
+          "score": 0,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Para cerrar el ciclo, debes asegurar que el aprendizaje se mantenga en el tiempo en toda la obra. ¿Qué medida adoptas?",
+      "options": [
+        {
+          "text": "Actualizar la matriz de riesgos, estandarizar el control en un procedimiento de trabajo seguro y difundirlo en charlas de cinco minutos.",
+          "outcome": "El control queda documentado y se replica de forma sistemática en todas las cuadrillas.",
+          "feedback": "Correcto. Sintetizas el ciclo completo: IPER, matriz, controles y cultura. La estandarización y la difusión continua sostienen la mejora preventiva.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Considerar el caso resuelto porque ya se controló el riesgo puntual.",
+          "outcome": "El control no se documenta y semanas después reaparece la misma condición en otra cuadrilla.",
+          "feedback": "Insuficiente. La prevención es un proceso continuo. Sin estandarización ni difusión, los riesgos críticos tienden a repetirse.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso integra los pilares del módulo: identificar peligros (IPER), evaluarlos en una matriz de riesgos, aplicar la jerarquía de controles priorizando medidas colectivas y de ingeniería por sobre el EPP, y fortalecer la cultura preventiva mediante el Derecho a Saber (ODI, DS 40), la coordinación con contratistas (Ley 20.123) y el rol del Comité Paritario. Las mejores decisiones combinan acción inmediata frente a peligros graves, controles efectivos, cumplimiento normativo con respaldo documental y estandarización para sostener el aprendizaje en el tiempo. Recuerde que la prevención eficaz no termina al controlar un riesgo puntual: es un ciclo continuo de identificación, evaluación, control y mejora que involucra a trabajadores, jefaturas y prevencionistas."
+}

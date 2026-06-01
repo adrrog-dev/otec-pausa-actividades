@@ -1,0 +1,94 @@
+{
+  "title": "Alerta de lote: una decisión bajo presión",
+  "intro": "Eres jefe de turno en una planta de alimentos en Chile. Un cliente reporta posibles trozos metálicos en un envase de pulpa de fruta. Es viernes por la tarde y debes actuar con la información de trazabilidad disponible. Cada decisión cuenta para proteger al consumidor y a la empresa.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Recibes la llamada del cliente reportando un cuerpo extraño metálico. Aún no hay confirmación, pero el riesgo es real. ¿Cuál es tu primera acción?",
+      "options": [
+        {
+          "text": "Activar el procedimiento de retiro y convocar al equipo de crisis (calidad, producción, logística, comunicaciones)",
+          "outcome": "El equipo de crisis se reúne en menos de una hora y comienza la identificación de lotes afectados.",
+          "feedback": "Correcto. Ante una posible no conformidad de riesgo, se activa el recall plan y se convoca al equipo de crisis. Actuar temprano permite acotar el problema.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Esperar hasta el lunes para confirmar con análisis de laboratorio antes de mover a nadie",
+          "outcome": "Durante el fin de semana el producto sigue distribuyéndose y llega a más consumidores.",
+          "feedback": "Incorrecto. Un posible cuerpo extraño metálico puede dañar al consumidor. La velocidad de reacción es clave: nunca se posterga la activación por esperar confirmación total.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Pedir al cliente que devuelva solo su envase y cerrar el caso como reclamo aislado",
+          "outcome": "Se pierde la oportunidad de revisar si otros envases del mismo lote están afectados.",
+          "feedback": "Insuficiente. Un cuerpo extraño puede afectar a todo un lote. No se debe tratar como reclamo aislado sin revisar la trazabilidad.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El equipo necesita identificar a qué clientes se despachó el lote sospechoso. El estándar internacional GFSI exige hacerlo en ≤4 horas. ¿Cómo procedes?",
+      "options": [
+        {
+          "text": "Usar los registros de trazabilidad descendente por lote (guías de despacho, cliente, fecha y cantidad)",
+          "outcome": "En menos de 4 horas identificas todos los destinos del lote afectado de forma acotada.",
+          "feedback": "Excelente. La trazabilidad descendente identifica a qué clientes se despachó cada lote. Cumplir el estándar de ≤4 horas permite un recall rápido y acotado.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Revisar manualmente facturas de todo el mes sin filtrar por lote",
+          "outcome": "El proceso toma dos días y obliga a retirar mucho más producto del necesario.",
+          "feedback": "Ineficiente. Sin trazabilidad por lote, debes retirar todo el stock, encareciendo el recall. El identificador único de lote es esencial.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Confirmas presencia de metal en el lote. Determinas que corresponde a un recall con riesgo a la salud. ¿A quién notificas?",
+      "options": [
+        {
+          "text": "Notificar a la SEREMI de Salud y a ACHIPIA según corresponda, además de clientes y distribuidores con acta de recepción",
+          "outcome": "La autoridad queda informada y los clientes inician la devolución coordinada del producto.",
+          "feedback": "Correcto. En un recall de riesgo a la salud la notificación a la autoridad (SEREMI Salud / ACHIPIA / ISP / SAG según corresponda) es obligatoria, junto con la comunicación a clientes.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Notificar solo a los clientes y resolver internamente sin avisar a la autoridad",
+          "outcome": "La empresa queda expuesta a sanciones por incumplir la obligación de notificación sanitaria.",
+          "feedback": "Incorrecto. En un recall con riesgo a la salud, notificar a la autoridad es obligatorio. Omitirlo genera responsabilidad legal.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "El producto retirado está en cuarentena. ¿Cómo cierras correctamente el proceso?",
+      "options": [
+        {
+          "text": "Disponer el producto con destrucción documentada, investigar la causa raíz y definir acción correctiva permanente",
+          "outcome": "Se identifica una falla en el detector de metales, se corrige y se documenta el cierre del recall.",
+          "feedback": "Correcto. El cierre incluye disposición documentada, análisis de causa raíz (5 Porqués / Ishikawa) y acción correctiva y preventiva para evitar recurrencia.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Destruir el producto y reanudar la operación sin investigar el origen",
+          "outcome": "El problema vuelve a aparecer semanas después porque no se corrigió la causa.",
+          "feedback": "Insuficiente. Sin investigación de causa raíz y acción preventiva, la no conformidad se repetirá. El recall no se cierra correctamente.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso muestra que la diferencia entre un recall barato y uno catastrófico está en la calidad de la trazabilidad por lote y la velocidad de reacción. Las decisiones correctas fueron: activar de inmediato el equipo de crisis, usar la trazabilidad descendente para identificar destinos en ≤4 horas, notificar obligatoriamente a la autoridad sanitaria y cerrar el proceso con disposición documentada e investigación de causa raíz. Aplicar estos pasos protege al consumidor, reduce pérdidas y resguarda la responsabilidad de la empresa. Recuerda realizar simulacros periódicos de recall para mantener al equipo preparado."
+}

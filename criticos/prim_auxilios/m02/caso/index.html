@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emergencia en el patio de bodega: RCP y DEA en acción — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Emergencia en el patio de bodega: RCP y DEA en acción",
+  "intro": "Son las 16:20 hrs en una empresa de logística en San Bernardo. Mientras realizas tu turno, un compañero de 52 años se desploma repentinamente en el patio de carga. Eres el primer trabajador en llegar a su lado. Lo que decidas en los próximos minutos puede marcar la diferencia entre la vida y la muerte. Mantén la calma y aplica lo aprendido en el módulo de RCP y DEA.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Tu compañero está en el suelo, inmóvil. Te acercas y observas que no se mueve. ¿Qué haces primero?",
+      "options": [
+        {
+          "text": "Lo sacudo suavemente por los hombros y le hablo fuerte para verificar si responde.",
+          "outcome": "El trabajador no responde al estímulo verbal ni táctil. Observas su pecho: presenta jadeos aislados (respiración agónica). Has reconocido correctamente un posible paro cardiorrespiratorio.",
+          "feedback": "Correcto. La evaluación inicial es verificar respuesta verbal y táctil. La respiración agónica (gasping) NO es respiración normal: es un signo de paro y exige actuar de inmediato.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Le doy agua y lo siento contra la pared para que se recupere.",
+          "outcome": "Mover y dar líquido a una persona inconsciente es peligroso y retrasa la atención vital. El compañero sigue sin responder y cada segundo cuenta.",
+          "feedback": "Incorrecto. Nunca des líquidos ni muevas innecesariamente a una víctima inconsciente. Primero verifica conciencia y respiración. Cada minuto sin maniobras reduce la sobrevida entre 7 y 10%.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Espero unos minutos a ver si se levanta solo antes de hacer algo.",
+          "outcome": "El tiempo es crítico. Esperar sin actuar disminuye drásticamente las probabilidades de sobrevida del compañero.",
+          "feedback": "Incorrecto. En menos de 10 segundos debes decidir si iniciar RCP. Esperar puede ser fatal. Actúa con rapidez y método.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Confirmas que no responde y tiene respiración agónica. Hay otros dos trabajadores cerca observando. ¿Cómo organizas la respuesta?",
+      "options": [
+        {
+          "text": "Grito pidiendo ayuda, instruyo a un compañero a llamar al SAMU 131 y a otro a buscar el DEA, y comienzo compresiones de inmediato.",
+          "outcome": "Activas la cadena de sobrevida. Un compañero llama al 131, otro corre por el DEA mientras tú inicias las compresiones torácicas sin demora.",
+          "feedback": "Excelente. Reconocimiento precoz, llamada al SAMU 131 y RCP inmediata por testigo son los primeros eslabones de la cadena de sobrevida. Delegar tareas específicas evita que nadie actúe.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Llamo yo mismo al 131 con calma y dejo las compresiones para cuando termine la llamada.",
+          "outcome": "Mientras hablas por teléfono, nadie está realizando compresiones. El corazón del compañero lleva minutos sin recibir circulación.",
+          "feedback": "Mejorable. Delega la llamada a otra persona para que tú inicies las compresiones sin retraso. La RCP no debe esperar. Si estuvieras solo, primero llama y luego comprime.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Inicias compresiones. Debes mantener una RCP de alta calidad. ¿Cómo aplicas la técnica?",
+      "options": [
+        {
+          "text": "Comprimo en la mitad inferior del esternón, 5-6 cm de profundidad, a 100-120 por minuto, ciclos de 30 compresiones y 2 ventilaciones.",
+          "outcome": "Tus compresiones son firmes, rítmicas y permiten descompresión completa. Mantienes el ciclo 30:2 de forma constante hasta que llega el DEA.",
+          "feedback": "Perfecto. Frecuencia 100-120/min, profundidad 5-6 cm, punto correcto en el esternón y ciclo 30:2. Recuerda cambiar de rescatista cada 2 minutos (5 ciclos) para no perder calidad.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Comprimo suave y lento para no lastimarle las costillas, alrededor de 60 por minuto.",
+          "outcome": "Las compresiones débiles y lentas no generan circulación suficiente para mantener oxigenado el cerebro del compañero.",
+          "feedback": "Incorrecto. La frecuencia correcta es 100-120/min y la profundidad 5-6 cm. Compresiones insuficientes no salvan vidas. Es preferible una RCP enérgica y bien aplicada.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Llega el DEA. Lo enciendes y debes usarlo correctamente. El equipo analiza el ritmo e indica 'descarga aconsejada'. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Grito '¡Despejen!', verifico que nadie toca al paciente y presiono el botón de descarga. Luego reanudo RCP de inmediato.",
+          "outcome": "La descarga se administra de forma segura. Reanudas las compresiones sin demora. La RCP continúa hasta la llegada del SAMU, que toma el control del soporte avanzado. El compañero recupera signos vitales.",
+          "feedback": "Excelente. Antes de la descarga siempre grita '¡Despejen!' y verifica que nadie toque a la víctima, para evitar lesiones. Tras la descarga se reanuda RCP por 2 minutos hasta nuevo análisis.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Presiono la descarga rápido sin avisar, mientras un compañero todavía sujeta el brazo de la víctima.",
+          "outcome": "La descarga afecta también al compañero que tocaba a la víctima, generando un segundo accidente y riesgo para el equipo de rescate.",
+          "feedback": "Incorrecto. Nunca presiones la descarga sin gritar '¡Despejen!' y confirmar visualmente que nadie toca al paciente. La seguridad del equipo es prioritaria.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Coloqué los parches sobre la ropa, así que la descarga no tendrá buen contacto, pero igual presiono.",
+          "outcome": "Los parches sobre la ropa impiden la conducción eléctrica adecuada. La descarga es inefectiva y se pierde tiempo valioso.",
+          "feedback": "Incorrecto. Los parches deben ir sobre piel desnuda y seca: uno bajo la clavícula derecha y otro en el costado izquierdo. Si hay humedad, sudor o vello excesivo, seca o rasura la zona.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El paro cardiorrespiratorio mata en minutos si no hay respuesta. Como viste en este caso, la secuencia correcta es clara: reconocer el paro (no responde + respiración agónica), activar la cadena de sobrevida llamando al SAMU 131 y pidiendo el DEA, iniciar RCP de alta calidad (frecuencia 100-120/min, profundidad 5-6 cm, ciclo 30:2) y operar el DEA con seguridad, siempre gritando '¡Despejen!' antes de cada descarga. Recuerda que en Chile la Ley 21.156 (2019) obliga a contar con DEA en espacios públicos masivos: identifica el más cercano a tu lugar de trabajo. Tu rapidez y método pueden triplicar las probabilidades de que un compañero sobreviva. Este caso tiene fines formativos; ante una emergencia real, llama siempre al SAMU 131 y sigue las indicaciones del personal especializado."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

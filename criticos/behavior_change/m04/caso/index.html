@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Una denuncia bajo la Ley Karin: ¿qué harías tú? — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Una denuncia bajo la Ley Karin: ¿qué harías tú?",
+  "intro": "Eres jefatura de un equipo en una empresa chilena. Una colaboradora se acerca a tu oficina, visiblemente incómoda, y te cuenta que un compañero del área la ha estado tratando de forma hostil y con comentarios despectivos sobre su capacidad 'por ser mujer'. Lo que decidas a continuación marcará la diferencia para ella, para tu equipo y para el cumplimiento de la Ley 21.643 (Ley Karin). Tus decisiones tienen consecuencias.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "La trabajadora te relata la situación y te pide ayuda, pero te dice que tiene miedo de que se sepa y de represalias. ¿Cómo reaccionas en este primer momento?",
+      "options": [
+        {
+          "text": "La escuchas con respeto, le agradeces la confianza y le explicas que existe un canal de denuncia confidencial según la Ley Karin.",
+          "outcome": "La trabajadora se siente acogida y comprende que hay un procedimiento formal que la protege.",
+          "feedback": "Correcto. La Ley Karin obliga a contar con un canal de denuncia confidencial y a actuar con perspectiva de género. Escuchar sin juzgar y orientar hacia el procedimiento formal es el primer paso adecuado.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Le dices que probablemente exagera y que 'son cosas del trabajo' que se resuelven hablando entre ellos.",
+          "outcome": "La trabajadora se siente desestimada y duda en seguir adelante. El ambiente hostil continúa.",
+          "feedback": "Incorrecto. Minimizar una posible situación de acoso laboral con perspectiva de género incumple el espíritu de la Ley Karin. La empresa tiene el deber de acoger toda denuncia y activar el protocolo.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Le pides que te envíe pruebas antes de hacer cualquier cosa, porque 'sin evidencia no se puede actuar'.",
+          "outcome": "La trabajadora se siente presionada y sola frente a la carga de probar todo por sí misma.",
+          "feedback": "Parcialmente incorrecto. La denuncia puede ser verbal o escrita y debe acogerse dentro de 3 días. No corresponde condicionar el inicio del procedimiento a que la persona reúna pruebas previas.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "La denuncia se formaliza. Como jefatura, debes decidir qué hacer mientras se inicia la investigación interna, que tiene un plazo máximo de 30 días corridos.",
+      "options": [
+        {
+          "text": "Coordinas con RR.HH. medidas de resguardo inmediatas, como separar turnos o reasignar funciones para evitar contacto entre las partes.",
+          "outcome": "Se reduce el riesgo de nuevos episodios y la trabajadora puede desempeñarse con mayor tranquilidad durante la investigación.",
+          "feedback": "Correcto. La Ley Karin exige medidas de resguardo inmediatas durante la investigación, como separación o cambio de turnos, para proteger a la persona afectada.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Decides no hacer cambios para 'no generar rumores' y esperar el resultado de la investigación.",
+          "outcome": "La trabajadora sigue expuesta al compañero denunciado y el clima se vuelve más tenso.",
+          "feedback": "Incorrecto. Omitir las medidas de resguardo deja desprotegida a la persona afectada y expone a la empresa a sanciones y a un eventual sumario ante la Dirección del Trabajo.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "La investigación avanza. Tu gerencia te pregunta cómo evitar que situaciones como esta se repitan en el futuro. ¿Qué propones?",
+      "options": [
+        {
+          "text": "Propones capacitación obligatoria anual sobre Ley Karin, sesgos y microagresiones, junto con reforzar el protocolo y el comité de D&I con KPI.",
+          "outcome": "La empresa adopta una estrategia preventiva y medible, fortaleciendo un entorno respetuoso.",
+          "feedback": "Excelente. La prevención sostenida (capacitación mínima de 4 hrs/año, comité de D&I con indicadores) es clave para construir entornos respetuosos y cumplir la ley más allá del caso puntual.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Sugieres enviar un correo recordando 'portarse bien' y dar el tema por cerrado una vez terminada la investigación.",
+          "outcome": "El mensaje se diluye rápidamente y no cambia las conductas de fondo.",
+          "feedback": "Insuficiente. Un correo aislado no genera cambio cultural ni cumple con la lógica preventiva y de capacitación continua que promueve la Ley Karin y las buenas prácticas de D&I.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Planteas implementar prácticas concretas de equidad: bandas salariales transparentes, paneles de entrevista mixtos y mentoría cruzada.",
+          "outcome": "La organización conecta la prevención del acoso con una estrategia integral de equidad de género.",
+          "feedback": "Muy bien. Vincular la prevención con prácticas estructurales de equidad (transparencia salarial, paneles mixtos, mentoría) ataca las relaciones de poder históricas que están en la base del problema.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Aplicar equidad de género en el trabajo implica tres cosas que practicaste en este caso: acoger toda denuncia con respeto y derivarla al canal confidencial, activar las medidas de resguardo dentro de los plazos de la Ley Karin (acoger en 3 días, investigar en máximo 30 días corridos) y, sobre todo, prevenir mediante capacitación continua y prácticas concretas de D&I. La Ley 21.643 obliga a empresas con 1 o más trabajadores a tener protocolo, reglamento actualizado y canal de denuncia. Pero la ley es el piso: construir entornos respetuosos requiere distinguir diversidad, inclusión, equidad y pertenencia, y traducirlas en acciones medibles. Como jefatura o prevencionista, tu rol es decisivo para que cada persona pueda trabajar con seguridad y ser tratada con justicia."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

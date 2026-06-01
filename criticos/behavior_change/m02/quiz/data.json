@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Microagresiones y Sesgos Inconscientes",
+  "intro": "Pon a prueba lo aprendido sobre cómo reconocer microagresiones y sesgos inconscientes en el entorno laboral chileno. Responde cada pregunta y revisa la retroalimentación para reforzar tus conocimientos. ¡Mucho éxito!",
+  "questions": [
+    {
+      "q": "¿Qué caracteriza a una microinvalidación?",
+      "options": [
+        "Insultar abiertamente a la persona",
+        "Negar la experiencia o realidad del otro",
+        "Excluir físicamente a alguien de un grupo",
+        "Despedir a un trabajador sin causa justificada"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La microinvalidación niega o minimiza la experiencia del otro, por ejemplo con frases como 'yo no veo color' o 'aquí todos somos iguales'.",
+      "feedbackKo": "Incorrecto. La microinvalidación se caracteriza por negar la experiencia o realidad del otro, como decir 'aquí no hay machismo, son ideas tuyas'.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuándo ocurre el sesgo de afinidad en el trabajo?",
+      "options": [
+        "Cuando se valora a quien tiene más experiencia laboral",
+        "Cuando se prefiere o se promueve a quien se parece a uno mismo",
+        "Cuando se discrimina a una persona por su edad",
+        "Cuando se promueve únicamente por antigüedad en la empresa"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El sesgo de afinidad nos lleva a favorecer a quienes comparten nuestro colegio, comuna o género, sin notarlo.",
+      "feedbackKo": "Incorrecto. El sesgo de afinidad ocurre cuando preferimos a quien se parece a nosotros, por ejemplo del mismo colegio o comuna.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según ComunidadMujer (2023), ¿qué porcentaje de mujeres profesionales en Chile reportó al menos una microagresión por género en los últimos 12 meses?",
+      "options": [
+        "32%",
+        "48%",
+        "64%",
+        "89%"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El 64% de las mujeres profesionales reportó microagresiones por género, cifra que sube a 71% en regiones.",
+      "feedbackKo": "Incorrecto. La cifra correcta es 64% a nivel nacional, y aumenta a 71% en regiones.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿En qué situación se prefiere la técnica del calling-in por sobre el calling-out?",
+      "options": [
+        "Cuando el caso es público y debe denunciarse abiertamente",
+        "Cuando se trata de microagresiones cotidianas no graves",
+        "Cuando ya existe una denuncia formal en curso",
+        "Cuando es la tercera vez que ocurre el hecho"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El calling-in invita a la reflexión en privado y es más efectivo para microagresiones cotidianas no graves.",
+      "feedbackKo": "Incorrecto. El calling-in se prefiere para microagresiones cotidianas no graves; el calling-out se reserva para casos graves o reiterados.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto a la relación entre intención e impacto en una microagresión, ¿cuál afirmación es correcta?",
+      "options": [
+        "Si no hubo mala intención, entonces no se produce daño",
+        "Una microagresión sin mala intención igualmente puede causar daño",
+        "El impacto solo importa cuando hay reiteración",
+        "Lo único relevante es lo que la persona quiso decir"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Lo que importa no es solo la intención, sino el impacto que recibe la otra persona. Todos tenemos puntos ciegos.",
+      "feedbackKo": "Incorrecto. Aunque no haya mala intención, una microagresión puede causar daño. Lo clave es el impacto en quien la recibe.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

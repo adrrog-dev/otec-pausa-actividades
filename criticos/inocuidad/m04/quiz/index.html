@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quiz: POES y Sanitización — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Actividad interactiva</footer>
+<script>window.__DATA__ = {
+  "title": "Quiz: POES y Sanitización",
+  "intro": "Bienvenido a la evaluación del módulo de POES (Procedimientos Operacionales Estandarizados de Sanitización). Responde las 5 preguntas para reforzar lo aprendido sobre limpieza, sanitización, productos químicos y verificación. Cada respuesta incluye retroalimentación para apoyar tu aprendizaje. ¡Éxito!",
+  "questions": [
+    {
+      "q": "¿Cuál es la diferencia entre limpieza y sanitización?",
+      "options": [
+        "Son lo mismo y se usan de forma indistinta",
+        "La limpieza remueve suciedad visible; la sanitización reduce los microorganismos a niveles seguros",
+        "La sanitización solo utiliza agua sin químicos",
+        "La limpieza siempre requiere agua a más de 82 °C"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La limpieza elimina la suciedad visible (grasa, restos, polvo) y la sanitización reduce la carga microbiana a niveles seguros. Son etapas distintas y complementarias.",
+      "feedbackKo": "Recuerda: limpieza y sanitización no son lo mismo. La limpieza remueve suciedad visible, mientras que la sanitización reduce los microorganismos a niveles seguros.",
+      "points": 20,
+      "difficulty": "Fácil"
+    },
+    {
+      "q": "¿Cuál es la concentración típica de cloro libre para sanitizar superficies?",
+      "options": [
+        "10 ppm",
+        "50 ppm",
+        "100-200 ppm",
+        "1000 ppm"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El hipoclorito de sodio se utiliza entre 100 y 200 ppm de cloro libre, con un tiempo de contacto de 1 a 2 minutos sobre superficies y utensilios.",
+      "feedbackKo": "La concentración adecuada es 100-200 ppm de cloro libre. Dosis muy bajas no son eficaces y dosis muy altas pueden dañar superficies o dejar residuos.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Por qué no se debe mezclar cloro con ácido durante la sanitización?",
+      "options": [
+        "Porque potencia el efecto y se permite en lácteos",
+        "Porque es peligroso: libera gas tóxico",
+        "Porque solo se puede mezclar al final del turno",
+        "Porque encarece el procedimiento sin afectar la seguridad"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Mezclar cloro con ácido genera gas tóxico, lo que representa un riesgo grave para la salud de los trabajadores. Nunca deben combinarse.",
+      "feedbackKo": "Atención: mezclar cloro con ácido libera gas tóxico y constituye un riesgo grave para los trabajadores. Esta práctica está prohibida en todo momento.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué método permite verificar la sanitización de una superficie en aproximadamente 15 segundos?",
+      "options": [
+        "Cultivo microbiológico en laboratorio",
+        "ATP por bioluminiscencia",
+        "Medición de pH",
+        "Test de gluten"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El método ATP por bioluminiscencia mide la materia orgánica residual y entrega resultados en unos 15 segundos, ideal para verificación rápida por turno.",
+      "feedbackKo": "El método correcto es ATP por bioluminiscencia, que mide materia orgánica residual y entrega resultados en segundos. El cultivo microbiológico requiere días.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según el caso de la planta láctea, ¿dónde suele esconderse la contaminación que un POES incompleto no elimina?",
+      "options": [
+        "Solo en los pisos y muros de la sala",
+        "En las juntas, gomas y zonas muertas de los equipos",
+        "Únicamente en la ropa del personal",
+        "En las hojas de seguridad de los químicos"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Las juntas, gomas y zonas muertas (dead-ends) son puntos donde se forman biofilms persistentes, como los de Listeria. Por eso el desarme periódico de equipos es clave.",
+      "feedbackKo": "Recuerda el caso de Osorno: la contaminación se esconde en juntas, gomas y zonas muertas de los equipos. Un POES sin desarme periódico es un POES incompleto.",
+      "points": 20,
+      "difficulty": "Avanzado"
+    }
+  ]
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

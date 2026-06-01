@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Evaluación de riesgo en trabajos en altura",
+  "intro": "Pon a prueba lo aprendido sobre IPER y ATS en trabajos en altura. Recuerda que sin estas herramientas documentadas, ninguna tarea sobre 1,8 m puede ejecutarse legalmente en Chile. Selecciona la alternativa correcta en cada pregunta.",
+  "questions": [
+    {
+      "q": "¿Cuál es el primer nivel que se debe explorar en la jerarquía de controles para trabajo en altura?",
+      "options": [
+        "Uso de EPP (arnés y línea de vida)",
+        "Eliminación del riesgo",
+        "Controles administrativos",
+        "Sustitución del equipo"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La eliminación es el primer nivel: antes de cualquier control, hay que preguntarse si la tarea puede realizarse desde el suelo, por ejemplo con herramientas telescópicas.",
+      "feedbackKo": "Respuesta incorrecta. El primer nivel es la Eliminación del riesgo. El EPP es siempre el último recurso de la jerarquía, no el primero.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿A partir de qué velocidad de viento se prohíbe el trabajo sobre andamios?",
+      "options": [
+        "15 km/h",
+        "20 km/h",
+        "30 km/h",
+        "50 km/h"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Con viento superior a 30 km/h queda prohibido el trabajo en andamios, ya que aumenta significativamente el riesgo de caída y pérdida de estabilidad.",
+      "feedbackKo": "Respuesta incorrecta. El límite es 30 km/h. Por sobre esa velocidad de viento no se debe trabajar en andamios.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿En qué momento debe firmarse el Análisis de Trabajo Seguro (ATS)?",
+      "options": [
+        "Al finalizar la jornada",
+        "Antes de iniciar la tarea",
+        "Solo si ocurre un accidente",
+        "Una vez al mes"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El ATS debe firmarse antes de subir y mantenerse disponible en obra. La firma deja constancia de que cada trabajador comprendió los peligros y controles.",
+      "feedbackKo": "Respuesta incorrecta. El ATS se firma antes de iniciar la tarea, no después ni de forma esporádica. Es un requisito operativo de cada jornada.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según la matriz Probabilidad x Consecuencia, ¿cómo se clasifica una consecuencia fatal con probabilidad baja?",
+      "options": [
+        "Aceptable",
+        "Tolerable",
+        "Intolerable",
+        "No aplica"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Aunque la probabilidad sea baja, una consecuencia fatal siempre se clasifica como Intolerable. Por eso en altura la probabilidad debe llevarse a muy baja mediante controles.",
+      "feedbackKo": "Respuesta incorrecta. Una consecuencia fatal, incluso con probabilidad baja, se considera Intolerable. La gravedad del resultado obliga a reforzar los controles.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En el caso de Pudahuel 2023, ¿qué variable no contemplada en el IPER provocó la caída del montajista?",
+      "options": [
+        "La velocidad del viento en la faena",
+        "El estado del soporte (cubierta frágil)",
+        "El tiempo de exposición del trabajador",
+        "La altura total de la estructura"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El IPER no contempló el estado del soporte: la cubierta de fibrocemento estaba envejecida y era no transitable. Este es el peligro más subestimado en caídas fatales.",
+      "feedbackKo": "Respuesta incorrecta. La falla fue no evaluar el estado del soporte (cubierta frágil). Un IPER bien hecho la habría categorizado como 'no transitable' y exigido pasarelas certificadas.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

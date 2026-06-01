@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emergencia en obra: corte con sierra circular — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Emergencia en obra: corte con sierra circular",
+  "intro": "Eres prevencionista en una obra de construcción en Santiago Centro. Son las 10:15 hrs cuando un carpintero de 35 años se corta el antebrazo izquierdo con una sierra circular. Presenta un sangrado rojo brillante que sale a chorros (hemorragia arterial). Cada decisión cuenta: una hemorragia arterial puede causar shock en 3 a 5 minutos. ¿Qué haces?",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "El trabajador está consciente pero asustado, sangrando con fuerza por el antebrazo. Tienes el botiquín a un costado. ¿Cuál es tu primera acción?",
+      "options": [
+        {
+          "text": "Colocarte guantes del botiquín y aplicar presión directa con gasas sobre la herida.",
+          "outcome": "Te proteges del riesgo biológico y comienzas a controlar la hemorragia de inmediato.",
+          "feedback": "Correcto. El primer paso es el EPP del rescatista (guantes) y luego presión directa firme con gasa o paño limpio por al menos 10 minutos sin levantar.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Aplicar de inmediato un torniquete en el antebrazo para detener el sangrado rápido.",
+          "outcome": "Detienes el sangrado, pero saltaste pasos clave y aumentas el riesgo de lesión innecesaria.",
+          "feedback": "Incorrecto. El torniquete es el último recurso, solo si la presión directa y el vendaje compresivo fallan. Además, no debe ir sobre la articulación.",
+          "score": -0.5,
+          "next": 2
+        },
+        {
+          "text": "Buscar agua para lavar la herida antes de hacer cualquier cosa.",
+          "outcome": "Pierdes tiempo valioso mientras el trabajador sigue perdiendo sangre.",
+          "feedback": "Incorrecto. En una hemorragia arterial no debes detenerte a lavar; la prioridad es detener el sangrado con presión directa de inmediato.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Aplicaste presión directa por 10 minutos elevando el brazo, pero el sangrado no cede del todo. ¿Cómo continúas?",
+      "options": [
+        {
+          "text": "Colocar un vendaje compresivo ajustado sobre la zona, manteniendo la presión.",
+          "outcome": "El vendaje compresivo controla la hemorragia y dejas las manos libres para pedir ayuda.",
+          "feedback": "Correcto. Si la presión directa no es suficiente, el siguiente paso es el vendaje compresivo, vigilando color y temperatura de los dedos.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Retirar la gasa para revisar cómo va la herida.",
+          "outcome": "Al levantar la gasa interrumpes el coágulo en formación y el sangrado vuelve con fuerza.",
+          "feedback": "Incorrecto. Nunca levantes la gasa durante la compresión: reinicia el sangrado. Agrega más gasa encima si es necesario.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "La hemorragia se controló con el vendaje compresivo. Esperas la ambulancia, pero notas que el trabajador está pálido, sudoroso, con pulso rápido y dice tener mucha sed. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Acostarlo en posición de shock (piernas elevadas unos 30 cm), abrigarlo y NO darle líquidos.",
+          "outcome": "Mantienes la perfusión hacia órganos vitales y previenes que el shock progrese.",
+          "feedback": "Correcto. Son signos de shock hipovolémico. La posición de shock, el abrigo y no dar líquidos por boca son lo indicado mientras llega la ayuda.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Darle agua para calmar la sed mientras espera.",
+          "outcome": "El trabajador podría aspirar o complicarse si requiere cirugía con anestesia.",
+          "feedback": "Incorrecto. Nunca des líquidos por boca a una víctima en shock o con posible necesidad de cirugía.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Sentarlo y pedirle que camine un poco para que se active.",
+          "outcome": "El movimiento agrava el shock y puede provocar pérdida de conciencia.",
+          "feedback": "Incorrecto. Ante signos de shock, la víctima debe permanecer acostada y abrigada, nunca de pie o caminando.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Llega la ambulancia de la Mutual. El trabajador está estable. Como prevencionista, ¿qué corresponde hacer respecto al protocolo de la empresa?",
+      "options": [
+        {
+          "text": "Asegurar que se presente la DIAT y derivar a la mutual según la Ley 16.744.",
+          "outcome": "El accidente queda correctamente documentado y el trabajador accede a la cobertura legal.",
+          "feedback": "Correcto. Todo accidente laboral debe declararse mediante la DIAT; la mutual cubre atención y reposo según la Ley 16.744.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Esperar a ver si el trabajador necesita reposo antes de registrar el evento.",
+          "outcome": "Retrasas el proceso y arriesgas el acceso oportuno a la cobertura.",
+          "feedback": "Incorrecto. La declaración del accidente no debe postergarse; el registro y la DIAT son obligatorios e inmediatos.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El manejo de una hemorragia arterial sigue una secuencia clara: protección del rescatista (guantes), presión directa por al menos 10 minutos, elevación, vendaje compresivo y, solo si todo lo anterior falla, torniquete. Reconocer a tiempo los signos de shock hipovolémico (palidez, sudoración, taquicardia, sed) y aplicar la posición de shock puede salvar una vida mientras llega la ayuda. Recuerda nunca levantar la gasa durante la compresión ni dar líquidos por boca. Finalmente, todo accidente laboral debe declararse mediante la DIAT para activar la cobertura de la mutual según la Ley 16.744. Como respondedor en tu empresa, tu actuación rápida y ordenada marca la diferencia entre una emergencia controlada y una complicación grave."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

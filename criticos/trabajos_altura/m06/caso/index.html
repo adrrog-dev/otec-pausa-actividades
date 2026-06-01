@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Caída en altura: activa el plan de rescate — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Caída en altura: activa el plan de rescate",
+  "intro": "Estás trabajando en una obra en altura en Santiago. Son las 10:35 hrs. Un compañero de tu cuadrilla, Marcos, pierde el equilibrio y cae desde una plataforma a 4 metros. Su arnés detiene la caída y queda suspendido, consciente pero sin poder alcanzar ninguna estructura para apoyarse. Tú eres el primero en darte cuenta. Cada minuto cuenta: a partir de los 3 a 5 minutos suspendido inmóvil comienza el riesgo del síndrome del arnés. Tus decisiones determinarán el desenlace.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Marcos quedó suspendido por su arnés a 4 metros de altura. Está consciente y te grita pidiendo ayuda. La ventana crítica corre. ¿Cuál es tu primera acción?",
+      "options": [
+        {
+          "text": "Llamar de inmediato a Bomberos y esperar su llegada para no improvisar.",
+          "outcome": "Bomberos confirma que llegará en aproximadamente 22 minutos. Marcos sigue suspendido sin apoyo.",
+          "feedback": "Llamar a Bomberos NO es un plan de rescate: su tiempo de respuesta suele superar los 20 minutos críticos. El rescate debe estar disponible en la propia obra y activarse en menos de 10 minutos.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Activar de inmediato el plan de rescate de la obra: avisar por radio a la brigada designada y al supervisor.",
+          "outcome": "La brigada de rescate, con dos rescatistas capacitados, recibe el aviso y se moviliza con el equipo (cuerda, descendedor y poleas). Mientras tanto, mantienes contacto visual y verbal con Marcos.",
+          "feedback": "Correcto. El plan de rescate propio, con brigada entrenada y comunicación disponible, es la respuesta que exige la NCh 2272 y la práctica industrial chilena. La activación temprana es clave para llegar antes de los 10 minutos.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Trepar tú mismo sin equipo de rescate para intentar bajarlo rápidamente.",
+          "outcome": "Subes sin sistema de rescate ni protección adecuada y casi pierdes el equilibrio. Generas una segunda situación de riesgo.",
+          "feedback": "Improvisar sin equipo ni capacitación pone en peligro tu vida y retrasa el rescate real. El rescate lo ejecuta la brigada con el equipo destinado para ello.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Mientras la ayuda se organiza, Marcos sigue consciente. Han pasado unos 3 minutos. ¿Qué le indicas hacer mientras esperan al rescatista?",
+      "options": [
+        {
+          "text": "Que se quede totalmente inmóvil para ahorrar energía.",
+          "outcome": "Marcos permanece quieto. A los pocos minutos empieza a sentir mareo, sudor frío y palidez: signos de alerta del síndrome del arnés.",
+          "feedback": "La inmovilidad acelera el estasis venoso en las piernas y la pérdida de retorno al corazón. Es justamente lo que se debe evitar mientras llega el rescate.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Indicarle que pedalee continuamente con las piernas y use la cinta de alivio si la tiene.",
+          "outcome": "Marcos comienza a pedalear y logra apoyar los pies en la cinta de alivio (foot loop). El bombeo muscular mejora su retorno venoso y se mantiene estable.",
+          "feedback": "Correcto. El auto-rescate, mientras el trabajador está consciente, incluye pedalear para activar el bombeo muscular y reducir el estasis venoso. Esto gana tiempo valioso dentro de la ventana crítica.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Pedirle que se cuelgue boca abajo para descansar los brazos.",
+          "outcome": "La maniobra es peligrosa y empeora su condición; Marcos se desorienta y aumenta el riesgo.",
+          "feedback": "Esta indicación es errónea y peligrosa. Lo correcto es mantener activo el bombeo muscular con las piernas y conservar la posición segura del arnés.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "La brigada llega y ejecuta un rescate por descenso asistido en menos de 8 minutos. Marcos está en el suelo, consciente y dice sentirse 'casi bien'. ¿Cómo manejas el post-rescate?",
+      "options": [
+        {
+          "text": "Acostarlo de inmediato boca arriba y completamente plano para que descanse.",
+          "outcome": "Al acostarlo plano de golpe, la sangre acumulada en las piernas retorna bruscamente y Marcos sufre un episodio de descompensación (shock por reflujo).",
+          "feedback": "Nunca se debe acostar plano de inmediato. El riesgo de 'shock por reflujo' es real. La posición correcta es semi-sentada por al menos 30 minutos.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Mantenerlo en posición semi-sentada al menos 30 minutos, evaluar signos vitales y trasladarlo a la Mutual o ACHS.",
+          "outcome": "Marcos queda en posición semi-sentada, se controlan sus signos vitales y se coordina el traslado al centro de salud de referencia. Se documenta el incidente y se retira el EPP involucrado.",
+          "feedback": "Correcto. El protocolo post-rescate exige posición semi-sentada por 30 minutos mínimo, evaluación y traslado obligatorio a ACHS o Mutual aunque parezca recuperado, por el riesgo de complicaciones tardías como el fallo renal.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Como dice sentirse bien, lo dejas seguir trabajando tras un breve descanso.",
+          "outcome": "Marcos retoma faenas. Horas después comienza con síntomas de complicación renal que pudieron ser prevenidos.",
+          "feedback": "Sentirse recuperado no descarta complicaciones tardías. El síndrome del arnés puede provocar fallo renal horas después. El traslado a centro de salud es siempre obligatorio.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "El incidente ha sido controlado. El prevencionista te pide retroalimentar a la cuadrilla sobre lo aprendido. ¿Qué mensaje central transmites?",
+      "options": [
+        {
+          "text": "Que basta con tener arneses certificados para estar protegidos.",
+          "outcome": "El mensaje deja un vacío peligroso en la prevención de la cuadrilla.",
+          "feedback": "El arnés detiene la caída, pero abre una segunda emergencia: la suspensión. La protección real incluye un plan de rescate documentado y una brigada lista para actuar.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Que toda tarea en altura requiere plan de rescate documentado, brigada propia, equipo disponible y comunicación, activables antes de iniciar la faena.",
+          "outcome": "La cuadrilla refuerza su plan de rescate, designa brigadistas con nombre y RUT, identifica puntos de izaje y define el centro de salud de referencia. Programan un simulacro para medir tiempos.",
+          "feedback": "Excelente cierre. La prevención efectiva se basa en un plan de rescate previo y entrenado. La ventana de 20 minutos no admite improvisación: la respuesta debe estar en obra y activarse en menos de 10 minutos.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso refuerza el objetivo del módulo: activar el plan de rescate en altura. Las decisiones correctas siguen una secuencia clave: 1) activar de inmediato la brigada propia, ya que llamar a Bomberos no es plan de rescate por sus tiempos de respuesta sobre los 20 minutos críticos; 2) indicar auto-rescate (pedaleo y cinta de alivio) mientras el trabajador está consciente para retrasar el síndrome del arnés; 3) ejecutar el rescate antes de los 10 minutos; y 4) aplicar el protocolo post-rescate en posición semi-sentada por 30 minutos y trasladar siempre a ACHS o Mutual, aunque la persona parezca recuperada. El caso del Edificio Las Condes 2025 demuestra la consecuencia fatal y legal (300 UTM y querella por Art. 184 CT) de no contar con brigada ni plan. La lección final: en altura, el plan de rescate se prepara y se entrena antes de subir, nunca se improvisa durante la emergencia."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

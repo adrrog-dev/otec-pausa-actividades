@@ -1,0 +1,88 @@
+{
+  "title": "Reactivando la cultura preventiva: el caso del CPHS dormido",
+  "intro": "Eres Carla, supervisora en una empresa de aseo industrial con 145 trabajadores. Te enteras de que el Comité Paritario (CPHS) lleva 8 meses sin sesionar, el RIOHS tiene 6 años sin actualizar y la accidentabilidad subió del 4% al 7,8%. La gerencia te pide ayudar a reactivar la cultura de prevención. Cada decisión que tomes tendrá consecuencias. Recuerda: la prevención se construye día a día.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Durante una ronda, observas a un trabajador limpiando una zona húmeda sin señalización de piso resbaladizo ni los EPP indicados. Hay clientes circulando cerca. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Detienes la tarea, conversas con respeto sobre el riesgo y refuerzas el uso correcto del EPP y la señalización.",
+          "outcome": "El trabajador instala la señalización y se pone los EPP. Agradece que le hayas explicado el motivo y no solo dado una orden.",
+          "feedback": "Correcto. El liderazgo visible y la conversación de seguridad son pilares de la cultura preventiva. Corregir en el momento, sin buscar culpables, fortalece comportamientos seguros.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Lo dejas pasar porque el CPHS no está funcionando y no es tu responsabilidad directa.",
+          "outcome": "Más tarde, un cliente resbala en esa zona. El incidente queda registrado y aumenta la preocupación de la gerencia.",
+          "feedback": "Incorrecto. La inacción de las jefaturas frente a actos inseguros refleja una cultura reactiva o patológica. La seguridad es responsabilidad de todos, especialmente de quien lidera equipos.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Anotas el nombre del trabajador para sancionarlo según el RIOHS más adelante.",
+          "outcome": "El trabajador se siente vigilado y deja de reportar otros riesgos por miedo a represalias.",
+          "feedback": "Parcialmente inadecuado. Saltar directo a la sanción, sin corregir el riesgo inmediato ni dialogar, instala una cultura de miedo que reduce el reporte de casi-accidentes, un indicador clave de cultura madura.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "La gerencia te pide proponer cómo reactivar el CPHS, que lleva 8 meses sin sesionar. Sabes que el DS 54 exige reuniones ordinarias mensuales. ¿Qué propones primero?",
+      "options": [
+        {
+          "text": "Convocar de inmediato a sesión ordinaria mensual, regularizar el calendario y dejar actas formales de cada reunión.",
+          "outcome": "El CPHS vuelve a sesionar. Se retoma la investigación de accidentes y la vigilancia del cumplimiento de medidas.",
+          "feedback": "Correcto. El DS 54 establece que el CPHS debe reunirse ordinariamente al menos una vez al mes. Regularizar las sesiones y documentarlas es el primer paso legal y cultural.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Esperar a que ocurra un accidente grave para convocar una reunión extraordinaria.",
+          "outcome": "La empresa sigue sin instancia preventiva activa y la accidentabilidad no mejora.",
+          "feedback": "Incorrecto. Reaccionar solo ante accidentes es propio de una cultura reactiva. Las reuniones extraordinarias se suman a las ordinarias mensuales, no las reemplazan.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Designar tú misma a los integrantes del Comité para agilizar el proceso.",
+          "outcome": "Trabajadores cuestionan la validez del Comité por no haber sido elegidos por votación.",
+          "feedback": "Incorrecto. El CPHS es bipartito: 3 representantes del empleador y 3 trabajadores elegidos por votación. No puede designarse a dedo. Hacerlo afecta su legitimidad y vulnera el DS 54.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Al revisar el RIOHS de 6 años de antigüedad, notas que no incluye procedimientos sobre Ley Karin ni la Obligación de Informar (ODI) actualizada. ¿Cómo actúas?",
+      "options": [
+        {
+          "text": "Levantas las brechas, las presentas como propuestas concretas al CPHS y coordinas la actualización con RR.HH., notificando luego a la DT y SEREMI de Salud.",
+          "outcome": "El RIOHS se actualiza incorporando los procedimientos de Ley Karin y la ODI vigente. Cada trabajador recibe una copia.",
+          "feedback": "Excelente. El RIOHS debe mantenerse actualizado, entregarse gratuitamente a cada trabajador e incorporar los procedimientos de reclamos vinculados a Ley Karin. La participación del CPHS fortalece la cultura participativa.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Actualizas solo lo mínimo y entregas el documento únicamente a los supervisores.",
+          "outcome": "Los trabajadores no conocen los nuevos procedimientos y se generan dudas sobre cómo denunciar situaciones de la Ley Karin.",
+          "feedback": "Incorrecto. El RIOHS debe entregarse gratuitamente a cada trabajador, no solo a las jefaturas. Una actualización incompleta deja a la organización expuesta y mantiene una cultura de cumplimiento mínimo.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Decides que el RIOHS está bien porque 'siempre se ha trabajado así' y postergas la actualización.",
+          "outcome": "La empresa queda sin procedimientos formales frente a denuncias de acoso y riesgos no informados.",
+          "feedback": "Incorrecto. Un RIOHS desactualizado no responde a las exigencias legales vigentes ni protege a las personas. La consistencia entre lo que se dice y lo que se hace es la base de una cultura madura.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La cultura de prevención no se decreta: se construye con decisiones consistentes. En este caso viste que corregir riesgos en el momento, reactivar el CPHS con sesiones mensuales (DS 54) y mantener el RIOHS actualizado y entregado a cada trabajador (DS 40 y Código del Trabajo) son acciones concretas que mueven a la organización desde una cultura reactiva hacia una proactiva y generativa. Para sostener este avance, la empresa debería medir indicadores como la tasa de reporte de casi-accidentes, el porcentaje de participación en el CPHS y el índice de clima de seguridad. Recuerda: el liderazgo visible de las jefaturas y la participación de los trabajadores son los pilares que sostienen una cultura preventiva real."
+}

@@ -1,0 +1,88 @@
+{
+  "title": "Caída en obra: ¿qué hacemos según la Ley 16.744?",
+  "intro": "Usted trabaja en la Constructora Andes Sur, en una obra residencial en Puente Alto. Conviven 87 trabajadores propios y 4 empresas contratistas. Durante la jornada, un trabajador de la contratista eléctrica cae desde un andamio a 3 metros y sufre una fractura expuesta de tibia. Usted es la primera persona en reaccionar. Sus decisiones determinarán la correcta atención del trabajador y el cumplimiento del marco legal.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "El trabajador accidentado está consciente pero con dolor intenso y sangrado en la pierna. Varios compañeros se acercan. ¿Cuál es su primera acción?",
+      "options": [
+        {
+          "text": "Activar la atención de urgencia y derivar al organismo administrador del seguro (la mutualidad a la que está adherida la contratista).",
+          "outcome": "Se controla el sangrado, se inmoviliza la zona y se coordina el traslado al centro asistencial del organismo administrador. El trabajador recibe atención oportuna.",
+          "feedback": "Correcto. La Ley 16.744 establece prestaciones médicas a cargo del organismo administrador (ACHS, Mutual CChC, IST o ISL) al que está adherido el empleador del trabajador, en este caso la contratista eléctrica.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Pedir que el trabajador se levante y camine hasta la oficina para registrar lo ocurrido.",
+          "outcome": "Movilizar al trabajador con una fractura expuesta agrava la lesión y aumenta el riesgo de infección y complicaciones.",
+          "feedback": "Incorrecto. Ante una fractura expuesta nunca se debe movilizar a la persona sin inmovilización. La prioridad es la atención de urgencia y la derivación al organismo administrador.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Esperar instrucciones antes de hacer cualquier cosa, para no asumir responsabilidades.",
+          "outcome": "La demora retrasa la atención y pone en riesgo la salud del trabajador.",
+          "feedback": "Insuficiente. Ante una emergencia, todos deben actuar para resguardar la vida y la salud. El deber de cuidado del empleador (art. 184 del Código del Trabajo) y la lógica preventiva exigen reacción inmediata.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El trabajador ya está siendo trasladado al centro asistencial. Ahora corresponde formalizar el accidente. ¿Qué documento se debe emitir y en qué plazo?",
+      "options": [
+        {
+          "text": "Emitir la Denuncia Individual de Accidente del Trabajo (DIAT) y presentarla al organismo administrador dentro de las 24 horas.",
+          "outcome": "La DIAT queda registrada a tiempo, permitiendo activar formalmente las prestaciones y la investigación del accidente.",
+          "feedback": "Correcto. La DIAT debe presentarse al organismo administrador dentro de las 24 horas de conocido el accidente. Es un trámite obligatorio y clave para la cobertura.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "No emitir documento, ya que el trabajador es de una contratista y no de Andes Sur.",
+          "outcome": "Se omite una obligación legal y se expone a la empresa principal a sanciones por parte de la fiscalización.",
+          "feedback": "Incorrecto. Bajo la Ley 20.123 de subcontratación, la empresa principal tiene responsabilidad y deberes de coordinación. El accidente debe denunciarse mediante DIAT al organismo administrador correspondiente.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Esperar el alta médica para recopilar antecedentes y recién entonces emitir la denuncia.",
+          "outcome": "El plazo legal de 24 horas se incumple, lo que puede afectar la cobertura y generar observaciones de la SUSESO.",
+          "feedback": "Incorrecto. La DIAT no espera el alta: debe presentarse dentro de las 24 horas de conocido el hecho. La investigación se realiza en paralelo.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Durante la revisión posterior, se constata que el trabajador contratista nunca recibió capacitación sobre los riesgos de su puesto. ¿Qué obligación se incumplió?",
+      "options": [
+        {
+          "text": "El Derecho a Saber (ODI), establecido en el DS 40, que obliga a informar los riesgos antes del inicio de funciones.",
+          "outcome": "Se identifica el incumplimiento y se establece un plan para regularizar la entrega del ODI a todos los trabajadores, propios y contratistas.",
+          "feedback": "Correcto. El DS 40 instaura la Obligación de Informar los Riesgos Laborales (ODI). Bajo la Ley 20.123, la empresa principal también debe velar por la coordinación preventiva con sus contratistas.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "El DS 594, que regula la cotización adicional del seguro.",
+          "outcome": "Se confunde la normativa aplicable y no se corrige el problema de fondo.",
+          "feedback": "Incorrecto. El DS 594 fija condiciones sanitarias y ambientales mínimas, no la obligación de informar riesgos. El Derecho a Saber (ODI) está en el DS 40.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Ninguna, porque la capacitación es voluntaria para los contratistas.",
+          "outcome": "Se normaliza un incumplimiento grave que expone a sanciones y a nuevos accidentes.",
+          "feedback": "Incorrecto. La capacitación sobre riesgos (ODI, DS 40) es obligatoria para todo trabajador antes de iniciar funciones, sin distinción entre propios y contratistas.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso integra los elementos centrales de la Ley 16.744 y su normativa complementaria. Ante un accidente del trabajo: primero se resguarda la vida y la salud activando la atención de urgencia y derivando al organismo administrador (ACHS, Mutual CChC, IST o ISL) al que está adherido el empleador del trabajador; luego se formaliza con la DIAT dentro de las 24 horas; y finalmente se revisan los deberes preventivos, como el Derecho a Saber (ODI) del DS 40. En obras con subcontratación (Ley 20.123), la empresa principal mantiene deberes de coordinación y vigilancia preventiva. Recordar siempre que las mutualidades son corporaciones sin fines de lucro y que la SUSESO fiscaliza el sistema. Aplicar correctamente este marco protege a las personas y previene sanciones para la empresa."
+}

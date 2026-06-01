@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Permiso de Trabajo en Altura (PTA) y LOTO",
+  "intro": "Evalúa lo que aprendiste sobre la emisión de un Permiso de Trabajo en Altura seguro y la aplicación del procedimiento LOTO. Lee cada pregunta con atención y selecciona una sola respuesta. Recibirás retroalimentación inmediata para reforzar los puntos críticos de seguridad.",
+  "questions": [
+    {
+      "q": "¿Cuál es la vigencia máxima de un Permiso de Trabajo en Altura (PTA)?",
+      "options": [
+        "1 turno (8-12 horas)",
+        "24 horas continuas",
+        "1 semana laboral",
+        "Indefinida mientras dure la obra"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. El PTA tiene vigencia máxima de 1 turno (8-12 hrs). Si cambia el equipo, las condiciones o ocurre un evento, debe renovarse.",
+      "feedbackKo": "Incorrecto. La vigencia máxima del PTA es de 1 turno (8-12 hrs). Debe renovarse si cambian las condiciones, el equipo o ante un cuasi-accidente.",
+      "points": 10,
+      "difficulty": "facil"
+    },
+    {
+      "q": "¿Quién está autorizado a suspender un PTA al detectar una condición de riesgo?",
+      "options": [
+        "Solo el supervisor de obra",
+        "Solo el prevencionista de riesgos",
+        "Cualquier persona que detecte un riesgo",
+        "Solo el jefe de la brigada de rescate"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Cualquier persona puede suspender un PTA ante un cambio de condición, como viento sobre 30 km/h, EPP defectuoso o fatiga del trabajador.",
+      "feedbackKo": "Incorrecto. La seguridad es responsabilidad de todos: cualquier persona que detecte un riesgo puede suspender el PTA, no solo el supervisor.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "¿Cuál es la regla básica del procedimiento LOTO?",
+      "options": [
+        "Un candado por turno de trabajo",
+        "Una persona, un candado",
+        "Un candado compartido por equipo",
+        "Candado solo si lo solicita la jefatura"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. 'Una persona, un candado': cada trabajador instala su propio candado personal y solo él puede retirarlo al finalizar la tarea.",
+      "feedbackKo": "Incorrecto. La regla es 'una persona, un candado'. Cada trabajador coloca su candado personal y es el único que puede retirarlo.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "Antes de emitir el PTA, ¿qué documentos deben estar previamente firmados?",
+      "options": [
+        "Solo el IPER",
+        "Solo el ATS",
+        "IPER y ATS",
+        "Solo la cotización del trabajo"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El PTA exige verificar que el IPER y el ATS estén firmados, asegurando que los riesgos fueron identificados y analizados antes de iniciar la tarea.",
+      "feedbackKo": "Incorrecto. Deben estar firmados tanto el IPER como el ATS antes de emitir el PTA, garantizando la evaluación de riesgos de la tarea.",
+      "points": 10,
+      "difficulty": "intermedio"
+    },
+    {
+      "q": "Respecto a las fuentes de energía cubiertas por el LOTO, ¿cuál afirmación es correcta?",
+      "options": [
+        "El LOTO se aplica únicamente a energía eléctrica",
+        "El LOTO cubre energía eléctrica, mecánica, hidráulica, neumática, química, térmica y gravitacional",
+        "El LOTO solo aplica a energía mecánica e hidráulica",
+        "El LOTO es opcional cuando hay un PTA firmado"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El LOTO controla múltiples fuentes de energía: eléctrica, mecánica, hidráulica, neumática, química, térmica y gravitacional. El caso de Faena Andina 2023 demostró que omitirlo cuesta vidas.",
+      "feedbackKo": "Incorrecto. El LOTO no se limita a la energía eléctrica: incluye mecánica, hidráulica, neumática, química, térmica y gravitacional. Un PTA sin LOTO en trabajos con energía es papel mojado.",
+      "points": 10,
+      "difficulty": "dificil"
+    }
+  ]
+}

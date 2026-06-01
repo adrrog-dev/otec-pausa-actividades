@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Nudges y Diseño Conductual para Entornos Respetuosos",
+  "intro": "Pon a prueba lo aprendido sobre nudges, arquitectura de elección y micro-comportamientos. Cada pregunta tiene una sola respuesta correcta. Al responder recibirás retroalimentación para reforzar tu aprendizaje. ¡Adelante!",
+  "questions": [
+    {
+      "q": "¿Qué característica define a un nudge y lo diferencia de la coerción?",
+      "options": [
+        "Es siempre más económico que una campaña tradicional",
+        "No prohíbe opciones ni altera significativamente los incentivos económicos",
+        "Es invisible para la persona que decide",
+        "Solo puede aplicarse en empresas grandes"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Un nudge orienta la conducta manteniendo la libertad de elegir: no obliga ni cambia los incentivos económicos de fondo.",
+      "feedbackKo": "Revisa la definición. Lo esencial de un nudge es que respeta la libertad de elección: no prohíbe opciones ni altera los incentivos económicos.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según BJ Fogg, la fórmula B=MAP describe el comportamiento como el resultado de:",
+      "options": [
+        "Behavior = Motivation × Ability × Prompt",
+        "Behavior = Motivation + Ability + Plan",
+        "Buenos Amigos que Motivan a las Personas",
+        "Big Actions Matter Performance"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. B=MAP significa que un comportamiento ocurre cuando coinciden Motivación, Capacidad (Ability) y un Gatillo (Prompt).",
+      "feedbackKo": "La respuesta correcta es Behavior = Motivation × Ability × Prompt. El comportamiento requiere motivación, capacidad y un gatillo que lo active.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Por qué funcionan tan bien las opciones por defecto (defaults) en la arquitectura de elección?",
+      "options": [
+        "Porque son más rápidas de configurar",
+        "Porque resultan más económicas para la empresa",
+        "Porque la mayoría de las personas tiende a aceptar la opción que viene marcada",
+        "Porque son de carácter obligatorio"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La mayoría de las personas mantiene la opción predeterminada, por lo que un buen default facilita la conducta deseada.",
+      "feedbackKo": "Recuerda: el poder del default está en que la mayoría acepta lo que viene marcado, sin necesidad de obligar ni prohibir.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál de las siguientes situaciones es un ejemplo de 'dark pattern' (nudge manipulativo)?",
+      "options": [
+        "Un botón grande y visible para elegir la opción saludable",
+        "El pre-bloqueo de una capacitación en el calendario",
+        "Un botón 'cancelar suscripción' oculto tras cuatro menús",
+        "Un default conservador en el ahorro previsional"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Esconder la opción de cancelar aprovecha los sesgos en contra del usuario: es un dark pattern, no un nudge ético.",
+      "feedbackKo": "Un dark pattern aprovecha los sesgos en perjuicio de la persona. Ocultar el botón de cancelar es el ejemplo clásico de manipulación.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En el caso de Walmart Chile 'Buenos Días Respeto', ¿cuál fue la clave del nudge implementado?",
+      "options": [
+        "Una sanción aplicada a quienes no leían las cartas de respeto",
+        "Un ritual breve de 90 segundos al inicio del turno, de bajo costo y alta adopción",
+        "Una campaña publicitaria masiva en medios externos",
+        "Un sistema obligatorio de control biométrico de asistencia"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El nudge consistió en un ritual de 90 segundos al iniciar el turno, costo cero, que elevó la percepción de respeto y redujo las quejas internas.",
+      "feedbackKo": "El acierto de Walmart fue un micro-ritual de 90 segundos al inicio del turno, sin costo ni sanciones, que se convirtió en hábito colectivo.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

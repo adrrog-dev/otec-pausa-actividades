@@ -1,0 +1,76 @@
+{
+  "title": "Evaluación Final Integrada: Prevención de Riesgos Laborales",
+  "intro": "Esta evaluación reúne los conceptos clave del curso: identificación de peligros (IPER), construcción de la matriz de riesgos, definición de controles y fortalecimiento de la cultura preventiva. Responda cada pregunta seleccionando una sola alternativa. Al finalizar conocerá su retroalimentación.",
+  "questions": [
+    {
+      "q": "En el proceso IPER (Identificación de Peligros y Evaluación de Riesgos), el nivel de riesgo se determina principalmente a partir de la combinación de dos factores. ¿Cuáles son?",
+      "options": [
+        "Probabilidad de ocurrencia y severidad de las consecuencias",
+        "Costo del control y antigüedad del trabajador",
+        "Número de trabajadores y tamaño de la empresa",
+        "Tipo de mutualidad y porcentaje de cotización adicional"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. El nivel de riesgo resulta de cruzar la probabilidad de que ocurra el evento con la severidad de sus consecuencias. Esta lógica es la base de la matriz de riesgos.",
+      "feedbackKo": "Revisa el concepto de IPER. El nivel de riesgo se obtiene combinando la probabilidad de ocurrencia con la severidad de las consecuencias, no factores administrativos.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Según la jerarquía de controles, ¿cuál medida debe priorizarse por ser la más efectiva para reducir un riesgo?",
+      "options": [
+        "Entrega de elementos de protección personal (EPP)",
+        "Señalización y procedimientos administrativos",
+        "Eliminación o sustitución del peligro en su origen",
+        "Capacitación al trabajador expuesto"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La jerarquía de controles prioriza eliminar o sustituir el peligro en la fuente. Los controles administrativos y el EPP son las últimas opciones porque dependen del comportamiento humano.",
+      "feedbackKo": "Recuerda la jerarquía de controles: primero se busca eliminar o sustituir el peligro. El EPP y la capacitación son medidas de menor jerarquía.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Una matriz de riesgos clasifica un peligro como 'riesgo alto/intolerable'. ¿Cuál es la acción más adecuada según los principios de prevención?",
+      "options": [
+        "Registrarlo y revisarlo en la próxima reunión anual del CPHS",
+        "Intervenir de inmediato aplicando controles antes de continuar la actividad",
+        "Esperar a que ocurra un incidente para evaluar su impacto real",
+        "Trasladar la responsabilidad únicamente al trabajador expuesto"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Un riesgo alto o intolerable exige intervención inmediata con controles antes de continuar la actividad. Postergar la acción expone a las personas a daños graves.",
+      "feedbackKo": "Un riesgo intolerable no puede esperar ni trasladarse al trabajador. Requiere intervención inmediata con controles antes de continuar la tarea.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "El 'Derecho a Saber' (ODI), establecido en el DS 40, contribuye directamente a la cultura preventiva porque:",
+      "options": [
+        "Reemplaza la necesidad de aplicar la metodología IPER",
+        "Obliga a informar oportunamente a los trabajadores sobre los riesgos de sus tareas y las medidas de control",
+        "Solo aplica a las jefaturas y prevencionistas de la empresa",
+        "Exime al empleador del deber de cuidado del artículo 184"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El ODI obliga al empleador a informar oportunamente sobre los riesgos, métodos de trabajo correctos y medidas de prevención. Trabajadores informados fortalecen la cultura preventiva.",
+      "feedbackKo": "El ODI no reemplaza al IPER ni exime el deber de cuidado. Su propósito es informar a los trabajadores sobre los riesgos y las medidas de control de sus tareas.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Una empresa integra IPER, matriz de riesgos, controles y participación del CPHS de forma permanente. Esto refleja principalmente que:",
+      "options": [
+        "La prevención se aplica solo cuando ocurre un accidente",
+        "La gestión de riesgos es un proceso aislado del trabajo diario",
+        "La prevención está instalada como una cultura de mejora continua",
+        "Basta con cumplir el porcentaje de cotización de la Ley 16.744"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Integrar IPER, matriz, controles y participación del CPHS de manera continua refleja una cultura preventiva madura, orientada a la mejora permanente y no a la reacción.",
+      "feedbackKo": "La síntesis del curso apunta a que la prevención sea continua y participativa. Cuando estos elementos se integran de forma permanente, hablamos de una cultura de mejora continua.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

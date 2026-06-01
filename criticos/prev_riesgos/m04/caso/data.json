@@ -1,0 +1,101 @@
+{
+  "title": "Decisión en la Maestranza: EPP y Jerarquía de Controles",
+  "intro": "Eres operador de soldadura MIG en una maestranza metalmecánica de San Bernardo. Hoy debes soldar piezas estructurales. Los riesgos presentes son: radiación UV/IR del arco, humos metálicos, ruido de amoladora a 95 dB(A), proyección de chispas y quemaduras. Tu jefatura te pide comenzar la tarea cuanto antes. Cada decisión que tomes tendrá consecuencias para tu seguridad y la del equipo.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Al llegar al puesto, notas que el sistema de extracción localizada de humos está apagado y no hay biombo que aísle el arco. La jefatura insiste en empezar de inmediato y te ofrece la máscara de soldar y un respirador. ¿Qué haces primero?",
+      "options": [
+        {
+          "text": "Tomar el respirador y la máscara, y comenzar a soldar de inmediato para no atrasar la producción.",
+          "outcome": "Comienzas a trabajar, pero los humos metálicos (fierro, manganeso, ozono) se acumulan en la zona y afectan también a compañeros cercanos.",
+          "feedback": "El EPP es la última barrera de la jerarquía de controles, no la primera. Saltarse los controles de ingeniería deja un riesgo activo para todos. Recuerda: entregar EPP no exime de aplicar controles superiores.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Solicitar que se encienda la extracción localizada y se instale un biombo antes de soldar.",
+          "outcome": "Activas dos controles de ingeniería (ventilación localizada y aislamiento del arco), reduciendo la concentración de humos y la exposición a radiación de terceros.",
+          "feedback": "Correcto. Antes del EPP se deben aplicar todos los controles factibles de niveles superiores: eliminación, sustitución, ingeniería y administrativos. La ventilación localizada y el biombo son controles de ingeniería.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Avisar que sin extracción no se puede trabajar y retirarte del área sin coordinar nada.",
+          "outcome": "Detienes el riesgo inmediato para ti, pero el problema queda sin resolver y la tarea sigue pendiente sin solución acordada.",
+          "feedback": "Tienes razón en no exponerte, pero la respuesta correcta es gestionar la activación de los controles de ingeniería junto a la jefatura y el prevencionista, no solo retirarte.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Con los controles de ingeniería resueltos, debes seleccionar tu EPP completo. La bodega tiene varios elementos disponibles. ¿Qué combinación eliges para la soldadura MIG?",
+      "options": [
+        {
+          "text": "Máscara de soldar con filtro adecuado, respirador para humos metálicos, protección auditiva, guantes y delantal de cuero, y calzado de seguridad certificado.",
+          "outcome": "Quedas protegido frente a radiación, humos, ruido, chispas y quemaduras, con cada elemento adecuado a su peligro específico.",
+          "feedback": "Excelente. Cada tipo de EPP responde a un peligro distinto: ocular/facial para radiación, respiratorio para humos, auditivo para ruido, manos y tronco para quemaduras, pies por calzado certificado.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Solo la máscara de soldar y guantes, porque cubren lo más visible del trabajo.",
+          "outcome": "Quedas expuesto a los humos metálicos respirables y al ruido de 95 dB(A) de la amoladora.",
+          "feedback": "Incompleto. El ruido sobre 82 dB(A) diarios (DS 594) obliga a protección auditiva, y los humos metálicos exigen respirador. El EPP debe ser adecuado a todos los riesgos presentes.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "El EPP que indique el supervisor, sin revisar si corresponde a cada riesgo.",
+          "outcome": "Recibes algunos elementos, pero no verificas que cubran todos los peligros de la tarea.",
+          "feedback": "El trabajador también debe comprender qué EPP corresponde a cada peligro. Delegar sin verificar puede dejar riesgos sin cubrir.",
+          "score": 0,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Antes de colocarte el casco facial de soldar, observas que presenta una grieta visible en la carcasa, aunque su fecha de vida útil teórica aún no vence. ¿Qué decides?",
+      "options": [
+        {
+          "text": "Usarlo igual, ya que la fecha de vencimiento no ha llegado.",
+          "outcome": "El elemento con grieta puede fallar ante una proyección o impacto, perdiendo su capacidad protectora.",
+          "feedback": "Incorrecto. Un EPP con daño estructural visible debe darse de baja aunque no haya cumplido su vida útil teórica. La integridad estructural prima sobre la fecha.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Dar de baja el elemento, registrar el hallazgo y solicitar un reemplazo certificado.",
+          "outcome": "Documentas la inspección preuso, retiras el elemento dañado y obtienes uno en buen estado.",
+          "feedback": "Correcto. La inspección preuso es responsabilidad del trabajador y del supervisor. El empleador debe reemplazar gratuitamente el EPP cuando pierde su capacidad protectora (DS 594 y DS 18).",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Tu jefatura quiere asegurarse de que el casco de reemplazo cumple la norma exigida en Chile. Te pregunta cómo se verifica esto. ¿Qué respondes?",
+      "options": [
+        {
+          "text": "Que basta con que el casco se vea robusto y de buena marca.",
+          "outcome": "La apariencia no garantiza cumplimiento normativo ni protección real.",
+          "feedback": "Incorrecto. La certificación no se evalúa a simple vista. El DS 18 exige certificación formal por organismos autorizados.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Que debe contar con certificación de un organismo autorizado en Chile (como CESMEC, IDIEM o INN), según el DS 18, y tener la marca de certificación visible.",
+          "outcome": "Confirmas que el EPP es certificado conforme a la normativa chilena antes de su uso.",
+          "feedback": "Correcto. El DS 18 establece la certificación de los elementos de protección personal mediante organismos como CESMEC, IDIEM o INN. La certificación debe ser verificable.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso refuerza una idea central: la jerarquía de controles se aplica en orden, y el EPP es siempre la última barrera, nunca la primera. Antes de entregar protección personal, el empleador debe aplicar todos los controles factibles de eliminación, sustitución, ingeniería y administrativos. Al seleccionar EPP, cada elemento responde a un peligro específico y a una norma técnica: protección auditiva sobre 82 dB(A) diarios, respirador para humos metálicos, casco y elementos certificados según el DS 18. La inspección preuso es responsabilidad compartida entre trabajador y supervisor: un elemento con daño estructural visible debe darse de baja aunque no haya vencido su vida útil teórica. Finalmente, el EPP debe ser adecuado al riesgo, entregado gratuitamente y certificado por organismos autorizados (CESMEC, IDIEM, INN). Tomar buenas decisiones en cada etapa protege tu integridad y la de todo el equipo."
+}

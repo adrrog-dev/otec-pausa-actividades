@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Liderando el cambio cultural en mi equipo — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Liderando el cambio cultural en mi equipo",
+  "intro": "Eres jefatura de un área operativa en una empresa chilena. Tras la entrada en vigor de la Ley Karin (21.643), la gerencia te pide impulsar un cambio cultural hacia entornos más respetuosos. Notas que en las reuniones algunos colaboradores interrumpen y descalifican a sus compañeros, y nadie corrige esa conducta. Debes decidir cómo abordar este cambio aplicando los modelos Kotter, ADKAR y COM-B.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "La gerencia te entrega un instructivo y te dice: 'Comunícalo al equipo, esto ahora es obligatorio'. ¿Cómo inicias el proceso de cambio?",
+      "options": [
+        {
+          "text": "Envío un correo masivo con el instructivo y advierto que su incumplimiento tendrá sanciones.",
+          "outcome": "El equipo lee el correo, pero nadie cambia su conducta. Algunos lo perciben como una amenaza y se cierran a participar.",
+          "feedback": "El cambio por decreto rara vez funciona. En el modelo ADKAR fallaste en generar 'Awareness' (conciencia genuina) y 'Desire' (deseo de participar). Imponer sin explicar el porqué no transforma comportamientos.",
+          "score": -0.7,
+          "next": 2
+        },
+        {
+          "text": "Convoco una reunión para explicar por qué este cambio importa: dignidad de las personas, obligaciones de la Ley Karin y beneficios para el clima y la productividad.",
+          "outcome": "El equipo comprende las razones éticas, legales y de negocio. Varios reconocen que el ambiente puede mejorar y se muestran dispuestos a colaborar.",
+          "feedback": "Excelente. Aplicaste el primer paso de Kotter (crear sentido de urgencia) y las primeras etapas de ADKAR (Awareness y Desire). Conectar el cambio con un propósito claro genera adhesión real.",
+          "score": 0.9,
+          "next": 2
+        },
+        {
+          "text": "Decido esperar a que recursos humanos resuelva el tema, ya que no es mi responsabilidad directa.",
+          "outcome": "El problema persiste y la conducta irrespetuosa se normaliza aún más. La gerencia te observa con preocupación.",
+          "feedback": "El liderazgo de la jefatura es clave: Kotter exige una coalición guía. Delegar totalmente el cambio cultural deja al equipo sin referente y perpetúa el problema.",
+          "score": -0.9,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya hay conciencia del problema, pero las conductas irrespetuosas continúan en las reuniones. Decides analizar la causa con el modelo COM-B. ¿Qué priorizas?",
+      "options": [
+        {
+          "text": "Solo realizo una charla informativa sobre respeto laboral y doy por resuelto el tema.",
+          "outcome": "La charla es bien recibida, pero a las dos semanas las interrupciones vuelven. La capacitación por sí sola no sostuvo el cambio.",
+          "feedback": "Según McKinsey, intervenir solo en el individuo sin tocar el sistema hace fracasar el 70% de los programas. Faltó trabajar la Oportunidad (O) y el Refuerzo de COM-B y ADKAR.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Analizo las tres dimensiones del COM-B: capacidad (habilidades de comunicación), oportunidad (reglas de reunión y turnos para hablar) y motivación (que las jefaturas den el ejemplo).",
+          "outcome": "Identificas que falta una norma clara de reuniones y que algunas jefaturas también interrumpen. Diseñas una intervención integral en las tres dimensiones.",
+          "feedback": "Muy bien. Usaste COM-B para intervenir en el sistema y no solo en las personas. Reconocer que 'a veces no falta voluntad, falta oportunidad' es clave para un cambio sostenible.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Implementas las primeras medidas: turnos para hablar en reuniones y acuerdos de respeto. Las primeras semanas mejoran. ¿Cómo aseguras que el cambio se sostenga en el tiempo?",
+      "options": [
+        {
+          "text": "Reconozco públicamente los avances, celebro logros tempranos y mantengo seguimiento periódico con el equipo.",
+          "outcome": "El equipo se motiva al ver que su esfuerzo es valorado. Los nuevos hábitos se consolidan y la confianza aumenta.",
+          "feedback": "Perfecto. Aplicaste los pasos finales de Kotter (generar logros tempranos, consolidar y anclar en la cultura) y la 'R' de ADKAR (Reinforcement). El refuerzo sostiene el cambio.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Doy el cambio por logrado y dejo de hacer seguimiento para dedicarme a otras tareas.",
+          "outcome": "Sin refuerzo, las conductas antiguas regresan gradualmente. El esfuerzo inicial se diluye.",
+          "feedback": "Faltó la etapa de Refuerzo (ADKAR) y el anclaje en la cultura (Kotter). Todo cambio requiere sostenibilidad: sin seguimiento, el sistema vuelve a su estado anterior.",
+          "score": -0.6,
+          "next": null
+        },
+        {
+          "text": "Establezco indicadores (KPI) de clima y respeto, e incorporo el tema en las evaluaciones de desempeño de las jefaturas.",
+          "outcome": "El cambio se integra a los procesos formales de la organización y deja de depender de la voluntad individual.",
+          "feedback": "Excelente decisión de cambio sistémico. Al modificar incentivos y KPI anclas el comportamiento en la estructura, tal como recomienda Kotter en su paso final.",
+          "score": 0.9,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Liderar un cambio cultural hacia entornos respetuosos exige más que comunicar una norma. Los tres modelos se complementan: Kotter aporta la dimensión organizacional (urgencia, coalición, logros tempranos y anclaje cultural); ADKAR guía la transición individual (conciencia, deseo, conocimiento, habilidad y refuerzo); y COM-B permite diagnosticar si el problema está en la capacidad, la oportunidad o la motivación, interviniendo el sistema y no solo a las personas. Recuerda que en Chile, bajo la Ley 21.643 (Ley Karin), promover entornos respetuosos es además una obligación legal y un imperativo ético y de negocio. Las capacitaciones aisladas fracasan: el cambio sostenible requiere rediseñar políticas, procesos, incentivos y el ejemplo permanente de las jefaturas."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

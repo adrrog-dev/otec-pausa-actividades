@@ -1,0 +1,87 @@
+{
+  "title": "Decisión en altura: el arnés de Marcos",
+  "intro": "Marcos es mantenedor mecánico en una faena minera en la Región de Antofagasta. Debe subir a una estructura a 5 metros para reparar una válvula. Tiene 90 segundos antes de que su jefatura espere el reporte de inicio. Acompáñalo en sus decisiones sobre el EPP anticaídas y descubre las consecuencias de cada una. Recuerda: el sistema anticaídas es la última barrera entre el trabajador y el suelo.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Marcos toma su arnés del pañol. Un compañero le comenta: 'Ese arnés es el que frenó la caída de Luis hace tres semanas, pero quedó como nuevo, ni se nota'. ¿Qué hace Marcos?",
+      "options": [
+        {
+          "text": "Lo usa igual, porque visualmente se ve intacto y no hay otro disponible.",
+          "outcome": "Marcos sube con un arnés que ya detuvo una caída. La cinta dorsal podría tener daño interno no visible en la zona del impacto.",
+          "feedback": "Decisión incorrecta. Según la NCh 2272, todo arnés que detuvo una caída debe descartarse de inmediato, aunque parezca intacto. El daño estructural no siempre es visible. Esto fue exactamente lo que causó la fatalidad de Calama 2025.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Lo aparta, informa a su supervisor del descarte obligatorio y solicita otro arnés certificado.",
+          "outcome": "Marcos retira el arnés post-impacto del uso y pide uno nuevo. Aunque demora unos minutos, prioriza su seguridad.",
+          "feedback": "Decisión correcta. Un arnés que detuvo una caída es un gatillo de descarte definitivo sin excepciones. Detener la operación para conseguir un equipo seguro siempre es la opción válida.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Con un arnés disponible, Marcos inicia la inspección pre-uso. Al revisar las cintas, nota un corte de aproximadamente 2 mm en una correa del muslo y una hebilla con leve dificultad de cierre. ¿Qué decide?",
+      "options": [
+        {
+          "text": "Considera que son daños menores y continúa, ya que el arnés 'aguanta'.",
+          "outcome": "Marcos ignora hallazgos que comprometen la integridad del equipo. Un corte y una hebilla deformada reducen la capacidad del arnés en una caída real.",
+          "feedback": "Decisión incorrecta. La rutina de inspección establece descarte ante cualquier corte mayor a 1 mm en cintas y ante deformación visible de hebillas. No son daños 'menores'.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Descarta el arnés, registra los hallazgos en la tabla de inspección y busca un equipo en buen estado.",
+          "outcome": "Marcos documenta los defectos y separa el arnés. La trazabilidad del hallazgo evita que otro trabajador lo use por error.",
+          "feedback": "Decisión correcta. El corte supera el límite de 1 mm y la hebilla presenta dificultad de cierre: ambos son criterios de descarte. Registrar el hallazgo es parte de la buena gestión preventiva.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Marcos ya tiene un arnés certificado NCh 1258 en buen estado. Ahora debe elegir el conector para anclarse a la línea de vida. En el pañol encuentra un mosquetón de doble seguro de 22 kN y, al lado, un mosquetón de snap simple de escalada deportiva. ¿Cuál usa?",
+      "options": [
+        {
+          "text": "El mosquetón de snap simple, porque es más liviano y rápido de operar.",
+          "outcome": "Marcos elige un conector no apto para uso industrial, que puede abrirse de forma involuntaria durante el trabajo.",
+          "feedback": "Decisión incorrecta. El mosquetón de snap simple de escalada deportiva está prohibido en industria. En sistemas anticaídas son obligatorios los mosquetones de doble seguro con autobloqueo y resistencia mínima de 22 kN.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "El mosquetón de doble seguro de 22 kN, verificando que el resorte cierre bien.",
+          "outcome": "Marcos conecta correctamente al anillo dorsal D con un mosquetón certificado y revisa su cierre antes de subir.",
+          "feedback": "Decisión correcta. El mosquetón de doble seguro de 22 kN es obligatorio en sistemas anticaídas. Verificar el resorte y el cierre forma parte de la inspección del conector.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Antes de subir, Marcos debe conectar su línea de vida al anillo del arnés. Identifica el anillo dorsal D en la espalda, el anillo pectoral y el de cintura. ¿Dónde conecta la línea para detención de caídas?",
+      "options": [
+        {
+          "text": "Al anillo de cintura, porque le queda más cómodo y a la mano.",
+          "outcome": "Marcos se conecta a un punto diseñado solo para posicionamiento. En una caída, este anclaje no soportaría correctamente la detención y podría causar lesiones graves.",
+          "feedback": "Decisión incorrecta. El anillo de cintura y el pectoral son solo para posicionamiento, NO para detención de caídas. El único punto válido es el anillo dorsal D, ubicado a la altura de los omóplatos.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Al anillo dorsal D ubicado en la espalda, a la altura de los omóplatos.",
+          "outcome": "Marcos conecta su línea al punto correcto. Su sistema anticaídas queda completo y operativo: arnés certificado, conector adecuado y anclaje válido.",
+          "feedback": "Decisión correcta. El anillo dorsal D es el único punto válido para detención de caídas. Marcos sube a trabajar con un sistema seguro y conforme a la NCh 2272.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "El caso de Marcos demuestra que la seguridad en trabajos en altura depende de una cadena de decisiones correctas, no de una sola. El sistema anticaídas son tres piezas inseparables: el arnés NCh 1258 con anillo dorsal D, la línea con absorbedor que limite la fuerza a 6 kN, y los mosquetones de doble seguro de 22 kN. Cada elemento debe inspeccionarse antes de cada uso, y todo equipo que detuvo una caída o presenta cortes, deformaciones o contacto con químicos debe descartarse sin excepción. La presión por 'no detener la operación' nunca justifica usar EPP defectuoso o post-impacto: la lección de Calama 2025 lo confirma con un costo irreparable. Trabajadores, jefaturas y prevencionistas comparten la responsabilidad de garantizar que cada conexión sea segura y conforme a la normativa chilena. Si tuviste decisiones incorrectas, repasa los criterios de inspección y descarte del Módulo 3 antes de aplicarlos en terreno."
+}

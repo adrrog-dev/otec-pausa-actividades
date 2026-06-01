@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emergencia en faena: evaluación de la escena y activación del SAMU 131 — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Emergencia en faena: evaluación de la escena y activación del SAMU 131",
+  "intro": "Eres operario en una faena de la Región de Antofagasta. Son las 14:30 hrs. Escuchas un grito y ves a un compañero, operador de maquinaria pesada, caído e inconsciente junto a una excavadora. Cerca de él hay un cable de media tensión expuesto en el suelo. Tus decisiones en los próximos 60 segundos serán críticas. Recuerda: lo primero es no convertirte en una segunda víctima.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Llegas al lugar y ves a tu compañero inconsciente junto al cable de media tensión. Otros trabajadores se acercan corriendo. ¿Qué haces primero?",
+      "options": [
+        {
+          "text": "Corro de inmediato a tomar a mi compañero y apartarlo del cable con mis manos.",
+          "outcome": "Al tocar a la víctima en contacto con la corriente, recibes una descarga eléctrica y caes también. Ahora hay dos personas lesionadas y nadie controlando la escena.",
+          "feedback": "Nunca toques a una víctima de accidente eléctrico sin antes cortar la energía. Convertirte en segunda víctima retrasa toda la cadena de ayuda. El principio 3S parte por tu propia seguridad.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Aplico el principio 3S: detengo a los demás, evalúo riesgos y busco cortar la energía en el interruptor general antes de acercarme.",
+          "outcome": "Detienes a tus compañeros, identificas el riesgo eléctrico y cortas la energía en el tablero general. Recién entonces la escena es segura para acercarse.",
+          "feedback": "Excelente. Seguridad propia, del paciente y del equipo (3S) es siempre el primer paso. Cortar la energía evita una segunda víctima y permite intervenir con seguridad.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Saco mi celular y grabo la situación para informar después al supervisor.",
+          "outcome": "Pierdes segundos valiosos grabando mientras la víctima sigue sin atención y el riesgo eléctrico permanece activo.",
+          "feedback": "El registro no es prioridad en los primeros 60 segundos. Primero asegura la escena (3S) y activa la ayuda. La documentación viene después.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "La energía está cortada y la escena es segura. Tu compañero sigue inconsciente. Necesitas activar la cadena de emergencia. ¿Cómo procedes con el llamado?",
+      "options": [
+        {
+          "text": "Llamo al 131 SAMU y entrego ubicación exacta, número de víctimas, tipo de incidente (eléctrico), estado de conciencia y respiración, y mi teléfono de contacto. No corto hasta que el operador autorice.",
+          "outcome": "El operador del SAMU recibe los 5 datos obligatorios, despacha una ambulancia y te guía mientras llega la ayuda.",
+          "feedback": "Correcto. El SAMU se activa con el 131 y los 5 datos mínimos: ubicación, número de víctimas, tipo de incidente, estado de conciencia/respiración y teléfono en sitio. Nunca cortes la línea antes de que lo autoricen.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Llamo al 133 de Carabineros porque es el número que recuerdo de memoria.",
+          "outcome": "Carabineros te redirige al SAMU, perdiendo tiempo en la derivación mientras la víctima sigue sin atención médica.",
+          "feedback": "El número del SAMU en Chile es el 131. Memorízalo: es la vía directa a la atención médica de urgencia prehospitalaria.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Le pido a un compañero que llame al 131 mientras yo aviso al supervisor y a la mutual, ya que la faena está adherida a ACHS.",
+          "outcome": "Se activa el 131 y, en paralelo, das aviso a la mutual (ACHS 600 600 2247) y al supervisor. La cadena de emergencia queda completa.",
+          "feedback": "Muy bien. La cadena chilena es 131 SAMU + mutual + supervisor. Delegar tareas en paralelo agiliza la respuesta cuando hay más personas disponibles.",
+          "score": 1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "La ambulancia viene en camino. Mientras esperas, decides evaluar a la víctima. ¿Por dónde comienzas la evaluación primaria?",
+      "options": [
+        {
+          "text": "Aplico la secuencia CABDE: verifico circulación y hemorragias masivas, vía aérea, respiración, conciencia (AVDI) y exposición de lesiones.",
+          "outcome": "Realizas una evaluación primaria ordenada en menos de 60 segundos y entregas información clave al SAMU sobre el estado de la víctima.",
+          "feedback": "Perfecto. La secuencia CABDE comienza por Circulación y hemorragias masivas, y entrega un diagnóstico funcional rápido. La escala AVDI evalúa el nivel de conciencia.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Le doy agua y trato de que despierte sacudiéndolo con fuerza.",
+          "outcome": "Mover bruscamente a la víctima puede agravar lesiones, y dar líquidos a alguien inconsciente genera riesgo de asfixia.",
+          "feedback": "Nunca des líquidos ni muevas con fuerza a una persona inconsciente. Sigue la secuencia CABDE y mantén la vía aérea permeable.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Espero sin tocar a la víctima hasta que llegue la ambulancia, por temor a empeorar la situación.",
+          "outcome": "La inacción deja sin información al SAMU y podría retrasar la detección de una hemorragia o paro respiratorio tratable.",
+          "feedback": "Una vez segura la escena, sí debes evaluar con CABDE. La evaluación primaria es parte de la primera respuesta y aporta datos vitales al equipo médico.",
+          "score": -0.5,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "La víctima fue estabilizada y trasladada por el SAMU a un centro de la mutual. Al día siguiente, el área administrativa te consulta sobre la documentación del accidente. ¿Qué corresponde hacer?",
+      "options": [
+        {
+          "text": "La empresa entrega la DOA al trabajador y presenta la DIAT a la mutual dentro de las 24 horas hábiles, según la Ley 16.744.",
+          "outcome": "La documentación se gestiona correctamente y dentro del plazo legal, asegurando la cobertura del trabajador y el cumplimiento normativo.",
+          "feedback": "Correcto. La DOA permite la atención en la mutual y la DIAT debe presentarse dentro de 24 horas hábiles (art. 76, Ley 16.744). Su omisión expone a multas de la SUSESO de 1 a 150 UTM.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "No es necesario documentar nada porque la víctima ya fue atendida.",
+          "outcome": "La empresa incumple la Ley 16.744 y queda expuesta a sanciones, además de dejar al trabajador sin respaldo formal del accidente.",
+          "feedback": "Todo accidente laboral debe documentarse con DOA y DIAT. La DIAT tiene un plazo de 24 horas hábiles y su omisión genera multas SUSESO.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Espero una semana para reunir todos los antecedentes antes de presentar la DIAT.",
+          "outcome": "Superas el plazo de 24 horas hábiles, lo que constituye una infracción a la normativa vigente.",
+          "feedback": "La DIAT debe presentarse dentro de las 24 horas hábiles, aunque se completen detalles después. No esperes a tener toda la información para cumplir el plazo.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso refuerza la secuencia correcta de actuación frente a una emergencia laboral en Chile. Primero, el principio 3S (Seguridad propia, del paciente y del equipo) evita convertirse en una segunda víctima, especialmente en accidentes eléctricos donde cortar la energía es obligatorio antes del contacto físico. Segundo, la activación de la cadena de emergencia mediante el SAMU 131 con sus 5 datos obligatorios, en paralelo al aviso a la mutual y al supervisor. Tercero, la evaluación primaria CABDE, que comienza por Circulación y hemorragias masivas y permite un diagnóstico funcional en menos de 60 segundos. Finalmente, la gestión documental con DOA y DIAT dentro de las 24 horas hábiles, exigida por la Ley 16.744. Recuerda: las mejores decisiones se toman antes del contacto físico con la víctima. Mantén siempre a la vista los teléfonos de tu mutual y practica la llamada al 131."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>El comentario en la reunión de equipo — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "El comentario en la reunión de equipo",
+  "intro": "Eres Camila, jefa de proyecto en una empresa de servicios en Santiago. Durante una reunión, tu colega Rodrigo presenta a una nueva integrante del equipo, Marie, profesional haitiana con un magíster en logística. Rodrigo dice frente a todos: 'Marie habla español muy bien para ser haitiana, así que no se preocupen'. Notas que Marie baja la mirada. Como jefatura, debes decidir cómo actuar. Tus decisiones tendrán consecuencias en el clima laboral y en el aprendizaje del equipo.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Rodrigo acaba de hacer el comentario sobre Marie. El equipo sigue en silencio y la reunión continúa. ¿Qué haces en ese momento?",
+      "options": [
+        {
+          "text": "Dejas pasar el comentario para no incomodar a Rodrigo delante de todos y sigues con la agenda.",
+          "outcome": "La reunión continúa, pero Marie permanece callada el resto de la sesión. El comentario queda validado por el silencio de la jefatura.",
+          "feedback": "Aunque evitar la confrontación pública puede parecer prudente, ignorar una microinsulto normaliza el sesgo. Como jefatura, tu silencio comunica que el comentario es aceptable. Recuerda: lo importante no es la intención de Rodrigo, sino el impacto en Marie.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Interrumpes públicamente a Rodrigo y le dices que ese comentario es discriminatorio y poco profesional.",
+          "outcome": "Rodrigo se pone a la defensiva y responde que 'solo era un cumplido'. La tensión aumenta y la reunión termina en un ambiente incómodo.",
+          "feedback": "Detener una microagresión es correcto, pero el calling-out público y con juicio personal puede generar defensividad y escalar el conflicto. Para microagresiones cotidianas suele ser más efectivo nombrar el hecho sin atacar a la persona.",
+          "score": 0.2,
+          "next": 2
+        },
+        {
+          "text": "Reencauzas en el momento de forma breve y respetuosa: 'Gracias Rodrigo. Marie tiene un magíster en logística y aporta mucho a este proyecto', y luego buscas hablar con él en privado.",
+          "outcome": "El equipo nota que la jefatura redirige el foco hacia las competencias de Marie. Ella levanta la mirada y participa más adelante en la reunión.",
+          "feedback": "Excelente. Reconoces el aporte profesional de Marie sin exponer a Rodrigo, y dejas la conversación de fondo para un espacio privado (calling-in). Separas intención de impacto y cuidas el clima del equipo.",
+          "score": 1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Terminada la reunión, decides conversar con Rodrigo a solas sobre su comentario. ¿Cómo inicias la conversación?",
+      "options": [
+        {
+          "text": "'Rodrigo, lo que dijiste fue una microagresión racista. No quiero que vuelvas a hacerlo.'",
+          "outcome": "Rodrigo se siente acusado, niega cualquier intención negativa y la conversación se cierra sin reflexión real.",
+          "feedback": "Etiquetar a la persona en lugar de describir el hecho activa la defensa. El calling-in busca invitar a reflexionar, no sentenciar. Intenta nombrar la conducta específica y su impacto.",
+          "score": -0.3,
+          "next": 3
+        },
+        {
+          "text": "Aplicas el calling-in en 4 pasos: nombras el hecho, explicas el impacto, asumes buena intención y propones una alternativa.",
+          "outcome": "Rodrigo escucha, reconoce que no había pensado en cómo sonaba su comentario y agradece la conversación. Se compromete a presentar a las personas por sus competencias.",
+          "feedback": "Muy bien. La técnica de 4 pasos ('Cuando dijiste X… percibí que… sé que no fue tu intención… la próxima vez podríamos…') permite que la persona reflexione sin sentirse atacada y genera un cambio de conducta real.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Decides no hablar con Rodrigo y, en su lugar, ingresas de inmediato una denuncia formal por Ley Karin.",
+          "outcome": "El proceso formal se activa por un comentario aislado y no grave. Rodrigo se siente sorprendido y el equipo percibe un ambiente de vigilancia.",
+          "feedback": "La vía formal (calling-out) se reserva para casos graves o reiterados. Una microagresión cotidiana y aislada se aborda mejor con una conversación reflexiva. Escalar de inmediato puede deteriorar la confianza del equipo.",
+          "score": -0.2,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Una semana después, detectas que el comentario de Rodrigo no fue un caso aislado: otros miembros del equipo han hecho bromas sobre el acento de Marie. Como jefatura, ¿qué medida tomas?",
+      "options": [
+        {
+          "text": "Esperas a ver si la situación se resuelve sola, ya que no quieres exagerar.",
+          "outcome": "Las bromas continúan y Marie comienza a evitar las instancias de equipo. El clima se deteriora.",
+          "feedback": "Cuando las microagresiones se reiteran, dejar de actuar permite que escalen hacia un hostigamiento. La reiteración es justamente lo que puede transformar microagresiones en una situación abordable por la Ley Karin.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Propones a tu área de personas una instancia de sensibilización en sesgos para todo el equipo, inspirada en buenas prácticas como las 'Listening Sessions' o 'Conversaciones Difíciles'.",
+          "outcome": "Se realiza un taller con facilitación adecuada. El equipo conversa abiertamente, las bromas cesan y Marie vuelve a participar con confianza.",
+          "feedback": "Decisión acertada. Las experiencias de Falabella y Entel muestran que abordar los sesgos de forma preventiva y colectiva reduce conflictos y mejora el clima. Como jefatura, actuar a nivel de equipo previene la escalada hacia denuncias formales.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Llamas la atención a todo el equipo por correo, sin nombrar la conducta específica ni proponer soluciones.",
+          "outcome": "El equipo recibe el mensaje como un reto general. Nadie identifica claramente la conducta esperada y la incomodidad persiste.",
+          "feedback": "Un mensaje genérico y punitivo rara vez cambia conductas. Es más efectivo nombrar el hecho con respeto y ofrecer un espacio de aprendizaje y alternativas concretas.",
+          "score": 0,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso te permitió practicar el reconocimiento de microagresiones (el comentario sobre el español de Marie es una microinsulto que presume inferioridad por origen), la diferencia entre intención e impacto, y la elección entre calling-in y calling-out. Las mejores decisiones combinan tres elementos: redirigir en el momento sin exponer a la persona, abordar el fondo en privado con la técnica de 4 pasos, y escalar a medidas colectivas o formales solo cuando la conducta se reitera o es grave. Como jefatura, tu rol es clave: tu reacción inmediata comunica al equipo qué conductas son aceptables. Construir entornos respetuosos no se trata de castigar, sino de invitar a reflexionar y entregar alternativas concretas, cuidando tanto a la persona afectada como el clima del equipo."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

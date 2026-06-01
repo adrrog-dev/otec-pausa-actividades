@@ -1,0 +1,115 @@
+{
+  "title": "Recepción y custodia de la cadena de frío",
+  "intro": "Eres responsable de recepción en una empresa de servicios de alimentación en la Región Metropolitana. Es un día caluroso de verano (30 °C ambiente). Llega un camión con carnes refrigeradas para tu cocina. A lo largo de la jornada deberás tomar decisiones que afectan la inocuidad del producto, los registros exigidos por el DS 977/1996 y el riesgo de un sumario sanitario. Recuerda: la cadena de frío se rompe silenciosamente.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "El camión llega y el chofer te apura porque va atrasado. El termógrafo del vehículo marca 4 °C, pero notas que el equipo de frío hace un ruido extraño y la carga lleva cerca de 3 horas en ruta. ¿Qué haces antes de recibir la mercadería?",
+      "options": [
+        {
+          "text": "Confío en el termógrafo del camión (4 °C) y recibo la carga de inmediato para no atrasar al chofer.",
+          "outcome": "Recibes la carga sin verificación cruzada. Más tarde detectas que algunos cortes están a 12 °C: el sensor del camión estaba descalibrado, igual que en el caso real de la distribuidora de carnes.",
+          "feedback": "Confiar en un solo sensor es un punto único de falla. El DS 977 exige verificación de temperatura del producto en recepción. Debes medir con termómetro propio (infrarrojo o sonda) cada lote crítico.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Mido la temperatura interna del producto con mi propia sonda y registro fecha, hora, proveedor, lote y temperatura.",
+          "outcome": "Aplicas verificación cruzada. Tu sonda marca 7 °C en varios cortes, por sobre el límite de 0–5 °C para carnes refrigeradas. Tienes un dato objetivo para decidir.",
+          "feedback": "Correcto. La verificación cruzada con instrumento propio y el registro documental son la principal defensa frente a una fiscalización de la SEREMI.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Reviso solo visualmente que los envases estén cerrados y firmo la guía sin medir temperatura.",
+          "outcome": "La inspección visual no detecta una falla térmica interna. La carga queda recibida sin respaldo documental de temperatura.",
+          "feedback": "La revisión visual es necesaria pero no suficiente. Sin medición y registro de temperatura, la SEREMI presume incumplimiento.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Tras medir, confirmas que parte de la carne refrigerada está a 7 °C, por sobre el rango legal de 0–5 °C. El proveedor estima que estuvo expuesta cerca de 3 horas en condiciones sobre la zona de seguridad. ¿Qué decides con ese lote?",
+      "options": [
+        {
+          "text": "Acepto la carga igual y la meto rápido al refrigerador, asumiendo que 'enfriará de nuevo'.",
+          "outcome": "El producto superó la regla de las 2 horas en zona de peligro. Reenfriar no revierte la multiplicación bacteriana ya ocurrida; el lote queda inseguro dentro de tu cámara.",
+          "feedback": "Bajar la temperatura no elimina los patógenos ni sus toxinas. Superadas las 2 horas en zona de peligro (5–60 °C), corresponde decomisar.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Rechazo el lote, lo documento como no conformidad y notifico al proveedor por escrito.",
+          "outcome": "Rechazas la carga con respaldo documental. El proveedor deberá responder y tú proteges la inocuidad de tu operación.",
+          "feedback": "Decisión correcta. El DS 977 permite rechazar refrigerados sobre 5 °C. Documentar la no conformidad respalda tu actuación ante la SEREMI.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Recibo solo los cortes que están dentro de norma y rechazo los que están a 7 °C, dejando registro de ambos.",
+          "outcome": "Separas lo conforme de lo no conforme con criterio técnico y registro claro. Evitas decomisar de más, pero proteges la inocuidad.",
+          "feedback": "Buena práctica: decisión basada en datos por lote, con registro de conformidad y no conformidad. Asegúrate de verificar que los aceptados estén realmente bajo 5 °C en su centro.",
+          "score": 0.8,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Resuelta la recepción, almacenas la carne aceptada en cámara de refrigeración. Una jefatura te pide guardar todo 'donde quepa' porque hay poco espacio y la jornada está apretada. ¿Cómo organizas el almacenamiento?",
+      "options": [
+        {
+          "text": "Acomodo crudos y listos para consumo juntos y saturo la cámara para que entre todo.",
+          "outcome": "El goteo de crudos contamina los productos listos y la cámara saturada impide la circulación de aire frío, generando puntos sobre 5 °C.",
+          "feedback": "Error doble: contaminación cruzada y pérdida de frío por saturación. La regla es 'arriba listos, abajo crudos' y no sobrecargar.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Coloco crudos abajo y listos para consumo arriba, separo por grupos, aplico PEPS/FIFO con rótulo de fecha y dejo espacio para circulación de aire.",
+          "outcome": "El almacenamiento queda ordenado, sin riesgo de goteo y con buena circulación de frío. La rotulación facilita la rotación correcta.",
+          "feedback": "Excelente. Aplicas las buenas prácticas de almacenamiento del DS 977: separación por grupos, PEPS/FIFO y circulación de aire.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Guardo todo correctamente separado, pero no registro la temperatura de la cámara porque 'siempre funciona bien'.",
+          "outcome": "El orden es correcto, pero quedas sin registro. Si la cámara falla en silencio, no tendrás evidencia ni alerta temprana.",
+          "feedback": "El orden no reemplaza el registro. Debes registrar la temperatura mínimo 2 veces por día (turno mañana y tarde) con termómetro visible.",
+          "score": 0.2,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Durante la noche hay un corte de luz de 3 horas. En la mañana revisas la cámara: el termómetro marca 9 °C y desconoces cuánto tiempo estuvo sobre 5 °C. ¿Qué acción correctiva aplicas?",
+      "options": [
+        {
+          "text": "Como ya volvió a enfriar, sigo usando el producto normalmente sin dejar registro del evento.",
+          "outcome": "Liberas producto de inocuidad incierta y sin documentar el incidente, exponiendo a clientes a una posible ETA y a la empresa a un sumario.",
+          "feedback": "Grave. Toda rotura de cadena de frío debe documentarse, evaluarse por tiempo/temperatura y, ante duda alta o más de 2 horas en zona de peligro, decomisarse.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Estimo tiempo y temperatura de exposición, registro la no conformidad, decomiso lo que superó las 2 horas en zona de peligro y, si hay duda, solicito análisis microbiológico antes de liberar.",
+          "outcome": "Actúas con criterio técnico: evalúas, documentas y proteges la inocuidad. Además registras el evento para la investigación de causa raíz.",
+          "feedback": "Respuesta ideal. Aplicas las acciones correctivas del módulo: evaluar exposición, decomisar o analizar según riesgo y documentar la no conformidad.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Decomiso todo el contenido de la cámara de inmediato sin evaluar tiempo ni temperatura para evitarme problemas.",
+          "outcome": "Proteges la inocuidad, pero descartas producto que pudo evaluarse, generando una pérdida económica posiblemente evitable.",
+          "feedback": "La inocuidad está resguardada, pero la buena práctica es decidir según el tiempo y la temperatura de exposición. Documenta el evento e investiga la causa raíz (falla del compresor, corte de luz) para prevenir su repetición.",
+          "score": 0.4,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso muestra que la cadena de frío se protege con tres pilares: verificación con instrumento propio, registros documentales auditables y acciones correctivas basadas en datos. Confiar en un solo sensor o en la inspección visual es un punto único de falla, tal como ocurrió en el caso real de la distribuidora de carnes que perdió 1,2 toneladas y enfrentó un sumario sanitario. Recuerda los límites clave: refrigerados 0–5 °C, congelados ≤ −18 °C, zona de peligro 5–60 °C y la regla de las 2 horas. Frente a una rotura de cadena de frío, evalúa tiempo y temperatura, decomisa o analiza según el riesgo y documenta siempre la no conformidad, investigando la causa raíz. Sin registros auditables, la SEREMI presume incumplimiento."
+}

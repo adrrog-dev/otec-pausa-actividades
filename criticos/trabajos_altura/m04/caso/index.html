@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Decisión en altura: ¿es seguro ese punto de anclaje? — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Decisión en altura: ¿es seguro ese punto de anclaje?",
+  "intro": "Eres técnico de mantención y debes subir a una torre de telecomunicaciones para revisar un equipo a 12 metros de altura. Llevas tu arnés certificado y tu línea de vida con absorbedor. Al llegar a la plataforma, debes decidir dónde anclarte. Tus decisiones determinarán tu seguridad y la de tu equipo. Recuerda: la NCh 2272 exige un punto de anclaje que resista al menos 15 kN (≈ 1.500 kgf) por trabajador.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Observas tres opciones para anclarte: (A) un perno que sujeta un cable coaxial, (B) una placa metálica atornillada con una etiqueta de certificación NCh / EN 795 visible, y (C) la baranda de la plataforma. No hay un prevencionista cerca para consultarle. ¿Dónde te anclas?",
+      "options": [
+        {
+          "text": "Me anclo al perno del cable coaxial, parece firme y está a la mano.",
+          "outcome": "El perno está diseñado solo para sujetar un cable liviano. Si ocurre una caída, podría ceder muy por debajo de los 15 kN requeridos, tal como ocurrió en el caso del Cerro San Cristóbal 2024.",
+          "feedback": "Error grave. Un perno de fijación de cable NO es un punto de anclaje certificado. Solo deben usarse puntos certificados o validados por un ingeniero civil.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Me anclo a la placa certificada NCh / EN 795.",
+          "outcome": "La placa cuenta con certificación visible que garantiza la resistencia mínima de 15 kN por trabajador. Tu sistema anticaídas queda correctamente respaldado.",
+          "feedback": "Decisión correcta. Un punto certificado de fabricante (placa atornillada con certificado NCh / EN 795) es la opción adecuada en torres y naves prefabricadas.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Me anclo a la baranda de la plataforma.",
+          "outcome": "Las barandas están diseñadas para evitar caídas de personas que se apoyan, no para resistir la fuerza dinámica de una caída con arnés. Su resistencia no está certificada para 15 kN.",
+          "feedback": "Incorrecto. Una baranda no es un punto de anclaje certificado. Debes buscar un punto validado por ingeniero o con certificación NCh / EN 795.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Antes de continuar, recuerdas la actividad de mapeo de anclajes. Decides reevaluar. Ves la placa certificada NCh / EN 795 que habías descartado. ¿Qué haces ahora?",
+      "options": [
+        {
+          "text": "Me reubico y me anclo a la placa certificada antes de seguir trabajando.",
+          "outcome": "Corriges tu decisión a tiempo. El punto certificado garantiza los 15 kN mínimos exigidos por la NCh 2272.",
+          "feedback": "Bien hecho. Reconocer y corregir un anclaje inseguro evita exponerte a una caída con un punto que podría ceder.",
+          "score": 0.8,
+          "next": 3
+        },
+        {
+          "text": "Sigo con el anclaje anterior para no perder tiempo.",
+          "outcome": "Mantienes un punto de anclaje no certificado. Estás expuesto a una falla del sistema completo ante una caída.",
+          "feedback": "Decisión peligrosa. La presión de tiempo nunca justifica usar un anclaje sin certificación. Detén la tarea y verifica.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Tu compañero llega y quiere anclarse al mismo punto que tú para trabajar simultáneamente. El punto está certificado para 15 kN. ¿Qué le indicas?",
+      "options": [
+        {
+          "text": "Verifico si el punto está certificado para dos personas (30 kN) o si debe usar otro anclaje.",
+          "outcome": "Confirmas que cada trabajador anclado requiere 15 kN. Para dos personas se necesitan 30 kN o dos puntos independientes certificados.",
+          "feedback": "Correcto. La resistencia mínima se multiplica por el número de trabajadores conectados: 2 personas = 30 kN.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Le digo que sí, el punto es resistente y aguanta a los dos.",
+          "outcome": "Asumir que un punto de 15 kN soporta a dos personas duplica el riesgo. Podría no resistir la fuerza combinada de dos caídas.",
+          "feedback": "Incorrecto. Un punto de 15 kN está certificado para una sola persona. Para dos se requieren 30 kN o anclajes independientes.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Para futuras subidas, debes recomendar una mejora de seguridad para la torre. ¿Qué propones a tu jefatura?",
+      "options": [
+        {
+          "text": "Instalar una línea de vida vertical certificada con dispositivo deslizante (rope grab) y validación anual.",
+          "outcome": "La línea de vida vertical permite ascenso seguro por la escalera de gato, con bloqueo automático ante una caída. Es la solución recomendada por la pericia del caso real 2024.",
+          "feedback": "Excelente decisión. La línea de vida vertical certificada con rope grab y validación anual es la medida correcta para torres y antenas.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Marcar el perno del coaxial con pintura para que se reconozca como anclaje.",
+          "outcome": "Pintar un perno no le otorga resistencia ni certificación. Seguiría siendo un punto inseguro, ahora con apariencia engañosa de validez.",
+          "feedback": "Incorrecto y peligroso. La certificación de un punto depende de cálculo ingenieril o norma NCh / EN 795, no de una marca visual.",
+          "score": -1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "La causa principal de fatalidades en trabajo en altura no es la falta de arnés, sino el uso de un punto de anclaje que no resiste la fuerza de una caída. La regla es clara: 15 kN por trabajador anclado (NCh 2272 / OSHA / EN 795), que se multiplica por el número de personas conectadas. Solo deben usarse puntos certificados (placa NCh / EN 795) o validados por un ingeniero civil; nunca pernos de cables, barandas u otros elementos no diseñados para resistir cargas dinámicas. El caso real de la antena del Cerro San Cristóbal (2024) demostró que un perno cedió a 8 kN, muy por debajo del mínimo exigido, causando una lesión grave y una multa de 120 UTM a la empresa. Ante cualquier duda, detén la tarea, verifica la certificación y, cuando corresponda, exige la instalación de una línea de vida vertical certificada con dispositivo deslizante y validación anual. Tu vida depende del eslabón más crítico del sistema: el punto de anclaje."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

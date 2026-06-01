@@ -1,0 +1,108 @@
+{
+  "title": "POES en la línea de envasado: decisiones que protegen la inocuidad",
+  "intro": "Trabajas en una planta láctea PYME. Es inicio de turno y debes sanitizar la llenadora antes de operar. El supervisor te apura porque hay producción atrasada. Tus decisiones impactarán directamente la inocuidad del producto y el cumplimiento del POES. Avancemos paso a paso.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "La superficie de la llenadora todavía tiene restos visibles de leche del turno anterior. El supervisor te dice: 'Échale cloro rápido y partamos'. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Aplico cloro directamente sobre la superficie sucia para ahorrar tiempo.",
+          "outcome": "El cloro se inactiva al contacto con la materia orgánica y la superficie queda contaminada. La sanitización no surte efecto.",
+          "feedback": "Recuerda: aplicar cloro sobre superficie sucia es ineficaz, porque la materia orgánica inactiva el cloro. Primero hay que limpiar.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Realizo primero la limpieza (pre-enjuague, detergente y acción mecánica) y luego sanitizo.",
+          "outcome": "Sigues las etapas del proceso: removiste la suciedad visible antes de sanitizar. La superficie queda lista para una sanitización efectiva.",
+          "feedback": "Correcto. Limpieza y sanitización son etapas distintas: primero se remueve la suciedad, luego se reducen los microorganismos.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Paso un paño con agua y aplico el sanitizante de inmediato.",
+          "outcome": "El agua sola no remueve grasa ni restos orgánicos adheridos. La sanitización posterior queda comprometida.",
+          "feedback": "Insuficiente. La limpieza requiere agua más detergente, acción mecánica y tiempo. Solo agua no basta.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Ya con la superficie limpia, debes preparar el sanitizante. El POES indica ácido peracético a 150 ppm por 5 minutos. Notas que también hay un bidón de cloro disponible. ¿Cómo procedes?",
+      "options": [
+        {
+          "text": "Mezclo cloro con un poco de ácido para 'reforzar' la sanitización.",
+          "outcome": "La mezcla libera gas tóxico, generando un riesgo grave para tu salud y la de tus compañeros. Se debe evacuar el área.",
+          "feedback": "Nunca mezcles cloro con ácido: produce gas tóxico. Cada químico se usa según su hoja de seguridad y el POES.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Preparo el ácido peracético a 150 ppm y respeto los 5 minutos de tiempo de contacto.",
+          "outcome": "Aplicas el sanitizante a la concentración y tiempo que exige el POES. La reducción microbiana es efectiva.",
+          "feedback": "Excelente. Respetar concentración y tiempo de contacto es clave para que el sanitizante cumpla su función.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Aplico el ácido peracético, pero como hay apuro lo dejo solo 1 minuto.",
+          "outcome": "No se cumple el tiempo de contacto exigido. Parte de los microorganismos sobreviven y el riesgo persiste.",
+          "feedback": "El tiempo de contacto no es opcional: el POES indica 5 minutos para este sanitizante. Reducirlo invalida la sanitización.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Análisis anteriores detectaron Listeria en las juntas de goma de la llenadora. El POES indica desarme semanal de juntas, y hoy corresponde. El supervisor sugiere saltarlo 'por esta vez'. ¿Qué decides?",
+      "options": [
+        {
+          "text": "Desarmo las juntas, las sanitizo y dejo registro del desarme.",
+          "outcome": "Eliminas el biofilm escondido en las zonas muertas. Es justamente donde se aloja la Listeria.",
+          "feedback": "Muy bien. Las juntas, gomas y zonas muertas son donde se esconde la contaminación. Un POES sin desarme periódico está incompleto.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Salto el desarme porque las superficies visibles se ven limpias.",
+          "outcome": "El biofilm en las juntas permanece. La próxima microbiología vuelve a arrojar Listeria sobre límite.",
+          "feedback": "Una limpieza visualmente correcta no garantiza inocuidad. La Listeria forma biofilms persistentes en juntas y dead-ends.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Terminaste la sanitización. El check-list de verificación POES está sobre la mesa, sin firmar, y el equipo de ATP disponible. ¿Cómo cierras la tarea?",
+      "options": [
+        {
+          "text": "Completo el check-list, lo firmo y realizo la verificación ATP del turno.",
+          "outcome": "Queda evidencia auditable de la ejecución y verificación. El POES está cumplido en forma completa.",
+          "feedback": "Correcto. POES = procedimiento escrito + ejecución correcta + registro firmado + verificación. El registro y la verificación son parte del cumplimiento.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "No firmo el registro; total, la limpieza ya quedó hecha.",
+          "outcome": "Sin registro firmado ni verificación, ante una auditoría no hay forma de demostrar que el POES se cumplió.",
+          "feedback": "Un POES debe estar escrito, firmado y verificado, no solo ejecutado. Sin registro, la tarea queda incompleta.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Firmo el registro pero omito la verificación ATP por falta de tiempo.",
+          "outcome": "Hay evidencia de ejecución, pero sin verificación no se confirma la eficacia de la sanitización.",
+          "feedback": "La verificación es parte esencial del POES. El ATP entrega resultado en 15 segundos y confirma la limpieza efectiva.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso refuerza que la inocuidad alimentaria no depende de la apariencia, sino del cumplimiento integral del POES. Las claves: primero limpiar y luego sanitizar; respetar siempre la concentración y el tiempo de contacto del sanitizante; nunca mezclar cloro con ácido; desarmar periódicamente equipos para eliminar biofilms en juntas y zonas muertas; y cerrar la tarea con registro firmado y verificación (ATP o microbiología). Recuerda: POES = procedimiento escrito + ejecución correcta + registro firmado + verificación. Sin estos cuatro elementos, las BPM y el sistema HACCP pierden su base. Para profundizar, revisa la Guía POES de ACHIPIA y el DS 977 sobre disposiciones de higiene."
+}

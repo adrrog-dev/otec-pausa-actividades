@@ -1,0 +1,76 @@
+{
+  "title": "Quiz BPM e Higiene Personal — Inocuidad Alimentaria",
+  "intro": "Evalúe sus conocimientos sobre Buenas Prácticas de Manufactura (BPM) e higiene del personal manipulador según el DS 977/1996. Cada pregunta tiene una sola respuesta correcta. Lea con atención y aplique lo aprendido en su lugar de trabajo.",
+  "questions": [
+    {
+      "q": "Según la normativa chilena, ¿cuál es la vigencia del curso de manipulación de alimentos?",
+      "options": [
+        "1 año",
+        "2 años",
+        "3 años",
+        "Indefinida"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El curso de manipulación de alimentos (NCh 3235) tiene una vigencia de 3 años y es obligatorio para todo manipulador.",
+      "feedbackKo": "Incorrecto. La vigencia del curso de manipulación de alimentos es de 3 años, según la NCh 3235.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En un refrigerador, ¿cómo deben ubicarse los productos crudos respecto de los listos para consumo?",
+      "options": [
+        "Indistintamente, según el espacio disponible",
+        "Arriba, para mantenerlos a la vista",
+        "Abajo, para evitar que goteen sobre los listos para consumo",
+        "En el cajón del medio"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. Los productos crudos van abajo para evitar que líquidos goteen sobre alimentos listos para consumo, una causa frecuente de contaminación cruzada y ETA.",
+      "feedbackKo": "Incorrecto. Los productos crudos deben ir abajo para evitar el goteo de líquidos crudos sobre alimentos listos para consumo.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto del uso de joyas en áreas de manipulación de alimentos, lo correcto es:",
+      "options": [
+        "Está permitido si las joyas están limpias",
+        "Está prohibido el uso de relojes, anillos, pulseras y aros",
+        "Solo se prohíben los anillos con piedras",
+        "Se permite si el trabajador usa guantes"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El DS 977 prohíbe joyas, relojes, pulseras y aros en el área, ya que pueden albergar microorganismos y constituir un riesgo de contaminación.",
+      "feedbackKo": "Incorrecto. El uso de joyas, relojes y pulseras está prohibido en el área de manipulación, sin excepción por limpieza.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué color de tabla se utiliza tradicionalmente para cortar carne cruda?",
+      "options": [
+        "Verde",
+        "Azul",
+        "Rojo",
+        "Blanco"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El rojo se asigna a la carne cruda. La separación por colores (azul: pescado, verde: vegetales, amarillo: aves, blanco: lácteos) previene la contaminación cruzada.",
+      "feedbackKo": "Incorrecto. La carne cruda se corta con tabla roja. Recuerde el código: azul pescado, verde vegetales, amarillo aves, blanco lácteos.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es la relación entre las BPM y el sistema HACCP?",
+      "options": [
+        "Las BPM son opcionales si existe HACCP",
+        "Las BPM son un prerrequisito obligatorio para implementar HACCP",
+        "El HACCP reemplaza a las BPM en terreno",
+        "Ambos sistemas son independientes y no se relacionan"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Las BPM son el prerrequisito obligatorio del HACCP. Sin BPM aplicadas en terreno, el plan HACCP colapsa al primer evento real.",
+      "feedbackKo": "Incorrecto. Las BPM son prerrequisito obligatorio del HACCP. Un HACCP sin BPM en terreno es un sistema condenado al fracaso.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

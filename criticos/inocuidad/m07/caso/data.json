@@ -1,0 +1,88 @@
+{
+  "title": "Caso integrador de inocuidad: una mañana en Alimentos del Sur Ltda.",
+  "intro": "Usted es jefe de turno en una planta procesadora de alimentos en la Región del Maule. Son las 08:00 y, sin aviso previo, ingresa un fiscalizador de la SEREMI de Salud para una inspección de rutina. En las próximas horas deberá demostrar el cumplimiento integrado de HACCP, BPM y POES. Cada decisión que tome tendrá consecuencias para la planta. Recuerde: la mayoría de las sanciones no provienen de hallazgos graves, sino de registros faltantes y capacitación vencida.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "El fiscalizador de la SEREMI solicita ingresar de inmediato y pide ver la Resolución Sanitaria vigente y los registros del último mes. Usted nota que un manipulador en la línea no tiene cofia ni mascarilla puesta. ¿Qué hace primero?",
+      "options": [
+        {
+          "text": "Solicitar al fiscalizador que espere afuera mientras ordena la documentación y corrige al trabajador.",
+          "outcome": "El fiscalizador le recuerda que, según el Código Sanitario (Arts. 155-178), puede ingresar a cualquier hora sin aviso previo. Pedirle que espere genera una mala impresión inicial y queda registrado en el acta.",
+          "feedback": "La SEREMI tiene atribución legal de ingreso inmediato. Obstaculizar la fiscalización agrava su situación. Lo correcto es facilitar el acceso y atender los hallazgos de forma transparente.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Permitir el ingreso de inmediato, presentar la Resolución Sanitaria vigente y, en paralelo, instruir al supervisor para que el manipulador se coloque su equipo (BPM).",
+          "outcome": "El fiscalizador valora la disposición a colaborar. Anota el cumplimiento de BPM del personal y registra la corrección inmediata del uso de cofia y mascarilla.",
+          "feedback": "Correcto. Facilitar el ingreso es una obligación, y corregir en el acto una desviación de BPM demuestra control operativo. La actitud preventiva reduce el riesgo de sumario.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Permitir el ingreso, pero ignorar al trabajador sin equipo para no llamar la atención sobre el problema.",
+          "outcome": "El fiscalizador detecta por sí mismo al manipulador sin cofia ni mascarilla y lo consigna como incumplimiento de BPM (Título III del DS 977, higiene del personal).",
+          "feedback": "Las desviaciones de BPM no desaparecen por omitirlas. Corregir en el momento habría demostrado un sistema activo. Ahora queda un hallazgo formal en el acta.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El fiscalizador revisa los registros de POES y de control de un Punto Crítico de Control (PCC) HACCP: la temperatura de la cámara de refrigeración. Encuentra que los últimos 5 días no tienen registro de temperatura. El operador le comenta que 'sí se midió, pero no alcanzó a anotarse'. ¿Qué responde?",
+      "options": [
+        {
+          "text": "Reconocer la brecha, mostrar el procedimiento documentado del PCC y comprometer un plan de cierre inmediato con responsable y plazo.",
+          "outcome": "El fiscalizador consigna la falta de registro, pero también deja constancia de que existe un procedimiento HACCP escrito y un plan de acción correctiva con responsable definido.",
+          "feedback": "Bien manejado. La trazabilidad del PCC se basa en evidencia escrita. Aunque la falta queda registrada, demostrar procedimiento y acción correctiva atenúa la gravedad y muestra un sistema HACCP vivo.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Pedir al operador que complete las planillas ahora, anotando temperaturas estimadas para los días faltantes.",
+          "outcome": "El fiscalizador advierte que se trata de registros llenados a posteriori con datos no verificables. Esto puede interpretarse como adulteración de registros, agravando el sumario.",
+          "feedback": "Nunca se deben rellenar registros con datos inventados. La inocuidad se basa en evidencia real y verificable. Falsear registros es una falta grave que destruye la confianza en todo el sistema.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Argumentar que la cámara funcionaba bien y que el registro es solo un trámite administrativo sin importancia real.",
+          "outcome": "El fiscalizador rechaza el argumento: el monitoreo del PCC es la columna del HACCP. Sin registro, no hay evidencia de que el control se ejerció, y eso pone en duda la inocuidad del producto.",
+          "feedback": "El registro de un PCC no es un trámite: es la prueba del control. Minimizar su importancia revela desconocimiento del HACCP y debilita su posición ante la SEREMI.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Finalmente, el fiscalizador solicita los certificados de capacitación vigente del personal manipulador (curso con OTEC autorizada). Usted revisa y descubre que 3 de 12 trabajadores tienen su capacitación vencida. ¿Cómo procede?",
+      "options": [
+        {
+          "text": "Reconocer la situación, presentar el listado completo del personal y un plan de recapacitación con OTEC autorizada, fechas y responsable.",
+          "outcome": "El fiscalizador consigna la brecha de capacitación, pero registra un plan concreto de cierre. La planta evita la clausura y queda con plazo para regularizar.",
+          "feedback": "Excelente cierre. La capacitación vencida es una de las causas más frecuentes de sanción. Reconocerla con un plan formal demuestra gestión preventiva y compromiso con el cumplimiento.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Asegurar verbalmente que 'todos están capacitados' sin mostrar los certificados de los 3 trabajadores.",
+          "outcome": "El fiscalizador exige los documentos. Al no existir respaldo de capacitación vigente, registra el incumplimiento del Título III del DS 977 y eleva el caso a sumario sanitario.",
+          "feedback": "Las afirmaciones verbales no tienen valor en una fiscalización. La capacitación vigente debe respaldarse con certificados. La falta de evidencia se traduce directamente en sanción.",
+          "score": -1,
+          "next": null
+        },
+        {
+          "text": "Ofrecer matricular a los 3 trabajadores ese mismo día y pedir que no se consigne el hallazgo en el acta.",
+          "outcome": "Inscribir el curso es positivo, pero solicitar que no se registre el hallazgo es improcedente. El fiscalizador debe consignar lo observado; la inscripción solo cuenta como acción correctiva.",
+          "feedback": "Iniciar la recapacitación es correcto, pero pedir omitir un hallazgo no corresponde y daña la relación con la autoridad. Lo válido es reconocer la brecha y documentar la acción de cierre.",
+          "score": -0.25,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso integra los tres pilares de la inocuidad alimentaria en Chile. Las Buenas Prácticas de Manufactura (BPM) se evaluaron en la higiene del personal; los Procedimientos Operativos Estandarizados de Saneamiento (POES) y el sistema HACCP se verificaron en el monitoreo de un Punto Crítico de Control (temperatura de refrigeración); y el marco legal del DS 977/1996 se manifestó en la capacitación obligatoria del personal manipulador. El aprendizaje central es que la SEREMI de Salud puede fiscalizar sin aviso previo, y que la principal defensa de un establecimiento no son las explicaciones verbales, sino los registros vigentes, los procedimientos documentados y la capacitación al día con OTEC autorizada. Reconocer las brechas con transparencia y presentar planes de cierre concretos —con responsable y plazo— protege a la empresa frente a multas (0,1 a 1.000 UTM) y clausuras. Por el contrario, falsear registros o intentar ocultar hallazgos agrava la situación y compromete la inocuidad real del producto y la salud de las personas."
+}

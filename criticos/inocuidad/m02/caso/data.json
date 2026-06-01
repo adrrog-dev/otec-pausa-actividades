@@ -1,0 +1,74 @@
+{
+  "title": "Decisión en el casino minero: ¿está bien cocido el pollo?",
+  "intro": "Usted trabaja como manipulador de alimentos en un casino institucional de una empresa minera en Antofagasta que sirve 1.800 raciones diarias. Hoy está a cargo del proceso de pollo a la plancha, etapa identificada como Punto Crítico de Control (PCC) en el plan HACCP. Sus decisiones afectarán directamente la inocuidad del alimento que consumirán los trabajadores. Avancemos paso a paso.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Es la hora peak del almuerzo. El termómetro calibrado marca 68 °C en el centro de una bandeja de pollo, pero el límite crítico del plan HACCP exige ≥75 °C por al menos 15 segundos. La fila de comensales crece y su jefatura pide apurar el servicio. ¿Qué hace?",
+      "options": [
+        {
+          "text": "Sirvo el pollo igual; 68 °C se ve bien cocido y la fila no puede esperar.",
+          "outcome": "El pollo no alcanzó el límite crítico. Existe riesgo real de sobrevivencia de patógenos como Salmonella, lo que puede causar un brote gastrointestinal entre los trabajadores.",
+          "feedback": "Un PCC no se negocia por presión de tiempo. Si el límite crítico no se cumple, el producto no es inocuo. La presión operativa nunca justifica omitir el control esencial.",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Devuelvo el pollo a cocción hasta alcanzar ≥75 °C en el centro y vuelvo a medir.",
+          "outcome": "Aplica correctamente la acción correctiva del plan HACCP (recocción inmediata). Una vez verificado el límite crítico, el pollo puede servirse con seguridad.",
+          "feedback": "Correcto. Ante una desviación en un PCC, la acción correctiva es inmediata: recocción o desecho. Así protege la inocuidad sin descartar el producto innecesariamente.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Desecho toda la bandeja sin más análisis para no arriesgarme.",
+          "outcome": "Evita el riesgo sanitario, pero genera una pérdida innecesaria de alimento cuando la recocción era una opción válida y contemplada en el plan.",
+          "feedback": "Su intención de proteger la inocuidad es correcta, pero el plan HACCP contempla la recocción como primera acción correctiva. Desechar debe reservarse cuando la recocción no es viable.",
+          "score": 0,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El pollo ya está correctamente cocido. Ahora pasa a la etapa de mantención en caliente, también definida como PCC con límite crítico de ≥63 °C. El plan establece monitoreo cada 30 minutos con termómetro calibrado y registro firmado. Usted está muy ocupado. ¿Qué hace?",
+      "options": [
+        {
+          "text": "Mido la temperatura cada 30 minutos y firmo el registro en la planilla.",
+          "outcome": "Mantiene la cadena de control y deja evidencia auditable. La trazabilidad del PCC queda demostrada ante cualquier inspección de la autoridad sanitaria.",
+          "feedback": "Excelente. El monitoreo disciplinado y el registro firmado son la columna vertebral del HACCP. 'No se necesita tecnología cara, se necesita disciplina de registro.'",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Confío en que el equipo mantiene la temperatura y completo la planilla al final del turno de memoria.",
+          "outcome": "El registro pierde validez: no refleja mediciones reales en el momento. Si hubo una desviación, no fue detectada ni corregida a tiempo.",
+          "feedback": "Llenar registros de memoria invalida el sistema de vigilancia. El monitoreo debe ser real, en el momento indicado, y registrarse al instante para que sea auditable.",
+          "score": -1,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Al cierre del turno, la jefatura de calidad le pide proponer una mejora para fortalecer el plan HACCP de la línea de pollo. ¿Qué recomienda?",
+      "options": [
+        {
+          "text": "Reforzar los prerrequisitos (BPM y POES) y la capacitación del equipo, además del monitoreo de PCC.",
+          "outcome": "Apunta a la base del sistema. Sin BPM y POES sólidos, ningún plan HACCP se sostiene; con un equipo capacitado, los controles se cumplen de forma consistente.",
+          "feedback": "Muy bien. HACCP no funciona sin BPM, POES, control de plagas, control de proveedores, trazabilidad y capacitación. Fortalecer la base es la mejora más estratégica.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Comprar equipos de cocción más caros y automatizados para no preocuparse del control.",
+          "outcome": "La tecnología puede ayudar, pero sin disciplina de registro ni prerrequisitos sólidos, el riesgo persiste y la inversión no garantiza inocuidad.",
+          "feedback": "El caso real demuestra que un termómetro y una planilla bien usados redujeron los incidentes a cero. La clave no es el costo del equipo, sino la disciplina de control y registro.",
+          "score": 0,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso reproduce la experiencia real de un casino minero en Antofagasta, donde un PCC bien definido y monitoreado redujo las quejas gastrointestinales de 7 a 0 por trimestre. Las decisiones correctas demuestran los pilares del HACCP: respetar los límites críticos en los PCC sin ceder a la presión operativa (Principio 3), aplicar acciones correctivas inmediatas ante desviaciones (Principio 5), ejecutar un monitoreo disciplinado en el momento indicado (Principio 4) y mantener registros firmados y auditables (Principio 7). Todo ello solo funciona sobre una base de prerrequisitos (BPM, POES) y capacitación del equipo. Recuerde: HACCP previene, no reacciona; y un PCC bien controlado protege la salud de quienes confían en su trabajo cada día."
+}

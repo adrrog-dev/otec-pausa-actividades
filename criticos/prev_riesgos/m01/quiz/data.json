@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Marco legal Ley 16.744 y rol de las Mutualidades",
+  "intro": "Pon a prueba lo aprendido sobre el marco normativo de la prevención de riesgos laborales en Chile. Responde las 5 preguntas y revisa la retroalimentación para reforzar tus conocimientos.",
+  "questions": [
+    {
+      "q": "¿Qué establece principalmente la Ley 16.744 de 1968?",
+      "options": [
+        "Un seguro social obligatorio contra accidentes del trabajo y enfermedades profesionales",
+        "Las condiciones sanitarias mínimas de los lugares de trabajo",
+        "La constitución de los Comités Paritarios de Higiene y Seguridad",
+        "El régimen de subcontratación de obras y faenas"
+      ],
+      "correctIndex": 0,
+      "feedbackOk": "Correcto. La Ley 16.744 es la columna vertebral del sistema preventivo chileno y crea un seguro obligatorio financiado por el empleador.",
+      "feedbackKo": "Incorrecto. La Ley 16.744 establece el seguro social obligatorio contra accidentes del trabajo y enfermedades profesionales. Las condiciones sanitarias son materia del DS 594.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuáles son los organismos administradores del seguro de la Ley 16.744?",
+      "options": [
+        "Dirección del Trabajo, SEREMI de Salud y SUSESO",
+        "ACHS, Mutual de Seguridad CChC, IST e ISL",
+        "Sernac, SUSESO e Inspección del Trabajo",
+        "Ministerio de Salud, ISP y SUSESO"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. ACHS, Mutual de Seguridad CChC, IST e ISL administran el seguro: pagan prestaciones y asesoran preventivamente a las empresas adheridas.",
+      "feedbackKo": "Incorrecto. Los organismos administradores son las mutualidades (ACHS, Mutual CChC, IST) y el ISL. La DT, SEREMI de Salud y SUSESO cumplen rol fiscalizador.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Qué porcentaje base de cotización paga el empleador por la Ley 16.744?",
+      "options": [
+        "0,75%",
+        "0,95%",
+        "1,50%",
+        "2,00%"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La cotización básica es de 0,95%, a la que se suma una cotización adicional diferenciada según el riesgo de la actividad.",
+      "feedbackKo": "Incorrecto. La cotización básica de la Ley 16.744 es de 0,95%, financiada íntegramente por el empleador.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "El \"Derecho a Saber\" u Obligación de Informar (ODI) los riesgos a los trabajadores está consagrado principalmente en:",
+      "options": [
+        "DS 594",
+        "DS 54",
+        "DS 40",
+        "Ley 20.123"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El DS 40 instaura la ODI, que obliga al empleador a informar oportunamente los riesgos del puesto de trabajo.",
+      "feedbackKo": "Incorrecto. La ODI está consagrada en el DS 40. El DS 594 regula condiciones sanitarias y el DS 54 los Comités Paritarios.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto de las mutualidades administradoras del seguro, es correcto afirmar que:",
+      "options": [
+        "Son empresas privadas con fines de lucro",
+        "Son corporaciones de derecho privado sin fines de lucro",
+        "Son organismos del Estado dependientes de la SUSESO",
+        "Solo pagan prestaciones económicas, no realizan prevención"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. Las mutualidades son corporaciones de derecho privado sin fines de lucro, con un rol dual: pagan prestaciones y asesoran en prevención.",
+      "feedbackKo": "Incorrecto. Las mutualidades son corporaciones de derecho privado sin fines de lucro y cumplen además un rol preventivo asesorando a las empresas adheridas.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

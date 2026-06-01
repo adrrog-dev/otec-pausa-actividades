@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Hemorragias y trauma en el ámbito laboral",
+  "intro": "Evalúa tus conocimientos sobre el control de hemorragias y la inmovilización de fracturas según los protocolos ACHS/Mutual/IST y las guías Stop the Bleed. Cada pregunta tiene una sola respuesta correcta. Lee con atención y aplica lo aprendido en el Módulo 4.",
+  "questions": [
+    {
+      "q": "¿Cómo se reconoce una hemorragia arterial, la más letal en una emergencia laboral?",
+      "options": [
+        "Sangre rojo oscuro con flujo continuo",
+        "Sangre rojo oscuro que aparece en sábana de forma leve",
+        "Sangre rojo brillante y pulsátil, que sale a chorros",
+        "Sangre amarillenta que cae en gotas"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La hemorragia arterial presenta sangre rojo brillante y pulsátil (a chorros), porque proviene de las arterias. Puede provocar shock hipovolémico en 3 a 5 minutos, por eso requiere control inmediato.",
+      "feedbackKo": "Respuesta incorrecta. La hemorragia arterial se caracteriza por sangre rojo brillante y pulsátil (a chorros). Las venosas y capilares presentan sangre rojo oscuro y flujo continuo o en sábana.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es el primer paso para controlar una hemorragia externa?",
+      "options": [
+        "Aplicar de inmediato un torniquete sobre la herida",
+        "Aplicar presión directa con gasa o paño limpio durante al menos 10 minutos",
+        "Colocar hielo sobre la zona afectada",
+        "Vendar la herida con presión muy leve"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El primer paso es la presión directa con gasa o paño limpio durante un mínimo de 10 minutos, sin levantar. El torniquete se reserva solo para hemorragias masivas de extremidad que no ceden.",
+      "feedbackKo": "Respuesta incorrecta. El primer paso siempre es la presión directa con gasa o paño limpio por al menos 10 minutos. El torniquete es el último recurso, solo si la presión, elevación y vendaje compresivo fallan.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Cuando es necesario aplicar un torniquete en una extremidad, ¿dónde debe colocarse?",
+      "options": [
+        "Directamente sobre la herida que sangra",
+        "A 1 cm de la herida para mayor precisión",
+        "A 5-7 cm proximal a la herida, nunca sobre una articulación",
+        "Sobre la articulación más cercana a la herida"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El torniquete se aplica a 5-7 cm en posición proximal a la herida (más cercano al cuerpo), nunca sobre una articulación. Recuerda anotar la hora de aplicación y trasladar de urgencia (máximo 2 horas).",
+      "feedbackKo": "Respuesta incorrecta. El torniquete se coloca a 5-7 cm proximal a la herida y nunca sobre una articulación. Además, se debe anotar la hora de aplicación y trasladar con urgencia.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Al inmovilizar una fractura, ¿qué principio se debe respetar?",
+      "options": [
+        "Inmovilizar solo la zona exacta de la fractura",
+        "Inmovilizar una articulación arriba y una articulación abajo del foco de fractura",
+        "Inmovilizar toda la extremidad sin considerar las articulaciones",
+        "Inmovilizar únicamente cuando hay deformidad visible"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El principio es inmovilizar una articulación arriba y una articulación abajo del foco de fractura. Nunca se debe intentar reducir o acomodar el hueso.",
+      "feedbackKo": "Respuesta incorrecta. La regla es inmovilizar una articulación arriba y una articulación abajo del foco de fractura, sin intentar reducir el hueso.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "En un caso de epistaxis (sangrado nasal), ¿cuál es la posición correcta de la cabeza de la víctima?",
+      "options": [
+        "Inclinada hacia atrás para frenar el sangrado",
+        "Completamente acostada boca arriba",
+        "Inclinada ligeramente hacia adelante, pinzando las narinas por 10 minutos",
+        "Girada hacia un costado sin pinzar la nariz"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. En epistaxis, la víctima debe estar sentada con la cabeza ligeramente inclinada hacia adelante y pinzando las narinas durante 10 minutos. Inclinarla hacia atrás puede provocar que trague sangre.",
+      "feedbackKo": "Respuesta incorrecta. Lo correcto es inclinar la cabeza ligeramente hacia adelante (nunca hacia atrás) y pinzar las narinas por 10 minutos. Inclinarla hacia atrás puede hacer que la persona trague sangre.",
+      "points": 10,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

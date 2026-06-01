@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Caso integrador: Cambiar la cultura de respeto en el área de Operaciones — OTEC Pausa</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main id="app" class="card"></main>
+<footer class="brandbar">OTEC Pausa Ltda. · Caso interactivo</footer>
+<script>window.__DATA__ = {
+  "title": "Caso integrador: Cambiar la cultura de respeto en el área de Operaciones",
+  "intro": "Eres jefatura del área de Operaciones de una empresa logística chilena. Tras la entrada en vigor de la Ley 21.643 (Ley Karin), tu empresa lanzó un programa de cambio cultural hacia entornos respetuosos. En tu equipo persisten conductas problemáticas: reuniones donde solo hablan los mismos, bromas que incomodan a algunas personas y un líder de turno que llega tarde y no respeta los protocolos. Deberás aplicar los modelos Kotter, ADKAR y COM-B para conducir el cambio. Cada decisión tiene consecuencias.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "Una trabajadora te comenta de manera informal que las 'tallas' del líder de turno la incomodan y que en las reuniones nunca alcanza a opinar. Aún no es una denuncia formal. ¿Cómo inicias el cambio en tu equipo?",
+      "options": [
+        {
+          "text": "Envías un correo masivo recordando que el acoso está prohibido y que la Ley Karin obliga a investigar.",
+          "outcome": "El correo genera roces. El equipo lo percibe como una amenaza genérica y no entiende qué conducta concreta debe cambiar.",
+          "feedback": "Comunicar la norma es necesario, pero según ADKAR falta generar 'Awareness' real del problema concreto y 'Desire' de participar. Un correo punitivo no crea conciencia ni deseo de cambio.",
+          "score": -0.3,
+          "next": 2
+        },
+        {
+          "text": "Conversas en privado con la trabajadora, le explicas el canal formal disponible y luego abres en tu equipo una conversación sobre cómo quieren trabajar, creando sentido de urgencia.",
+          "outcome": "La trabajadora se siente escuchada y respaldada. El equipo comienza a reconocer el problema sin sentirse acusado.",
+          "feedback": "Excelente. Aplicas el paso 1 de Kotter (sentido de urgencia) y las etapas A y D de ADKAR (conciencia y deseo). También respetas el deber de la jefatura de informar canales ante una posible situación de acoso.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Decides no intervenir porque 'no fue una denuncia formal' y prefieres esperar.",
+          "outcome": "La conducta continúa y la trabajadora deja de confiar en la jefatura. El clima del área se deteriora.",
+          "feedback": "Inacción riesgosa. La Ley Karin exige una gestión activa y la jefatura tiene deber de prevención. Ignorar señales tempranas eleva el riesgo legal, ético y de negocio.",
+          "score": -1,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "Avanzas con el programa. Quieres mejorar un comportamiento concreto: 'que las reuniones empiecen a tiempo y todas las personas puedan hablar'. ¿Qué intervención diseñas?",
+      "options": [
+        {
+          "text": "Solo capacitas al equipo en comunicación respetuosa, sin cambiar nada del entorno.",
+          "outcome": "La capacitación gusta, pero a las dos semanas el líder de turno vuelve a llegar tarde y todo regresa a lo anterior.",
+          "feedback": "Es el error más común: intervenir solo al individuo. Según McKinsey, el 70% de estos programas fracasa por no tocar el sistema. Faltó la dimensión sistémica de COM-B.",
+          "score": -0.5,
+          "next": 3
+        },
+        {
+          "text": "Aplicas COM-B: capacitas en facilitación (Capacidad), bloqueas salas y agendas con turnos para hablar (Oportunidad) y comprometes a los líderes a llegar puntuales modelando el cambio (Motivación).",
+          "outcome": "Las reuniones mejoran de forma sostenida porque cambiaste capacidad, oportunidad y motivación a la vez.",
+          "feedback": "Muy bien. Diseñaste una intervención sistémica completa con COM-B, atacando las tres dimensiones. No basta con voluntad: a veces falta oportunidad o capacidad.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Impones una regla estricta con sanciones a quien llegue tarde o interrumpa, sin más apoyo.",
+          "outcome": "Hay cumplimiento por miedo, pero aumenta la tensión y nadie quiere proponer ideas en las reuniones.",
+          "feedback": "El control sin capacidad ni motivación genera cumplimiento frágil. COM-B muestra que la motivación automática y la oportunidad social también importan para un cambio genuino.",
+          "score": -0.2,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "A los tres meses el clima mejoró y aumentaron las consultas por los canales formales. Algunos directivos se asustan: 'subieron las denuncias, esto va mal'. ¿Qué les respondes?",
+      "options": [
+        {
+          "text": "Les explicas que el alza de denuncias por canales formales suele ser señal de mayor confianza, como ocurrió en el caso BCI, y propones consolidar los logros.",
+          "outcome": "La dirección entiende el indicador, mantiene el apoyo y se forma una coalición guía estable.",
+          "feedback": "Correcto. Lees bien el dato (caso BCI: denuncias formales +240% como señal de confianza) y aplicas los pasos 6 y 7 de Kotter: reconocer logros tempranos y consolidar el cambio.",
+          "score": 1,
+          "next": 4
+        },
+        {
+          "text": "Coincides en que es preocupante y propones frenar la difusión de los canales.",
+          "outcome": "Las personas vuelven a callar y el riesgo legal y humano se oculta bajo la alfombra.",
+          "feedback": "Lectura equivocada del indicador. Silenciar los canales contradice la Ley Karin y destruye la confianza construida. El problema no desaparece, solo se invisibiliza.",
+          "score": -1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "Pasado un año, el cambio funciona. ¿Cómo aseguras que perdure en el tiempo?",
+      "options": [
+        {
+          "text": "Anclas las nuevas conductas en la cultura: las incorporas a la inducción, a los KPI de liderazgo y al reconocimiento del desempeño.",
+          "outcome": "El respeto se vuelve parte de 'cómo trabajamos aquí' y resiste cambios de personas.",
+          "feedback": "Perfecto. Aplicas el paso 8 de Kotter (anclar en la cultura) y la 'R' de ADKAR (refuerzo). El cambio sistémico —políticas, KPI e incentivos— sostiene el resultado.",
+          "score": 1,
+          "next": null
+        },
+        {
+          "text": "Das por terminado el programa y vuelves a las prioridades operativas.",
+          "outcome": "Sin refuerzo, en pocos meses reaparecen las conductas antiguas.",
+          "feedback": "Falta la etapa de Refuerzo (R de ADKAR) y el anclaje cultural (Kotter 8). Sin sostener el cambio, los avances se diluyen.",
+          "score": -0.5,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "Este caso integra los tres modelos del módulo. Kotter aportó la mirada organizacional: crear urgencia, conformar coalición guía, reconocer logros tempranos y anclar el cambio en la cultura. ADKAR ordenó la transición individual: generar conciencia y deseo antes de exigir conocimiento, habilidad y refuerzo. COM-B permitió diseñar intervenciones sistémicas, recordando que muchas veces no falta voluntad, sino capacidad u oportunidad. La evidencia (McKinsey, caso BCI) confirma que las capacitaciones aisladas fracasan si no se rediseña el sistema —políticas, procesos, KPI e incentivos— y que un alza de denuncias formales puede ser señal de mayor confianza. Como jefatura, prevencionista o trabajador, recuerda que cambiar comportamientos en el trabajo es un deber ético, una obligación legal bajo la Ley 21.643 y una decisión rentable para la organización. Este material es de carácter formativo y no constituye asesoría legal; ante situaciones concretas consulte los canales formales de su empresa y la Dirección del Trabajo."
+};</script>
+<script src="script.js"></script>
+</body>
+</html>

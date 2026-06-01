@@ -1,0 +1,76 @@
+{
+  "title": "Quiz: Kit de primeros auxilios y registro de incidentes",
+  "intro": "Pon a prueba tus conocimientos sobre la gestión del botiquín, el registro de incidentes y la derivación a la mutual en el ámbito laboral chileno. Cada respuesta incluye retroalimentación para reforzar tu aprendizaje. ¡Éxito!",
+  "questions": [
+    {
+      "q": "Según el DS 594, ¿qué elemento NO debe contener el botiquín de primeros auxilios sin prescripción médica?",
+      "options": [
+        "Gasas estériles",
+        "Analgésicos como aspirina o paracetamol",
+        "Vendas elásticas",
+        "Guantes de nitrilo"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El botiquín de primeros auxilios no es un botiquín de farmacia: no debe contener analgésicos, pomadas ni antibióticos sin prescripción médica.",
+      "feedbackKo": "Respuesta incorrecta. Las gasas, vendas y guantes sí forman parte del botiquín. Lo que no se incluye, sin prescripción médica, son los analgésicos como aspirina o paracetamol.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es el plazo legal para presentar la DIAT ante la mutual según el artículo 76 de la Ley 16.744?",
+      "options": [
+        "12 horas hábiles",
+        "24 horas hábiles",
+        "48 horas hábiles",
+        "5 días corridos"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. La DIAT debe presentarse dentro de 24 horas hábiles. Su omisión puede implicar multas SUSESO y dejar al trabajador sin cobertura.",
+      "feedbackKo": "Respuesta incorrecta. El plazo legal es de 24 horas hábiles. Incumplirlo arriesga multas y la pérdida de cobertura para el trabajador.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Con qué frecuencia mínima debe realizarse la revisión del botiquín?",
+      "options": [
+        "Anual",
+        "Semestral",
+        "Mensual",
+        "Cada 2 años"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. La revisión mínima es mensual, verificando estado y vencimientos, además de la reposición inmediata tras cada uso.",
+      "feedbackKo": "Respuesta incorrecta. La revisión debe hacerse al menos mensualmente para asegurar materiales vigentes y disponibles.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "¿Cuál es el teléfono de emergencias de la ACHS?",
+      "options": [
+        "1407",
+        "600 390 1000",
+        "600 600 2247",
+        "101"
+      ],
+      "correctIndex": 2,
+      "feedbackOk": "Correcto. El número de la ACHS es 600 600 2247. Recuerda: Mutual CChC 1407, IST 600 390 1000 e ISL 101.",
+      "feedbackKo": "Respuesta incorrecta. El teléfono de la ACHS es 600 600 2247. El 1407 corresponde a Mutual CChC, el 600 390 1000 al IST y el 101 al ISL.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    },
+    {
+      "q": "Respecto del accidente de trayecto (recorrido casa-trabajo), ¿cuál afirmación es correcta?",
+      "options": [
+        "No está cubierto por la Ley 16.744",
+        "Está cubierto por la Ley 16.744 y requiere documentación específica",
+        "Solo está cubierto si ocurre dentro de la empresa",
+        "Requiere los mismos documentos que un accidente del trabajo"
+      ],
+      "correctIndex": 1,
+      "feedbackOk": "Correcto. El accidente de trayecto sí está cubierto por la Ley 16.744, pero exige prueba específica como parte de Carabineros, certificado de atención o testigo.",
+      "feedbackKo": "Respuesta incorrecta. El accidente de trayecto está cubierto por la Ley 16.744, aunque requiere documentación específica distinta a la del accidente del trabajo.",
+      "points": 20,
+      "difficulty": "Intermedio"
+    }
+  ]
+}

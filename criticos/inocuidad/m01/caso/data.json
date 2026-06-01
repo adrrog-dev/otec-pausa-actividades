@@ -1,0 +1,101 @@
+{
+  "title": "Fiscalización SEREMI en Panadería 'El Trigal'",
+  "intro": "Eres Carolina, encargada de turno de la panadería 'El Trigal' en Valparaíso. Es martes por la mañana cuando un fiscalizador de la SEREMI de Salud llega sin previo aviso y solicita ingresar al establecimiento para una inspección de rutina. El dueño no está y deberás tomar decisiones que pueden evitar o agravar una sanción. Recuerda el marco del DS 977/1996.",
+  "nodes": [
+    {
+      "id": 1,
+      "situation": "El fiscalizador de la SEREMI se identifica con su credencial y pide ingresar para inspeccionar las instalaciones y revisar la documentación. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Le pido que regrese cuando esté el dueño, ya que solo él puede autorizar el ingreso.",
+          "outcome": "El fiscalizador te informa que, según el Código Sanitario (Arts. 155-178), la autoridad puede ingresar a cualquier hora sin aviso previo. Tu negativa queda registrada como obstrucción a la fiscalización.",
+          "feedback": "Incorrecto. La SEREMI de Salud está facultada para ingresar sin aviso a cualquier establecimiento de alimentos. Negar el acceso agrava la situación.",
+          "score": -1,
+          "next": 2
+        },
+        {
+          "text": "Lo recibo, verifico su credencial y le facilito el ingreso, avisando por teléfono al dueño.",
+          "outcome": "El fiscalizador agradece tu colaboración. Verificar la credencial es correcto y avisar al dueño demuestra orden interno. Comienza la inspección con buena disposición.",
+          "feedback": "Correcto. La SEREMI puede ingresar sin aviso; lo adecuado es verificar la identidad del fiscalizador y colaborar. Avisar a la jefatura es buena práctica.",
+          "score": 1,
+          "next": 2
+        },
+        {
+          "text": "Lo dejo entrar pero le digo que no tengo acceso a ningún documento.",
+          "outcome": "El fiscalizador inicia el recorrido, pero anota la falta de disposición para presentar registros, lo que predispone negativamente la inspección.",
+          "feedback": "Parcialmente incorrecto. Permitir el ingreso es correcto, pero negar acceso a la documentación dificulta demostrar cumplimiento del DS 977.",
+          "score": -0.5,
+          "next": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "situation": "El fiscalizador solicita la Resolución Sanitaria vigente y los registros de capacitación del personal manipulador. Sabes que el local fue ampliado hace dos meses y que un manipulador tiene el curso vencido. ¿Cómo respondes?",
+      "options": [
+        {
+          "text": "Le entrego la Resolución Sanitaria sin mencionar la ampliación y oculto la ficha del manipulador con curso vencido.",
+          "outcome": "El fiscalizador detecta por sí mismo la ampliación no informada y solicita las fichas completas del personal. Ocultar información configura una falta grave.",
+          "feedback": "Incorrecto. Ocultar información a la autoridad agrava el sumario. La Resolución debe actualizarse tras cualquier ampliación (Art. 3 DS 977).",
+          "score": -1,
+          "next": 3
+        },
+        {
+          "text": "Entrego toda la documentación disponible y declaro con transparencia que la Resolución debe actualizarse por la ampliación y que un curso está vencido, mostrando el plan de regularización en curso.",
+          "outcome": "El fiscalizador valora la transparencia y registra que existe un plan de cierre con responsables y plazos. Las observaciones se anotan, pero se reconoce la voluntad de cumplimiento.",
+          "feedback": "Correcto. La honestidad y mostrar un plan de regularización con responsable y plazo es la mejor defensa preventiva frente a una fiscalización.",
+          "score": 1,
+          "next": 3
+        },
+        {
+          "text": "Le digo que la documentación está completa y al día, sin verificar.",
+          "outcome": "Al revisar, el fiscalizador encuentra el curso vencido y la Resolución desactualizada. Tu afirmación falsa daña la credibilidad del establecimiento.",
+          "feedback": "Incorrecto. Afirmar cumplimiento sin verificar genera contradicciones que el fiscalizador detectará, debilitando la posición de la empresa.",
+          "score": -0.5,
+          "next": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "situation": "Durante el recorrido, el fiscalizador revisa el refrigerador y nota que la planilla de control de temperaturas tiene casilleros en blanco de las últimas tres semanas. Te pregunta por qué. ¿Qué haces?",
+      "options": [
+        {
+          "text": "Invento temperaturas y completo la planilla a mano frente al fiscalizador.",
+          "outcome": "El fiscalizador advierte la adulteración de registros en el momento, lo que constituye una de las faltas más graves posibles en una fiscalización.",
+          "feedback": "Muy incorrecto. Falsear registros frente a la autoridad es gravísimo. Los registros faltantes son una de las principales causas de sanción según el DS 977.",
+          "score": -1,
+          "next": 4
+        },
+        {
+          "text": "Reconozco la falla en el registro, explico que el equipo funciona dentro de rango y me comprometo a reinstaurar el control diario inmediatamente.",
+          "outcome": "El fiscalizador anota la observación como brecha a corregir. Tu reconocimiento honesto y el compromiso de reimplementar registros diarios se consignan favorablemente.",
+          "feedback": "Correcto. Reconocer la brecha y comprometer acciones concretas es lo adecuado. Los registros de temperatura son parte de los POES exigidos.",
+          "score": 1,
+          "next": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "situation": "La inspección concluye. El fiscalizador levanta un acta con las observaciones detectadas. ¿Cómo cierras la visita?",
+      "options": [
+        {
+          "text": "Firmo el acta sin leerla para terminar rápido.",
+          "outcome": "Firmas sin conocer el detalle de las observaciones, lo que dificulta preparar la defensa y el plan de cierre dentro de los plazos del sumario.",
+          "feedback": "Incorrecto. Siempre debes leer el acta para conocer las observaciones exactas y los plazos de descargo.",
+          "score": -0.5,
+          "next": null
+        },
+        {
+          "text": "Leo el acta, solicito copia, anoto los plazos de descargo y coordino con el dueño un plan de cierre con responsables y fechas.",
+          "outcome": "Quedas con la copia del acta, conoces los plazos para presentar descargos y activas de inmediato el plan: actualizar Resolución, capacitar al personal con OTEC autorizada y reinstaurar registros.",
+          "feedback": "Correcto. Leer el acta, pedir copia y activar un plan de cierre con responsable y plazo es la conducta esperada para regularizar y reducir el impacto del sumario.",
+          "score": 1,
+          "next": null
+        }
+      ]
+    }
+  ],
+  "finalAnalysis": "En una fiscalización de la SEREMI de Salud bajo el DS 977/1996, las mejores decisiones se basan en tres pilares: colaboración (la autoridad puede ingresar sin aviso), transparencia (reconocer brechas y mostrar planes de regularización es mejor que ocultar o falsear) y gestión documental al día. La mayoría de las sanciones no se originan en hallazgos espectaculares, sino en registros faltantes, capacitación vencida y Resoluciones Sanitarias desactualizadas. La defensa preventiva del establecimiento son sus registros vigentes, su personal capacitado por OTEC autorizada y sus procedimientos documentados. Falsear información o negar el acceso a la SEREMI agrava cualquier sumario y puede derivar en multas de hasta 1.000 UTM, clausura o suspensión de la Resolución Sanitaria."
+}
