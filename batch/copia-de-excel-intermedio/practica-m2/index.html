@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Práctica interactiva en Excel · Módulo 2 · OTEC Pausa</title>
+<script src="https://cdn.jsdelivr.net/npm/hyperformula@2.7.0/dist/hyperformula.full.min.js"></script>
+<style>
+  :root{
+    --teal:#00A99E; --blue:#1B3A57; --navy:#0F1F33; --orange:#F26B1F;
+    --red:#E32D3D; --yellow:#F5C037; --gray:#4A5568; --light:#F4F6F8;
+    --green-ok:#1e8e5a; --green-bg:#e6f6ee;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:Calibri,'Segoe UI',system-ui,sans-serif;color:#1d2530;background:#fff;}
+  .bands{display:flex;height:7px;}
+  .bands>div{flex:1;}
+  .b1{background:var(--teal);}.b2{background:var(--orange);}.b3{background:var(--red);}.b4{background:var(--yellow);}.b5{background:var(--blue);}
+  .wrap{max-width:920px;margin:0 auto;padding:18px 20px 40px;}
+  header.hd{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--light);padding-bottom:14px;margin-bottom:8px;}
+  .logo{width:44px;height:44px;flex:0 0 44px;}
+  .brand b{color:var(--blue);font-size:20px;letter-spacing:.5px;}
+  .brand span{display:block;color:var(--gray);font-size:12px;}
+  h1{font-size:21px;color:var(--blue);margin:18px 0 2px;}
+  .sub{color:var(--gray);font-size:13px;margin-bottom:14px;}
+  .card{background:var(--light);border-radius:8px;padding:14px 16px;margin:14px 0;font-size:14.5px;line-height:1.5;}
+  .card h2{font-size:15px;color:var(--teal);margin:0 0 8px;}
+  .card ul{margin:6px 0 0 0;padding-left:20px;}
+  .card li{margin-bottom:4px;}
+  code{background:#fff;border:1px solid #d8dee6;border-radius:4px;padding:1px 6px;font-family:Consolas,monospace;font-size:13px;color:var(--blue);}
+  /* barra de formulas */
+  .fxbar{display:flex;align-items:stretch;margin:16px 0 0;border:1px solid #c3ccd6;border-radius:6px 6px 0 0;overflow:hidden;}
+  .fxbar .fxlabel{background:var(--light);color:var(--gray);font-style:italic;font-weight:bold;padding:9px 14px;border-right:1px solid #c3ccd6;display:flex;align-items:center;gap:6px;min-width:96px;}
+  .fxbar .cellref{font-style:normal;color:var(--blue);font-family:Consolas,monospace;background:#fff;border:1px solid #c3ccd6;border-radius:3px;padding:1px 7px;font-size:12px;}
+  .fxbar input{flex:1;border:none;outline:none;padding:9px 12px;font-family:Consolas,monospace;font-size:14.5px;color:#1d2530;}
+  .fxbar input::placeholder{color:#9aa4b0;font-family:Calibri,sans-serif;font-style:italic;}
+  /* grid */
+  table.sheet{border-collapse:collapse;width:100%;font-size:14px;border:1px solid #b8c2cc;border-top:none;}
+  table.sheet th,table.sheet td{border:1px solid #d3dae2;padding:0;text-align:center;height:34px;}
+  table.sheet thead th{background:#217346;color:#fff;font-weight:bold;height:30px;}
+  table.sheet .rownum,table.sheet .colhdr{background:#f1f4f7;color:var(--gray);font-weight:bold;font-size:12px;width:34px;}
+  table.sheet td.data{background:#fff;padding:0 8px;}
+  table.sheet td.data.name{text-align:left;}
+  table.sheet td.editable{cursor:cell;position:relative;background:#fffdf5;}
+  table.sheet td.editable.sel{outline:2px solid var(--teal);outline-offset:-2px;}
+  table.sheet td.editable .val{padding:0 8px;min-height:34px;display:flex;align-items:center;justify-content:center;font-weight:bold;}
+  .val.ok-aprob{color:var(--green-ok);}
+  .val.ok-reprob{color:var(--red);}
+  .val.err{color:var(--red);font-style:italic;font-weight:normal;}
+  .badge{display:inline-block;margin-left:6px;font-size:13px;}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 6px;}
+  button{font-family:inherit;font-size:14px;font-weight:bold;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;transition:.15s;}
+  .btn-primary{background:var(--teal);color:#fff;}.btn-primary:hover{background:#018e85;}
+  .btn-ghost{background:#fff;color:var(--blue);border:1.5px solid #c3ccd6;}.btn-ghost:hover{border-color:var(--teal);color:var(--teal);}
+  .btn-soft{background:var(--light);color:var(--gray);}.btn-soft:hover{background:#e7ecf1;}
+  .feedback{margin-top:14px;border-radius:8px;padding:0;overflow:hidden;display:none;}
+  .feedback.show{display:block;}
+  .feedback .fhead{padding:12px 16px;font-weight:bold;font-size:15px;color:#fff;}
+  .feedback.good .fhead{background:var(--green-ok);}
+  .feedback.bad .fhead{background:var(--orange);}
+  .feedback .fbody{padding:12px 16px;font-size:14px;background:#fff;border:1px solid var(--light);border-top:none;}
+  .feedback .fbody ul{margin:6px 0 0;padding-left:20px;}
+  .hint{font-size:12.5px;color:var(--gray);margin-top:10px;}
+  footer{margin-top:26px;padding-top:14px;border-top:2px solid var(--light);font-size:12px;color:#9aa4b0;text-align:center;}
+  .pill{display:inline-block;background:var(--yellow);color:#5a4300;font-weight:bold;font-size:11px;padding:2px 9px;border-radius:20px;vertical-align:middle;}
+</style>
+</head>
+<body>
+<div class="bands"><div class="b1"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div><div class="b5"></div></div>
+<div class="wrap">
+  <header class="hd">
+    <svg class="logo" viewBox="0 0 100 100" aria-label="OTEC Pausa">
+      <path d="M50 8 q-7 0 -7 9 0 8 7 13 7 -5 7 -13 0 -9 -7 -9z" fill="#E32D3D"/>
+      <path d="M92 50 q0 -7 -9 -7 -8 0 -13 7 5 7 13 7 9 0 9 -7z" fill="#7CC242"/>
+      <path d="M50 92 q7 0 7 -9 0 -8 -7 -13 -7 5 -7 13 0 9 7 9z" fill="#F26B1F"/>
+      <path d="M8 50 q0 7 9 7 8 0 13 -7 -5 -7 -13 -7 -9 0 -9 7z" fill="#7FB3E8"/>
+      <circle cx="50" cy="50" r="6" fill="#fff"/>
+    </svg>
+    <div class="brand"><b>OTEC PAUSA</b><span>Organismo Técnico de Capacitación</span></div>
+  </header>
+
+  <h1>Práctica interactiva en Excel <span class="pill">PILOTO</span></h1>
+  <div class="sub">Curso Excel Intermedio · Módulo 2: Manejo de datos · Ejercicio 1: Registro de notas y validación</div>
+
+  <div class="card">
+    <h2>🎯 Tu tarea</h2>
+    Una escuela necesita saber qué estudiantes <b>aprueban</b>. La regla es:
+    <ul>
+      <li>Aprueba si la <b>asistencia es ≥ 80%</b> <b>Y</b> la <b>calificación es ≥ 70</b>.</li>
+      <li>En cualquier otro caso, <b>No Aprueba</b>.</li>
+    </ul>
+    En la columna <b>D (Resultado)</b> escribe una fórmula con las funciones <code>SI</code> e <code>Y</code> para la fila 2,
+    y cópiala al resto. Trabaja como en Excel: selecciona la celda, escribe la fórmula en la barra <i>fx</i> y presiona <b>Enter</b>.
+  </div>
+
+  <!-- barra de formulas -->
+  <div class="fxbar">
+    <div class="fxlabel"><span class="cellref" id="cellRef">D2</span> <i>fx</i></div>
+    <input id="fx" type="text" autocomplete="off" spellcheck="false"
+           placeholder="Escribe aquí la fórmula, por ejemplo: =SI(Y(B2>=80;C2>=70);&quot;Aprobado&quot;;&quot;No Aprobado&quot;)">
+  </div>
+
+  <table class="sheet" id="sheet">
+    <thead>
+      <tr><th class="colhdr"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+      <tr><th class="rownum">1</th><td class="data name"><b>Nombre del estudiante</b></td><td class="data"><b>Asistencia (%)</b></td><td class="data"><b>Calificación</b></td><td class="data"><b>Resultado</b></td></tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <div class="btns">
+    <button class="btn-primary" id="btnCheck">✓ Verificar mis resultados</button>
+    <button class="btn-ghost" id="btnSol">Ver solución</button>
+    <button class="btn-soft" id="btnReset">Reiniciar</button>
+  </div>
+  <div class="hint">💡 Consejo: en Excel chileno los argumentos se separan con punto y coma <code>;</code>. La función <code>Y(...)</code> es verdadera solo si <b>todas</b> sus condiciones se cumplen.</div>
+
+  <div class="feedback" id="feedback">
+    <div class="fhead" id="fhead"></div>
+    <div class="fbody" id="fbody"></div>
+  </div>
+
+  <footer>OTEC Pausa Ltda. · Curso Excel Intermedio · Práctica formativa (no reemplaza la evaluación del módulo) · Edición 2026</footer>
+</div>
+
+<script>
+// ---------- datos del ejercicio ----------
+const STUDENTS = [
+  ["Ana Pérez",    95, 85],
+  ["Luis Gómez",   75, 90],
+  ["María Soto",   88, 65],
+  ["Pedro Díaz",   80, 70],
+  ["Carla Ruiz",   60, 50],
+];
+const EXPECTED = ["Aprobado","No Aprobado","No Aprobado","Aprobado","No Aprobado"];
+const SOLUTION = '=SI(Y(B2>=80;C2>=70);"Aprobado";"No Aprobado")';
+
+// ---------- motor de formulas (HyperFormula) con traduccion ES->EN ----------
+const { HyperFormula } = window;
+let hf;
+function buildEngine(){
+  const data = [
+    ["Nombre","Asistencia","Calificacion","Resultado"],
+    ...STUDENTS.map(s => [s[0], s[1], s[2], ""])
+  ];
+  hf = HyperFormula.buildFromArray(data, { licenseKey: 'gpl-v3' });
+}
+// traduce fórmula en español (Excel chileno) al dialecto interno (inglés, coma)
+function translate(formula){
+  if(!formula) return "";
+  let f = formula.trim();
+  if(f[0] !== "=") return f; // texto/numero literal
+  // proteger contenido entre comillas
+  const strings = [];
+  f = f.replace(/"[^"]*"/g, m => { strings.push(m); return " "+(strings.length-1)+" "; });
+  // separador de argumentos ; -> ,
+  f = f.replace(/;/g, ",");
+  // nombres de función ES -> EN (palabra completa, mayúsc/minúsc)
+  const map = {"SI":"IF","Y":"AND","O":"OR","NO":"NOT","SUMA":"SUM","PROMEDIO":"AVERAGE",
+               "CONCATENAR":"CONCATENATE","CONTAR":"COUNT","MAX":"MAX","MIN":"MIN",
+               "BUSCARV":"VLOOKUP","SI.ERROR":"IFERROR","MAYUSC":"UPPER","MINUSC":"LOWER"};
+  f = f.replace(/([A-Za-zÁÉÍÓÚÑ\.]+)\s*\(/g, (m, name) => {
+    const up = name.toUpperCase();
+    return (map[up] || name) + "(";
+  });
+  // restaurar strings
+  f = f.replace(/ (\d+) /g, (m, i) => strings[+i]);
+  return f;
+}
+function setFormula(rowIdx, formula){
+  const internal = translate(formula);
+  hf.setCellContents({ sheet:0, row: rowIdx+1, col:3 }, [[internal]]);
+}
+function getResult(rowIdx){
+  const v = hf.getCellValue({ sheet:0, row: rowIdx+1, col:3 });
+  if(v && typeof v === 'object' && v.type==='ERROR') return {error:true, text:"#ERROR"};
+  if(v === null || v === "") return {empty:true, text:""};
+  return {text: String(v)};
+}
+
+// ---------- estado del grid ----------
+const formulas = ["","","","",""];   // lo que escribió el alumno por fila
+let selected = 0;                    // fila seleccionada (0..4)
+
+const rowsEl = document.getElementById('rows');
+const fxEl = document.getElementById('fx');
+const cellRefEl = document.getElementById('cellRef');
+
+function renderRows(){
+  rowsEl.innerHTML = "";
+  STUDENTS.forEach((s, i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      `<th class="rownum">${i+2}</th>
+       <td class="data name">${s[0]}</td>
+       <td class="data">${s[1]}</td>
+       <td class="data">${s[2]}</td>`;
+    const td = document.createElement('td');
+    td.className = 'editable' + (i===selected ? ' sel':'');
+    td.dataset.row = i;
+    const res = getResult(i);
+    let cls = 'val', txt = res.text;
+    if(res.error){ cls += ' err'; txt = '#¡ERROR!'; }
+    else if(res.text === 'Aprobado'){ cls += ' ok-aprob'; }
+    else if(res.text === 'No Aprobado'){ cls += ' ok-reprob'; }
+    td.innerHTML = `<div class="${cls}">${txt}</div>`;
+    td.addEventListener('click', () => selectRow(i));
+    tr.appendChild(td);
+    rowsEl.appendChild(tr);
+  });
+}
+function selectRow(i){
+  selected = i;
+  cellRefEl.textContent = "D" + (i+2);
+  fxEl.value = formulas[i];
+  document.querySelectorAll('td.editable').forEach((td,idx)=>td.classList.toggle('sel', idx===i));
+  fxEl.focus();
+}
+function commitFx(){
+  formulas[selected] = fxEl.value;
+  setFormula(selected, fxEl.value);
+  renderRows();
+  // mantener selección visible
+  document.querySelectorAll('td.editable')[selected].classList.add('sel');
+}
+
+fxEl.addEventListener('keydown', e => {
+  if(e.key === 'Enter'){
+    e.preventDefault();
+    commitFx();
+    if(selected < STUDENTS.length-1) selectRow(selected+1);
+  }
+});
+fxEl.addEventListener('blur', commitFx);
+
+// ---------- botones ----------
+const fb = document.getElementById('feedback');
+const fhead = document.getElementById('fhead');
+const fbody = document.getElementById('fbody');
+
+document.getElementById('btnCheck').addEventListener('click', () => {
+  // asegurar último commit
+  formulas[selected] = fxEl.value; setFormula(selected, fxEl.value);
+  let okCount = 0; const detalle = [];
+  STUDENTS.forEach((s,i) => {
+    const r = getResult(i);
+    const got = (r.text||"").trim().toLowerCase().replace(/\s+/g,' ');
+    const exp = EXPECTED[i].toLowerCase();
+    const ok = got === exp;
+    if(ok) okCount++;
+    detalle.push({nombre:s[0], celda:"D"+(i+2), got:r.text||"(vacío)", exp:EXPECTED[i], ok, blank: !formulas[i].trim()});
+  });
+  fb.className = 'feedback show ' + (okCount===STUDENTS.length ? 'good':'bad');
+  if(okCount===STUDENTS.length){
+    fhead.textContent = '✓ ¡Excelente! Los 5 resultados son correctos.';
+    fbody.innerHTML = 'Tu fórmula evalúa bien ambas condiciones con <code>Y(...)</code> dentro de <code>SI(...)</code>. '
+      + 'Así Excel decide automáticamente quién aprueba. ¡Tarea lograda! 🎉';
+  } else {
+    fhead.textContent = `Vas ${okCount} de ${STUDENTS.length}. Revisa estas filas:`;
+    let html = '<ul>';
+    detalle.filter(d=>!d.ok).forEach(d => {
+      if(d.blank) html += `<li><b>${d.celda}</b> (${d.nombre}): aún sin fórmula. Esperado: <code>${d.exp}</code>.</li>`;
+      else html += `<li><b>${d.celda}</b> (${d.nombre}): tu resultado <code>${d.got}</code> · esperado <code>${d.exp}</code>.</li>`;
+    });
+    html += '</ul><div class="hint">Pista: la condición es <code>B?&gt;=80</code> <b>Y</b> <code>C?&gt;=70</code>. Ojo con los casos límite (exactamente 80 y 70 sí aprueban).</div>';
+    fbody.innerHTML = html;
+  }
+  fb.scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+
+document.getElementById('btnSol').addEventListener('click', () => {
+  for(let i=0;i<STUDENTS.length;i++){
+    const f = SOLUTION.replace(/2/g, String(i+2)); // ajustar fila (B2->B3...)
+    // cuidado: "70" y "80" no deben cambiar; reconstruimos por plantilla segura
+    const fila = `=SI(Y(B${i+2}>=80;C${i+2}>=70);"Aprobado";"No Aprobado")`;
+    formulas[i] = fila; setFormula(i, fila);
+  }
+  renderRows();
+  selectRow(0);
+  fxEl.value = formulas[0];
+  fb.className = 'feedback show good';
+  fhead.textContent = 'Solución aplicada';
+  fbody.innerHTML = 'Esta es una fórmula correcta para la fila 2:<br><br><code>=SI(Y(B2&gt;=80;C2&gt;=70);"Aprobado";"No Aprobado")</code>'
+    + '<br><br>Selecciona cada celda D para ver cómo cambian las referencias (B2→B3→B4…) al copiarla hacia abajo.';
+});
+
+document.getElementById('btnReset').addEventListener('click', () => {
+  formulas.fill("");
+  buildEngine();
+  renderRows();
+  selectRow(0);
+  fxEl.value = "";
+  fb.className = 'feedback';
+});
+
+// ---------- init ----------
+buildEngine();
+renderRows();
+selectRow(0);
+</script>
+</body>
+</html>
