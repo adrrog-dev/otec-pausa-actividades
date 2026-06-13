@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Práctica interactiva en Excel · Módulo 6 · OTEC Pausa</title>
+<script src="https://cdn.jsdelivr.net/npm/hyperformula@2.7.0/dist/hyperformula.full.min.js"></script>
+<style>
+  :root{--teal:#00A99E;--blue:#1B3A57;--navy:#0F1F33;--orange:#F26B1F;--red:#E32D3D;--yellow:#F5C037;--gray:#4A5568;--light:#F4F6F8;--green-ok:#1e8e5a;}
+  *{box-sizing:border-box;}
+  html,body{overflow-x:hidden;}
+  body{margin:0;font-family:Calibri,'Segoe UI',system-ui,sans-serif;color:#1d2530;background:#fff;max-width:100%;}
+  table{max-width:100%;}
+  .sheetwrap{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch;}
+  .bands{display:flex;height:7px;}.bands>div{flex:1;}
+  .b1{background:var(--teal);}.b2{background:var(--orange);}.b3{background:var(--red);}.b4{background:var(--yellow);}.b5{background:var(--blue);}
+  .wrap{max-width:920px;margin:0 auto;padding:18px 20px 40px;}
+  header.hd{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--light);padding-bottom:14px;margin-bottom:8px;}
+  .logo{width:44px;height:44px;flex:0 0 44px;}
+  .brand b{color:var(--blue);font-size:20px;letter-spacing:.5px;}
+  .brand span{display:block;color:var(--gray);font-size:12px;}
+  h1{font-size:21px;color:var(--blue);margin:18px 0 2px;}
+  .sub{color:var(--gray);font-size:13px;margin-bottom:14px;}
+  .card{background:var(--light);border-radius:8px;padding:14px 16px;margin:14px 0;font-size:14.5px;line-height:1.5;}
+  .card h2{font-size:15px;color:var(--teal);margin:0 0 8px;}
+  .card ul{margin:6px 0 0 0;padding-left:20px;}.card li{margin-bottom:4px;}
+  code{background:#fff;border:1px solid #d8dee6;border-radius:4px;padding:1px 6px;font-family:Consolas,monospace;font-size:13px;color:var(--blue);}
+  /* tabla de origen (read-only) */
+  table.sheet{border-collapse:collapse;width:100%;font-size:14px;border:1px solid #b8c2cc;}
+  table.sheet th,table.sheet td{border:1px solid #d3dae2;padding:0;text-align:center;height:32px;}
+  table.sheet thead th{background:#217346;color:#fff;font-weight:bold;height:30px;}
+  table.sheet .rownum,table.sheet .colhdr{background:#f1f4f7;color:var(--gray);font-weight:bold;font-size:12px;width:30px;}
+  table.sheet td.data{background:#fff;padding:0 10px;}table.sheet td.data.name{text-align:left;}
+  table.sheet td.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .secttl{font-size:15px;color:var(--blue);font-weight:bold;margin:22px 0 4px;display:flex;align-items:center;gap:8px;}
+  .secttl small{font-weight:normal;color:var(--gray);font-size:12.5px;}
+  /* constructor */
+  .builder{margin:8px 0 0;}
+  .fieldbank{background:var(--light);border:1px solid #e0e6ec;border-radius:8px;padding:12px 14px;margin:6px 0 14px;}
+  .fieldbank .bktitle{font-size:12.5px;font-weight:bold;color:var(--gray);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;min-height:38px;}
+  .chip{display:flex;flex-direction:column;gap:5px;background:#fff;border:1.5px solid #c3ccd6;border-radius:8px;padding:8px 10px;font-size:13.5px;font-weight:bold;color:var(--blue);cursor:grab;user-select:none;box-shadow:0 1px 2px rgba(0,0,0,.05);}
+  .chip:active{cursor:grabbing;}
+  .chip.dragging{opacity:.45;}
+  .chip .chiphead{display:flex;align-items:center;gap:7px;}
+  .chip .gripdot{color:#aeb8c2;font-size:12px;letter-spacing:-1px;}
+  .chip .tag{font-size:10px;font-weight:bold;padding:1px 6px;border-radius:10px;}
+  .chip .tag.num{background:#e2f0ff;color:#1B3A57;}
+  .chip .tag.txt{background:#e9f7f3;color:#0c7a6e;}
+  .chip select{font-family:inherit;font-size:12px;font-weight:bold;color:var(--gray);border:1px solid #d3dae2;border-radius:5px;padding:3px 4px;background:#fff;cursor:pointer;}
+  .areas{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 6px;}
+  @media(max-width:560px){.areas{grid-template-columns:1fr;}}
+  .area{border:1.5px dashed #c3ccd6;border-radius:8px;padding:10px 12px;min-height:78px;transition:.15s;background:#fff;}
+  .area.over{border-color:var(--teal);background:#effbfa;border-style:solid;}
+  .area .atitle{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:bold;color:var(--blue);text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px;}
+  .area .atitle .ico{width:18px;height:18px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;color:#fff;}
+  .area.filtros .ico{background:var(--yellow);color:#5a4300;}
+  .area.filas   .ico{background:var(--teal);}
+  .area.columnas .ico{background:var(--orange);}
+  .area.valores .ico{background:var(--blue);}
+  .area .adrop{font-size:12px;color:#9aa4b0;font-style:italic;padding:6px 2px;}
+  .area .achips{display:flex;flex-wrap:wrap;gap:8px;}
+  /* filtro interactivo */
+  .filterbar{display:none;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0 0;font-size:13.5px;color:var(--gray);}
+  .filterbar.show{display:flex;}
+  .filterbar select{font-family:inherit;font-size:13.5px;border:1px solid #c3ccd6;border-radius:6px;padding:5px 9px;color:var(--blue);font-weight:bold;background:#fff;}
+  /* tabla dinamica resultante */
+  table.pivot{border-collapse:collapse;width:100%;font-size:13.5px;border:1px solid #b8c2cc;margin-top:6px;}
+  table.pivot th,table.pivot td{border:1px solid #d3dae2;padding:5px 10px;text-align:right;height:30px;font-variant-numeric:tabular-nums;}
+  table.pivot thead th{background:#217346;color:#fff;font-weight:bold;text-align:center;}
+  table.pivot th.corner{background:#1b5e3a;text-align:left;}
+  table.pivot th.rowh{background:#eef4f0;color:var(--blue);text-align:left;font-weight:bold;}
+  table.pivot td.cell{background:#fff;color:#1d2530;}
+  table.pivot td.empty{background:#fafbfc;color:#c0c8d0;}
+  table.pivot .totrow th,table.pivot .totrow td{background:#d8ebe0;font-weight:bold;color:var(--blue);}
+  table.pivot td.totcol,table.pivot th.totcol{background:#d8ebe0;font-weight:bold;color:var(--blue);}
+  table.pivot .gt{background:#bfe0cb !important;color:var(--navy) !important;}
+  .nopivot{font-size:13px;color:var(--gray);background:var(--light);border:1px dashed #c3ccd6;border-radius:8px;padding:14px;text-align:center;font-style:italic;}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 6px;}
+  button{font-family:inherit;font-size:14px;font-weight:bold;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;transition:.15s;}
+  .btn-primary{background:var(--teal);color:#fff;}.btn-primary:hover{background:#018e85;}
+  .btn-ghost{background:#fff;color:var(--blue);border:1.5px solid #c3ccd6;}.btn-ghost:hover{border-color:var(--teal);color:var(--teal);}
+  .btn-soft{background:var(--light);color:var(--gray);}.btn-soft:hover{background:#e7ecf1;}
+  .feedback{margin-top:14px;border-radius:8px;overflow:hidden;display:none;}.feedback.show{display:block;}
+  .feedback .fhead{padding:12px 16px;font-weight:bold;font-size:15px;color:#fff;}
+  .feedback.good .fhead{background:var(--green-ok);}.feedback.bad .fhead{background:var(--orange);}
+  .feedback .fbody{padding:12px 16px;font-size:14px;background:#fff;border:1px solid var(--light);border-top:none;}
+  .feedback .fbody ul{margin:6px 0 0;padding-left:20px;}
+  .hint{font-size:12.5px;color:var(--gray);margin-top:10px;}
+  footer{margin-top:26px;padding-top:14px;border-top:2px solid var(--light);font-size:12px;color:#9aa4b0;text-align:center;}
+  .pill{display:inline-block;background:var(--yellow);color:#5a4300;font-weight:bold;font-size:11px;padding:2px 9px;border-radius:20px;vertical-align:middle;}
+</style>
+</head>
+<body>
+<div class="bands"><div class="b1"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div><div class="b5"></div></div>
+<div class="wrap">
+  <header class="hd">
+    <svg class="logo" viewBox="0 0 100 100" aria-label="OTEC Pausa">
+      <path d="M50 8 q-7 0 -7 9 0 8 7 13 7 -5 7 -13 0 -9 -7 -9z" fill="#E32D3D"/>
+      <path d="M92 50 q0 -7 -9 -7 -8 0 -13 7 5 7 13 7 9 0 9 -7z" fill="#7CC242"/>
+      <path d="M50 92 q7 0 7 -9 0 -8 -7 -13 -7 5 -7 13 0 9 7 9z" fill="#F26B1F"/>
+      <path d="M8 50 q0 7 9 7 8 0 13 -7 -5 -7 -13 -7 -9 0 -9 7z" fill="#7FB3E8"/>
+      <circle cx="50" cy="50" r="6" fill="#fff"/>
+    </svg>
+    <div class="brand"><b>OTEC PAUSA</b><span>Organismo Técnico de Capacitación</span></div>
+  </header>
+  <h1>Práctica interactiva en Excel <span class="pill">MÓDULO 6</span></h1>
+  <div class="sub">Módulo 6: Tablas dinámicas en Excel · Trabajo práctico</div>
+
+  <div class="card">
+    <h2>📊 Ejercicio: Construye una tabla dinámica de ventas</h2>
+    Tienes una hoja con datos de ventas de productos en una tienda durante un año (columnas <b>Producto</b>, <b>Mes</b>, <b>Cantidad</b>, <b>Ventas</b>).
+    Crea una tabla dinámica que resuma las ventas. Arrastra (o asigna) los campos a las áreas <b>Filtros</b>, <b>Filas</b>, <b>Columnas</b> y <b>Valores</b>, y observa cómo se resume la información.
+    <br><br><b>Objetivo:</b> ver la suma de <b>Ventas</b> por <b>Producto</b> y por <b>Mes</b>.
+  </div>
+
+  <!-- ===== Datos de origen ===== -->
+  <div class="secttl">📄 Datos de origen <small>· 16 transacciones (solo lectura)</small></div>
+  <div class="sheetwrap"><table class="sheet" id="srcTable">
+    <thead>
+      <tr><th class="colhdr"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr>
+      <tr><th class="rownum">1</th><td class="data name"><b>Producto</b></td><td class="data name"><b>Mes</b></td><td class="data"><b>Cantidad</b></td><td class="data"><b>Ventas</b></td></tr>
+    </thead>
+    <tbody id="srcRows"></tbody>
+  </table></div>
+
+  <!-- ===== Constructor ===== -->
+  <div class="secttl">🧩 Constructor de tabla dinámica <small>· arrastra los campos o usa el selector "Asignar a"</small></div>
+  <div class="builder">
+    <div class="fieldbank" id="bank">
+      <div class="bktitle">Campos disponibles</div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="areas">
+      <div class="area filtros"  data-area="filtros"  id="area-filtros">
+        <div class="atitle"><span class="ico">▽</span>Filtros</div>
+        <div class="adrop">Suelta aquí un campo…</div>
+        <div class="achips"></div>
+      </div>
+      <div class="area columnas" data-area="columnas" id="area-columnas">
+        <div class="atitle"><span class="ico">▣</span>Columnas</div>
+        <div class="adrop">Suelta aquí un campo…</div>
+        <div class="achips"></div>
+      </div>
+      <div class="area filas"    data-area="filas"    id="area-filas">
+        <div class="atitle"><span class="ico">≡</span>Filas</div>
+        <div class="adrop">Suelta aquí un campo…</div>
+        <div class="achips"></div>
+      </div>
+      <div class="area valores"  data-area="valores"  id="area-valores">
+        <div class="atitle"><span class="ico">Σ</span>Valores</div>
+        <div class="adrop">Suelta aquí un campo numérico…</div>
+        <div class="achips"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Tabla dinámica resultante ===== -->
+  <div class="secttl">📈 Tabla dinámica</div>
+  <div class="filterbar" id="filterbar"></div>
+  <div class="sheetwrap" id="pivotWrap"></div>
+
+  <div class="btns">
+    <button class="btn-primary" id="check">✓ Verificar</button>
+    <button class="btn-ghost" id="sol">Ver solución</button>
+    <button class="btn-soft" id="reset">Reiniciar</button>
+  </div>
+  <div class="hint">💡 En una tabla dinámica, <b>Filas</b> y <b>Columnas</b> definen las categorías que se cruzan, y <b>Valores</b> es el dato numérico que se agrega (aquí, <b>Suma</b>). <b>Filtros</b> acota qué datos entran al resumen.</div>
+  <div class="feedback" id="fb"><div class="fhead" id="fh"></div><div class="fbody" id="fbd"></div></div>
+
+  <footer>OTEC Pausa Ltda. · Curso Excel Intermedio · Práctica formativa (no reemplaza la evaluación del módulo) · Edición 2026</footer>
+</div>
+
+<script>
+// ===== Datos de origen FIJOS (16 transacciones) =====
+// Cada fila: [Producto, Mes, Cantidad, Ventas]
+const DATA = [
+  ["Notebook","Enero",   3, 1050000],
+  ["Notebook","Febrero", 2,  700000],
+  ["Notebook","Marzo",   4, 1400000],
+  ["Mouse",   "Enero",  10,   50000],
+  ["Mouse",   "Febrero",15,   75000],
+  ["Mouse",   "Marzo",  12,   60000],
+  ["Teclado", "Enero",   8,  120000],
+  ["Teclado", "Febrero", 6,   90000],
+  ["Teclado", "Marzo",   9,  135000],
+  ["Monitor", "Enero",   5,  750000],
+  ["Monitor", "Febrero", 7, 1050000],
+  ["Monitor", "Marzo",   4,  600000],
+  ["Notebook","Enero",   1,  350000],
+  ["Mouse",   "Marzo",  20,  100000],
+  ["Teclado", "Febrero", 5,   75000],
+  ["Monitor", "Marzo",   3,  450000],
+];
+// Definición de campos: índice de columna en DATA + tipo
+const FIELDS = {
+  Producto: {idx:0, type:"txt"},
+  Mes:      {idx:1, type:"txt"},
+  Cantidad: {idx:2, type:"num"},
+  Ventas:   {idx:3, type:"num"},
+};
+const ORDER = ["Producto","Mes","Cantidad","Ventas"];
+
+// Estado: a qué área pertenece cada campo (null = banco de campos)
+let placement = {Producto:null, Mes:null, Cantidad:null, Ventas:null};
+let filterValue = "__ALL__"; // valor activo del filtro
+
+const fmt = n => n.toLocaleString('es-CL'); // separador de miles
+
+// ---------- Render tabla de origen ----------
+function renderSource(){
+  const tb = document.getElementById('srcRows');
+  tb.innerHTML = "";
+  DATA.forEach((d,i)=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      `<th class="rownum">${i+2}</th>`+
+      `<td class="data name">${d[0]}</td>`+
+      `<td class="data name">${d[1]}</td>`+
+      `<td class="data num">${d[2]}</td>`+
+      `<td class="data num">${fmt(d[3])}</td>`;
+    tb.appendChild(tr);
+  });
+}
+
+// ---------- Helpers de áreas ----------
+function fieldsIn(area){ return ORDER.filter(f => placement[f] === area); }
+function uniqueValues(field){
+  const i = FIELDS[field].idx;
+  const seen = [];
+  DATA.forEach(r => { if(!seen.includes(r[i])) seen.push(r[i]); });
+  return seen; // mantiene orden de aparición (Enero, Febrero, Marzo…)
+}
+
+// ---------- Render del constructor (chips + áreas) ----------
+function renderBuilder(){
+  // banco
+  const bank = document.getElementById('chips'); bank.innerHTML="";
+  ORDER.filter(f=>placement[f]===null).forEach(f => bank.appendChild(makeChip(f)));
+  if(!bank.children.length){ bank.innerHTML = '<span style="font-size:12.5px;color:#9aa4b0;font-style:italic">Todos los campos asignados.</span>'; }
+  // áreas
+  ['filtros','filas','columnas','valores'].forEach(area=>{
+    const box = document.getElementById('area-'+area);
+    const drop = box.querySelector('.adrop');
+    const cont = box.querySelector('.achips'); cont.innerHTML="";
+    const list = fieldsIn(area);
+    drop.style.display = list.length ? 'none' : 'block';
+    list.forEach(f => cont.appendChild(makeChip(f, area)));
+  });
+}
+function makeChip(field, area){
+  const f = FIELDS[field];
+  const chip = document.createElement('div');
+  chip.className = 'chip';
+  chip.draggable = true;
+  chip.dataset.field = field;
+  // En Valores los campos numéricos se muestran como "Suma de X"
+  const label = (area==='valores' && f.type==='num') ? ('Suma de '+field) : field;
+  const tagClass = f.type==='num' ? 'num' : 'txt';
+  const tagText  = f.type==='num' ? 'Σ núm' : 'texto';
+  chip.innerHTML =
+    `<div class="chiphead"><span class="gripdot">⋮⋮</span><span>${label}</span>`+
+    `<span class="tag ${tagClass}">${tagText}</span></div>`+
+    `<select data-field="${field}">`+
+      `<option value="">Asignar a…</option>`+
+      `<option value="filtros">Filtros</option>`+
+      `<option value="filas">Filas</option>`+
+      `<option value="columnas">Columnas</option>`+
+      `<option value="valores">Valores</option>`+
+      `<option value="__none__">(ninguno)</option>`+
+    `</select>`;
+  // selector actual
+  const sel = chip.querySelector('select');
+  sel.value = area || "";
+  sel.addEventListener('change', e=>{
+    const v = e.target.value;
+    assign(field, v==='__none__' || v==='' ? null : v);
+  });
+  // drag & drop (HTML5) — plus al método robusto del select
+  chip.addEventListener('dragstart', e=>{
+    e.dataTransfer.setData('text/plain', field);
+    e.dataTransfer.effectAllowed = 'move';
+    chip.classList.add('dragging');
+  });
+  chip.addEventListener('dragend', ()=>chip.classList.remove('dragging'));
+  return chip;
+}
+
+// ---------- Asignación central ----------
+function assign(field, area){
+  placement[field] = area;        // area ∈ {filtros,filas,columnas,valores,null}
+  filterValue = "__ALL__";        // resetear filtro al recambiar config
+  renderBuilder();
+  renderFilter();
+  renderPivot();
+}
+
+// ---------- Drag & drop targets ----------
+function wireDropZones(){
+  // áreas
+  ['filtros','filas','columnas','valores'].forEach(area=>{
+    const box = document.getElementById('area-'+area);
+    box.addEventListener('dragover', e=>{ e.preventDefault(); box.classList.add('over'); });
+    box.addEventListener('dragleave', ()=>box.classList.remove('over'));
+    box.addEventListener('drop', e=>{
+      e.preventDefault(); box.classList.remove('over');
+      const field = e.dataTransfer.getData('text/plain');
+      if(field) assign(field, area);
+    });
+  });
+  // banco = devolver al pool (null)
+  const bank = document.getElementById('bank');
+  bank.addEventListener('dragover', e=>{ e.preventDefault(); bank.classList.add('over'); });
+  bank.addEventListener('dragleave', ()=>bank.classList.remove('over'));
+  bank.addEventListener('drop', e=>{
+    e.preventDefault(); bank.classList.remove('over');
+    const field = e.dataTransfer.getData('text/plain');
+    if(field) assign(field, null);
+  });
+}
+
+// ---------- Filtro interactivo ----------
+function renderFilter(){
+  const bar = document.getElementById('filterbar');
+  const fcampos = fieldsIn('filtros');
+  if(!fcampos.length){ bar.className='filterbar'; bar.innerHTML=""; return; }
+  const field = fcampos[0]; // usamos el primer campo de Filtros
+  const vals = uniqueValues(field);
+  bar.className = 'filterbar show';
+  bar.innerHTML =
+    `<span>🔻 Filtro <b>${field}</b>:</span>`+
+    `<select id="filterSel"><option value="__ALL__">(Todos)</option>`+
+      vals.map(v=>`<option value="${v}">${v}</option>`).join('')+
+    `</select>`;
+  const sel = document.getElementById('filterSel');
+  sel.value = filterValue;
+  sel.addEventListener('change', e=>{ filterValue = e.target.value; renderPivot(); });
+}
+
+// ---------- Cálculo + render de la tabla dinámica ----------
+function renderPivot(){
+  const wrap = document.getElementById('pivotWrap');
+  const rowF = fieldsIn('filas')[0]    || null;
+  const colF = fieldsIn('columnas')[0] || null;
+  const valFs = fieldsIn('valores').filter(f=>FIELDS[f].type==='num'); // solo numéricos agregan
+  const filtF = fieldsIn('filtros')[0] || null;
+
+  if(!valFs.length || (!rowF && !colF)){
+    wrap.innerHTML = '<div class="nopivot">Asigna al menos un campo a <b>Filas</b> o <b>Columnas</b> y un campo numérico a <b>Valores</b> para ver el resumen.</div>';
+    return;
+  }
+
+  // 1) Filtrar los datos según el campo de Filtros (si hay)
+  let rows = DATA;
+  if(filtF && filterValue !== "__ALL__"){
+    const fi = FIELDS[filtF].idx;
+    rows = DATA.filter(r => String(r[fi]) === String(filterValue));
+  }
+
+  // Para simplicidad pedagógica agregamos UN campo de Valores (el primero) con SUMA
+  const valF = valFs[0];
+  const vIdx = FIELDS[valF].idx;
+  const rIdx = rowF ? FIELDS[rowF].idx : null;
+  const cIdx = colF ? FIELDS[colF].idx : null;
+
+  // Etiquetas de filas/columnas (valores únicos en orden de aparición)
+  const rowKeys = rowF ? uniqueValues(rowF) : ["(Total)"];
+  const colKeys = colF ? uniqueValues(colF) : ["(Total)"];
+
+  // 2) Agregación SUMA: acumulamos Ventas por cada combinación fila×columna.
+  //    agg[r][c] = suma del campo de Valores para esa intersección.
+  const agg = {};
+  rowKeys.forEach(rk => { agg[rk] = {}; colKeys.forEach(ck => agg[rk][ck] = 0); });
+  rows.forEach(r => {
+    const rk = rowF ? r[rIdx] : "(Total)";
+    const ck = colF ? r[cIdx] : "(Total)";
+    if(agg[rk] && ck in agg[rk]) agg[rk][ck] += r[vIdx];
+  });
+
+  // 3) Totales por fila, por columna y total general
+  const rowTot = {}; rowKeys.forEach(rk => rowTot[rk] = colKeys.reduce((s,ck)=>s+agg[rk][ck],0));
+  const colTot = {}; colKeys.forEach(ck => colTot[ck] = rowKeys.reduce((s,rk)=>s+agg[rk][ck],0));
+  const grand  = rowKeys.reduce((s,rk)=>s+rowTot[rk],0);
+
+  // 4) Construir la tabla HTML estilo Excel
+  const valLabel = 'Suma de '+valF;
+  let html = '<table class="pivot">';
+  // encabezado
+  html += '<thead><tr>';
+  html += `<th class="corner">${valLabel}</th>`;
+  if(colF){ colKeys.forEach(ck => html += `<th>${ck}</th>`); }
+  html += '<th class="totcol">Total general</th></tr></thead><tbody>';
+  // filas de datos
+  rowKeys.forEach(rk => {
+    html += '<tr>';
+    html += `<th class="rowh">${rowF ? rk : 'Total'}</th>`;
+    colKeys.forEach(ck => {
+      const v = agg[rk][ck];
+      html += v ? `<td class="cell">${fmt(v)}</td>` : `<td class="empty">—</td>`;
+    });
+    html += `<td class="totcol">${fmt(rowTot[rk])}</td>`;
+    html += '</tr>';
+  });
+  // fila de totales
+  html += '<tr class="totrow"><th class="rowh">Total general</th>';
+  colKeys.forEach(ck => html += `<td>${fmt(colTot[ck])}</td>`);
+  html += `<td class="gt">${fmt(grand)}</td>`;
+  html += '</tr></tbody></table>';
+
+  wrap.innerHTML = html;
+}
+
+// ---------- Verificación ----------
+const fb=document.getElementById('fb'),fh=document.getElementById('fh'),fbd=document.getElementById('fbd');
+function showFb(good, head, body){
+  fb.className = 'feedback show '+(good?'good':'bad');
+  fh.textContent = head; fbd.innerHTML = body;
+  fb.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+document.getElementById('check').addEventListener('click', ()=>{
+  const filas    = fieldsIn('filas');
+  const columnas = fieldsIn('columnas');
+  const valores  = fieldsIn('valores');
+  // Objetivo: Producto y Mes uno en Filas y otro en Columnas (cualquier orden),
+  // y Ventas (numérico) en Valores con SUMA.
+  const rc = new Set([...filas, ...columnas]);
+  const productoMes = filas.length>=1 && columnas.length>=1 && rc.has('Producto') && rc.has('Mes');
+  const ventasEnValores = valores.includes('Ventas');
+
+  if(productoMes && ventasEnValores){
+    showFb(true,
+      '✓ ¡Bien! Construiste una tabla dinámica que resume la suma de Ventas por Producto y Mes.',
+      'Cruzaste <b>Producto</b> y <b>Mes</b> en Filas y Columnas, y colocaste <code>Suma de Ventas</code> en Valores. '+
+      'Cada celda muestra cuánto se vendió de ese producto en ese mes, con totales por fila, por columna y total general. 🎉');
+  } else {
+    const faltan = [];
+    if(!rc.has('Producto')) faltan.push('coloca <b>Producto</b> en Filas o Columnas');
+    if(!rc.has('Mes'))      faltan.push('coloca <b>Mes</b> en Filas o Columnas');
+    if(!(filas.length>=1 && columnas.length>=1)) faltan.push('usa <b>Filas</b> y <b>Columnas</b> a la vez (uno cada uno)');
+    if(!ventasEnValores)    faltan.push('arrastra <b>Ventas</b> a <b>Valores</b> (Suma de Ventas)');
+    showFb(false,
+      'Todavía no resume Ventas por Producto y Mes.',
+      'Para cumplir el objetivo: <b>Producto en Filas</b>, <b>Mes en Columnas</b> y <b>Suma de Ventas en Valores</b>.'+
+      '<ul>'+faltan.map(x=>`<li>${x}</li>`).join('')+'</ul>');
+  }
+});
+
+// ---------- Ver solución ----------
+document.getElementById('sol').addEventListener('click', ()=>{
+  placement = {Producto:'filas', Mes:'columnas', Cantidad:null, Ventas:'valores'};
+  filterValue = "__ALL__";
+  renderBuilder(); renderFilter(); renderPivot();
+  // Comprobación de cifras (mental): Notebook = 1050000+700000+1400000+350000 = 3.500.000
+  showFb(true,
+    'Solución aplicada',
+    'Configuración: <b>Filas = Producto</b>, <b>Columnas = Mes</b>, <b>Valores = Suma de Ventas</b>.<br><br>'+
+    'Por ejemplo, el total de <b>Notebook</b> es '+
+    '<code>1.050.000 + 700.000 + 1.400.000 + 350.000 = 3.500.000</code>, '+
+    'y el <b>Total general</b> de la tienda es <code>'+fmt(DATA.reduce((s,r)=>s+r[3],0))+'</code>.');
+});
+
+// ---------- Reiniciar ----------
+document.getElementById('reset').addEventListener('click', ()=>{
+  placement = {Producto:null, Mes:null, Cantidad:null, Ventas:null};
+  filterValue = "__ALL__";
+  renderBuilder(); renderFilter(); renderPivot();
+  fb.className='feedback';
+});
+
+// ---------- Init ----------
+renderSource();
+wireDropZones();
+renderBuilder();
+renderFilter();
+renderPivot();
+</script>
+</body>
+</html>
