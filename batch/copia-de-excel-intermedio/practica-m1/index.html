@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Práctica interactiva en Excel · Módulo 1 · OTEC Pausa</title>
+<script src="https://cdn.jsdelivr.net/npm/hyperformula@2.7.0/dist/hyperformula.full.min.js"></script>
+<style>
+  :root{--teal:#00A99E;--blue:#1B3A57;--navy:#0F1F33;--orange:#F26B1F;--red:#E32D3D;--yellow:#F5C037;--gray:#4A5568;--light:#F4F6F8;--green-ok:#1e8e5a;}
+  *{box-sizing:border-box;}
+  html,body{overflow-x:hidden;}
+  body{margin:0;font-family:Calibri,'Segoe UI',system-ui,sans-serif;color:#1d2530;background:#fff;max-width:100%;}
+  table{max-width:100%;}
+  .sheetwrap{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch;}
+  .bands{display:flex;height:7px;}.bands>div{flex:1;}
+  .b1{background:var(--teal);}.b2{background:var(--orange);}.b3{background:var(--red);}.b4{background:var(--yellow);}.b5{background:var(--blue);}
+  .wrap{max-width:920px;margin:0 auto;padding:18px 20px 40px;}
+  header.hd{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--light);padding-bottom:14px;margin-bottom:8px;}
+  .logo{width:44px;height:44px;flex:0 0 44px;}
+  .brand b{color:var(--blue);font-size:20px;letter-spacing:.5px;}
+  .brand span{display:block;color:var(--gray);font-size:12px;}
+  h1{font-size:21px;color:var(--blue);margin:18px 0 2px;}
+  .sub{color:var(--gray);font-size:13px;margin-bottom:14px;}
+  .tabs{display:flex;gap:6px;border-bottom:2px solid var(--light);margin:18px 0 0;flex-wrap:wrap;}
+  .tab{padding:10px 16px;font-size:14px;font-weight:bold;color:var(--gray);cursor:pointer;border:2px solid transparent;border-bottom:none;border-radius:8px 8px 0 0;}
+  .tab.active{color:var(--blue);background:var(--light);border-color:var(--light);}
+  .pane{display:none;padding-top:6px;}.pane.active{display:block;}
+  .card{background:var(--light);border-radius:8px;padding:14px 16px;margin:14px 0;font-size:14.5px;line-height:1.5;}
+  .card h2{font-size:15px;color:var(--teal);margin:0 0 8px;}
+  .card ul{margin:6px 0 0 0;padding-left:20px;}.card li{margin-bottom:4px;}
+  code{background:#fff;border:1px solid #d8dee6;border-radius:4px;padding:1px 6px;font-family:Consolas,monospace;font-size:13px;color:var(--blue);}
+  .fxbar{display:flex;align-items:stretch;margin:16px 0 0;border:1px solid #c3ccd6;border-radius:6px 6px 0 0;overflow:hidden;}
+  .fxbar .fxlabel{background:var(--light);color:var(--gray);font-style:italic;font-weight:bold;padding:9px 14px;border-right:1px solid #c3ccd6;display:flex;align-items:center;gap:6px;min-width:84px;}
+  .fxbar .cellref{font-style:normal;color:var(--blue);font-family:Consolas,monospace;background:#fff;border:1px solid #c3ccd6;border-radius:3px;padding:1px 7px;font-size:12px;}
+  .fxbar input{flex:1;min-width:0;border:none;outline:none;padding:9px 12px;font-family:Consolas,monospace;font-size:14.5px;color:#1d2530;}
+  .fxbar input::placeholder{color:#9aa4b0;font-family:Calibri,sans-serif;font-style:italic;}
+  table.sheet{border-collapse:collapse;width:100%;font-size:14px;border:1px solid #b8c2cc;border-top:none;}
+  table.sheet th,table.sheet td{border:1px solid #d3dae2;padding:0;text-align:center;height:34px;}
+  table.sheet thead th{background:#217346;color:#fff;font-weight:bold;height:30px;}
+  table.sheet .rownum,table.sheet .colhdr{background:#f1f4f7;color:var(--gray);font-weight:bold;font-size:12px;width:30px;}
+  table.sheet td.data{background:#fff;padding:0 8px;}table.sheet td.data.name{text-align:left;}
+  table.sheet td.editable{cursor:cell;background:#fffdf5;}
+  table.sheet td.editable.sel{outline:2px solid var(--teal);outline-offset:-2px;}
+  table.sheet td.editable .val{padding:0 8px;min-height:34px;display:flex;align-items:center;justify-content:center;font-weight:bold;color:var(--blue);}
+  .val.err{color:var(--red);font-style:italic;font-weight:normal;}
+  /* panel de respuestas */
+  .ans{margin:16px 0 0;border:1px solid #d3dae2;border-radius:8px;overflow:hidden;}
+  .ans .ahead{background:var(--light);padding:9px 14px;font-weight:bold;color:var(--blue);font-size:14px;}
+  .arow{display:flex;align-items:stretch;border-top:1px solid #eef1f4;flex-wrap:wrap;}
+  .arow .lbl{flex:1 1 230px;padding:10px 14px;font-size:14px;display:flex;align-items:center;}
+  .arow .fxa{flex:2 1 280px;display:flex;align-items:center;border-left:1px solid #eef1f4;min-width:0;}
+  .arow .fxa input{flex:1;min-width:0;border:none;outline:none;padding:10px 12px;font-family:Consolas,monospace;font-size:14px;}
+  .arow .out{flex:0 0 110px;border-left:1px solid #eef1f4;display:flex;align-items:center;justify-content:center;font-weight:bold;color:var(--blue);}
+  .arow .out.err{color:var(--red);font-weight:normal;font-style:italic;}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 6px;}
+  button{font-family:inherit;font-size:14px;font-weight:bold;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;transition:.15s;}
+  .btn-primary{background:var(--teal);color:#fff;}.btn-primary:hover{background:#018e85;}
+  .btn-ghost{background:#fff;color:var(--blue);border:1.5px solid #c3ccd6;}.btn-ghost:hover{border-color:var(--teal);color:var(--teal);}
+  .btn-soft{background:var(--light);color:var(--gray);}.btn-soft:hover{background:#e7ecf1;}
+  .feedback{margin-top:14px;border-radius:8px;overflow:hidden;display:none;}.feedback.show{display:block;}
+  .feedback .fhead{padding:12px 16px;font-weight:bold;font-size:15px;color:#fff;}
+  .feedback.good .fhead{background:var(--green-ok);}.feedback.bad .fhead{background:var(--orange);}
+  .feedback .fbody{padding:12px 16px;font-size:14px;background:#fff;border:1px solid var(--light);border-top:none;}
+  .feedback .fbody ul{margin:6px 0 0;padding-left:20px;}
+  .hint{font-size:12.5px;color:var(--gray);margin-top:10px;}
+  footer{margin-top:26px;padding-top:14px;border-top:2px solid var(--light);font-size:12px;color:#9aa4b0;text-align:center;}
+  .pill{display:inline-block;background:var(--yellow);color:#5a4300;font-weight:bold;font-size:11px;padding:2px 9px;border-radius:20px;vertical-align:middle;}
+</style>
+</head>
+<body>
+<div class="bands"><div class="b1"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div><div class="b5"></div></div>
+<div class="wrap">
+  <header class="hd">
+    <svg class="logo" viewBox="0 0 100 100" aria-label="OTEC Pausa">
+      <path d="M50 8 q-7 0 -7 9 0 8 7 13 7 -5 7 -13 0 -9 -7 -9z" fill="#E32D3D"/>
+      <path d="M92 50 q0 -7 -9 -7 -8 0 -13 7 5 7 13 7 9 0 9 -7z" fill="#7CC242"/>
+      <path d="M50 92 q7 0 7 -9 0 -8 -7 -13 -7 5 -7 13 0 9 7 9z" fill="#F26B1F"/>
+      <path d="M8 50 q0 7 9 7 8 0 13 -7 -5 -7 -13 -7 -9 0 -9 7z" fill="#7FB3E8"/>
+      <circle cx="50" cy="50" r="6" fill="#fff"/>
+    </svg>
+    <div class="brand"><b>OTEC PAUSA</b><span>Organismo Técnico de Capacitación</span></div>
+  </header>
+  <h1>Práctica interactiva en Excel <span class="pill">MÓDULO 1</span></h1>
+  <div class="sub">Módulo 1: Introducción y manejo de datos en Excel · Trabajo práctico</div>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="e1">Ejercicio 1: Cotización con IVA</div>
+    <div class="tab" data-tab="e2">Ejercicio 2: Seguimiento de gastos mensuales</div>
+  </div>
+
+  <!-- ===== EJ1: Cotización con IVA ===== -->
+  <section class="pane active" id="pane-e1">
+    <div class="card">
+      <h2>🧾 Ejercicio 1: Cotización de insumos con IVA</h2>
+      Desarrolla un formato de cotización simple de insumos para un establecimiento educacional. Las columnas deben contener: N° de insumo, detalle, cantidad, precio unitario y precio total por insumo. El valor de cada insumo se calcula con fórmulas. El valor total de la cotización debe incluir IVA (19%).
+      <br><br>
+      Escribe en la columna <b>E (Precio total)</b> la fórmula que multiplica <b>cantidad × precio unitario</b>, y luego completa <b>Subtotal</b>, <b>IVA</b> y <b>Total con IVA</b> en el panel inferior.
+    </div>
+    <div class="fxbar">
+      <div class="fxlabel"><span class="cellref" id="cellRef1">E2</span> <i>fx</i></div>
+      <input id="fx1" type="text" autocomplete="off" spellcheck="false" placeholder='Ej.: =C2*D2'>
+    </div>
+    <div class="sheetwrap"><table class="sheet" id="sheet1">
+      <thead>
+        <tr><th class="colhdr"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+        <tr><th class="rownum">1</th><td class="data"><b>N°</b></td><td class="data name"><b>Detalle</b></td><td class="data"><b>Cantidad</b></td><td class="data"><b>Precio unitario</b></td><td class="data"><b>Precio total</b></td></tr>
+      </thead>
+      <tbody id="rows1"></tbody>
+    </table></div>
+    <div class="ans">
+      <div class="ahead">Panel de respuestas — escribe cada fórmula y presiona Enter</div>
+      <div id="answers1"></div>
+    </div>
+    <div class="btns">
+      <button class="btn-primary" id="check1">✓ Verificar</button>
+      <button class="btn-ghost" id="sol1">Ver solución</button>
+      <button class="btn-soft" id="reset1">Reiniciar</button>
+    </div>
+    <div class="hint">💡 En la columna E escribe <code>=C2*D2</code> en la fila 2 y cópiala hacia abajo. El IVA en Chile es del <b>19%</b>: el Total con IVA es el Subtotal multiplicado por <code>1.19</code>.</div>
+    <div class="feedback" id="fb1"><div class="fhead" id="fh1"></div><div class="fbody" id="fbd1"></div></div>
+  </section>
+
+  <!-- ===== EJ2: Seguimiento de gastos mensuales ===== -->
+  <section class="pane" id="pane-e2">
+    <div class="card">
+      <h2>📅 Ejercicio 2: Seguimiento de gastos mensuales</h2>
+      Configura una hoja para el seguimiento de gastos mensuales. En la columna <b>A</b> los meses (Enero a Diciembre) y en la columna <b>B</b> los gastos de cada mes. En la celda <b>Total Anual</b> calcula el total con la función <code>SUMA</code>, y aplica formato de moneda.
+      <br><br>
+      Escribe en <b>B14</b> la fórmula que suma todos los gastos del año.
+    </div>
+    <div class="fxbar">
+      <div class="fxlabel"><span class="cellref" id="cellRef2">B14</span> <i>fx</i></div>
+      <input id="fx2" type="text" autocomplete="off" spellcheck="false" placeholder='Ej.: =SUMA(B2:B13)'>
+    </div>
+    <div class="sheetwrap"><table class="sheet" id="sheet2">
+      <thead>
+        <tr><th class="colhdr"></th><th>A</th><th>B</th></tr>
+        <tr><th class="rownum">1</th><td class="data name"><b>Mes</b></td><td class="data"><b>Gastos Mensuales</b></td></tr>
+      </thead>
+      <tbody id="rows2"></tbody>
+    </table></div>
+    <div class="btns">
+      <button class="btn-primary" id="check2">✓ Verificar</button>
+      <button class="btn-ghost" id="sol2">Ver solución</button>
+      <button class="btn-soft" id="reset2">Reiniciar</button>
+    </div>
+    <div class="hint">💡 <code>SUMA(rango)</code> suma todos los valores de un rango continuo. Para los 12 meses (filas 2 a 13) usa <code>=SUMA(B2:B13)</code>. Los gastos están expresados en dólares.</div>
+    <div class="feedback" id="fb2"><div class="fhead" id="fh2"></div><div class="fbody" id="fbd2"></div></div>
+  </section>
+
+  <footer>OTEC Pausa Ltda. · Curso Excel Intermedio · Práctica formativa (no reemplaza la evaluación del módulo) · Edición 2026</footer>
+</div>
+
+<script>
+const { HyperFormula } = window;
+function translate(formula){
+  if(!formula) return "";
+  let f = formula.trim();
+  if(f[0] !== "=") return f;
+  const strings = [];
+  f = f.replace(/"[^"]*"/g, m => { strings.push(m); return " "+(strings.length-1)+" "; });
+  f = f.replace(/;/g, ",");
+  const map = {"SI":"IF","Y":"AND","O":"OR","NO":"NOT","SUMA":"SUM","PROMEDIO":"AVERAGE","CONCATENAR":"CONCATENATE","CONTAR.SI":"COUNTIF","CONTAR":"COUNT","MAX":"MAX","MIN":"MIN","BUSCARV":"VLOOKUP","SI.ERROR":"IFERROR","MAYUSC":"UPPER","MINUSC":"LOWER"};
+  f = f.replace(/([A-Za-zÁÉÍÓÚÑ\.]+)\s*\(/g, (m, name) => (map[name.toUpperCase()]||name)+"(");
+  f = f.replace(/ (\d+) /g, (m, i) => strings[+i]);
+  return f;
+}
+function norm(x){ // normaliza números/strings para comparar
+  if(x==null) return "";
+  let s=String(x).trim();
+  const n=parseFloat(s.replace(',','.'));
+  if(!isNaN(n) && isFinite(n) && /^[-\d.,]+$/.test(s)) return String(Math.round(n*100)/100);
+  return s.toLowerCase();
+}
+
+// ===== EJ1 Cotización con IVA =====
+// columnas: A=N°, B=Detalle, C=Cantidad, D=Precio unitario, E=Precio total
+const DATA1 = [
+  [1,"Notebook 14 pulgadas",3,350000],
+  [2,"Resma papel carta",10,3500],
+  [3,"Detergente de piso 5L",6,4990],
+  [4,"Tóner para impresora",2,45000],
+  [5,"Caja de lápices pasta",8,2490],
+];
+const EXP1 = [1050000,35000,29940,90000,19920]; // E2..E6
+// panel: Subtotal, IVA (19%), Total con IVA
+const SUM1 = DATA1.reduce((a,d)=>a+d[2]*d[3],0); // 1224860
+const QS1 = [
+  {lbl:"Subtotal (suma de los precios totales)", sol:"=SUMA(E2:E6)", exp:String(SUM1)},
+  {lbl:"IVA (19% del subtotal)", sol:"=SUMA(E2:E6)*0.19", exp:String(Math.round(SUM1*0.19*100)/100)},
+  {lbl:"Total con IVA", sol:"=SUMA(E2:E6)*1.19", exp:String(Math.round(SUM1*1.19*100)/100)},
+];
+let hf1, formulas1=DATA1.map(()=>""), sel1=0;
+function eng1(){
+  // hoja: fila 0 = encabezados; filas 1..5 = datos con E vacía; fila 7 = scratch
+  hf1 = HyperFormula.buildFromArray([
+    ["N°","Detalle","Cant","PU","Total"],
+    ...DATA1.map(d=>[d[0],d[1],d[2],d[3],""])
+  ],{licenseKey:'gpl-v3'});
+}
+function res1(i){ const v=hf1.getCellValue({sheet:0,row:i+1,col:4}); if(v&&typeof v==='object'&&v.type==='ERROR')return{error:1}; if(v==null||v==="")return{empty:1}; return{text:String(v)}; }
+function calc1(formula){
+  if(!formula||!formula.trim()) return {empty:1};
+  try{
+    hf1.setCellContents({sheet:0,row:7,col:0},[[translate(formula)]]);
+    const v=hf1.getCellValue({sheet:0,row:7,col:0});
+    if(v&&typeof v==='object'&&v.type==='ERROR')return{error:1};
+    return {text:String(v)};
+  }catch(e){return{error:1};}
+}
+const rows1=document.getElementById('rows1'),fx1=document.getElementById('fx1'),cr1=document.getElementById('cellRef1');
+const ans1Vals = QS1.map(()=>"");
+function render1(){
+  rows1.innerHTML="";
+  DATA1.forEach((d,i)=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<th class="rownum">${i+2}</th><td class="data">${d[0]}</td><td class="data name">${d[1]}</td><td class="data">${d[2]}</td><td class="data">${d[3]}</td>`;
+    const td=document.createElement('td');td.className='editable'+(i===sel1?' sel':'');
+    const r=res1(i);let cls='val',txt=r.text||"";if(r.error){cls+=' err';txt='#¡ERROR!';}
+    td.innerHTML=`<div class="${cls}">${txt}</div>`;td.addEventListener('click',()=>selr1(i));tr.appendChild(td);rows1.appendChild(tr);
+  });
+  // panel de respuestas
+  const ans=document.getElementById('answers1');ans.innerHTML="";
+  QS1.forEach((q,i)=>{
+    const row=document.createElement('div');row.className='arow';
+    row.innerHTML=`<div class="lbl">${q.lbl}</div>
+      <div class="fxa"><input data-q="${i}" type="text" autocomplete="off" spellcheck="false" placeholder="= …" value="${ans1Vals[i].replace(/"/g,'&quot;')}"></div>
+      <div class="out" data-out1="${i}"></div>`;
+    ans.appendChild(row);
+  });
+  ans.querySelectorAll('input').forEach(inp=>{
+    inp.addEventListener('input',e=>{ans1Vals[+e.target.dataset.q]=e.target.value;});
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();updateOut1(+e.target.dataset.q);}});
+    inp.addEventListener('blur',e=>updateOut1(+e.target.dataset.q));
+  });
+}
+function updateOut1(i){
+  const r=calc1(ans1Vals[i]);const out=document.querySelector(`.out[data-out1="${i}"]`);
+  if(r.empty){out.textContent="";out.className='out';}
+  else if(r.error){out.textContent="#¡ERROR!";out.className='out err';}
+  else{out.textContent=r.text;out.className='out';}
+}
+function selr1(i){sel1=i;cr1.textContent="E"+(i+2);fx1.value=formulas1[i];document.querySelectorAll('#rows1 td.editable').forEach((t,x)=>t.classList.toggle('sel',x===i));fx1.focus();}
+function commit1(){formulas1[sel1]=fx1.value;hf1.setCellContents({sheet:0,row:sel1+1,col:4},[[translate(fx1.value)]]);render1();const cells=document.querySelectorAll('#rows1 td.editable');if(cells[sel1])cells[sel1].classList.add('sel');}
+fx1.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();commit1();if(sel1<DATA1.length-1)selr1(sel1+1);}});
+fx1.addEventListener('blur',commit1);
+const fb1=document.getElementById('fb1'),fh1=document.getElementById('fh1'),fbd1=document.getElementById('fbd1');
+document.getElementById('check1').addEventListener('click',()=>{
+  formulas1[sel1]=fx1.value;hf1.setCellContents({sheet:0,row:sel1+1,col:4},[[translate(fx1.value)]]);
+  let okE=0;const badE=[];
+  DATA1.forEach((d,i)=>{const r=res1(i);if(norm(r.text)===norm(EXP1[i]))okE++;else badE.push({c:"E"+(i+2),g:r.text||"(vacío)",e:EXP1[i],blank:!formulas1[i].trim()});});
+  let okP=0;const badP=[];
+  QS1.forEach((q,i)=>{updateOut1(i);const r=calc1(ans1Vals[i]);const got=r.text!=null?r.text:"";if(!r.empty&&!r.error&&norm(got)===norm(q.exp))okP++;else badP.push({lbl:q.lbl,got:(r.empty?"(vacío)":r.error?"#¡ERROR!":got),exp:q.exp});});
+  const totalOK = okE+okP, totalN = DATA1.length+QS1.length;
+  fb1.className='feedback show '+(totalOK===totalN?'good':'bad');
+  if(totalOK===totalN){fh1.textContent='✓ ¡Muy bien! La cotización completa es correcta, IVA incluido.';fbd1.innerHTML='Calculaste el precio total de cada insumo con <code>=Cantidad*Precio unitario</code>, el subtotal con <code>SUMA</code> y aplicaste el IVA del 19%. 🎉';}
+  else{
+    fh1.textContent=`Vas ${totalOK} de ${totalN}. Revisa:`;
+    let h='<ul>';
+    badE.forEach(d=>h+=d.blank?`<li><b>${d.c}</b>: sin fórmula. Esperado <code>${d.e}</code>.</li>`:`<li><b>${d.c}</b>: tu resultado <code>${d.g}</code> · esperado <code>${d.e}</code>.</li>`);
+    badP.forEach(d=>h+=`<li><b>${d.lbl}</b>: tu resultado <code>${d.got}</code> · esperado <code>${d.exp}</code>.</li>`);
+    h+='</ul><div class="hint">Recuerda: Precio total = <code>=C?*D?</code>; Subtotal = <code>=SUMA(E2:E6)</code>; Total con IVA = Subtotal × <code>1.19</code>.</div>';
+    fbd1.innerHTML=h;
+  }
+  fb1.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+document.getElementById('sol1').addEventListener('click',()=>{
+  for(let i=0;i<DATA1.length;i++){const f=`=C${i+2}*D${i+2}`;formulas1[i]=f;hf1.setCellContents({sheet:0,row:i+1,col:4},[[translate(f)]]);}
+  QS1.forEach((q,i)=>{ans1Vals[i]=q.sol;});
+  render1();selr1(0);fx1.value=formulas1[0];QS1.forEach((q,i)=>updateOut1(i));
+  fb1.className='feedback show good';fh1.textContent='Solución aplicada';
+  fbd1.innerHTML='Precio total (fila 2): <code>=C2*D2</code> · copia hacia abajo hasta E6.<br><br>Subtotal: <code>=SUMA(E2:E6)</code> · IVA: <code>=SUMA(E2:E6)*0.19</code> · Total con IVA: <code>=SUMA(E2:E6)*1.19</code>';
+});
+document.getElementById('reset1').addEventListener('click',()=>{formulas1.fill("");ans1Vals.fill("");eng1();render1();selr1(0);fx1.value="";fb1.className='feedback';});
+
+// ===== EJ2 Seguimiento de gastos mensuales =====
+const MESES = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+const GASTOS = [1200,980,1100,1350,900,1500,1250,1400,1050,1320,1180,1600];
+const EXP2 = GASTOS.reduce((a,b)=>a+b,0); // 14830
+let hf2, formula2="", sel2=true;
+function eng2(){
+  // fila 0 = encabezados; filas 1..12 = meses+gastos; fila 13 = Total Anual con B14 vacía
+  hf2 = HyperFormula.buildFromArray([
+    ["Mes","Gastos"],
+    ...MESES.map((m,i)=>[m,GASTOS[i]]),
+    ["Total Anual",""]
+  ],{licenseKey:'gpl-v3'});
+}
+function res2(){ const v=hf2.getCellValue({sheet:0,row:13,col:1}); if(v&&typeof v==='object'&&v.type==='ERROR')return{error:1}; if(v==null||v==="")return{empty:1}; return{text:String(v)}; }
+const rows2=document.getElementById('rows2'),fx2=document.getElementById('fx2'),cr2=document.getElementById('cellRef2');
+function fmtMoney(n){ return "$"+Number(n).toLocaleString('en-US'); }
+function render2(){
+  rows2.innerHTML="";
+  MESES.forEach((m,i)=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<th class="rownum">${i+2}</th><td class="data name">${m}</td><td class="data">${fmtMoney(GASTOS[i])}</td>`;
+    rows2.appendChild(tr);
+  });
+  // fila Total Anual (14): A14 fijo, B14 editable
+  const tr=document.createElement('tr');
+  tr.innerHTML=`<th class="rownum">14</th><td class="data name"><b>Total Anual</b></td>`;
+  const td=document.createElement('td');td.className='editable'+(sel2?' sel':'');
+  const r=res2();let cls='val',txt=r.text?fmtMoney(r.text):"";if(r.error){cls+=' err';txt='#¡ERROR!';}
+  td.innerHTML=`<div class="${cls}">${txt}</div>`;td.addEventListener('click',()=>selr2());tr.appendChild(td);rows2.appendChild(tr);
+}
+function selr2(){sel2=true;cr2.textContent="B14";fx2.value=formula2;const c=document.querySelector('#rows2 td.editable');if(c)c.classList.add('sel');fx2.focus();}
+function commit2(){formula2=fx2.value;hf2.setCellContents({sheet:0,row:13,col:1},[[translate(fx2.value)]]);render2();}
+fx2.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();commit2();}});
+fx2.addEventListener('blur',commit2);
+const fb2=document.getElementById('fb2'),fh2=document.getElementById('fh2'),fbd2=document.getElementById('fbd2');
+document.getElementById('check2').addEventListener('click',()=>{
+  formula2=fx2.value;hf2.setCellContents({sheet:0,row:13,col:1},[[translate(fx2.value)]]);
+  const r=res2();const got=r.text||"";
+  const ok = !r.empty && !r.error && norm(got)===norm(EXP2);
+  fb2.className='feedback show '+(ok?'good':'bad');
+  if(ok){fh2.textContent='✓ ¡Excelente! El Total Anual es correcto.';fbd2.innerHTML=`Sumaste los 12 meses con <code>=SUMA(B2:B13)</code> y obtuviste <b>${fmtMoney(EXP2)}</b>. 🎉`;}
+  else{
+    const shown = r.empty?"(vacío)":r.error?"#¡ERROR!":fmtMoney(got);
+    fh2.textContent='Aún no es correcto. Revisa:';
+    fbd2.innerHTML=`<ul><li><b>B14</b>: tu resultado <code>${shown}</code> · esperado <code>${fmtMoney(EXP2)}</code>.</li></ul><div class="hint">Usa <code>=SUMA(B2:B13)</code> para sumar los 12 meses (Enero a Diciembre).</div>`;
+  }
+  fb2.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+document.getElementById('sol2').addEventListener('click',()=>{
+  formula2="=SUMA(B2:B13)";hf2.setCellContents({sheet:0,row:13,col:1},[[translate(formula2)]]);
+  render2();selr2();fx2.value=formula2;
+  fb2.className='feedback show good';fh2.textContent='Solución aplicada';
+  fbd2.innerHTML=`Total Anual: <code>=SUMA(B2:B13)</code> → <b>${fmtMoney(EXP2)}</b>`;
+});
+document.getElementById('reset2').addEventListener('click',()=>{formula2="";eng2();render2();selr2();fx2.value="";fb2.className='feedback';});
+
+// tabs
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');document.getElementById('pane-'+t.dataset.tab).classList.add('active');
+}));
+// init
+eng1();render1();selr1(0);eng2();render2();
+</script>
+</body>
+</html>
