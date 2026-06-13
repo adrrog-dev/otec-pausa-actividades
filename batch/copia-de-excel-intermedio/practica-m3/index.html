@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Práctica interactiva en Excel · Módulo 3 · OTEC Pausa</title>
+<script src="https://cdn.jsdelivr.net/npm/hyperformula@2.7.0/dist/hyperformula.full.min.js"></script>
+<style>
+  :root{--teal:#00A99E;--blue:#1B3A57;--navy:#0F1F33;--orange:#F26B1F;--red:#E32D3D;--yellow:#F5C037;--gray:#4A5568;--light:#F4F6F8;--green-ok:#1e8e5a;}
+  *{box-sizing:border-box;}
+  html,body{overflow-x:hidden;}
+  body{margin:0;font-family:Calibri,'Segoe UI',system-ui,sans-serif;color:#1d2530;background:#fff;max-width:100%;}
+  table{max-width:100%;}
+  .sheetwrap{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch;}
+  .bands{display:flex;height:7px;}.bands>div{flex:1;}
+  .b1{background:var(--teal);}.b2{background:var(--orange);}.b3{background:var(--red);}.b4{background:var(--yellow);}.b5{background:var(--blue);}
+  .wrap{max-width:920px;margin:0 auto;padding:18px 20px 40px;}
+  header.hd{display:flex;align-items:center;gap:14px;border-bottom:2px solid var(--light);padding-bottom:14px;margin-bottom:8px;}
+  .logo{width:44px;height:44px;flex:0 0 44px;}
+  .brand b{color:var(--blue);font-size:20px;letter-spacing:.5px;}
+  .brand span{display:block;color:var(--gray);font-size:12px;}
+  h1{font-size:21px;color:var(--blue);margin:18px 0 2px;}
+  .sub{color:var(--gray);font-size:13px;margin-bottom:14px;}
+  .tabs{display:flex;gap:6px;border-bottom:2px solid var(--light);margin:18px 0 0;flex-wrap:wrap;}
+  .tab{padding:10px 16px;font-size:14px;font-weight:bold;color:var(--gray);cursor:pointer;border:2px solid transparent;border-bottom:none;border-radius:8px 8px 0 0;}
+  .tab.active{color:var(--blue);background:var(--light);border-color:var(--light);}
+  .pane{display:none;padding-top:6px;}.pane.active{display:block;}
+  .card{background:var(--light);border-radius:8px;padding:14px 16px;margin:14px 0;font-size:14.5px;line-height:1.5;}
+  .card h2{font-size:15px;color:var(--teal);margin:0 0 8px;}
+  .card ul{margin:6px 0 0 0;padding-left:20px;}.card li{margin-bottom:4px;}
+  code{background:#fff;border:1px solid #d8dee6;border-radius:4px;padding:1px 6px;font-family:Consolas,monospace;font-size:13px;color:var(--blue);}
+  .fxbar{display:flex;align-items:stretch;margin:16px 0 0;border:1px solid #c3ccd6;border-radius:6px 6px 0 0;overflow:hidden;}
+  .fxbar .fxlabel{background:var(--light);color:var(--gray);font-style:italic;font-weight:bold;padding:9px 14px;border-right:1px solid #c3ccd6;display:flex;align-items:center;gap:6px;min-width:84px;}
+  .fxbar .cellref{font-style:normal;color:var(--blue);font-family:Consolas,monospace;background:#fff;border:1px solid #c3ccd6;border-radius:3px;padding:1px 7px;font-size:12px;}
+  .fxbar input{flex:1;min-width:0;border:none;outline:none;padding:9px 12px;font-family:Consolas,monospace;font-size:14.5px;color:#1d2530;}
+  .fxbar input::placeholder{color:#9aa4b0;font-family:Calibri,sans-serif;font-style:italic;}
+  table.sheet{border-collapse:collapse;width:100%;font-size:14px;border:1px solid #b8c2cc;border-top:none;}
+  table.sheet th,table.sheet td{border:1px solid #d3dae2;padding:0;text-align:center;height:34px;}
+  table.sheet thead th{background:#217346;color:#fff;font-weight:bold;height:30px;}
+  table.sheet .rownum,table.sheet .colhdr{background:#f1f4f7;color:var(--gray);font-weight:bold;font-size:12px;width:30px;}
+  table.sheet td.data{background:#fff;padding:0 8px;}table.sheet td.data.name{text-align:left;}
+  table.sheet td.editable{cursor:cell;background:#fffdf5;}
+  table.sheet td.editable.sel{outline:2px solid var(--teal);outline-offset:-2px;}
+  table.sheet td.editable .val{padding:0 8px;min-height:34px;display:flex;align-items:center;justify-content:center;font-weight:bold;color:var(--blue);}
+  .val.err{color:var(--red);font-style:italic;font-weight:normal;}
+  /* panel de respuestas (ej2) */
+  .ans{margin:16px 0 0;border:1px solid #d3dae2;border-radius:8px;overflow:hidden;}
+  .ans .ahead{background:var(--light);padding:9px 14px;font-weight:bold;color:var(--blue);font-size:14px;}
+  .arow{display:flex;align-items:stretch;border-top:1px solid #eef1f4;flex-wrap:wrap;}
+  .arow .lbl{flex:1 1 230px;padding:10px 14px;font-size:14px;display:flex;align-items:center;}
+  .arow .fxa{flex:2 1 280px;display:flex;align-items:center;border-left:1px solid #eef1f4;min-width:0;}
+  .arow .fxa input{flex:1;min-width:0;border:none;outline:none;padding:10px 12px;font-family:Consolas,monospace;font-size:14px;}
+  .arow .out{flex:0 0 92px;border-left:1px solid #eef1f4;display:flex;align-items:center;justify-content:center;font-weight:bold;color:var(--blue);}
+  .arow .out.err{color:var(--red);font-weight:normal;font-style:italic;}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 6px;}
+  button{font-family:inherit;font-size:14px;font-weight:bold;border:none;border-radius:6px;padding:10px 18px;cursor:pointer;transition:.15s;}
+  .btn-primary{background:var(--teal);color:#fff;}.btn-primary:hover{background:#018e85;}
+  .btn-ghost{background:#fff;color:var(--blue);border:1.5px solid #c3ccd6;}.btn-ghost:hover{border-color:var(--teal);color:var(--teal);}
+  .btn-soft{background:var(--light);color:var(--gray);}.btn-soft:hover{background:#e7ecf1;}
+  .feedback{margin-top:14px;border-radius:8px;overflow:hidden;display:none;}.feedback.show{display:block;}
+  .feedback .fhead{padding:12px 16px;font-weight:bold;font-size:15px;color:#fff;}
+  .feedback.good .fhead{background:var(--green-ok);}.feedback.bad .fhead{background:var(--orange);}
+  .feedback .fbody{padding:12px 16px;font-size:14px;background:#fff;border:1px solid var(--light);border-top:none;}
+  .feedback .fbody ul{margin:6px 0 0;padding-left:20px;}
+  .hint{font-size:12.5px;color:var(--gray);margin-top:10px;}
+  footer{margin-top:26px;padding-top:14px;border-top:2px solid var(--light);font-size:12px;color:#9aa4b0;text-align:center;}
+  .pill{display:inline-block;background:var(--yellow);color:#5a4300;font-weight:bold;font-size:11px;padding:2px 9px;border-radius:20px;vertical-align:middle;}
+
+  /* ===== CSS NUEVO M3 — autofiltro (ej1) ===== */
+  .filterbar{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 2px;align-items:flex-end;}
+  .fgrp{display:flex;flex-direction:column;gap:3px;}
+  .fgrp label{font-size:11.5px;font-weight:bold;color:var(--gray);text-transform:uppercase;letter-spacing:.3px;}
+  .fgrp .frow{display:flex;align-items:center;gap:5px;}
+  .fgrp select,.fgrp input{font-family:Calibri,sans-serif;font-size:13.5px;border:1.5px solid #c3ccd6;border-radius:6px;padding:6px 9px;color:#1d2530;background:#fff;outline:none;}
+  .fgrp select:focus,.fgrp input:focus{border-color:var(--teal);}
+  .fgrp input{width:62px;text-align:center;}
+  .fgrp .dash{color:var(--gray);font-weight:bold;}
+  .filtinfo{font-size:13px;color:var(--blue);font-weight:bold;background:var(--light);border-radius:6px;padding:7px 12px;margin:10px 0 0;display:inline-block;}
+  .filtinfo b{color:var(--teal);}
+  /* encabezado de columna con ícono de filtro tipo Excel */
+  table.sheet thead th .colflag{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;margin-left:5px;border-radius:3px;background:rgba(255,255,255,.22);font-size:9px;vertical-align:middle;}
+  table.sheet thead th.filtered .colflag{background:var(--yellow);color:#5a4300;}
+  table.sheet tbody tr.hidden-row{display:none;}
+  .empty-note{font-size:13px;color:var(--gray);font-style:italic;padding:10px 4px;}
+
+  /* ===== CSS NUEVO M3 — validación de datos (ej2) ===== */
+  table.vsheet{border-collapse:collapse;width:100%;font-size:14px;border:1px solid #b8c2cc;}
+  table.vsheet th,table.vsheet td{border:1px solid #d3dae2;padding:0;text-align:center;}
+  table.vsheet thead th{background:#217346;color:#fff;font-weight:bold;height:32px;font-size:13.5px;padding:0 6px;}
+  table.vsheet tbody td{background:#fff;height:40px;}
+  table.vsheet tbody td .vfield{display:flex;flex-direction:column;align-items:stretch;}
+  table.vsheet input,table.vsheet select{font-family:Calibri,sans-serif;font-size:13.5px;border:1.5px solid transparent;border-radius:5px;padding:7px 8px;width:100%;outline:none;background:#fffdf5;color:#1d2530;}
+  table.vsheet input:focus,table.vsheet select:focus{border-color:var(--teal);background:#fff;}
+  table.vsheet td.invalid input,table.vsheet td.invalid select{border-color:var(--red);background:#fff3f3;}
+  table.vsheet td .verr{display:none;font-size:10.5px;color:var(--red);font-weight:bold;text-align:left;padding:2px 4px 0;line-height:1.25;}
+  table.vsheet td.invalid .verr{display:block;}
+  table.vsheet td.ok-cell input,table.vsheet td.ok-cell select{border-color:var(--green-ok);}
+  .delcol{width:34px;}
+  .delrow{background:#fff;color:var(--red);border:1.5px solid #e6c0c0;border-radius:5px;width:26px;height:26px;padding:0;font-size:15px;line-height:1;cursor:pointer;}
+  .delrow:hover{background:#fff3f3;border-color:var(--red);}
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;margin:6px 0 0;}
+  @media(max-width:560px){.rules{grid-template-columns:1fr;}}
+  .rules .rule{display:flex;gap:8px;align-items:flex-start;font-size:14px;line-height:1.4;}
+  .rules .rk{flex:0 0 auto;font-weight:bold;color:var(--teal);}
+  .validlegend{font-size:12.5px;color:var(--gray);margin-top:10px;}
+  .validlegend .chip{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:middle;margin:0 3px 0 10px;border:1.5px solid;}
+  .chip.ok{border-color:var(--green-ok);background:#eafaf2;}
+  .chip.bad{border-color:var(--red);background:#fff3f3;}
+</style>
+</head>
+<body>
+<div class="bands"><div class="b1"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div><div class="b5"></div></div>
+<div class="wrap">
+  <header class="hd">
+    <svg class="logo" viewBox="0 0 100 100" aria-label="OTEC Pausa">
+      <path d="M50 8 q-7 0 -7 9 0 8 7 13 7 -5 7 -13 0 -9 -7 -9z" fill="#E32D3D"/>
+      <path d="M92 50 q0 -7 -9 -7 -8 0 -13 7 5 7 13 7 9 0 9 -7z" fill="#7CC242"/>
+      <path d="M50 92 q7 0 7 -9 0 -8 -7 -13 -7 5 -7 13 0 9 7 9z" fill="#F26B1F"/>
+      <path d="M8 50 q0 7 9 7 8 0 13 -7 -5 -7 -13 -7 -9 0 -9 7z" fill="#7FB3E8"/>
+      <circle cx="50" cy="50" r="6" fill="#fff"/>
+    </svg>
+    <div class="brand"><b>OTEC PAUSA</b><span>Organismo Técnico de Capacitación</span></div>
+  </header>
+  <h1>Práctica interactiva en Excel <span class="pill">MÓDULO 3</span></h1>
+  <div class="sub">Curso Excel Intermedio · Módulo 3: Listas, tablas e impresiones en Excel · Trabajo práctico</div>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="e1">Ejercicio 1: Filtrado de lista de estudiantes</div>
+    <div class="tab" data-tab="e2">Ejercicio 2: Validación de datos</div>
+  </div>
+
+  <!-- ===== EJ1: FILTROS ===== -->
+  <section class="pane active" id="pane-e1">
+    <div class="card">
+      <h2>🔎 Ejercicio 1: Filtrado de lista de estudiantes</h2>
+      Tienes una lista de estudiantes con los campos <b>Nombre</b>, <b>Edad</b>, <b>Género</b> y <b>Calificación</b>. Practica el uso de filtros para obtener información específica.
+      <ul>
+        <li>Usa los <b>autofiltros</b> sobre cada encabezado para mostrar solo las filas que cumplen.</li>
+        <li>Observa la tabla filtrada y responde los 3 requerimientos del panel inferior.</li>
+        <li>Escribe el número que leíste (también aceptamos una fórmula tipo <code>=PROMEDIO(...)</code>).</li>
+      </ul>
+    </div>
+
+    <!-- controles de autofiltro -->
+    <div class="filterbar">
+      <div class="fgrp">
+        <label>Edad (rango)</label>
+        <div class="frow">
+          <input id="fEdadMin" type="number" inputmode="numeric" placeholder="mín">
+          <span class="dash">–</span>
+          <input id="fEdadMax" type="number" inputmode="numeric" placeholder="máx">
+        </div>
+      </div>
+      <div class="fgrp">
+        <label>Género</label>
+        <div class="frow">
+          <select id="fGenero">
+            <option value="Todos">Todos</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+          </select>
+        </div>
+      </div>
+      <div class="fgrp">
+        <label>Calificación</label>
+        <div class="frow">
+          <span class="dash">≥</span>
+          <input id="fCalMin" type="number" inputmode="numeric" placeholder="valor">
+        </div>
+      </div>
+      <div class="fgrp">
+        <label>&nbsp;</label>
+        <div class="frow"><button class="btn-soft" id="reset1">↺ Reiniciar filtros</button></div>
+      </div>
+    </div>
+    <div class="filtinfo" id="filtInfo"></div>
+
+    <div class="sheetwrap"><table class="sheet" id="sheet1">
+      <thead>
+        <tr><th class="colhdr"></th>
+          <th id="hNombre">Nombre</th>
+          <th id="hEdad">Edad<span class="colflag">▾</span></th>
+          <th id="hGenero">Género<span class="colflag">▾</span></th>
+          <th id="hCalif">Calificación<span class="colflag">▾</span></th>
+        </tr>
+      </thead>
+      <tbody id="rows1"></tbody>
+    </table></div>
+    <div class="empty-note" id="emptyNote1" style="display:none;">Ningún estudiante cumple los criterios de filtro actuales.</div>
+
+    <!-- panel de respuestas -->
+    <div class="ans">
+      <div class="ahead">Panel de respuestas — filtra, lee el resultado y escríbelo (Enter para evaluar)</div>
+      <div id="answers1"></div>
+    </div>
+    <div class="btns">
+      <button class="btn-primary" id="check1">✓ Verificar</button>
+      <button class="btn-ghost" id="sol1">Mostrar respuestas</button>
+      <button class="btn-soft" id="clear1">Limpiar respuestas</button>
+    </div>
+    <div class="hint">💡 Para el Req 1 filtra <b>Edad de 18 a 25</b>; para el Req 2 elige <b>Género = Femenino</b>; para el Req 3 pon <b>Calificación ≥ 90</b>. Los promedios van redondeados a 2 decimales.</div>
+    <div class="feedback" id="fb1"><div class="fhead" id="fh1"></div><div class="fbody" id="fbd1"></div></div>
+  </section>
+
+  <!-- ===== EJ2: VALIDACIÓN DE DATOS ===== -->
+  <section class="pane" id="pane-e2">
+    <div class="card">
+      <h2>✅ Ejercicio 2: Validación de datos</h2>
+      Creas una hoja para que los empleados registren <b>gastos de viaje</b>. Establece reglas de validación y prueba ingresar valores inválidos para ver cómo la validación los rechaza.
+      <div class="rules">
+        <div class="rule"><span class="rk">①</span><span><b>Fecha</b> dentro del último mes: del <code>2026-05-13</code> al <code>2026-06-13</code>.</span></div>
+        <div class="rule"><span class="rk">②</span><span><b>Monto</b> mayor que cero.</span></div>
+        <div class="rule"><span class="rk">③</span><span><b>Categoría</b> desde una lista: Transporte, Hospedaje, Comida.</span></div>
+        <div class="rule"><span class="rk">④</span><span><b>Aprobado</b> solo <code>Sí</code> o <code>No</code>.</span></div>
+      </div>
+    </div>
+
+    <div class="sheetwrap"><table class="vsheet" id="vsheet">
+      <thead>
+        <tr>
+          <th style="width:21%">Fecha</th>
+          <th style="width:27%">Concepto</th>
+          <th style="width:17%">Monto</th>
+          <th style="width:20%">Categoría</th>
+          <th style="width:15%">Aprobado</th>
+          <th class="delcol"></th>
+        </tr>
+      </thead>
+      <tbody id="vrows"></tbody>
+    </table></div>
+
+    <div class="validlegend">
+      Las celdas se validan en vivo:
+      <span class="chip ok"></span> válida ·
+      <span class="chip bad"></span> inválida (muestra el motivo del rechazo).
+    </div>
+
+    <div class="btns">
+      <button class="btn-ghost" id="addrow">＋ Agregar fila</button>
+      <button class="btn-primary" id="check2">✓ Verificar</button>
+      <button class="btn-soft" id="reset2">↺ Reiniciar</button>
+    </div>
+    <div class="hint">💡 En Excel real esto se configura en <b>Datos → Validación de datos</b>: rango de fecha, número mayor que 0, y listas desplegables. Aquí las reglas ya están activas: intenta romperlas.</div>
+    <div class="feedback" id="fb2"><div class="fhead" id="fh2"></div><div class="fbody" id="fbd2"></div></div>
+  </section>
+
+  <footer>OTEC Pausa Ltda. · Curso Excel Intermedio · Práctica formativa (no reemplaza la evaluación del módulo) · Edición 2026</footer>
+</div>
+
+<script>
+const { HyperFormula } = window;
+function translate(formula){
+  if(!formula) return "";
+  let f = formula.trim();
+  if(f[0] !== "=") return f;
+  const strings = [];
+  f = f.replace(/"[^"]*"/g, m => { strings.push(m); return " "+(strings.length-1)+" "; });
+  f = f.replace(/;/g, ",");
+  const map = {"SI":"IF","Y":"AND","O":"OR","NO":"NOT","SUMA":"SUM","PROMEDIO":"AVERAGE","CONCATENAR":"CONCATENATE","CONTAR.SI":"COUNTIF","CONTAR":"COUNT","MAX":"MAX","MIN":"MIN","BUSCARV":"VLOOKUP","SI.ERROR":"IFERROR","MAYUSC":"UPPER","MINUSC":"LOWER"};
+  f = f.replace(/([A-Za-zÁÉÍÓÚÑ\.]+)\s*\(/g, (m, name) => (map[name.toUpperCase()]||name)+"(");
+  f = f.replace(/ (\d+) /g, (m, i) => strings[+i]);
+  return f;
+}
+function norm(x){ // normaliza números/strings para comparar
+  if(x==null) return "";
+  let s=String(x).trim();
+  const n=parseFloat(s.replace(',','.'));
+  if(!isNaN(n) && isFinite(n) && /^[-\d.,]+$/.test(s)) return String(Math.round(n*100)/100);
+  return s.toLowerCase();
+}
+function round2(n){ return Math.round(n*100)/100; }
+
+// =====================================================================
+// EJ1 — FILTROS · lista FIJA de 20 estudiantes
+// columnas: Nombre, Edad (16-30), Género (Femenino/Masculino), Calificación (60-100)
+// =====================================================================
+const STUD = [
+  ["Camila Rojas",        19, "Femenino",  92],
+  ["Mateo Fuentes",       22, "Masculino", 78],
+  ["Valentina Soto",      17, "Femenino",  85],
+  ["Benjamín Díaz",       25, "Masculino", 90],
+  ["Isidora Muñoz",       21, "Femenino",  67],
+  ["Tomás Herrera",       28, "Masculino", 73],
+  ["Antonia Vega",        18, "Femenino",  96],
+  ["Vicente Castro",      23, "Masculino", 88],
+  ["Florencia Pizarro",   16, "Femenino",  61],
+  ["Joaquín Reyes",       30, "Masculino", 84],
+  ["Martina Araya",       24, "Femenino",  91],
+  ["Agustín Cortés",      20, "Masculino", 70],
+  ["Catalina Núñez",      27, "Femenino",  82],
+  ["Maximiliano Pavez",   19, "Masculino", 95],
+  ["Josefa Tapia",        26, "Femenino",  74],
+  ["Sebastián Lagos",     22, "Masculino", 60],
+  ["Emilia Carrasco",     18, "Femenino",  89],
+  ["Lucas Bravo",         29, "Masculino", 93],
+  ["Trinidad Salazar",    21, "Femenino",  77],
+  ["Cristóbal Méndez",    24, "Masculino", 86],
+];
+
+// --- valores esperados calculados DINÁMICAMENTE desde STUD ---
+function avg(arr){ return arr.length ? round2(arr.reduce((a,b)=>a+b,0)/arr.length) : 0; }
+// Req 1: edad 18..25 (inclusive)
+const r1set   = STUD.filter(s => s[1]>=18 && s[1]<=25);
+const R1_CNT  = r1set.length;
+const R1_AVG  = avg(r1set.map(s=>s[3]));
+// Req 2: género Femenino → promedio calificación
+const femSet  = STUD.filter(s => s[2]==="Femenino");
+const R2_AVG  = avg(femSet.map(s=>s[3]));
+// Req 3: calificación >=90 → cuántos + promedio de sus edades
+const c90set  = STUD.filter(s => s[3]>=90);
+const R3_CNT  = c90set.length;
+const R3_AGE  = avg(c90set.map(s=>s[1]));
+
+const REQS1 = [
+  {id:"r1a", lbl:"Req 1 · Filtra edad 18 a 25. ¿Cuántos estudiantes cumplen?", exp:String(R1_CNT)},
+  {id:"r1b", lbl:"Req 1 · Promedio de calificaciones de esos estudiantes",     exp:String(R1_AVG)},
+  {id:"r2",  lbl:"Req 2 · Filtra género Femenino. Promedio de sus calificaciones", exp:String(R2_AVG)},
+  {id:"r3a", lbl:"Req 3 · Filtra calificación ≥ 90. ¿Cuántos estudiantes?",    exp:String(R3_CNT)},
+  {id:"r3b", lbl:"Req 3 · Promedio de las edades de esos estudiantes",         exp:String(R3_AGE)},
+];
+
+// motor HyperFormula para evaluar fórmulas que escriba el alumno sobre los datos
+// hoja: col0 Nombre, col1 Edad, col2 Género, col3 Calif (fila0 = encabezado, datos fila 1..20)
+let hf1;
+function eng1(){
+  hf1 = HyperFormula.buildFromArray(
+    [["Nombre","Edad","Genero","Calif"], ...STUD.map(s=>[s[0],s[1],s[2],s[3]])],
+    {licenseKey:'gpl-v3'}
+  );
+}
+function calc1(formula){
+  if(!formula || !formula.trim()) return {empty:1};
+  try{
+    hf1.setCellContents({sheet:0,row:24,col:0},[[translate(formula)]]); // celda scratch fuera de datos
+    const v=hf1.getCellValue({sheet:0,row:24,col:0});
+    if(v&&typeof v==='object'&&v.type==='ERROR') return {error:1};
+    return {text:String(v)};
+  }catch(e){ return {error:1}; }
+}
+// si el alumno escribe número simple lo tomamos tal cual; si escribe fórmula la evaluamos
+function resolveAns1(raw){
+  if(!raw || !raw.trim()) return {empty:1};
+  if(raw.trim()[0]==="=") { const r=calc1(raw); return r; }
+  return {text:raw.trim()};
+}
+
+const rows1=document.getElementById('rows1');
+const emptyNote1=document.getElementById('emptyNote1');
+const fEdadMin=document.getElementById('fEdadMin'),fEdadMax=document.getElementById('fEdadMax');
+const fGenero=document.getElementById('fGenero'),fCalMin=document.getElementById('fCalMin');
+const filtInfo=document.getElementById('filtInfo');
+const hEdad=document.getElementById('hEdad'),hGenero=document.getElementById('hGenero'),hCalif=document.getElementById('hCalif');
+
+function passFilter(s){
+  const eMin=fEdadMin.value!==""?parseFloat(fEdadMin.value):null;
+  const eMax=fEdadMax.value!==""?parseFloat(fEdadMax.value):null;
+  const gen=fGenero.value;
+  const cMin=fCalMin.value!==""?parseFloat(fCalMin.value):null;
+  if(eMin!==null && s[1]<eMin) return false;
+  if(eMax!==null && s[1]>eMax) return false;
+  if(gen!=="Todos" && s[2]!==gen) return false;
+  if(cMin!==null && s[3]<cMin) return false;
+  return true;
+}
+function renderRows1(){
+  rows1.innerHTML="";
+  let shown=0;
+  STUD.forEach((s,i)=>{
+    const tr=document.createElement('tr');
+    const visible=passFilter(s);
+    if(!visible) tr.className='hidden-row'; else shown++;
+    tr.innerHTML=`<th class="rownum">${i+2}</th>`+
+      `<td class="data name">${s[0]}</td>`+
+      `<td class="data">${s[1]}</td>`+
+      `<td class="data">${s[2]}</td>`+
+      `<td class="data">${s[3]}</td>`;
+    rows1.appendChild(tr);
+  });
+  emptyNote1.style.display = shown===0 ? 'block':'none';
+  // marca encabezados con filtro activo
+  const eActive = fEdadMin.value!=="" || fEdadMax.value!=="";
+  const gActive = fGenero.value!=="Todos";
+  const cActive = fCalMin.value!=="";
+  hEdad.classList.toggle('filtered',eActive);
+  hGenero.classList.toggle('filtered',gActive);
+  hCalif.classList.toggle('filtered',cActive);
+  const total=STUD.length;
+  filtInfo.innerHTML = `Mostrando <b>${shown}</b> de ${total} estudiantes`+
+    (eActive||gActive||cActive ? ' · filtro activo' : ' · sin filtro');
+}
+[fEdadMin,fEdadMax,fCalMin].forEach(el=>el.addEventListener('input',renderRows1));
+fGenero.addEventListener('change',renderRows1);
+document.getElementById('reset1').addEventListener('click',()=>{
+  fEdadMin.value="";fEdadMax.value="";fCalMin.value="";fGenero.value="Todos";renderRows1();
+});
+
+// panel de respuestas ej1
+const ansVals1 = REQS1.map(()=>"");
+const answers1=document.getElementById('answers1');
+function renderAnswers1(){
+  answers1.innerHTML="";
+  REQS1.forEach((q,i)=>{
+    const row=document.createElement('div');row.className='arow';
+    row.innerHTML=`<div class="lbl">${q.lbl}</div>
+      <div class="fxa"><input data-q="${i}" type="text" autocomplete="off" spellcheck="false" placeholder="escribe el número… (o =PROMEDIO(...))" value="${ansVals1[i].replace(/"/g,'&quot;')}"></div>
+      <div class="out" data-out1="${i}"></div>`;
+    answers1.appendChild(row);
+  });
+  answers1.querySelectorAll('input').forEach(inp=>{
+    inp.addEventListener('input',e=>{ansVals1[+e.target.dataset.q]=e.target.value;});
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();updateOut1(+e.target.dataset.q);}});
+    inp.addEventListener('blur',e=>updateOut1(+e.target.dataset.q));
+  });
+}
+function updateOut1(i){
+  const out=document.querySelector(`.out[data-out1="${i}"]`);
+  const r=resolveAns1(ansVals1[i]);
+  if(r.empty){out.textContent="";out.className='out';}
+  else if(r.error){out.textContent="#¡ERROR!";out.className='out err';}
+  else{out.textContent=r.text;out.className='out';}
+}
+const fb1=document.getElementById('fb1'),fh1=document.getElementById('fh1'),fbd1=document.getElementById('fbd1');
+document.getElementById('check1').addEventListener('click',()=>{
+  let ok=0;const bad=[];
+  REQS1.forEach((q,i)=>{
+    updateOut1(i);
+    const r=resolveAns1(ansVals1[i]);
+    const got=(r.text!=null && !r.empty && !r.error)?r.text:"";
+    if(got!=="" && norm(got)===norm(q.exp)) ok++;
+    else bad.push({lbl:q.lbl, got:(r.empty?"(vacío)":r.error?"#¡ERROR!":got), exp:q.exp});
+  });
+  fb1.className='feedback show '+(ok===REQS1.length?'good':'bad');
+  if(ok===REQS1.length){
+    fh1.textContent='✓ ¡Muy bien! Los 5 valores coinciden con los datos filtrados.';
+    fbd1.innerHTML='Aplicaste correctamente los autofiltros por edad, género y calificación, y leíste/calculaste los promedios. 🎉';
+  }else{
+    fh1.textContent=`Vas ${ok} de ${REQS1.length}. Revisa:`;
+    let h='<ul>';bad.forEach(d=>h+=`<li>${d.lbl}: tu valor <code>${d.got}</code> · esperado <code>${d.exp}</code>.</li>`);
+    h+='</ul><div class="hint">Asegúrate de aplicar el filtro indicado antes de leer el dato; los promedios van con 2 decimales.</div>';
+    fbd1.innerHTML=h;
+  }
+  fb1.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+document.getElementById('sol1').addEventListener('click',()=>{
+  REQS1.forEach((q,i)=>{ansVals1[i]=q.exp;});renderAnswers1();REQS1.forEach((q,i)=>updateOut1(i));
+  fb1.className='feedback show good';fh1.textContent='Respuestas mostradas';
+  fbd1.innerHTML=`Valores correctos (calculados sobre los 20 estudiantes):<ul>
+    <li>Req 1 — cumplen edad 18–25: <code>${R1_CNT}</code> · promedio calificación: <code>${R1_AVG}</code></li>
+    <li>Req 2 — promedio calificación Femenino: <code>${R2_AVG}</code></li>
+    <li>Req 3 — calificación ≥ 90: <code>${R3_CNT}</code> · promedio edades: <code>${R3_AGE}</code></li></ul>`;
+});
+document.getElementById('clear1').addEventListener('click',()=>{
+  ansVals1.fill("");renderAnswers1();fb1.className='feedback';
+});
+
+// =====================================================================
+// EJ2 — VALIDACIÓN DE DATOS (gastos de viaje)
+// =====================================================================
+const DATE_MIN="2026-05-13", DATE_MAX="2026-06-13";
+const CATS=["Transporte","Hospedaje","Comida"];
+let vData=[];           // [{fecha,concepto,monto,categoria,aprobado}]
+function blankRow(){ return {fecha:"",concepto:"",monto:"",categoria:"",aprobado:""}; }
+function seedRows(){ vData=[blankRow(),blankRow()]; }
+
+const vrows=document.getElementById('vrows');
+
+// validadores individuales → devuelven {ok:bool, msg:string}
+function vFecha(v){
+  if(!v) return {ok:false,msg:"Ingresa una fecha"};
+  if(v<DATE_MIN||v>DATE_MAX) return {ok:false,msg:"Fecha fuera del rango permitido"};
+  return {ok:true};
+}
+function vConcepto(v){
+  if(!v||!v.trim()) return {ok:false,msg:"Ingresa un concepto"};
+  return {ok:true};
+}
+function vMonto(v){
+  if(v===""||v==null) return {ok:false,msg:"Ingresa un monto"};
+  const n=parseFloat(v);
+  if(isNaN(n)) return {ok:false,msg:"Monto no válido"};
+  if(n<=0) return {ok:false,msg:"El monto debe ser mayor que cero"};
+  return {ok:true};
+}
+function vCategoria(v){
+  if(!CATS.includes(v)) return {ok:false,msg:"Elige una categoría de la lista"};
+  return {ok:true};
+}
+function vAprobado(v){
+  if(v!=="Sí"&&v!=="No") return {ok:false,msg:"Selecciona Sí o No"};
+  return {ok:true};
+}
+const VAL = {fecha:vFecha, concepto:vConcepto, monto:vMonto, categoria:vCategoria, aprobado:vAprobado};
+
+function applyValidation(){
+  // recorre cada input/select renderizado y pinta estado en vivo
+  vrows.querySelectorAll('td[data-field]').forEach(td=>{
+    const field=td.dataset.field; const idx=+td.dataset.idx;
+    const val=vData[idx][field];
+    const res=VAL[field](val);
+    const errEl=td.querySelector('.verr');
+    td.classList.remove('invalid','ok-cell');
+    if(val===""||val==null){ if(errEl)errEl.textContent=""; return; } // vacío neutro hasta que escriben
+    if(res.ok){ td.classList.add('ok-cell'); if(errEl)errEl.textContent=""; }
+    else{ td.classList.add('invalid'); if(errEl)errEl.textContent=res.msg; }
+  });
+}
+function renderV(){
+  vrows.innerHTML="";
+  vData.forEach((r,i)=>{
+    const tr=document.createElement('tr');
+    const catOpts=['<option value="">— elegir —</option>',...CATS.map(c=>`<option value="${c}"${r.categoria===c?' selected':''}>${c}</option>`)].join('');
+    const aprOpts=['<option value="">—</option>',
+      `<option value="Sí"${r.aprobado==="Sí"?' selected':''}>Sí</option>`,
+      `<option value="No"${r.aprobado==="No"?' selected':''}>No</option>`].join('');
+    tr.innerHTML=
+      `<td data-field="fecha" data-idx="${i}"><div class="vfield"><input type="date" min="${DATE_MIN}" max="${DATE_MAX}" value="${r.fecha}"><span class="verr"></span></div></td>`+
+      `<td data-field="concepto" data-idx="${i}"><div class="vfield"><input type="text" placeholder="Ej.: Taxi aeropuerto" value="${(r.concepto||'').replace(/"/g,'&quot;')}"><span class="verr"></span></div></td>`+
+      `<td data-field="monto" data-idx="${i}"><div class="vfield"><input type="number" inputmode="decimal" placeholder="0" value="${r.monto}"><span class="verr"></span></div></td>`+
+      `<td data-field="categoria" data-idx="${i}"><div class="vfield"><select>${catOpts}</select><span class="verr"></span></div></td>`+
+      `<td data-field="aprobado" data-idx="${i}"><div class="vfield"><select>${aprOpts}</select><span class="verr"></span></div></td>`+
+      `<td class="delcol"><button class="delrow" title="Eliminar fila" data-del="${i}">×</button></td>`;
+    vrows.appendChild(tr);
+  });
+  // listeners
+  vrows.querySelectorAll('td[data-field]').forEach(td=>{
+    const field=td.dataset.field; const idx=+td.dataset.idx;
+    const ctrl=td.querySelector('input,select');
+    const handler=e=>{ vData[idx][field]=e.target.value; applyValidation(); };
+    ctrl.addEventListener('input',handler);
+    ctrl.addEventListener('change',handler);
+  });
+  vrows.querySelectorAll('.delrow').forEach(b=>b.addEventListener('click',e=>{
+    const idx=+e.target.dataset.del;
+    if(vData.length<=1){ vData[0]=blankRow(); } else { vData.splice(idx,1); }
+    renderV(); applyValidation();
+  }));
+  applyValidation();
+}
+document.getElementById('addrow').addEventListener('click',()=>{ vData.push(blankRow()); renderV(); });
+document.getElementById('reset2').addEventListener('click',()=>{ seedRows(); renderV(); document.getElementById('fb2').className='feedback'; });
+
+const fb2=document.getElementById('fb2'),fh2=document.getElementById('fh2'),fbd2=document.getElementById('fbd2');
+document.getElementById('check2').addEventListener('click',()=>{
+  applyValidation();
+  let validRows=0; const issues=[];
+  vData.forEach((r,i)=>{
+    // fila "en uso": al menos un campo con contenido
+    const used = Object.values(r).some(v=>v!==""&&v!=null);
+    if(!used) return;
+    const fieldsBad=[];
+    Object.keys(VAL).forEach(f=>{ const res=VAL[f](r[f]); if(!res.ok) fieldsBad.push(res.msg); });
+    if(fieldsBad.length===0) validRows++;
+    else issues.push({n:i+1, msgs:[...new Set(fieldsBad)]});
+  });
+  if(validRows>=1 && issues.length===0){
+    fb2.className='feedback show good';
+    fh2.textContent=`✓ ¡Felicitaciones! ${validRows} fila(s) 100% válida(s).`;
+    fbd2.innerHTML='Todas las filas cumplen las 4 reglas de validación (fecha en rango, monto &gt; 0, categoría de la lista y Aprobado Sí/No). 🎉';
+  }else if(validRows>=1 && issues.length>0){
+    fb2.className='feedback show good';
+    fh2.textContent=`✓ ${validRows} fila(s) válida(s). Hay ${issues.length} fila(s) con datos a corregir:`;
+    let h='<ul>';issues.forEach(it=>h+=`<li><b>Fila ${it.n}:</b> ${it.msgs.join(' · ')}.</li>`);h+='</ul>';
+    fbd2.innerHTML=h;
+  }else{
+    fb2.className='feedback show bad';
+    fh2.textContent='Aún no hay ninguna fila 100% válida.';
+    let h='';
+    if(issues.length){ h='<ul>';issues.forEach(it=>h+=`<li><b>Fila ${it.n}:</b> ${it.msgs.join(' · ')}.</li>`);h+='</ul>'; }
+    else { h='<div class="hint">Completa una fila con los 5 campos válidos y presiona Verificar.</div>'; }
+    fbd2.innerHTML=h;
+  }
+  fb2.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+
+// tabs
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');document.getElementById('pane-'+t.dataset.tab).classList.add('active');
+}));
+
+// init
+eng1();renderRows1();renderAnswers1();
+seedRows();renderV();
+</script>
+</body>
+</html>
