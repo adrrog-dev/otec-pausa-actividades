@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablas Dinamicas — Analisis completo</title>
+<script src="https://cdn.jsdelivr.net/npm/hyperformula/dist/hyperformula.full.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #1B3A57; }
+  .header { background: linear-gradient(135deg, #1B3A57 0%, #00A99E 100%); color: #fff; padding: 18px 24px; }
+  .header h1 { font-size: 1.1rem; font-weight: 700; letter-spacing: .3px; }
+  .header p  { font-size: .82rem; opacity: .85; margin-top: 4px; }
+  .band { height: 4px; background: linear-gradient(90deg, #00A99E 0%, #F26B1F 33%, #E32D3D 66%, #F5C037 100%); }
+  .container { max-width: 860px; margin: 20px auto; padding: 0 16px 40px; }
+  .card { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.08); padding: 22px 24px; margin-bottom: 18px; }
+  .card h2 { font-size: 1rem; color: #1B3A57; margin-bottom: 12px; border-left: 4px solid #00A99E; padding-left: 10px; }
+  .btn { display: inline-block; padding: 9px 22px; border: none; border-radius: 6px; cursor: pointer; font-size: .9rem; font-weight: 600; transition: .2s; }
+  .btn-primary  { background: #00A99E;  color: #fff; }
+  .btn-secondary{ background: #F26B1F; color: #fff; margin-left: 8px; }
+  .btn:hover { opacity: .85; transform: translateY(-1px); }
+  .feedback { margin-top: 14px; padding: 12px 16px; border-radius: 6px; font-weight: 600; font-size: .9rem; display: none; }
+  .ok  { background: #e6f9f0; color: #1a7a4a; border-left: 4px solid #27ae60; }
+  .err { background: #fdecea; color: #922b21; border-left: 4px solid #e74c3c; }
+  .grid-wrap { overflow-x: auto; margin: 12px 0; }
+  table.hf { border-collapse: collapse; font-size: .82rem; }
+  table.hf th { background: #1B3A57; color: #fff; padding: 5px 10px; text-align: center; min-width: 110px; }
+  table.hf td { border: 1px solid #cdd8e3; padding: 4px 8px; min-width: 110px; }
+  table.hf td.lbl { background: #e8f0f6; font-weight: 600; }
+  table.hf input { border: none; width: 100%; font-size: .82rem; outline: none; background: transparent; color: #1B3A57; }
+  .opts label { display: block; padding: 8px 12px; margin: 6px 0; border: 2px solid #dce5ee; border-radius: 6px; cursor: pointer; transition: .15s; }
+  .opts label:hover { border-color: #00A99E; }
+  .opts input[type=radio] { accent-color: #00A99E; margin-right: 8px; }
+  .opts label.selected { border-color: #00A99E; background: #e8f8f7; }
+  .drag-zone { min-height: 50px; border: 2px dashed #aab8c6; border-radius: 6px; padding: 8px; background: #f8fafc; display: flex; flex-wrap: wrap; gap: 6px; }
+  .drag-item { padding: 6px 12px; background: #1B3A57; color: #fff; border-radius: 4px; cursor: grab; font-size: .82rem; user-select: none; }
+  .drag-item.placed { background: #00A99E; }
+  .score-bar { background: #e8f0f6; border-radius: 20px; height: 18px; margin-top: 10px; overflow: hidden; }
+  .score-fill { height: 100%; background: linear-gradient(90deg, #00A99E, #F26B1F); border-radius: 20px; transition: width .5s; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: .75rem; font-weight: 700; background: #00A99E; color: #fff; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="band"></div>
+<div class="header">
+  <h1>&#128295; Tablas Dinamicas — Analisis completo</h1>
+  <p>Unidad 3: Tablas Dinamicas · Ejercicio 3 de 3 &nbsp;|&nbsp; OTEC Pausa Ltda.</p>
+</div>
+<div class="band"></div>
+<div class="container">
+
+<div class="card">
+  <h2>Escenario completo — Dashboard de ventas con TD</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">Analiza los datos de ventas de la empresa y responde las preguntas basandote en la Tabla Dinamica simulada:</p>
+  <div class="grid-wrap">
+    <table class="hf">
+      <tr><th>Vendedor</th><th>Enero</th><th>Febrero</th><th>Marzo</th><th>Total</th><th>% del total</th></tr>
+      <tr><td class="lbl">Ana López</td><td>$3.200.000</td><td>$4.100.000</td><td>$3.800.000</td><td>$11.100.000</td><td>22,5%</td></tr>
+      <tr><td class="lbl">Bruno Ríos</td><td>$2.500.000</td><td>$2.200.000</td><td>$3.000.000</td><td>$7.700.000</td><td>15,6%</td></tr>
+      <tr><td class="lbl">Carla Mora</td><td>$4.800.000</td><td>$5.200.000</td><td>$5.500.000</td><td>$15.500.000</td><td>31,4%</td></tr>
+      <tr><td class="lbl">Diego Soto</td><td>$3.900.000</td><td>$3.600.000</td><td>$7.500.000</td><td>$15.000.000</td><td>30,5%</td></tr>
+      <tr style="font-weight:700;background:#e8f0f6;"><td>Total</td><td>$14.400.000</td><td>$15.100.000</td><td>$19.800.000</td><td>$49.300.000</td><td>100%</td></tr>
+    </table>
+  </div>
+
+  <div class="card" style="background:#f4f6f9;border:1px solid #dce5ee;margin-top:0;">
+    <p style="font-weight:600;margin-bottom:8px;">P1: ¿Quien tuvo la mayor tasa de crecimiento de Enero a Marzo?</p>
+    <div class="opts" id="opts1">
+      <label><input type="radio" name="q1" value="a"> Ana López (+18,75%)</label>
+      <label><input type="radio" name="q1" value="b"> Bruno Ríos (+20%)</label>
+      <label><input type="radio" name="q1" value="c"> Diego Soto (+92,3%)</label>
+      <label><input type="radio" name="q1" value="d"> Carla Mora (+14,6%)</label>
+    </div>
+    <button class="btn btn-primary" style="margin-top:8px;" onclick="v1()">Verificar P1</button>
+    <div class="feedback" id="fb1"></div>
+  </div>
+
+  <div class="card" style="background:#f4f6f9;border:1px solid #dce5ee;">
+    <p style="font-weight:600;margin-bottom:8px;">P2: ¿Que tipo de grafico de la Tabla Dinamica recomiendas para mostrar la evolucion mensual por vendedor?</p>
+    <div class="opts" id="opts2">
+      <label><input type="radio" name="q2" value="a"> Grafico de pastel (torta) — muestra la proporcion total</label>
+      <label><input type="radio" name="q2" value="b"> Grafico de lineas — muestra la tendencia mensual por vendedor claramente</label>
+      <label><input type="radio" name="q2" value="c"> Grafico de barras apiladas al 100% — normaliza todas las series</label>
+      <label><input type="radio" name="q2" value="d"> Grafico de dispersion — compara dos variables numericas independientes</label>
+    </div>
+    <button class="btn btn-primary" style="margin-top:8px;" onclick="v2()">Verificar P2</button>
+    <div class="feedback" id="fb2"></div>
+  </div>
+
+  <div class="card" style="background:#f4f6f9;border:1px solid #dce5ee;">
+    <p style="font-weight:600;margin-bottom:8px;">P3: Si agregas un Slicer de "Region" y filtras solo la Region Norte, pero la columna Region no esta en la TD, ¿que ocurre?</p>
+    <div class="opts" id="opts3">
+      <label><input type="radio" name="q3" value="a"> Excel agrega la columna automaticamente al origen de datos</label>
+      <label><input type="radio" name="q3" value="b"> El Slicer no aparecera en la lista de campos disponibles para crear</label>
+      <label><input type="radio" name="q3" value="c"> El Slicer funciona pero filtra por nombre de vendedor en vez de region</label>
+      <label><input type="radio" name="q3" value="d"> Excel muestra un error critico y cierra el archivo</label>
+    </div>
+    <button class="btn btn-primary" style="margin-top:8px;" onclick="v3()">Verificar P3</button>
+    <div class="feedback" id="fb3"></div>
+  </div>
+</div>
+
+<script>
+function v1(){const v=document.querySelector('input[name="q1"]:checked')?.value;if(!v)return mostrarFeedback('fb1',false,'Selecciona.');mostrarFeedback('fb1',v==='c',v==='c'?'Correcto. Diego: (7.500.000-3.900.000)/3.900.000 = 92,3%. Muy por encima del resto.':'Incorrecto. Calcula (Marzo-Enero)/Enero × 100. Diego: (7.500.000-3.900.000)/3.900.000 = 92,3% es el mayor.');}
+function v2(){const v=document.querySelector('input[name="q2"]:checked')?.value;if(!v)return mostrarFeedback('fb2',false,'Selecciona.');mostrarFeedback('fb2',v==='b',v==='b'?'Correcto. Las lineas muestran tendencia temporal de multiples series (vendedores) en el mismo grafico.':'Incorrecto. Torta muestra proporcion puntual. Barras 100% normaliza y oculta magnitudes. Dispersion compara variables no temporales.');}
+function v3(){const v=document.querySelector('input[name="q3"]:checked')?.value;if(!v)return mostrarFeedback('fb3',false,'Selecciona.');mostrarFeedback('fb3',v==='b',v==='b'?'Correcto. El Slicer solo puede crearse con campos que esten en el origen de datos de la TD. Si Region no existe en los datos, no aparece disponible.':'Incorrecto. Excel no agrega columnas automaticamente. El Slicer simplemente no aparecera como opcion disponible.');}
+</script>
+
+</div>
+<script>
+document.querySelectorAll('.opts label').forEach(l => {
+  l.querySelector('input')?.addEventListener('change', () => {
+    l.closest('.opts').querySelectorAll('label').forEach(x => x.classList.remove('selected'));
+    l.classList.add('selected');
+  });
+});
+function mostrarFeedback(id, correcto, msg) {
+  const el = document.getElementById(id);
+  el.className = 'feedback ' + (correcto ? 'ok' : 'err');
+  el.textContent = correcto ? '✅ ' + msg : '❌ ' + msg;
+  el.style.display = 'block';
+  el.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>

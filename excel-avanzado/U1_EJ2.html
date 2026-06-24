@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Macros — Variables y depuracion VBA</title>
+<script src="https://cdn.jsdelivr.net/npm/hyperformula/dist/hyperformula.full.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #1B3A57; }
+  .header { background: linear-gradient(135deg, #1B3A57 0%, #00A99E 100%); color: #fff; padding: 18px 24px; }
+  .header h1 { font-size: 1.1rem; font-weight: 700; letter-spacing: .3px; }
+  .header p  { font-size: .82rem; opacity: .85; margin-top: 4px; }
+  .band { height: 4px; background: linear-gradient(90deg, #00A99E 0%, #F26B1F 33%, #E32D3D 66%, #F5C037 100%); }
+  .container { max-width: 860px; margin: 20px auto; padding: 0 16px 40px; }
+  .card { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.08); padding: 22px 24px; margin-bottom: 18px; }
+  .card h2 { font-size: 1rem; color: #1B3A57; margin-bottom: 12px; border-left: 4px solid #00A99E; padding-left: 10px; }
+  .btn { display: inline-block; padding: 9px 22px; border: none; border-radius: 6px; cursor: pointer; font-size: .9rem; font-weight: 600; transition: .2s; }
+  .btn-primary  { background: #00A99E;  color: #fff; }
+  .btn-secondary{ background: #F26B1F; color: #fff; margin-left: 8px; }
+  .btn:hover { opacity: .85; transform: translateY(-1px); }
+  .feedback { margin-top: 14px; padding: 12px 16px; border-radius: 6px; font-weight: 600; font-size: .9rem; display: none; }
+  .ok  { background: #e6f9f0; color: #1a7a4a; border-left: 4px solid #27ae60; }
+  .err { background: #fdecea; color: #922b21; border-left: 4px solid #e74c3c; }
+  .grid-wrap { overflow-x: auto; margin: 12px 0; }
+  table.hf { border-collapse: collapse; font-size: .82rem; }
+  table.hf th { background: #1B3A57; color: #fff; padding: 5px 10px; text-align: center; min-width: 110px; }
+  table.hf td { border: 1px solid #cdd8e3; padding: 4px 8px; min-width: 110px; }
+  table.hf td.lbl { background: #e8f0f6; font-weight: 600; }
+  table.hf input { border: none; width: 100%; font-size: .82rem; outline: none; background: transparent; color: #1B3A57; }
+  .opts label { display: block; padding: 8px 12px; margin: 6px 0; border: 2px solid #dce5ee; border-radius: 6px; cursor: pointer; transition: .15s; }
+  .opts label:hover { border-color: #00A99E; }
+  .opts input[type=radio] { accent-color: #00A99E; margin-right: 8px; }
+  .opts label.selected { border-color: #00A99E; background: #e8f8f7; }
+  .drag-zone { min-height: 50px; border: 2px dashed #aab8c6; border-radius: 6px; padding: 8px; background: #f8fafc; display: flex; flex-wrap: wrap; gap: 6px; }
+  .drag-item { padding: 6px 12px; background: #1B3A57; color: #fff; border-radius: 4px; cursor: grab; font-size: .82rem; user-select: none; }
+  .drag-item.placed { background: #00A99E; }
+  .score-bar { background: #e8f0f6; border-radius: 20px; height: 18px; margin-top: 10px; overflow: hidden; }
+  .score-fill { height: 100%; background: linear-gradient(90deg, #00A99E, #F26B1F); border-radius: 20px; transition: width .5s; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: .75rem; font-weight: 700; background: #00A99E; color: #fff; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="band"></div>
+<div class="header">
+  <h1>&#128295; Macros — Variables y depuracion VBA</h1>
+  <p>Unidad 1: Macros · Ejercicio 2 de 3 &nbsp;|&nbsp; OTEC Pausa Ltda.</p>
+</div>
+<div class="band"></div>
+<div class="container">
+
+<div class="card">
+  <h2>Ejercicio 1 — Lectura de código: ¿qué hace este bucle?</h2>
+  <pre style="background:#1e2d3d;color:#7dd3fc;padding:14px;border-radius:8px;font-size:.82rem;overflow-x:auto;">
+Sub ResaltarNegativos()
+    Dim i As Long
+    For i = 2 To 100
+        If Cells(i, 3).Value < 0 Then
+            Cells(i, 3).Interior.Color = RGB(231, 76, 60)
+        End If
+    Next i
+End Sub</pre>
+  <p style="margin:14px 0 8px;font-weight:600;">¿Qué hace esta macro cuando se ejecuta?</p>
+  <div class="opts" id="opts1">
+    <label><input type="radio" name="q1" value="a"> Borra los valores negativos de la columna C, filas 2 a 100</label>
+    <label><input type="radio" name="q1" value="b"> Colorea de rojo las celdas de la columna C (filas 2-100) que tienen valores negativos</label>
+    <label><input type="radio" name="q1" value="c"> Suma todos los valores negativos de la columna C</label>
+    <label><input type="radio" name="q1" value="d"> Filtra y muestra solo las filas con valores negativos en C</label>
+  </div>
+  <button class="btn btn-primary" onclick="v1()">Verificar</button>
+  <div class="feedback" id="fb1"></div>
+</div>
+
+<div class="card">
+  <h2>Ejercicio 2 — Variables y tipos de datos VBA</h2>
+  <p style="margin-bottom:12px;color:#4a5568;font-size:.9rem;">Asocia cada tipo de dato VBA con su uso correcto:</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+    <div>
+      <p style="font-weight:600;margin-bottom:8px;">Tipo de dato</p>
+      <div id="zona-tipos" class="drag-zone" style="flex-direction:column;">
+        <div class="drag-item" draggable="true" data-val="Long">Long</div>
+        <div class="drag-item" draggable="true" data-val="String">String</div>
+        <div class="drag-item" draggable="true" data-val="Boolean">Boolean</div>
+        <div class="drag-item" draggable="true" data-val="Double">Double</div>
+      </div>
+    </div>
+    <div>
+      <p style="font-weight:600;margin-bottom:8px;">Uso ideal para...</p>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="drop-target" data-answer="Long" style="border:2px dashed #aab8c6;border-radius:6px;padding:8px;min-height:38px;background:#f8fafc;">Contador de filas (1 a 1.000.000)</div>
+        <div class="drop-target" data-answer="String" style="border:2px dashed #aab8c6;border-radius:6px;padding:8px;min-height:38px;background:#f8fafc;">Nombre de un cliente</div>
+        <div class="drop-target" data-answer="Boolean" style="border:2px dashed #aab8c6;border-radius:6px;padding:8px;min-height:38px;background:#f8fafc;">¿El archivo está abierto? (Sí/No)</div>
+        <div class="drop-target" data-answer="Double" style="border:2px dashed #aab8c6;border-radius:6px;padding:8px;min-height:38px;background:#f8fafc;">Precio con decimales</div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" onclick="verificarDrag()">Verificar asociaciones</button>
+  <div class="feedback" id="fb2"></div>
+</div>
+
+<div class="card">
+  <h2>Ejercicio 3 — Depuración de macro</h2>
+  <p style="margin-bottom:8px;font-size:.9rem;color:#4a5568;">La siguiente macro tiene un <strong>error</strong>. Identifícalo:</p>
+  <pre style="background:#1e2d3d;color:#7dd3fc;padding:14px;border-radius:8px;font-size:.82rem;overflow-x:auto;">
+Sub Calcular()
+    Dim total As Integer
+    total = 0
+    For i = 1 To 10
+        total = total + Cells(i, 1).Value
+    Next i
+    MsgBox "Total = " & total
+End Sub</pre>
+  <div class="opts" id="opts3">
+    <label><input type="radio" name="q3" value="a"> <code>Dim total As Integer</code> debería ser <code>Long</code> o <code>Double</code> para evitar desbordamiento con valores grandes</label>
+    <label><input type="radio" name="q3" value="b"> Falta el <code>End Sub</code> al final</label>
+    <label><input type="radio" name="q3" value="c"> <code>MsgBox</code> no puede concatenar texto con variables</label>
+    <label><input type="radio" name="q3" value="d"> El bucle <code>For</code> debería empezar en 0</label>
+  </div>
+  <button class="btn btn-primary" onclick="v3()">Verificar</button>
+  <div class="feedback" id="fb3"></div>
+</div>
+
+<script>
+// Drag and drop
+let dragged = null;
+document.querySelectorAll('.drag-item').forEach(el => {
+  el.addEventListener('dragstart', () => dragged = el);
+});
+document.querySelectorAll('.drop-target').forEach(target => {
+  target.addEventListener('dragover', e => e.preventDefault());
+  target.addEventListener('drop', () => {
+    if (!dragged) return;
+    target.dataset.dropped = dragged.dataset.val;
+    target.style.background = '#e8f8f7';
+    target.style.borderColor = '#00A99E';
+    const prev = target.querySelector('.drag-item');
+    if (prev) document.getElementById('zona-tipos').appendChild(prev);
+    target.prepend(dragged);
+    dragged.classList.add('placed');
+  });
+});
+function verificarDrag() {
+  let ok = 0;
+  document.querySelectorAll('.drop-target').forEach(t => {
+    if (t.dataset.dropped === t.dataset.answer) { ok++; t.style.background='#e6f9f0'; }
+    else t.style.background='#fdecea';
+  });
+  mostrarFeedback('fb2', ok===4, ok===4 ? 'Perfecto, todas las asociaciones son correctas.' : `${ok}/4 correctas. Long para enteros grandes, String para texto, Boolean para Verdadero/Falso, Double para decimales.`);
+}
+function v1() {
+  const v = document.querySelector('input[name="q1"]:checked')?.value;
+  if (!v) return mostrarFeedback('fb1', false, 'Selecciona una respuesta.');
+  mostrarFeedback('fb1', v==='b', v==='b'
+    ? 'Correcto. Interior.Color = RGB(231,76,60) aplica color rojo al fondo de la celda cuando el valor es negativo.'
+    : 'Incorrecto. El condicional IF no borra ni filtra; solo modifica el formato interior de la celda.');
+}
+function v3() {
+  const v = document.querySelector('input[name="q3"]:checked')?.value;
+  if (!v) return mostrarFeedback('fb3', false, 'Selecciona una respuesta.');
+  mostrarFeedback('fb3', v==='a', v==='a'
+    ? 'Correcto. Integer tiene límite de 32.767. Con datos financieros puede desbordarse. Usar Long o Double es la práctica segura.'
+    : 'Incorrecto. El End Sub sí está presente. MsgBox sí permite concatenar. El bucle es válido desde 1.');
+}
+</script>
+
+</div>
+<script>
+document.querySelectorAll('.opts label').forEach(l => {
+  l.querySelector('input')?.addEventListener('change', () => {
+    l.closest('.opts').querySelectorAll('label').forEach(x => x.classList.remove('selected'));
+    l.classList.add('selected');
+  });
+});
+function mostrarFeedback(id, correcto, msg) {
+  const el = document.getElementById(id);
+  el.className = 'feedback ' + (correcto ? 'ok' : 'err');
+  el.textContent = correcto ? '✅ ' + msg : '❌ ' + msg;
+  el.style.display = 'block';
+  el.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>

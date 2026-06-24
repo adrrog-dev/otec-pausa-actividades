@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solver — Planteamiento y restricciones</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f4f6f9;color:#1B3A57}
+  .header{background:linear-gradient(135deg,#1B3A57 0%,#00A99E 100%);color:#fff;padding:18px 24px}
+  .header h1{font-size:1.1rem;font-weight:700}
+  .header p{font-size:.82rem;opacity:.85;margin-top:4px}
+  .band{height:4px;background:linear-gradient(90deg,#00A99E 0%,#F26B1F 33%,#E32D3D 66%,#F5C037 100%)}
+  .container{max-width:860px;margin:20px auto;padding:0 16px 40px}
+  .card{background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:22px 24px;margin-bottom:18px}
+  .card h2{font-size:1rem;color:#1B3A57;margin-bottom:12px;border-left:4px solid #00A99E;padding-left:10px}
+  .btn{display:inline-block;padding:9px 22px;border:none;border-radius:6px;cursor:pointer;font-size:.9rem;font-weight:600;transition:.2s}
+  .btn-primary{background:#00A99E;color:#fff}
+  .btn:hover{opacity:.85;transform:translateY(-1px)}
+  .feedback{margin-top:14px;padding:12px 16px;border-radius:6px;font-weight:600;font-size:.9rem;display:none}
+  .ok{background:#e6f9f0;color:#1a7a4a;border-left:4px solid #27ae60}
+  .err{background:#fdecea;color:#922b21;border-left:4px solid #e74c3c}
+  .opts label{display:block;padding:8px 12px;margin:6px 0;border:2px solid #dce5ee;border-radius:6px;cursor:pointer;transition:.15s}
+  .opts label:hover{border-color:#00A99E}
+  .opts input[type=radio]{accent-color:#00A99E;margin-right:8px}
+  pre{background:#1e2d3d;color:#7dd3fc;padding:14px;border-radius:8px;font-size:.82rem;overflow-x:auto;margin:10px 0}
+  .subcardx{background:#f4f6f9;border:1px solid #dce5ee;border-radius:8px;padding:16px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="band"></div>
+<div class="header">
+  <h1>&#128295; Solver — Planteamiento y restricciones</h1>
+  <p>Unidad 4: Análisis de Datos · Ejercicio 1 de 2 | OTEC Pausa Ltda.</p>
+</div>
+<div class="band"></div>
+<div class="container">
+
+<div class="card">
+  <h2>P1 — ¿Cuándo usar Solver vs. Buscar Objetivo?</h2>
+  <p style="margin-bottom:10px;color:#4a5568;font-size:.9rem;">Selecciona la afirmación CORRECTA sobre cuándo usar cada herramienta:</p>
+  <div class="opts" id="o1">
+    <label><input type="radio" name="q1" value="a"> Buscar Objetivo admite múltiples variables de decisión y restricciones; Solver solo una variable</label>
+    <label><input type="radio" name="q1" value="b"> Buscar Objetivo cambia UNA celda variable para alcanzar un objetivo; Solver optimiza con múltiples variables y restricciones</label>
+    <label><input type="radio" name="q1" value="c"> Ambas herramientas son equivalentes; Solver es solo más lento</label>
+    <label><input type="radio" name="q1" value="d"> Solver solo funciona para maximizar; Buscar Objetivo solo para minimizar</label>
+  </div>
+  <button class="btn btn-primary" onclick="v1()">Verificar</button>
+  <div class="feedback" id="fb1"></div>
+</div>
+
+<div class="card">
+  <h2>P2 — Plantear un problema de Solver</h2>
+  <p style="margin-bottom:10px;color:#4a5568;font-size:.9rem;">Una empresa quiere maximizar sus ingresos (<strong>celda B10</strong>) ajustando las unidades producidas de 3 productos (celdas <strong>B2:B4</strong>), con la restricción de que el total de horas no supere 240 (<strong>B8 &lt;= 240</strong>) y que ningún producto sea negativo. ¿Cuál es la configuración correcta de Solver?</p>
+  <div class="opts" id="o2">
+    <label><input type="radio" name="q2" value="a"> Celda objetivo: B2:B4 (Máx) · Variables: B10 · Sin restricciones</label>
+    <label><input type="radio" name="q2" value="b"> Celda objetivo: B10 (Máx) · Variables: B2:B4 · Restricciones: B8 &lt;= 240 y B2:B4 &gt;= 0</label>
+    <label><input type="radio" name="q2" value="c"> Celda objetivo: B8 (Min) · Variables: B10 · Restricción: B2:B4 &gt;= 0</label>
+    <label><input type="radio" name="q2" value="d"> Celda objetivo: B10 (Máx) · Variables: B8 · Restricciones: B2:B4 = 0</label>
+  </div>
+  <button class="btn btn-primary" onclick="v2()">Verificar</button>
+  <div class="feedback" id="fb2"></div>
+</div>
+
+<div class="card">
+  <h2>P3 — Análisis de escenarios con tabla de datos</h2>
+  <p style="margin-bottom:10px;color:#4a5568;font-size:.9rem;">Quieres analizar cómo varía la utilidad neta si el precio unitario cambia de $5.000 a $15.000 (en pasos de $1.000). ¿Cuál es el método más eficiente en Excel?</p>
+  <div class="opts" id="o3">
+    <label><input type="radio" name="q3" value="a"> Crear 11 copias del modelo y cambiar el precio manualmente en cada una</label>
+    <label><input type="radio" name="q3" value="b"> Usar Datos → Análisis de hipótesis → Tabla de datos (1 variable) con los precios en columna y la fórmula de utilidad como referencia</label>
+    <label><input type="radio" name="q3" value="c"> Usar Solver con objetivo Máx y la variable de precio</label>
+    <label><input type="radio" name="q3" value="d"> Crear un gráfico de dispersión con los precios en X y la utilidad en Y manualmente</label>
+  </div>
+  <button class="btn btn-primary" onclick="v3()">Verificar</button>
+  <div class="feedback" id="fb3"></div>
+</div>
+
+<script>
+function v1(){const v=document.querySelector('input[name="q1"]:checked')?.value;if(!v)return fb('fb1',false,'Selecciona.');fb('fb1',v==='b',v==='b'?'Correcto. Buscar Objetivo: 1 variable para alcanzar un valor exacto. Solver: múltiples variables + restricciones para optimizar.':'Incorrecto. Es al revés: Buscar Objetivo es la herramienta simple (1 variable). Solver es el motor de optimización completo.');}
+function v2(){const v=document.querySelector('input[name="q2"]:checked')?.value;if(!v)return fb('fb2',false,'Selecciona.');fb('fb2',v==='b',v==='b'?'Correcto. En Solver: celda objetivo = lo que quieres optimizar (B10=ingresos, Máx); variables = lo que Excel ajusta (B2:B4); restricciones = los límites del problema.':'Incorrecto. La celda objetivo es lo que OPTIMIZAS (B10=ingresos). Las variables son lo que Solver AJUSTA (B2:B4). B8 es la restricción de horas.');}
+function v3(){const v=document.querySelector('input[name="q3"]:checked')?.value;if(!v)return fb('fb3',false,'Selecciona.');fb('fb3',v==='b',v==='b'?'Correcto. La Tabla de datos (1 variable) calcula automáticamente todos los escenarios con una sola operación, sin duplicar el modelo.':'Incorrecto. Copiar 11 veces es ineficiente y propenso a errores. Solver optimiza pero no analiza un rango de escenarios. El gráfico sería manual y no calculador.');}
+</script>
+
+</div>
+<script>
+document.querySelectorAll('.opts label').forEach(l=>{
+  l.querySelector('input')?.addEventListener('change',()=>{
+    l.closest('.opts').querySelectorAll('label').forEach(x=>x.classList.remove('selected'));
+    l.classList.add('selected');
+  });
+});
+function fb(id,ok,msg){const el=document.getElementById(id);el.className='feedback '+(ok?'ok':'err');el.textContent=(ok?'✅ ':'❌ ')+msg;el.style.display='block';el.scrollIntoView({behavior:'smooth',block:'nearest'});}
+</script>
+</body>
+</html>

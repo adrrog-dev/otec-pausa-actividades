@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablas Dinamicas — Estructura y areas</title>
+<script src="https://cdn.jsdelivr.net/npm/hyperformula/dist/hyperformula.full.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #1B3A57; }
+  .header { background: linear-gradient(135deg, #1B3A57 0%, #00A99E 100%); color: #fff; padding: 18px 24px; }
+  .header h1 { font-size: 1.1rem; font-weight: 700; letter-spacing: .3px; }
+  .header p  { font-size: .82rem; opacity: .85; margin-top: 4px; }
+  .band { height: 4px; background: linear-gradient(90deg, #00A99E 0%, #F26B1F 33%, #E32D3D 66%, #F5C037 100%); }
+  .container { max-width: 860px; margin: 20px auto; padding: 0 16px 40px; }
+  .card { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.08); padding: 22px 24px; margin-bottom: 18px; }
+  .card h2 { font-size: 1rem; color: #1B3A57; margin-bottom: 12px; border-left: 4px solid #00A99E; padding-left: 10px; }
+  .btn { display: inline-block; padding: 9px 22px; border: none; border-radius: 6px; cursor: pointer; font-size: .9rem; font-weight: 600; transition: .2s; }
+  .btn-primary  { background: #00A99E;  color: #fff; }
+  .btn-secondary{ background: #F26B1F; color: #fff; margin-left: 8px; }
+  .btn:hover { opacity: .85; transform: translateY(-1px); }
+  .feedback { margin-top: 14px; padding: 12px 16px; border-radius: 6px; font-weight: 600; font-size: .9rem; display: none; }
+  .ok  { background: #e6f9f0; color: #1a7a4a; border-left: 4px solid #27ae60; }
+  .err { background: #fdecea; color: #922b21; border-left: 4px solid #e74c3c; }
+  .grid-wrap { overflow-x: auto; margin: 12px 0; }
+  table.hf { border-collapse: collapse; font-size: .82rem; }
+  table.hf th { background: #1B3A57; color: #fff; padding: 5px 10px; text-align: center; min-width: 110px; }
+  table.hf td { border: 1px solid #cdd8e3; padding: 4px 8px; min-width: 110px; }
+  table.hf td.lbl { background: #e8f0f6; font-weight: 600; }
+  table.hf input { border: none; width: 100%; font-size: .82rem; outline: none; background: transparent; color: #1B3A57; }
+  .opts label { display: block; padding: 8px 12px; margin: 6px 0; border: 2px solid #dce5ee; border-radius: 6px; cursor: pointer; transition: .15s; }
+  .opts label:hover { border-color: #00A99E; }
+  .opts input[type=radio] { accent-color: #00A99E; margin-right: 8px; }
+  .opts label.selected { border-color: #00A99E; background: #e8f8f7; }
+  .drag-zone { min-height: 50px; border: 2px dashed #aab8c6; border-radius: 6px; padding: 8px; background: #f8fafc; display: flex; flex-wrap: wrap; gap: 6px; }
+  .drag-item { padding: 6px 12px; background: #1B3A57; color: #fff; border-radius: 4px; cursor: grab; font-size: .82rem; user-select: none; }
+  .drag-item.placed { background: #00A99E; }
+  .score-bar { background: #e8f0f6; border-radius: 20px; height: 18px; margin-top: 10px; overflow: hidden; }
+  .score-fill { height: 100%; background: linear-gradient(90deg, #00A99E, #F26B1F); border-radius: 20px; transition: width .5s; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: .75rem; font-weight: 700; background: #00A99E; color: #fff; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="band"></div>
+<div class="header">
+  <h1>&#128295; Tablas Dinamicas — Estructura y areas</h1>
+  <p>Unidad 3: Tablas Dinamicas · Ejercicio 1 de 3 &nbsp;|&nbsp; OTEC Pausa Ltda.</p>
+</div>
+<div class="band"></div>
+<div class="container">
+
+<div class="card">
+  <h2>Ejercicio 1 — Conceptos de Tabla Dinamica</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:14px;">Relaciona cada area de una Tabla Dinamica con su funcion correcta arrastrando el elemento:</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+    <div>
+      <p style="font-weight:600;margin-bottom:8px;">Area</p>
+      <div id="zona-areas" class="drag-zone" style="flex-direction:column;">
+        <div class="drag-item" draggable="true" data-val="Filas">Filas</div>
+        <div class="drag-item" draggable="true" data-val="Columnas">Columnas</div>
+        <div class="drag-item" draggable="true" data-val="Valores">Valores</div>
+        <div class="drag-item" draggable="true" data-val="Filtros">Filtros</div>
+      </div>
+    </div>
+    <div>
+      <p style="font-weight:600;margin-bottom:8px;">Funcion</p>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="drop-target" data-answer="Filas" style="border:2px dashed #aab8c6;border-radius:6px;padding:8px;min-height:38px;background:#f8fafc;">Agrupa categorias en el eje vertical (ej: Region, Vendedor)</div>
+        <div class="drop-target" data-answer="Columnas" style="border:2px dashed #aab8c6;border-radius:6px;padding:8px;min-height:38px;background:#f8fafc;">Agrupa categorias en el eje horizontal (ej: Mes, Trimestre)</div>
+        <div class="drop-target" data-answer="Valores" style="border:2px dashed #aab8c6;border-radius:6px;padding:8px;min-height:38px;background:#f8fafc;">Datos numericos que se resumen (ej: Suma de Ventas)</div>
+        <div class="drop-target" data-answer="Filtros" style="border:2px dashed #aab8c6;border-radius:6px;padding:8px;min-height:38px;background:#f8fafc;">Permite limitar el analisis a un subconjunto (ej: solo 2025)</div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" onclick="vDrag1()">Verificar</button>
+  <div class="feedback" id="fb1"></div>
+</div>
+
+<div class="card">
+  <h2>Ejercicio 2 — Interpretar resultados de Tabla Dinamica</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">La siguiente tabla dinamica muestra ventas por Region y Trimestre:</p>
+  <div class="grid-wrap">
+    <table class="hf">
+      <tr><th>Region / Trimestre</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Total</th></tr>
+      <tr><td class="lbl">Norte</td><td>$4.200.000</td><td>$5.100.000</td><td>$3.800.000</td><td>$13.100.000</td></tr>
+      <tr><td class="lbl">Sur</td><td>$2.900.000</td><td>$3.300.000</td><td>$4.600.000</td><td>$10.800.000</td></tr>
+      <tr><td class="lbl">Centro</td><td>$6.100.000</td><td>$5.800.000</td><td>$6.200.000</td><td>$18.100.000</td></tr>
+      <tr style="font-weight:700;background:#e8f0f6;"><td>Total general</td><td>$13.200.000</td><td>$14.200.000</td><td>$14.600.000</td><td>$42.000.000</td></tr>
+    </table>
+  </div>
+  <p style="margin:14px 0 8px;font-weight:600;">¿Que region tuvo la mayor caida entre Q1 y Q2?</p>
+  <div class="opts" id="opts2">
+    <label><input type="radio" name="q2" value="a"> Norte (bajo $900.000)</label>
+    <label><input type="radio" name="q2" value="b"> Sur (bajo $400.000)</label>
+    <label><input type="radio" name="q2" value="c"> Centro (bajo $300.000)</label>
+    <label><input type="radio" name="q2" value="d"> Ninguna, todas subieron de Q1 a Q2</label>
+  </div>
+  <button class="btn btn-primary" onclick="v2()">Verificar</button>
+  <div class="feedback" id="fb2"></div>
+</div>
+
+<div class="card">
+  <h2>Ejercicio 3 — Calculo en tabla dinamica</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">Usando los datos de la tabla anterior, ingresa el porcentaje que representa la region <strong>Sur</strong> sobre el <strong>Total general</strong> (redondea a 1 decimal):</p>
+  <div style="display:flex;align-items:center;gap:12px;margin:12px 0;">
+    <input type="number" id="resp3" step="0.1" min="0" max="100" placeholder="ej: 25.7" style="padding:8px 12px;border:2px solid #cdd8e3;border-radius:6px;font-size:1rem;width:120px;color:#1B3A57;">
+    <span style="font-size:1.2rem;font-weight:700;">%</span>
+    <button class="btn btn-primary" onclick="v3()">Verificar</button>
+  </div>
+  <div class="feedback" id="fb3"></div>
+</div>
+
+<script>
+let dragged = null;
+document.querySelectorAll('.drag-item').forEach(el => el.addEventListener('dragstart', () => dragged=el));
+document.querySelectorAll('.drop-target').forEach(target => {
+  target.addEventListener('dragover', e => e.preventDefault());
+  target.addEventListener('drop', () => {
+    if (!dragged) return;
+    target.dataset.dropped = dragged.dataset.val;
+    target.style.background='#e8f8f7'; target.style.borderColor='#00A99E';
+    const prev = target.querySelector('.drag-item');
+    if (prev) document.getElementById('zona-areas').appendChild(prev);
+    const txt = target.childNodes[target.childNodes.length-1];
+    target.prepend(dragged);
+    dragged.classList.add('placed');
+  });
+});
+function vDrag1() {
+  let ok=0;
+  document.querySelectorAll('.drop-target').forEach(t => {
+    if (t.dataset.dropped===t.dataset.answer){ok++;t.style.background='#e6f9f0';}
+    else t.style.background='#fdecea';
+  });
+  mostrarFeedback('fb1', ok===4, ok===4 ? 'Excelente. Conoces las 4 areas de una Tabla Dinamica.' : `${ok}/4 correctas. Recuerda: Filas=vertical, Columnas=horizontal, Valores=numeros, Filtros=subconjunto.`);
+}
+function v2() {
+  const v = document.querySelector('input[name="q2"]:checked')?.value;
+  if (!v) return mostrarFeedback('fb2',false,'Selecciona una respuesta.');
+  mostrarFeedback('fb2', v==='c', v==='c'
+    ? 'Correcto. Centro bajo de $6.100.000 a $5.800.000 (-$300.000). Norte y Sur en realidad subieron de Q1 a Q2.'
+    : 'Incorrecto. Norte subio +$900.000, Sur subio +$400.000. Solo Centro bajo $300.000.');
+}
+function v3() {
+  const val = parseFloat(document.getElementById('resp3').value);
+  const correcto = Math.round(10800000/42000000*1000)/10;
+  const ok = Math.abs(val - correcto) < 0.2;
+  mostrarFeedback('fb3', ok, ok
+    ? `Correcto. $10.800.000 / $42.000.000 = ${correcto}%.`
+    : `Incorrecto. Calcula: 10.800.000 ÷ 42.000.000 = ${correcto}%. Revisa tu division.`);
+}
+</script>
+
+</div>
+<script>
+document.querySelectorAll('.opts label').forEach(l => {
+  l.querySelector('input')?.addEventListener('change', () => {
+    l.closest('.opts').querySelectorAll('label').forEach(x => x.classList.remove('selected'));
+    l.classList.add('selected');
+  });
+});
+function mostrarFeedback(id, correcto, msg) {
+  const el = document.getElementById(id);
+  el.className = 'feedback ' + (correcto ? 'ok' : 'err');
+  el.textContent = correcto ? '✅ ' + msg : '❌ ' + msg;
+  el.style.display = 'block';
+  el.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Quiz de comprensión avanzada</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f4f6f9;color:#1B3A57}
+  .header{background:linear-gradient(135deg,#1B3A57 0%,#00A99E 100%);color:#fff;padding:18px 24px}
+  .header h1{font-size:1.1rem;font-weight:700}
+  .header p{font-size:.82rem;opacity:.85;margin-top:4px}
+  .band{height:4px;background:linear-gradient(90deg,#00A99E 0%,#F26B1F 33%,#E32D3D 66%,#F5C037 100%)}
+  .container{max-width:860px;margin:20px auto;padding:0 16px 40px}
+  .card{background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:22px 24px;margin-bottom:18px}
+  .card h2{font-size:1rem;color:#1B3A57;margin-bottom:12px;border-left:4px solid #00A99E;padding-left:10px}
+  .btn{display:inline-block;padding:9px 22px;border:none;border-radius:6px;cursor:pointer;font-size:.9rem;font-weight:600;transition:.2s}
+  .btn-primary{background:#00A99E;color:#fff}
+  .btn:hover{opacity:.85;transform:translateY(-1px)}
+  .feedback{margin-top:14px;padding:12px 16px;border-radius:6px;font-weight:600;font-size:.9rem;display:none}
+  .ok{background:#e6f9f0;color:#1a7a4a;border-left:4px solid #27ae60}
+  .err{background:#fdecea;color:#922b21;border-left:4px solid #e74c3c}
+  .opts label{display:block;padding:8px 12px;margin:6px 0;border:2px solid #dce5ee;border-radius:6px;cursor:pointer;transition:.15s}
+  .opts label:hover{border-color:#00A99E}
+  .opts input[type=radio]{accent-color:#00A99E;margin-right:8px}
+  pre{background:#1e2d3d;color:#7dd3fc;padding:14px;border-radius:8px;font-size:.82rem;overflow-x:auto;margin:10px 0}
+  .subcardx{background:#f4f6f9;border:1px solid #dce5ee;border-radius:8px;padding:16px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="band"></div>
+<div class="header">
+  <h1>&#128295; Dashboard — Quiz de comprensión avanzada</h1>
+  <p>Unidad 5: Dashboard · Quiz Interactivo | OTEC Pausa Ltda.</p>
+</div>
+<div class="band"></div>
+<div class="container">
+
+<div class="card">
+  <h2>Pregunta 1 — Vinculación dinámica</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">Tienes un dashboard con la celda <strong>B3</strong> que muestra el total de ventas del mes. La referencia es <code>=SUMAR.SI(Datos!C:C,Dashboard!A3,Datos!F:F)</code>. El gerente cambia el mes en A3. ¿Qué ocurre en B3 sin ninguna acción adicional?</p>
+  <div class="opts" id="o1">
+    <label><input type="radio" name="q1" value="a"> B3 queda con el valor anterior hasta que el usuario presione F9 o guarde</label>
+    <label><input type="radio" name="q1" value="b"> B3 se recalcula automáticamente mostrando el total del nuevo mes seleccionado</label>
+    <label><input type="radio" name="q1" value="c"> Excel muestra un error #REF porque A3 cambió</label>
+    <label><input type="radio" name="q1" value="d"> B3 muestra el promedio de todos los meses, no solo el seleccionado</label>
+  </div>
+  <button class="btn btn-primary" onclick="v1()">Verificar</button>
+  <div class="feedback" id="fb1"></div>
+</div>
+
+<div class="card">
+  <h2>Pregunta 2 — Alertas visuales condicionales</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">En tu dashboard, quieres que la celda de margen bruto se torne <span style="color:#e74c3c;font-weight:700;">roja</span> automáticamente si cae bajo el 20%. ¿Cuál es el mecanismo correcto?</p>
+  <div class="opts" id="o2">
+    <label><input type="radio" name="q2" value="a"> Cambiar el color manualmente cada vez que se actualiza el dashboard</label>
+    <label><input type="radio" name="q2" value="b"> Formato condicional → Nueva regla → "Dar formato a las celdas que contengan" → valor menor que 20%</label>
+    <label><input type="radio" name="q2" value="c"> Insertar una macro que cambie el color con cada actualización</label>
+    <label><input type="radio" name="q2" value="d"> Usar la función SI para mostrar "ROJO" como texto en la celda</label>
+  </div>
+  <button class="btn btn-primary" onclick="v2()">Verificar</button>
+  <div class="feedback" id="fb2"></div>
+</div>
+
+<div class="card">
+  <h2>Pregunta 3 — Escala de ejes y percepción</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">Un gráfico de barras muestra ventas que van de $9.800.000 a $10.200.000. El eje Y empieza en $9.700.000 en lugar de $0. ¿Cuál es el problema ético/profesional de esta visualización?</p>
+  <div class="opts" id="o3">
+    <label><input type="radio" name="q3" value="a"> Ninguno, es una práctica estándar para resaltar las diferencias entre barras</label>
+    <label><input type="radio" name="q3" value="b"> Exagera visualmente las diferencias porcentuales, haciendo que variaciones pequeñas parezcan enormes, lo que puede inducir a error en la toma de decisiones</label>
+    <label><input type="radio" name="q3" value="c"> El eje Y siempre debe empezar en el valor mínimo del conjunto de datos</label>
+    <label><input type="radio" name="q3" value="d"> El gráfico de barras no se puede usar con valores tan altos; debe usarse de líneas</label>
+  </div>
+  <button class="btn btn-primary" onclick="v3()">Verificar</button>
+  <div class="feedback" id="fb3"></div>
+</div>
+
+<div class="card">
+  <h2>Pregunta 4 — Actualización y publicación</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">Tu dashboard usa 3 Tablas Dinámicas. Un colega actualizó el archivo de datos fuente. ¿Cuál es la forma más eficiente de actualizar TODAS las TDs a la vez?</p>
+  <div class="opts" id="o4">
+    <label><input type="radio" name="q4" value="a"> Clic derecho en cada TD → Actualizar (3 veces, una por TD)</label>
+    <label><input type="radio" name="q4" value="b"> Datos → Actualizar todo (Ctrl+Alt+F5) — actualiza todas las conexiones y TDs en un solo clic</label>
+    <label><input type="radio" name="q4" value="c"> Cerrar y volver a abrir el archivo</label>
+    <label><input type="radio" name="q4" value="d"> Eliminar y volver a crear las 3 TDs con los nuevos datos</label>
+  </div>
+  <button class="btn btn-primary" onclick="v4()">Verificar</button>
+  <div class="feedback" id="fb4"></div>
+</div>
+
+<script>
+function v1(){const v=document.querySelector('input[name="q1"]:checked')?.value;if(!v)return fb('fb1',false,'Selecciona.');fb('fb1',v==='b',v==='b'?'Correcto. Las fórmulas de Excel son volátiles: se recalculan automáticamente cuando cambia cualquier celda de la que dependen (A3 en este caso).':'Incorrecto. F9 es para cálculo manual. Excel por defecto recalcula las fórmulas automáticamente al cambiar cualquier celda precedente.');}
+function v2(){const v=document.querySelector('input[name="q2"]:checked')?.value;if(!v)return fb('fb2',false,'Selecciona.');fb('fb2',v==='b',v==='b'?'Correcto. El formato condicional es el mecanismo nativo de Excel para alertas visuales automáticas sin macros. Se actualiza en tiempo real.':'Incorrecto. El cambio manual requiere intervención humana. Una macro es más compleja y frágil. SI() muestra texto, no cambia el color de fondo.');}
+function v3(){const v=document.querySelector('input[name="q3"]:checked')?.value;if(!v)return fb('fb3',false,'Selecciona.');fb('fb3',v==='b',v==='b'?'Correcto. Un eje que no comienza en 0 amplifica diferencias menores. En este caso, una variación de $400.000 sobre $10M (4%) puede verse como si fuera del 50%. Esto distorsiona la percepción.':'Incorrecto. Esta práctica se llama "gráfico de eje truncado" y aunque a veces es útil, puede inducir a error. El estándar ético es empezar en 0 o indicar claramente el corte.');}
+function v4(){const v=document.querySelector('input[name="q4"]:checked')?.value;if(!v)return fb('fb4',false,'Selecciona.');fb('fb4',v==='b',v==='b'?'Correcto. Datos → Actualizar todo (o Ctrl+Alt+F5) refresca todas las conexiones, tablas dinámicas y consultas Power Query en una sola acción.':'Incorrecto. Actualizar cada TD por separado es ineficiente. Cerrar y abrir el archivo no garantiza la actualización. Recrear las TDs es innecesario.');}
+</script>
+
+</div>
+<script>
+document.querySelectorAll('.opts label').forEach(l=>{
+  l.querySelector('input')?.addEventListener('change',()=>{
+    l.closest('.opts').querySelectorAll('label').forEach(x=>x.classList.remove('selected'));
+    l.classList.add('selected');
+  });
+});
+function fb(id,ok,msg){const el=document.getElementById(id);el.className='feedback '+(ok?'ok':'err');el.textContent=(ok?'✅ ':'❌ ')+msg;el.style.display='block';el.scrollIntoView({behavior:'smooth',block:'nearest'});}
+</script>
+</body>
+</html>

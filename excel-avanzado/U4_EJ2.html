@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solver — Interpretación y escenarios avanzados</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f4f6f9;color:#1B3A57}
+  .header{background:linear-gradient(135deg,#1B3A57 0%,#00A99E 100%);color:#fff;padding:18px 24px}
+  .header h1{font-size:1.1rem;font-weight:700}
+  .header p{font-size:.82rem;opacity:.85;margin-top:4px}
+  .band{height:4px;background:linear-gradient(90deg,#00A99E 0%,#F26B1F 33%,#E32D3D 66%,#F5C037 100%)}
+  .container{max-width:860px;margin:20px auto;padding:0 16px 40px}
+  .card{background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:22px 24px;margin-bottom:18px}
+  .card h2{font-size:1rem;color:#1B3A57;margin-bottom:12px;border-left:4px solid #00A99E;padding-left:10px}
+  .btn{display:inline-block;padding:9px 22px;border:none;border-radius:6px;cursor:pointer;font-size:.9rem;font-weight:600;transition:.2s}
+  .btn-primary{background:#00A99E;color:#fff}
+  .btn:hover{opacity:.85;transform:translateY(-1px)}
+  .feedback{margin-top:14px;padding:12px 16px;border-radius:6px;font-weight:600;font-size:.9rem;display:none}
+  .ok{background:#e6f9f0;color:#1a7a4a;border-left:4px solid #27ae60}
+  .err{background:#fdecea;color:#922b21;border-left:4px solid #e74c3c}
+  .opts label{display:block;padding:8px 12px;margin:6px 0;border:2px solid #dce5ee;border-radius:6px;cursor:pointer;transition:.15s}
+  .opts label:hover{border-color:#00A99E}
+  .opts input[type=radio]{accent-color:#00A99E;margin-right:8px}
+  pre{background:#1e2d3d;color:#7dd3fc;padding:14px;border-radius:8px;font-size:.82rem;overflow-x:auto;margin:10px 0}
+  .subcardx{background:#f4f6f9;border:1px solid #dce5ee;border-radius:8px;padding:16px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="band"></div>
+<div class="header">
+  <h1>&#128295; Solver — Interpretación y escenarios avanzados</h1>
+  <p>Unidad 4: Análisis de Datos · Ejercicio 2 de 2 | OTEC Pausa Ltda.</p>
+</div>
+<div class="band"></div>
+<div class="container">
+
+<div class="card">
+  <h2>Escenario empresarial — Mix de producción óptimo</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">Una empresa fabrica 3 productos (A, B, C) con los siguientes datos:</p>
+  <div style="overflow-x:auto;margin-bottom:14px;">
+    <table style="border-collapse:collapse;font-size:.85rem;width:100%;">
+      <tr style="background:#1B3A57;color:#fff;">
+        <th style="padding:8px;text-align:left;">Producto</th>
+        <th style="padding:8px;text-align:right;">Margen unitario</th>
+        <th style="padding:8px;text-align:right;">Horas máquina/u</th>
+        <th style="padding:8px;text-align:right;">Demanda máx</th>
+      </tr>
+      <tr style="background:#f4f6f9;"><td style="padding:8px;">A</td><td style="padding:8px;text-align:right;">$3.000</td><td style="padding:8px;text-align:right;">2 h</td><td style="padding:8px;text-align:right;">80 u</td></tr>
+      <tr><td style="padding:8px;">B</td><td style="padding:8px;text-align:right;">$5.000</td><td style="padding:8px;text-align:right;">4 h</td><td style="padding:8px;text-align:right;">50 u</td></tr>
+      <tr style="background:#f4f6f9;"><td style="padding:8px;">C</td><td style="padding:8px;text-align:right;">$2.500</td><td style="padding:8px;text-align:right;">1 h</td><td style="padding:8px;text-align:right;">120 u</td></tr>
+      <tr style="background:#e8f0f6;font-weight:700;"><td style="padding:8px;" colspan="4">Capacidad total de la máquina: <strong>400 horas</strong></td></tr>
+    </table>
+  </div>
+
+  <div class="subcardx">
+    <p style="font-weight:600;margin-bottom:8px;">P1: ¿Cuál es la celda objetivo de Solver para maximizar el margen total?</p>
+    <div class="opts" id="o1">
+      <label><input type="radio" name="q1" value="a"> La celda que contiene la fórmula: =(Unidades_A × 3000) + (Unidades_B × 5000) + (Unidades_C × 2500)</label>
+      <label><input type="radio" name="q1" value="b"> La celda que contiene el total de horas usadas</label>
+      <label><input type="radio" name="q1" value="c"> Las celdas de unidades de cada producto (A, B y C)</label>
+    </div>
+    <button class="btn btn-primary" style="margin-top:8px;" onclick="v1()">Verificar P1</button>
+    <div class="feedback" id="fb1"></div>
+  </div>
+
+  <div class="subcardx">
+    <p style="font-weight:600;margin-bottom:8px;">P2: El informe de Solver muestra "precio sombra = $1.250" para la restricción de horas. ¿Qué significa?</p>
+    <div class="opts" id="o2">
+      <label><input type="radio" name="q2" value="a"> El costo por hora de la máquina es $1.250</label>
+      <label><input type="radio" name="q2" value="b"> Si se agrega 1 hora adicional de capacidad, el margen total aumentaría en $1.250</label>
+      <label><input type="radio" name="q2" value="c"> La empresa debe cobrar $1.250 más por cada unidad producida</label>
+      <label><input type="radio" name="q2" value="d"> El problema no tiene solución óptima única</label>
+    </div>
+    <button class="btn btn-primary" style="margin-top:8px;" onclick="v2()">Verificar P2</button>
+    <div class="feedback" id="fb2"></div>
+  </div>
+
+  <div class="subcardx">
+    <p style="font-weight:600;margin-bottom:8px;">P3: Solver encontró solución: A=80, B=50, C=20. ¿Cuánto margen total genera?</p>
+    <div style="display:flex;align-items:center;gap:12px;margin:10px 0;">
+      <span style="font-weight:600;">$</span>
+      <input type="number" id="resp3" placeholder="ej: 540000" style="padding:8px 12px;border:2px solid #cdd8e3;border-radius:6px;font-size:1rem;width:150px;color:#1B3A57;">
+      <button class="btn btn-primary" onclick="v3()">Verificar P3</button>
+    </div>
+    <div class="feedback" id="fb3"></div>
+  </div>
+</div>
+
+<script>
+function v1(){const v=document.querySelector('input[name="q1"]:checked')?.value;if(!v)return fb('fb1',false,'Selecciona.');fb('fb1',v==='a',v==='a'?'Correcto. La celda objetivo es la fórmula del margen total (función a maximizar). Las variables son las unidades de cada producto.':'Incorrecto. La celda objetivo es lo que quieres MAXIMIZAR: el margen total calculado. Las unidades son las VARIABLES, no el objetivo.');}
+function v2(){const v=document.querySelector('input[name="q2"]:checked')?.value;if(!v)return fb('fb2',false,'Selecciona.');fb('fb2',v==='b',v==='b'?'Correcto. El precio sombra (shadow price) indica cuánto mejoraría el objetivo si se relajara la restricción en 1 unidad. 1 hora más = $1.250 más de margen.':'Incorrecto. El precio sombra NO es el costo de la máquina. Es la sensibilidad de la función objetivo ante un cambio marginal en la restricción.');}
+function v3(){
+  const val = parseFloat(document.getElementById('resp3').value);
+  const correcto = 80*3000 + 50*5000 + 20*2500;
+  fb('fb3', Math.abs(val-correcto)<1,
+    Math.abs(val-correcto)<1
+      ? 'Correcto. 80×$3.000 + 50×$5.000 + 20×$2.500 = $240.000 + $250.000 + $50.000 = $540.000.'
+      : 'Incorrecto. Calcula: (80×3.000)+(50×5.000)+(20×2.500) = 240.000+250.000+50.000 = $'+correcto.toLocaleString('es-CL')+'.');
+}
+</script>
+
+</div>
+<script>
+document.querySelectorAll('.opts label').forEach(l=>{
+  l.querySelector('input')?.addEventListener('change',()=>{
+    l.closest('.opts').querySelectorAll('label').forEach(x=>x.classList.remove('selected'));
+    l.classList.add('selected');
+  });
+});
+function fb(id,ok,msg){const el=document.getElementById(id);el.className='feedback '+(ok?'ok':'err');el.textContent=(ok?'✅ ':'❌ ')+msg;el.style.display='block';el.scrollIntoView({behavior:'smooth',block:'nearest'});}
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VBA — Código, formularios y depuración</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f4f6f9;color:#1B3A57}
+  .header{background:linear-gradient(135deg,#1B3A57 0%,#00A99E 100%);color:#fff;padding:18px 24px}
+  .header h1{font-size:1.1rem;font-weight:700}
+  .header p{font-size:.82rem;opacity:.85;margin-top:4px}
+  .band{height:4px;background:linear-gradient(90deg,#00A99E 0%,#F26B1F 33%,#E32D3D 66%,#F5C037 100%)}
+  .container{max-width:860px;margin:20px auto;padding:0 16px 40px}
+  .card{background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:22px 24px;margin-bottom:18px}
+  .card h2{font-size:1rem;color:#1B3A57;margin-bottom:12px;border-left:4px solid #00A99E;padding-left:10px}
+  .btn{display:inline-block;padding:9px 22px;border:none;border-radius:6px;cursor:pointer;font-size:.9rem;font-weight:600;transition:.2s}
+  .btn-primary{background:#00A99E;color:#fff}
+  .btn:hover{opacity:.85;transform:translateY(-1px)}
+  .feedback{margin-top:14px;padding:12px 16px;border-radius:6px;font-weight:600;font-size:.9rem;display:none}
+  .ok{background:#e6f9f0;color:#1a7a4a;border-left:4px solid #27ae60}
+  .err{background:#fdecea;color:#922b21;border-left:4px solid #e74c3c}
+  .opts label{display:block;padding:8px 12px;margin:6px 0;border:2px solid #dce5ee;border-radius:6px;cursor:pointer;transition:.15s}
+  .opts label:hover{border-color:#00A99E}
+  .opts input[type=radio]{accent-color:#00A99E;margin-right:8px}
+  pre{background:#1e2d3d;color:#7dd3fc;padding:14px;border-radius:8px;font-size:.82rem;overflow-x:auto;margin:10px 0}
+  .subcardx{background:#f4f6f9;border:1px solid #dce5ee;border-radius:8px;padding:16px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="band"></div>
+<div class="header">
+  <h1>&#128295; VBA — Código, formularios y depuración</h1>
+  <p>Unidad 2: Editor VBA · Ejercicio de Aplicación | OTEC Pausa Ltda.</p>
+</div>
+<div class="band"></div>
+<div class="container">
+
+<div class="card">
+  <h2>P1 — Trazar la ejecución de un procedimiento VBA</h2>
+  <p style="margin-bottom:10px;color:#4a5568;font-size:.9rem;">Ejecuta mentalmente el siguiente código y determina el valor de <code>resultado</code> al finalizar:</p>
+  <pre>
+Sub Calcular()
+    Dim resultado As Long
+    Dim i As Integer
+    resultado = 1
+    For i = 1 To 5
+        If i Mod 2 = 0 Then
+            resultado = resultado * i
+        End If
+    Next i
+    MsgBox resultado
+End Sub</pre>
+  <div class="opts" id="o1">
+    <label><input type="radio" name="q1" value="a"> 120 (producto de todos los numeros del 1 al 5)</label>
+    <label><input type="radio" name="q1" value="b"> 8 (solo multiplica los pares: 2 × 4)</label>
+    <label><input type="radio" name="q1" value="c"> 15 (suma los impares: 1+3+5)</label>
+    <label><input type="radio" name="q1" value="d"> 6 (multiplica 2 × 3)</label>
+  </div>
+  <button class="btn btn-primary" onclick="v1()">Verificar</button>
+  <div class="feedback" id="fb1"></div>
+</div>
+
+<div class="card">
+  <h2>P2 — Manejo de errores en VBA</h2>
+  <p style="margin-bottom:10px;color:#4a5568;font-size:.9rem;">¿Qué instrucción VBA permite que un procedimiento continúe su ejecución aunque ocurra un error en tiempo de ejecución, sin detener la macro?</p>
+  <div class="opts" id="o2">
+    <label><input type="radio" name="q2" value="a"> <code>On Error GoTo 0</code></label>
+    <label><input type="radio" name="q2" value="b"> <code>On Error Resume Next</code></label>
+    <label><input type="radio" name="q2" value="c"> <code>Err.Clear</code></label>
+    <label><input type="radio" name="q2" value="d"> <code>If Err Then Skip</code></label>
+  </div>
+  <button class="btn btn-primary" onclick="v2()">Verificar</button>
+  <div class="feedback" id="fb2"></div>
+</div>
+
+<div class="card">
+  <h2>P3 — Userform: asociar control con código</h2>
+  <p style="margin-bottom:10px;color:#4a5568;font-size:.9rem;">En un Userform de VBA tienes un TextBox llamado <strong>txtNombre</strong> y un botón <strong>btnGuardar</strong>. ¿Cuál es el código correcto para leer lo que escribió el usuario y escribirlo en la celda A1?</p>
+  <div class="opts" id="o3">
+    <label><input type="radio" name="q3" value="a">
+<pre style="margin:4px;font-size:.78rem;background:#f0f4f8;color:#1B3A57;padding:8px;border-radius:4px;">Private Sub btnGuardar_Click()
+    Range("A1").Value = txtNombre.Text
+End Sub</pre></label>
+    <label><input type="radio" name="q3" value="b">
+<pre style="margin:4px;font-size:.78rem;background:#f0f4f8;color:#1B3A57;padding:8px;border-radius:4px;">Private Sub btnGuardar_Click()
+    txtNombre.Value = Cells(1,1)
+End Sub</pre></label>
+    <label><input type="radio" name="q3" value="c">
+<pre style="margin:4px;font-size:.78rem;background:#f0f4f8;color:#1B3A57;padding:8px;border-radius:4px;">Private Sub Click_btnGuardar()
+    A1.Range = Form.txtNombre
+End Sub</pre></label>
+  </div>
+  <button class="btn btn-primary" onclick="v3()">Verificar</button>
+  <div class="feedback" id="fb3"></div>
+</div>
+
+<script>
+function v1(){const v=document.querySelector('input[name="q1"]:checked')?.value;if(!v)return fb('fb1',false,'Selecciona una respuesta.');fb('fb1',v==='b',v==='b'?'Correcto. i Mod 2 = 0 es verdadero para i=2 y i=4. resultado = 1 × 2 × 4 = 8.':'Incorrecto. La condición i Mod 2 = 0 selecciona solo PARES (2 y 4). resultado = 1 (inicial) × 2 × 4 = 8.');}
+function v2(){const v=document.querySelector('input[name="q2"]:checked')?.value;if(!v)return fb('fb2',false,'Selecciona una respuesta.');fb('fb2',v==='b',v==='b'?'Correcto. On Error Resume Next ignora el error y sigue la siguiente línea. On Error GoTo 0 reactiva el manejador predeterminado.':'Incorrecto. GoTo 0 desactiva el manejo de errores. Err.Clear limpia el objeto Err pero no evita la detención. La instrucción correcta es Resume Next.');}
+function v3(){const v=document.querySelector('input[name="q3"]:checked')?.value;if(!v)return fb('fb3',false,'Selecciona una respuesta.');fb('fb3',v==='a',v==='a'?'Correcto. Range("A1").Value = txtNombre.Text lee el texto del control y lo escribe en la celda.':'Incorrecto. En la opción B se invierte la asignación. En C, la sintaxis Click_btnGuardar y A1.Range no existen en VBA.');}
+</script>
+
+</div>
+<script>
+document.querySelectorAll('.opts label').forEach(l=>{
+  l.querySelector('input')?.addEventListener('change',()=>{
+    l.closest('.opts').querySelectorAll('label').forEach(x=>x.classList.remove('selected'));
+    l.classList.add('selected');
+  });
+});
+function fb(id,ok,msg){const el=document.getElementById(id);el.className='feedback '+(ok?'ok':'err');el.textContent=(ok?'✅ ':'❌ ')+msg;el.style.display='block';el.scrollIntoView({behavior:'smooth',block:'nearest'});}
+</script>
+</body>
+</html>

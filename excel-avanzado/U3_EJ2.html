@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablas Dinamicas — Agrupacion y Slicers</title>
+<script src="https://cdn.jsdelivr.net/npm/hyperformula/dist/hyperformula.full.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; color: #1B3A57; }
+  .header { background: linear-gradient(135deg, #1B3A57 0%, #00A99E 100%); color: #fff; padding: 18px 24px; }
+  .header h1 { font-size: 1.1rem; font-weight: 700; letter-spacing: .3px; }
+  .header p  { font-size: .82rem; opacity: .85; margin-top: 4px; }
+  .band { height: 4px; background: linear-gradient(90deg, #00A99E 0%, #F26B1F 33%, #E32D3D 66%, #F5C037 100%); }
+  .container { max-width: 860px; margin: 20px auto; padding: 0 16px 40px; }
+  .card { background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.08); padding: 22px 24px; margin-bottom: 18px; }
+  .card h2 { font-size: 1rem; color: #1B3A57; margin-bottom: 12px; border-left: 4px solid #00A99E; padding-left: 10px; }
+  .btn { display: inline-block; padding: 9px 22px; border: none; border-radius: 6px; cursor: pointer; font-size: .9rem; font-weight: 600; transition: .2s; }
+  .btn-primary  { background: #00A99E;  color: #fff; }
+  .btn-secondary{ background: #F26B1F; color: #fff; margin-left: 8px; }
+  .btn:hover { opacity: .85; transform: translateY(-1px); }
+  .feedback { margin-top: 14px; padding: 12px 16px; border-radius: 6px; font-weight: 600; font-size: .9rem; display: none; }
+  .ok  { background: #e6f9f0; color: #1a7a4a; border-left: 4px solid #27ae60; }
+  .err { background: #fdecea; color: #922b21; border-left: 4px solid #e74c3c; }
+  .grid-wrap { overflow-x: auto; margin: 12px 0; }
+  table.hf { border-collapse: collapse; font-size: .82rem; }
+  table.hf th { background: #1B3A57; color: #fff; padding: 5px 10px; text-align: center; min-width: 110px; }
+  table.hf td { border: 1px solid #cdd8e3; padding: 4px 8px; min-width: 110px; }
+  table.hf td.lbl { background: #e8f0f6; font-weight: 600; }
+  table.hf input { border: none; width: 100%; font-size: .82rem; outline: none; background: transparent; color: #1B3A57; }
+  .opts label { display: block; padding: 8px 12px; margin: 6px 0; border: 2px solid #dce5ee; border-radius: 6px; cursor: pointer; transition: .15s; }
+  .opts label:hover { border-color: #00A99E; }
+  .opts input[type=radio] { accent-color: #00A99E; margin-right: 8px; }
+  .opts label.selected { border-color: #00A99E; background: #e8f8f7; }
+  .drag-zone { min-height: 50px; border: 2px dashed #aab8c6; border-radius: 6px; padding: 8px; background: #f8fafc; display: flex; flex-wrap: wrap; gap: 6px; }
+  .drag-item { padding: 6px 12px; background: #1B3A57; color: #fff; border-radius: 4px; cursor: grab; font-size: .82rem; user-select: none; }
+  .drag-item.placed { background: #00A99E; }
+  .score-bar { background: #e8f0f6; border-radius: 20px; height: 18px; margin-top: 10px; overflow: hidden; }
+  .score-fill { height: 100%; background: linear-gradient(90deg, #00A99E, #F26B1F); border-radius: 20px; transition: width .5s; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: .75rem; font-weight: 700; background: #00A99E; color: #fff; margin-left: 8px; }
+</style>
+</head>
+<body>
+<div class="band"></div>
+<div class="header">
+  <h1>&#128295; Tablas Dinamicas — Agrupacion y Slicers</h1>
+  <p>Unidad 3: Tablas Dinamicas · Ejercicio 2 de 3 &nbsp;|&nbsp; OTEC Pausa Ltda.</p>
+</div>
+<div class="band"></div>
+<div class="container">
+
+<div class="card">
+  <h2>Ejercicio 1 — Agrupacion de fechas</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">En una Tabla Dinamica con fechas de venta, quieres ver los totales <strong>por mes y por ano</strong>. ¿Que configuracion uses?</p>
+  <div class="opts" id="opts1">
+    <label><input type="radio" name="q1" value="a"> Arrastrar la columna Fecha al area Filas y Excel agrupa automaticamente; o clic derecho en la fecha → Agrupar → seleccionar Meses y Anos</label>
+    <label><input type="radio" name="q1" value="b"> Crear una columna auxiliar con la formula =MES(A2) y agregarla al area Valores</label>
+    <label><input type="radio" name="q1" value="c"> Filtrar la Tabla Dinamica por trimestres y sumar manualmente</label>
+    <label><input type="radio" name="q1" value="d"> Usar la funcion AGRUPAR.FILAS en la celda de totales</label>
+  </div>
+  <button class="btn btn-primary" onclick="v1()">Verificar</button>
+  <div class="feedback" id="fb1"></div>
+</div>
+
+<div class="card">
+  <h2>Ejercicio 2 — Segmentacion de datos (Slicers)</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">¿Cual es la ventaja principal de usar <strong>Segmentaciones de datos (Slicers)</strong> en vez de los filtros desplegables de la Tabla Dinamica?</p>
+  <div class="opts" id="opts2">
+    <label><input type="radio" name="q2" value="a"> Los Slicers ocupan menos memoria RAM</label>
+    <label><input type="radio" name="q2" value="b"> Permiten filtrar visualmente con un clic y pueden conectarse a multiples Tablas Dinamicas a la vez</label>
+    <label><input type="radio" name="q2" value="c"> Los Slicers calculan los valores automaticamente sin necesidad de actualizar</label>
+    <label><input type="radio" name="q2" value="d"> Son la unica forma de filtrar por fecha en Excel Avanzado</label>
+  </div>
+  <button class="btn btn-primary" onclick="v2()">Verificar</button>
+  <div class="feedback" id="fb2"></div>
+</div>
+
+<div class="card">
+  <h2>Ejercicio 3 — Campo calculado</h2>
+  <p style="color:#4a5568;font-size:.9rem;margin-bottom:12px;">Tienes una Tabla Dinamica con <em>Suma de Ventas</em> y <em>Suma de Costo</em>. Quieres agregar un campo que muestre el <strong>Margen bruto (%)</strong> = (Ventas - Costo) / Ventas. ¿Donde lo creas?</p>
+  <div class="opts" id="opts3">
+    <label><input type="radio" name="q3" value="a"> En la hoja de datos origen, agrego una columna con la formula y actualizo la TD</label>
+    <label><input type="radio" name="q3" value="b"> Tabla Dinamica → Analizar → Campos, elementos y conjuntos → Campo calculado → defino la formula =(Ventas-Costo)/Ventas</label>
+    <label><input type="radio" name="q3" value="c"> Clic derecho en la TD → Opciones de campo de valor → Porcentaje del total</label>
+    <label><input type="radio" name="q3" value="d"> Tanto A como B son validas; B es la opcion nativa de la TD</label>
+  </div>
+  <button class="btn btn-primary" onclick="v3()">Verificar</button>
+  <div class="feedback" id="fb3"></div>
+</div>
+
+<script>
+function v1(){const v=document.querySelector('input[name="q1"]:checked')?.value;if(!v)return mostrarFeedback('fb1',false,'Selecciona.');mostrarFeedback('fb1',v==='a',v==='a'?'Correcto. La agrupacion automatica o manual (clic derecho → Agrupar) es el metodo nativo de Excel para fechas.':'Incorrecto. La columna auxiliar funciona pero es un workaround. El metodo nativo es agrupar directamente en la TD.');}
+function v2(){const v=document.querySelector('input[name="q2"]:checked')?.value;if(!v)return mostrarFeedback('fb2',false,'Selecciona.');mostrarFeedback('fb2',v==='b',v==='b'?'Correcto. Los Slicers son filtros visuales interactivos que pueden vincularse a varias TDs y graficos simultaneamente.':'Incorrecto. Los Slicers no mejoran el rendimiento ni calculan solos; su ventaja es la interactividad visual y la conexion multiple.');}
+function v3(){const v=document.querySelector('input[name="q3"]:checked')?.value;if(!v)return mostrarFeedback('fb3',false,'Selecciona.');mostrarFeedback('fb3',v==='d',v==='d'?'Correcto. Ambas opciones funcionan. B es la nativa (campo calculado dentro de la TD); A tambien es valida pero agrega una columna al origen.':'Incorrecto. Ambas opciones (A y B) son tecnicamente validas. C muestra % del total general, no el margen (Ventas-Costo)/Ventas.');}
+</script>
+
+</div>
+<script>
+document.querySelectorAll('.opts label').forEach(l => {
+  l.querySelector('input')?.addEventListener('change', () => {
+    l.closest('.opts').querySelectorAll('label').forEach(x => x.classList.remove('selected'));
+    l.classList.add('selected');
+  });
+});
+function mostrarFeedback(id, correcto, msg) {
+  const el = document.getElementById(id);
+  el.className = 'feedback ' + (correcto ? 'ok' : 'err');
+  el.textContent = correcto ? '✅ ' + msg : '❌ ' + msg;
+  el.style.display = 'block';
+  el.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+</script>
+</body>
+</html>
